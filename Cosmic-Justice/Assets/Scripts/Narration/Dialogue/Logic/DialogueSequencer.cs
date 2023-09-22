@@ -9,7 +9,7 @@ public class DialogueException : System.Exception
 
 public class DialogueSequencer
 {
-    public delegate void DialogueCallback(DialogueStart dialogue);
+    public delegate void DialogueCallback(Dialogue dialogue);
     public delegate void DialogueNodeCallback(DialogueNode node);
 
     public DialogueCallback OnDialogueStart;
@@ -17,10 +17,10 @@ public class DialogueSequencer
     public DialogueNodeCallback OnDialogueNodeStart;
     public DialogueNodeCallback OnDialogueNodeEnd;
 
-    private DialogueStart m_CurrentDialogue;
+    private Dialogue m_CurrentDialogue;
     private DialogueNode m_CurrentNode;
 
-    public void StartDialogue(DialogueStart dialogue)
+    public void StartDialogue(Dialogue dialogue)
     {
         if (m_CurrentDialogue == null)
         {
@@ -34,7 +34,7 @@ public class DialogueSequencer
         }
     }
 
-    public void EndDialogue(DialogueStart dialogue)
+    public void EndDialogue(Dialogue dialogue)
     {
         if (m_CurrentDialogue == dialogue)
         {

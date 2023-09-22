@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Dialogue/Dialogue Channel")]
 public class DialogueChannel : ScriptableObject
 {
-    public delegate void DialogueCallback(DialogueStart dialogue);
+    public delegate void DialogueCallback(Dialogue dialogue);
     public DialogueCallback OnDialogueRequested;
     public DialogueCallback OnDialogueStart;
     public DialogueCallback OnDialogueEnd;
@@ -13,17 +13,17 @@ public class DialogueChannel : ScriptableObject
     public DialogueNodeCallback OnDialogueNodeStart;
     public DialogueNodeCallback OnDialogueNodeEnd;
 
-    public void RaiseRequestDialogue(DialogueStart dialogue)
+    public void RaiseRequestDialogue(Dialogue dialogue)
     {
         OnDialogueRequested?.Invoke(dialogue);
     }
 
-    public void RaiseDialogueStart(DialogueStart dialogue)
+    public void RaiseDialogueStart(Dialogue dialogue)
     {
         OnDialogueStart?.Invoke(dialogue);
     }
 
-    public void RaiseDialogueEnd(DialogueStart dialogue)
+    public void RaiseDialogueEnd(Dialogue dialogue)
     {
         OnDialogueEnd?.Invoke(dialogue);
     }

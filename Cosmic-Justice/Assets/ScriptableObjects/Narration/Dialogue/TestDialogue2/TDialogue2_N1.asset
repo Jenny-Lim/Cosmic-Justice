@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 465d29ffbfe749d48b452cf7f5dfaf16, type: 3}
+  m_Name: TDialogue2_N1
+  m_EditorClassIdentifier: 
+  m_DialogueLine: {fileID: 11400000, guid: de6626f48267f984f8c9e35f3bd7cc6b, type: 2}
+  m_Choices:
+  - m_ChoicePreview: Yes
+    m_ChoiceNode: {fileID: 11400000, guid: 4cb05c35c304cbb409eb839263cbdddc, type: 2}
+  - m_ChoicePreview: No
+    m_ChoiceNode: {fileID: 11400000, guid: 49677c55cfd0c5e438ce65bcf9a97ae3, type: 2}
