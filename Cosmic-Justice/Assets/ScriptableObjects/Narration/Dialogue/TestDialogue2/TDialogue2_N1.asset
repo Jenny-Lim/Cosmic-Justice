@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DialogueLine: {fileID: 11400000, guid: de6626f48267f984f8c9e35f3bd7cc6b, type: 2}
   m_Choices:
-  - m_ChoicePreview: Yes
+  - m_ChoicePreview: Nagakome
     m_ChoiceNode: {fileID: 11400000, guid: 4cb05c35c304cbb409eb839263cbdddc, type: 2}
-  - m_ChoicePreview: No
+  - m_ChoicePreview: Sandstorm
     m_ChoiceNode: {fileID: 11400000, guid: 49677c55cfd0c5e438ce65bcf9a97ae3, type: 2}

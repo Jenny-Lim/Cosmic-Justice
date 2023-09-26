@@ -1,8 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Line")]
 public class NarrationLine : ScriptableObject
@@ -15,18 +14,34 @@ public class NarrationLine : ScriptableObject
     [Multiline]
     private string m_Text; //Holds the line of text being spoken
 
-    /*
     [SerializeField]
-    private Image m_CharacterImage; //Holds the image of the character during this dialogue
+    private Sprite m_CharacterImage; //Holds the image of the character during this dialogue
 
+    /*
     [SerializeField]
     private UnityEvent m_LineEvent; //Holds events that are to be played during this dialogue
     */
 
+    [Flags]
+    public enum Events
+    {
+        ShakeCanvas = 1,
+        Character1SpriteChange = 2,
+        test3 = 4
+    }
+
+    [SerializeField]
+    private Events m_events;
+
     public NarrationCharacter Speaker => m_Speaker; //Gets speaker's name
     public string Text => m_Text; //Gets the dialogue text
-    /*
-    public Image CharacterImage => m_CharacterImage; //A public access for the character image
 
-    public UnityEvent LineEvent => m_LineEvent; //Gets the events associated with this dialogue*/
+    public Sprite CharacterImage => m_CharacterImage; //A public access for the character image
+
+    public Events events => m_events;
+
+    /*
+    public UnityEvent LineEvent => m_LineEvent; //Gets the events associated with this dialogue
+    */
+
 }
