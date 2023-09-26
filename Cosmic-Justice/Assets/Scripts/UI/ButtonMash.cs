@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class EventManager : MonoBehaviour
+public class ButtonMash : MonoBehaviour
 {
-    public delegate void ShakeCameraAction();
-    public static event ShakeCameraAction ShakeCamera;
-    
+    [SerializeField] public Slider s;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +17,10 @@ public class EventManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Mash()
+    {
+        //Debug.Log(s.value);
     }
 }

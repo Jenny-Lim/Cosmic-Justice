@@ -1,4 +1,8 @@
+using System;
+using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -43,6 +47,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         }
     }
 
+    //Reads from line at beginning of node starting
     private void OnDialogueNodeStart(DialogueNode node)
     {
         gameObject.SetActive(true);
@@ -50,9 +55,23 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         m_DialogueText.text = node.DialogueLine.Text;
         m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
 
+        //If there are events then run them
+        if (node.DialogueLine.events != 0)
+        {
+            EventManager.current.GetNode(node);
+            //Save each event as a string in an array
+            string[] eventsList = node.DialogueLine.events.ToString().Split(", ");
+
+            foreach (string doEvent in eventsList)
+            {
+                EventManager.current.Invoke(doEvent, 0);
+            }
+        }
+
         node.Accept(this);
     }
 
+    //Handles the ending of the dialogue
     private void OnDialogueNodeEnd(DialogueNode node)
     {
         m_NextNode = null;
