@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ButtonMash : MonoBehaviour
 {
-    [SerializeField] public Slider s;
+    [SerializeField] public Slider slider;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +19,8 @@ public class ButtonMash : MonoBehaviour
         
     }
 
-    public void Mash()
+    void OnClick()
     {
-        //Debug.Log(s.value);
+        //slider.value += 0.5f;
     }
 }
