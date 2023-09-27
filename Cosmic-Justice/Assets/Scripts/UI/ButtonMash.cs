@@ -21,6 +21,7 @@ public class ButtonMash : MonoBehaviour
 
     void OnClick()
     {
-        //slider.value += 0.5f;
+        Debug.Log("ONClick");
+        slider.value += 0.5f;
     }
 }

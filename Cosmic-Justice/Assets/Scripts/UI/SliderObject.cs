@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Slider : MonoBehaviour
+public class SliderObject : MonoBehaviour
 {
     // Start is called before the first frame update
     private Slider thisSlider;
@@ -26,5 +26,11 @@ public class Slider : MonoBehaviour
             // decr.
         }
 
+    }
+
+    public void OnClick()
+    {
+        Debug.Log("ONClick");
+        thisSlider.value += 0.5f;
     }
 }
