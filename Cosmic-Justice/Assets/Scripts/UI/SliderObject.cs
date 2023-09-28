@@ -36,6 +36,10 @@ public class SliderObject : MonoBehaviour
             {
                 statusText.text = "Yippee!";
             }
+            else if (slider.value < slider.maxValue / 2)
+            {
+                statusText.text = "uh oh";
+            }
             else
             {
                 statusText.text = "Les gooo";
