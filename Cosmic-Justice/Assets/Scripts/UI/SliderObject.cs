@@ -5,32 +5,32 @@ using UnityEngine.UI;
 
 public class SliderObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private Slider thisSlider;
+    private Slider slider;
+    [SerializeField] float decrSpeed;
+    [SerializeField] float incrBy;
 
     void Start()
     {
-        thisSlider = GetComponent<Slider>();
+        slider = GetComponent<Slider>();
+        slider.value = slider.maxValue;
     }
 
-    // Update is called once per frame
     void Update()
     {
         // decrement until 0
-        // if (thisSlider.value <= 0)
+        if (slider.value <= 0)
         {
-            // lose minigame
+            Debug.Log("You Lose bozo");
         }
-        //else
+        else
         {
-            // decr.
+            slider.value -= decrSpeed * Time.deltaTime;
         }
 
     }
 
-    public void OnClick()
+    public void IncrementSlider()
     {
-        Debug.Log("ONClick");
-        thisSlider.value += 0.5f;
+        slider.value += incrBy;
     }
 }

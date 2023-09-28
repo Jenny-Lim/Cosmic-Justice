@@ -551,7 +551,6 @@ GameObject:
   - component: {fileID: 1695468936}
   - component: {fileID: 1695468935}
   - component: {fileID: 1695468934}
-  - component: {fileID: 1695468937}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -623,21 +622,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1695468932}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1847433622}
         m_TargetAssemblyTypeName: SliderObject, Assembly-CSharp
-        m_MethodName: OnClick
+        m_MethodName: IncrementSlider
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -685,19 +672,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695468932}
   m_CullTransparentMesh: 1
---- !u!114 &1695468937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695468932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0380017b4eac5014ebe1fb223ed4731b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 1847433621}
 --- !u!1 &1743474292
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +886,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c35ecfda7755b140a6d26a09e077581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  decrSpeed: 0.75
+  incrBy: 0.5
 --- !u!1 &2065842773
 GameObject:
   m_ObjectHideFlags: 0
