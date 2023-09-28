@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SliderObject : MonoBehaviour
 {
     private Slider slider;
     [SerializeField] float decrSpeed;
     [SerializeField] float incrBy;
+    [SerializeField] TMP_Text statusText;
+    [SerializeField] Button button;
+    [SerializeField] float yippeeRange; // temp
 
     void Start()
     {
@@ -20,11 +24,23 @@ public class SliderObject : MonoBehaviour
         // decrement until 0
         if (slider.value <= 0)
         {
-            Debug.Log("You Lose bozo");
+            statusText.text = "You lose.";
+            button.enabled = false;
         }
+
         else
         {
             slider.value -= decrSpeed * Time.deltaTime;
+
+            if (slider.value >= slider.maxValue - yippeeRange)
+            {
+                statusText.text = "Yippee!";
+            }
+            else
+            {
+                statusText.text = "Les gooo";
+            }
+
         }
 
     }
