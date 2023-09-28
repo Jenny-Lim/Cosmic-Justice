@@ -16,3 +16,4 @@ MonoBehaviour:
   m_Text: That was me angry
   m_CharacterImage: {fileID: 0}
   m_events: 1
+  m_minigames: 1

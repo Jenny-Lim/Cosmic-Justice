@@ -36,8 +36,16 @@ public class EventManager : MonoBehaviour
     {
         if(character1SpriteChange != null)
         {
-            Debug.Log("Try" + node.ToString());
             character1SpriteChange(node);
+        }
+    }
+
+    public event Action asteroid;
+    public void Asteroid()
+    {
+        if(asteroid != null)
+        {
+            asteroid();
         }
     }
 }

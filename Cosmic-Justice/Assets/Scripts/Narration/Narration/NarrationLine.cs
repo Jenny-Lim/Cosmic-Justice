@@ -26,12 +26,19 @@ public class NarrationLine : ScriptableObject
     public enum Events
     {
         ShakeCanvas = 1,
-        Character1SpriteChange = 2,
-        test3 = 4
+        Character1SpriteChange = 2
+    }
+
+    public enum Minigames
+    {
+        Asteroid = 1,
     }
 
     [SerializeField]
     private Events m_events;
+
+    [SerializeField]
+    private Minigames m_minigames;
 
     public NarrationCharacter Speaker => m_Speaker; //Gets speaker's name
     public string Text => m_Text; //Gets the dialogue text
@@ -39,6 +46,8 @@ public class NarrationLine : ScriptableObject
     public Sprite CharacterImage => m_CharacterImage; //A public access for the character image
 
     public Events events => m_events;
+
+    public Minigames minigame => m_minigames;
 
     /*
     public UnityEvent LineEvent => m_LineEvent; //Gets the events associated with this dialogue

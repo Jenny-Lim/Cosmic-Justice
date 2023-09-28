@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -86,6 +85,14 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
         gameObject.SetActive(false);
         m_ChoicesBoxTransform.gameObject.SetActive(false);
+
+
+        //If there is a minigame then run it
+        if (node != null && node.DialogueLine.minigame != 0)
+        {
+            Debug.Log(node.DialogueLine.minigame.ToString());
+            EventManager.current.Invoke(node.DialogueLine.minigame.ToString(), 0);
+        }
     }
 
     public void Visit(BasicDialogueNode node)

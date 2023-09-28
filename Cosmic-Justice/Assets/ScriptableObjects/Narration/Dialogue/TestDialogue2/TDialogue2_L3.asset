@@ -15,4 +15,5 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Text: That was me angry
   m_CharacterImage: {fileID: 21300000, guid: 422d7fa4c0c289c4ba7b9096451ec69f, type: 3}
-  m_events: 3
+  m_events: -1
+  m_minigames: 0
