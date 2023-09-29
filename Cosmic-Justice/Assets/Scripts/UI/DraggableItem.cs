@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private Vector3 offset;
-    Transform parentAfterDrag;
+    [HideInInspector] public Transform parentAfterDrag;
+    public Image image;
     public GameObject text;
+    public GameObject correctSlot;
+    bool disableDrag = false;
 
     public void Start()
     {
@@ -16,23 +20,33 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("begin drag");
-        parentAfterDrag = transform.parent;
-        transform.SetParent(transform.root);
-        transform.SetAsLastSibling();
-        offset = transform.position - Input.mousePosition;
+        if (disableDrag == false)
+        {
+            parentAfterDrag = transform.parent;
+            transform.SetParent(transform.root);
+            transform.SetAsLastSibling();
+            image.raycastTarget = false;
+            offset = transform.position - Input.mousePosition;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("drag");
-        transform.position = Input.mousePosition + offset;
+        if (disableDrag == false)
+        {
+            transform.position = Input.mousePosition + offset;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("end drag");
         transform.SetParent(parentAfterDrag);
+        image.raycastTarget = true;
+        Debug.Log(parentAfterDrag);
+        if(parentAfterDrag.gameObject == correctSlot)
+        {
+            disableDrag = true;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
