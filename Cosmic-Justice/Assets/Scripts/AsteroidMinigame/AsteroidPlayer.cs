@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class AsteroidPlayer : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class AsteroidPlayer : MonoBehaviour
 
     [SerializeField]
     private float turningSpeed = 1.0f;
+
+    [SerializeField]
+    private int lives = 3;
+
+    [SerializeField]
+    private TextMeshProUGUI textMeshProUGUI;
 
     private Rigidbody2D rgBd;
 
@@ -21,6 +28,13 @@ public class AsteroidPlayer : MonoBehaviour
     private void Awake()
     {
         rgBd = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnEnable()
+    {
+        lives = 3;
+        transform.localPosition = Vector3.zero;
+        textMeshProUGUI.text = lives.ToString();
     }
 
     // Update is called once per frame
@@ -57,6 +71,21 @@ public class AsteroidPlayer : MonoBehaviour
         if (turningDir != 0.0f)
         {
             rgBd.AddTorque(turningDir * this.turningSpeed);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Asteroid")
+        {
+            lives--;
+            textMeshProUGUI.text = lives.ToString();
+            Destroy(collision.gameObject);
+
+            if(lives <= 0)
+            {
+                EventManager.current.EndAsteroid();
+            }
         }
     }
 }

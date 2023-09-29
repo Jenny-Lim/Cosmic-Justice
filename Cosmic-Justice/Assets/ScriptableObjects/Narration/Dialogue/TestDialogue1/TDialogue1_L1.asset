@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TDialogue1_L1
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
-  m_Text: Hello Its a me, Greed. You wouldn't like me when I'm angry.
+  m_Text: Imma attack Emerald for fun with my goons
   m_CharacterImage: {fileID: 21300000, guid: ccfbfcaf909480a47b38edd56f9999ae, type: 3}
   m_events: 2
+  m_minigames: 0

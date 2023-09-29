@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TDialogue1_L2
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
-  m_Text: That was me angry
+  m_Text: AND WHOS GONNA STOP ME!!!
   m_CharacterImage: {fileID: 0}
   m_events: 1
   m_minigames: 1

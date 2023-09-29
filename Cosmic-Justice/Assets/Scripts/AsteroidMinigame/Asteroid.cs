@@ -30,6 +30,11 @@ public class Asteroid : MonoBehaviour
         rgBd = GetComponent<Rigidbody2D>();
     }
 
+    private void OnDisable()
+    {
+        Destroy(gameObject);
+    }
+
     private void Start()
     {
         imageSprite.sprite = asteroidSprites[Random.Range(0, asteroidSprites.Length)];

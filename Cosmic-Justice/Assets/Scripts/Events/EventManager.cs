@@ -48,4 +48,13 @@ public class EventManager : MonoBehaviour
             asteroid();
         }
     }
+
+    public event Action endAsteroid;
+    public void EndAsteroid()
+    {
+        if(endAsteroid != null)
+        {
+            endAsteroid();
+        }
+    }
 }

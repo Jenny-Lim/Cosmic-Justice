@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6253810066946974102}
   m_Layer: 5
   m_Name: Asteroid
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,8 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidSprites:
   - {fileID: 21300000, guid: ccfbfcaf909480a47b38edd56f9999ae, type: 3}
-  - {fileID: 21300000, guid: ccfbfcaf909480a47b38edd56f9999ae, type: 3}
-  - {fileID: 21300000, guid: ccfbfcaf909480a47b38edd56f9999ae, type: 3}
+  - {fileID: 21300000, guid: 535ad827f693cc5418274fc9b05b2dd5, type: 3}
+  - {fileID: 21300000, guid: 422d7fa4c0c289c4ba7b9096451ec69f, type: 3}
   speed: 50
   maxLifeTime: 15
   minSize: 1
