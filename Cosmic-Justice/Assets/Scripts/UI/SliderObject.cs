@@ -19,7 +19,7 @@ public class SliderObject : MonoBehaviour
         slider.value = slider.maxValue;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // decrement until 0
         if (slider.value <= 0)
