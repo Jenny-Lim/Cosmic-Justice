@@ -36,7 +36,7 @@ public class SliderObject : MonoBehaviour
             {
                 statusText.text = "Yippee!";
             }
-            else if (slider.value < slider.maxValue / 2)
+            else if (slider.value < slider.maxValue / 2) // have this defined in editor
             {
                 statusText.text = "uh oh";
             }
