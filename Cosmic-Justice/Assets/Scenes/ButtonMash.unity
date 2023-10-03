@@ -711,7 +711,7 @@ Canvas:
   m_GameObject: {fileID: 1422285588}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1175,6 +1175,7 @@ MonoBehaviour:
   statusText: {fileID: 933561}
   button: {fileID: 1695468934}
   yippeeRange: 0.25
+  timer: {fileID: 699742376}
 --- !u!1 &2065842773
 GameObject:
   m_ObjectHideFlags: 0

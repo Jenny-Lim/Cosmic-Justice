@@ -12,6 +12,7 @@ public class SliderObject : MonoBehaviour
     [SerializeField] TMP_Text statusText;
     [SerializeField] Button button;
     [SerializeField] float yippeeRange; // temp
+    [SerializeField] Timer timer;
 
     void Start()
     {
@@ -26,6 +27,14 @@ public class SliderObject : MonoBehaviour
         {
             statusText.text = "You lose.";
             button.enabled = false;
+        }
+
+        else if (timer.GetTime() <= 0)
+        {
+            statusText.text = "You Win!";
+            button.enabled = false;
+            
+            // exit here
         }
 
         else

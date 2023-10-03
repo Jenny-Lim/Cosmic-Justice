@@ -37,4 +37,9 @@ public class Timer : MonoBehaviour
             EventManager.current.EndAsteroid();
         }
     }
+
+    public float GetTime()
+    {
+        return tempTime;
+    }
 }
