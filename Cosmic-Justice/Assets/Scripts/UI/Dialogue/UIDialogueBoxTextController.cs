@@ -23,10 +23,17 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     private bool m_ListenToInput = false;
     private DialogueNode m_NextNode = null;
 
+    [SerializeField]
+    private EventManager eventManager;
+
+    private bool canGoNext;
+
     private void Awake()
     {
         m_DialogueChannel.OnDialogueNodeStart += OnDialogueNodeStart;
         m_DialogueChannel.OnDialogueNodeEnd += OnDialogueNodeEnd;
+        eventManager.canDialogue += CanDialogueRequest;
+        canGoNext = true;
 
         gameObject.SetActive(false);
         m_ChoicesBoxTransform.gameObject.SetActive(false);
@@ -36,38 +43,47 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     {
         m_DialogueChannel.OnDialogueNodeEnd -= OnDialogueNodeEnd;
         m_DialogueChannel.OnDialogueNodeStart -= OnDialogueNodeStart;
+        eventManager.canDialogue -= CanDialogueRequest;
     }
 
     private void Update()
     {
-        if (m_ListenToInput && Input.GetButtonDown("Submit"))
+        if (m_ListenToInput && Input.GetButtonDown("Submit") && canGoNext)
         {
             m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
         }
     }
 
+    private void CanDialogueRequest(bool can)
+    {
+        canGoNext = can;
+    }
+
     //Reads from line at beginning of node starting
     private void OnDialogueNodeStart(DialogueNode node)
     {
-        gameObject.SetActive(true);
-
-        m_DialogueText.text = node.DialogueLine.Text;
-        m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
-
-        //If there are events then run them
-        if (node.DialogueLine.events != 0)
+        if (canGoNext)
         {
-            EventManager.current.GetNode(node);
-            //Save each event as a string in an array
-            string[] eventsList = node.DialogueLine.events.ToString().Split(", ");
+            gameObject.SetActive(true);
 
-            foreach (string doEvent in eventsList)
+            m_DialogueText.text = node.DialogueLine.Text;
+            m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
+
+            //If there are events then run them
+            if (node.DialogueLine.events != 0)
             {
-                EventManager.current.Invoke(doEvent, 0);
-            }
-        }
+                EventManager.current.GetNode(node);
+                //Save each event as a string in an array
+                string[] eventsList = node.DialogueLine.events.ToString().Split(", ");
 
-        node.Accept(this);
+                foreach (string doEvent in eventsList)
+                {
+                    EventManager.current.Invoke(doEvent, 0);
+                }
+            }
+
+            node.Accept(this);
+        }
     }
 
     //Handles the ending of the dialogue

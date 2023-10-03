@@ -22,11 +22,13 @@ public class StartandEndAsteroidEvent : MonoBehaviour
 
     private void StartAsteroidMinigame()
     {
-        gameObject.SetActive (true);
+        EventManager.current.CanDialogue(false);
+        gameObject.SetActive(true);
     }
 
     private void EndAsteroidMinigame()
     {
+        EventManager.current.CanDialogue(true);
         gameObject.SetActive(false);
     }
 }

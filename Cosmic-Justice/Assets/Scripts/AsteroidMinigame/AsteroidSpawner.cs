@@ -20,17 +20,22 @@ public class AsteroidSpawner : MonoBehaviour
     [SerializeField]
     private Asteroid asteroidPrefab;
 
+    private RectTransform rectangle;
+
     // Start is called before the first frame update
     void Start()
     {
+        rectangle = GetComponent<RectTransform>();
         InvokeRepeating(nameof(SpawnAsteroid), spawnRate, spawnRate);
     }
 
     private void SpawnAsteroid()
     {
         //Get position outside of screen
-        float screenW = Screen.width + 40f;
-        float screenH = Screen.height + 40f;
+        float screenW = rectangle.rect.width;
+        float screenH = rectangle.rect.height;
+
+        //Debug.Log(screenW);
 
         for(int i = 0; i < spawnAmount; i++)
         {
@@ -41,16 +46,16 @@ public class AsteroidSpawner : MonoBehaviour
             Vector3 spawnDirection = new Vector3(randomCircle.x * screenW, randomCircle.y * screenH);
             Vector3 spawnPoint = this.transform.position + spawnDirection;
 
-            //Vector3 spawnPoint = new Vector3(transform.position.x )
-
             float variance = Random.Range(-this.trajectoryVariance, this.trajectoryVariance);
             Quaternion rotation = Quaternion.AngleAxis(variance, Vector3.forward);
 
-            Asteroid asteroid = Instantiate(this.asteroidPrefab, spawnPoint, rotation, this.transform);
+            //Debug.Log(spawnPoint.x);
+            Asteroid asteroid = Instantiate(this.asteroidPrefab, Camera.main.ScreenToWorldPoint(spawnPoint), rotation, this.transform.parent);
 
             if (asteroid != null)
             {
                 asteroid.size = Random.Range(asteroid.minSize, asteroid.maxSize);
+                asteroid.SetCollider();
 
                 asteroid.SetTrajectory(rotation * -spawnDirection);
             }

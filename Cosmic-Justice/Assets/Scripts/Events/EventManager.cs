@@ -25,36 +25,30 @@ public class EventManager : MonoBehaviour
     public event Action<DialogueNode> canvasShake;
     public void ShakeCanvas()
     {
-        if(canvasShake != null)
-        {
-            canvasShake(node);
-        }
+        canvasShake?.Invoke(node);
     }
 
     public event Action<DialogueNode> character1SpriteChange;
     public void Character1SpriteChange()
     {
-        if(character1SpriteChange != null)
-        {
-            character1SpriteChange(node);
-        }
+        character1SpriteChange?.Invoke(node);
     }
 
     public event Action asteroid;
     public void Asteroid()
     {
-        if(asteroid != null)
-        {
-            asteroid();
-        }
+        asteroid?.Invoke();
     }
 
     public event Action endAsteroid;
     public void EndAsteroid()
     {
-        if(endAsteroid != null)
-        {
-            endAsteroid();
-        }
+        endAsteroid?.Invoke();
+    }
+
+    public event Action<bool> canDialogue;
+    public void CanDialogue(bool can)
+    {
+        canDialogue?.Invoke(can);
     }
 }

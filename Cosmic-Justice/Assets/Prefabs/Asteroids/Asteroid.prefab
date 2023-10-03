@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 180, y: -26}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6341173872657521258
 CanvasRenderer:
@@ -90,7 +90,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2000
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -166,8 +166,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ccfbfcaf909480a47b38edd56f9999ae, type: 3}
   - {fileID: 21300000, guid: 535ad827f693cc5418274fc9b05b2dd5, type: 3}
   - {fileID: 21300000, guid: 422d7fa4c0c289c4ba7b9096451ec69f, type: 3}
-  speed: 50
+  speed: 0.5
   maxLifeTime: 15
-  minSize: 1
-  maxSize: 3
-  size: 1
+  minSize: 0.5
+  maxSize: 1.5
+  size: 0.5

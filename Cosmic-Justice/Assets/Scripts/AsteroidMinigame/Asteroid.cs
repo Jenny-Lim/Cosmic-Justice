@@ -23,11 +23,17 @@ public class Asteroid : MonoBehaviour
 
     private Rigidbody2D rgBd;
 
+    private BoxCollider2D boxCollider;
+
+    private RectTransform rectran;
+
     private void Awake()
     {
         //Get needed components
         imageSprite = GetComponent<Image>();
         rgBd = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        rectran = GetComponent<RectTransform>();
     }
 
     private void OnDisable()
@@ -42,7 +48,7 @@ public class Asteroid : MonoBehaviour
         this.transform.eulerAngles = new Vector3(0f, 0f, Random.value * 360.0f);
         this.transform.localScale = Vector3.one * this.size;
 
-        rgBd.mass = this.size * 2.0f; 
+        rgBd.mass = this.size * 2.0f;
     }
 
     public void SetTrajectory(Vector2 direction)
@@ -50,6 +56,11 @@ public class Asteroid : MonoBehaviour
         rgBd.AddForce(direction * speed);
 
         Destroy(this.gameObject, this.maxLifeTime);
+    }
+
+    public void SetCollider()
+    {
+        boxCollider.size = new Vector2(rectran.rect.width, rectran.rect.height);
     }
 
 
