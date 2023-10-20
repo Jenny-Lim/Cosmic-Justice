@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_Text: AND WHOS GONNA STOP ME!!!
-  m_CharacterImage: {fileID: 0}
+  m_CharacterImage1: {fileID: 0}
+  m_CharacterImage2: {fileID: 0}
+  m_TextSpeed: 0.1
+  m_Font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_events: 1
   m_minigames: 1

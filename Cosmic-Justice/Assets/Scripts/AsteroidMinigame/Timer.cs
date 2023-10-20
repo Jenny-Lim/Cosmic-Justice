@@ -26,6 +26,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Keep making the timer go down. When it ends then end the asteroid event
         if (tempTime >= 0)
         {
             tempTime -= Time.deltaTime;

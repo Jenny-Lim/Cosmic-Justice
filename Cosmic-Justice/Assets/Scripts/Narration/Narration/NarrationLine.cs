@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Line")]
 public class NarrationLine : ScriptableObject
@@ -15,7 +16,16 @@ public class NarrationLine : ScriptableObject
     private string m_Text; //Holds the line of text being spoken
 
     [SerializeField]
-    private Sprite m_CharacterImage; //Holds the image of the character during this dialogue
+    private Sprite m_CharacterImage1; //Holds the image of the character during this dialogue
+
+    [SerializeField]
+    private Sprite m_CharacterImage2;
+
+    [SerializeField]
+    private float m_TextSpeed = 0.1f;
+
+    [SerializeField]
+    private TMP_FontAsset m_Font;
 
     /*
     [SerializeField]
@@ -26,7 +36,8 @@ public class NarrationLine : ScriptableObject
     public enum Events
     {
         ShakeCanvas = 1,
-        Character1SpriteChange = 2
+        Character1SpriteChange = 2,
+        Character2SpriteChange = 4
     }
 
     public enum Minigames
@@ -43,11 +54,17 @@ public class NarrationLine : ScriptableObject
     public NarrationCharacter Speaker => m_Speaker; //Gets speaker's name
     public string Text => m_Text; //Gets the dialogue text
 
-    public Sprite CharacterImage => m_CharacterImage; //A public access for the character image
+    public Sprite CharacterImage1 => m_CharacterImage1; //A public access for the first character image
+
+    public Sprite CharacterImage2 => m_CharacterImage2; //A public access for the second character image
 
     public Events events => m_events;
 
     public Minigames minigame => m_minigames;
+
+    public float TextSpeed => m_TextSpeed;
+
+    public TMP_FontAsset Font => m_Font;
 
     /*
     public UnityEvent LineEvent => m_LineEvent; //Gets the events associated with this dialogue

@@ -34,6 +34,12 @@ public class EventManager : MonoBehaviour
         character1SpriteChange?.Invoke(node);
     }
 
+    public event Action<DialogueNode> character2SpriteChange;
+    public void Character2SpriteChange()
+    {
+        character2SpriteChange?.Invoke(node);
+    }
+
     public event Action asteroid;
     public void Asteroid()
     {
