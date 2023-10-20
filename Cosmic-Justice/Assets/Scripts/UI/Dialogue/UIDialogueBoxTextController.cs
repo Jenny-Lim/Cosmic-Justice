@@ -10,7 +10,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     [SerializeField]
     private TextMeshProUGUI m_SpeakerText;
     [SerializeField]
-    private TextMeshProUGUI m_DialogueText;
+    private DialogueText m_DialogueText;
 
     [SerializeField]
     private RectTransform m_ChoicesBoxTransform;
@@ -66,7 +66,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         {
             gameObject.SetActive(true);
 
-            m_DialogueText.text = node.DialogueLine.Text;
+            m_DialogueText.startDialogue(node.DialogueLine.Text, node.DialogueLine.TextSpeed, node.DialogueLine.Font);
             m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
 
             //If there are events then run them
@@ -91,7 +91,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     {
         m_NextNode = null;
         m_ListenToInput = false;
-        m_DialogueText.text = "";
         m_SpeakerText.text = "";
 
         foreach (Transform child in m_ChoicesBoxTransform)
