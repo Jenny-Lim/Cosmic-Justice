@@ -73,14 +73,10 @@ public class SceneLoader : MonoBehaviour
         Debug.Log("Quit");
     }
 
-    public void TestScene()
+    public void Credits()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(5);
     }
 
-    public void Podium()
-    {
-        SceneManager.LoadScene(4);
-
-    }
+   
 }
