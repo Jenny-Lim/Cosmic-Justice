@@ -27,6 +27,9 @@ public class NarrationLine : ScriptableObject
     [SerializeField]
     private TMP_FontAsset m_Font;
 
+    [SerializeField]
+    private float m_FontSize = 20f;
+
     /*
     [SerializeField]
     private UnityEvent m_LineEvent; //Holds events that are to be played during this dialogue
@@ -65,6 +68,8 @@ public class NarrationLine : ScriptableObject
     public float TextSpeed => m_TextSpeed;
 
     public TMP_FontAsset Font => m_Font;
+
+    public float FontSize => m_FontSize;
 
     /*
     public UnityEvent LineEvent => m_LineEvent; //Gets the events associated with this dialogue

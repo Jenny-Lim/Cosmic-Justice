@@ -36,10 +36,11 @@ public class DialogueText : MonoBehaviour
     }
 
 
-    public void startDialogue(string line, float speed, TMP_FontAsset font)
+    public void startDialogue(string line, float speed, TMP_FontAsset font, float size)
     {
         textMeshProUGUI.text = string.Empty; //Empty the text
         textMeshProUGUI.font = font;
+        textMeshProUGUI.fontSize = size;
         text = line;
         textSpeed = speed;
        

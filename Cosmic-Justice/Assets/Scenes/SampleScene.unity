@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 50271557}
   - component: {fileID: 50271556}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Courtroom Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0.000061035, y: -0.50504}
+  m_SizeDelta: {x: 1532, y: 518.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &50271556
 MonoBehaviour:
@@ -1878,6 +1878,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 50271555}
   - {fileID: 1341420160}
   - {fileID: 808149116}
   - {fileID: 2051896484}
@@ -1886,7 +1887,6 @@ RectTransform:
   - {fileID: 1798145202}
   - {fileID: 1122722315}
   - {fileID: 619057681}
-  - {fileID: 50271555}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1914,7 +1914,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 86a19400c2003354281857b43fa210f5, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -7783,7 +7783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c708460be1f6c64458d920d72c8f6404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountTime: 10
+  amountTime: 0
 --- !u!1 &1704336759
 GameObject:
   m_ObjectHideFlags: 0
@@ -8918,10 +8918,62 @@ RectTransform:
   m_AnchoredPosition: {x: 183.5, y: -61}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2144098798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2144098800}
+  - component: {fileID: 2144098799}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2144098799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144098798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218606dad880caf40a42a12e613c8885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: 892df653665253944afc24a8dc292968, type: 3}
+    volume: 0.558
+    pitch: 0.1
+    source: {fileID: 0}
+    loop: 1
+--- !u!4 &2144098800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144098798}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.0436535, y: 1.072395, z: 3689.683}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2144098800}
   - {fileID: 519420032}
   - {fileID: 1756292681}
   - {fileID: 759628438}

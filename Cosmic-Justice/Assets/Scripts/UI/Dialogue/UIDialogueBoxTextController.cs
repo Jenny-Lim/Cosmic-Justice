@@ -66,7 +66,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         {
             gameObject.SetActive(true);
 
-            m_DialogueText.startDialogue(node.DialogueLine.Text, node.DialogueLine.TextSpeed, node.DialogueLine.Font);
+            m_DialogueText.startDialogue(node.DialogueLine.Text, node.DialogueLine.TextSpeed, node.DialogueLine.Font, node.DialogueLine.FontSize);
             m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
             m_SpeakerText.font = node.DialogueLine.Font;
 
