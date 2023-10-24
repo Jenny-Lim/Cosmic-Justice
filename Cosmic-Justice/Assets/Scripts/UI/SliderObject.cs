@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class SliderObject : MonoBehaviour
 {
@@ -18,10 +19,9 @@ public class SliderObject : MonoBehaviour
 
     [SerializeField] Slider health;
 
-    private float rangeStart, rangeEnd;
+    private float rangeStart, rangeEnd, rangeSize;
     [SerializeField] GameObject safeArea;
     private RectTransform rangeRT;
-    [SerializeField] float rangeSize;
 
     [SerializeField] float decrHealth;
     [SerializeField] float incrHealth;
@@ -42,13 +42,16 @@ public class SliderObject : MonoBehaviour
         health.value = health.maxValue;
 
         rangeStart = Random.Range(slider.minValue, slider.maxValue);
+        rangeEnd = Random.Range(rangeStart + 1, slider.maxValue);
 
         //factor is the ratio between max val and max width
         //rangeSize *= (slider.maxValue / sliderRT.sizeDelta.x);
 
-        rangeEnd = rangeStart + rangeSize; // have this move around -- maybe move this to update
+        //rangeEnd = rangeStart + rangeSize; // have this move around -- maybe move this to update
 
         rangeRT.anchoredPosition = new Vector2(rangeStart, rangeRT.anchoredPosition.y);
+        rangeSize = rangeEnd - rangeStart;
+        rangeRT.sizeDelta = new Vector2(rangeSize, rangeRT.sizeDelta.y);
     }
 
     void Update() // check for handle collision w/ the range
@@ -100,13 +103,13 @@ public class SliderObject : MonoBehaviour
             }
 
             // for health
-            if (!(slider.value >= rangeStart && slider.value <= rangeEnd))
+            if (slider.value >= rangeStart && slider.value <= rangeEnd)
             {
-                health.value -= decrHealth * Time.deltaTime;
+                health.value += incrHealth * Time.deltaTime;
             }
             else
             {
-                health.value += incrHealth * Time.deltaTime;
+                health.value -= decrHealth * Time.deltaTime;
             }
 
         }

@@ -1595,17 +1595,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c35ecfda7755b140a6d26a09e077581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decrSpeed: 0.75
-  incrSpeed: 0.25
+  decrSpeed: 30
+  incrSpeed: 9.62
   statusText: {fileID: 933561}
   button: {fileID: 1695468934}
   yippeeRange: 0.25
   timer: {fileID: 699742376}
   health: {fileID: 171203806}
   safeArea: {fileID: 1839354611}
-  rangeSize: 4.16
-  decrHealth: 0.15
-  incrHealth: 0.25
+  decrHealth: 0.11
+  incrHealth: 7.39
 --- !u!1 &1847934498
 GameObject:
   m_ObjectHideFlags: 0
