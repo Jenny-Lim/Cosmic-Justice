@@ -41,13 +41,11 @@ public class SliderObject : MonoBehaviour
         slider.value = slider.maxValue;
         health.value = health.maxValue;
 
-        rangeStart = Random.Range(slider.minValue, slider.maxValue);
-        rangeEnd = Random.Range(rangeStart + 1, slider.maxValue);
+        rangeStart = Random.Range(slider.minValue, slider.maxValue); // how to get world coords with width
+        rangeEnd = Random.Range(rangeStart, slider.maxValue);
 
         //factor is the ratio between max val and max width
         //rangeSize *= (slider.maxValue / sliderRT.sizeDelta.x);
-
-        //rangeEnd = rangeStart + rangeSize; // have this move around -- maybe move this to update
 
         rangeRT.anchoredPosition = new Vector2(rangeStart, rangeRT.anchoredPosition.y);
         rangeSize = rangeEnd - rangeStart;
