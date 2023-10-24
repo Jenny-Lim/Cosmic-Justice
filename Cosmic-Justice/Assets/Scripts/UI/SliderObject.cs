@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
-using Random = System.Random;
 
 public class SliderObject : MonoBehaviour
 {
@@ -15,7 +13,7 @@ public class SliderObject : MonoBehaviour
 
     [SerializeField] TMP_Text statusText;
     [SerializeField] Button button;
-    [SerializeField] float yippeeRange; // temp
+    [SerializeField] float yippeeRange;
     [SerializeField] Timer timer;
 
     [SerializeField] Slider health;
@@ -34,34 +32,31 @@ public class SliderObject : MonoBehaviour
     void Start()
     {
         slider = GetComponent<Slider>();
-        slider.value = slider.maxValue;
-
-        health.value = health.maxValue;
-
-        sliderRT = slider.GetComponent<RectTransform>();
+        sliderRT = GetComponent<RectTransform>();
         rangeRT = safeArea.GetComponent<RectTransform>();
 
+        slider.maxValue = sliderRT.sizeDelta.x; // 1:1 relationship with slider and values
+        slider.minValue = 0;
 
-        rangeStart = 0;
-        Random rnd = new Random();
-        while (!(rangeStart>0 && rangeStart<slider.maxValue)) {
-            rangeStart = rnd.Next();
-        }
+        slider.value = slider.maxValue;
+        health.value = health.maxValue;
 
-        Debug.Log("rangeStart: " + rangeStart);
+        rangeStart = Random.Range(slider.minValue, slider.maxValue);
 
         //factor is the ratio between max val and max width
-        rangeSize *= (slider.maxValue / sliderRT.sizeDelta.x);
+        //rangeSize *= (slider.maxValue / sliderRT.sizeDelta.x);
 
         rangeEnd = rangeStart + rangeSize; // have this move around -- maybe move this to update
+
+        rangeRT.anchoredPosition = new Vector2(rangeStart, rangeRT.anchoredPosition.y);
     }
 
     void Update() // check for handle collision w/ the range
     {
         // calculate position of safe area
-        float factor = slider.value / slider.maxValue;
-        rangeStart *= factor;
-        rangeRT.anchoredPosition = new Vector2(rangeStart, rangeRT.anchoredPosition.y);
+        //float factor = slider.value / slider.maxValue;
+        //rangeStart *= factor;
+        //rangeRT.anchoredPosition = new Vector2(rangeStart, rangeRT.anchoredPosition.y);
 
         // adjust size accordingly -- for now, size does not change
         //rangeRT.sizeDelta = new Vector2(rangeSize, rangeRT.sizeDelta.y);
@@ -111,7 +106,7 @@ public class SliderObject : MonoBehaviour
             }
             else
             {
-                health.value += decrHealth * Time.deltaTime;
+                health.value += incrHealth * Time.deltaTime;
             }
 
         }
