@@ -23,6 +23,16 @@ public class DialogueText : MonoBehaviour
         textMeshProUGUI.text = string.Empty;
     }
 
+    private void Start()
+    {
+        EventManager.current.click += FastDialogue;
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.current.click -= FastDialogue;
+    }
+
 
     IEnumerator TypeLine()
     {
@@ -46,5 +56,10 @@ public class DialogueText : MonoBehaviour
        
         //Start typing the dialogue
         StartCoroutine(TypeLine());
+    }
+
+    private void FastDialogue()
+    {
+        textSpeed = 0;
     }
 }

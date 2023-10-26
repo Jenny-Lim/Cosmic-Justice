@@ -57,4 +57,10 @@ public class EventManager : MonoBehaviour
     {
         canDialogue?.Invoke(can);
     }
+
+    public event Action click;
+    public void MouseClick()
+    {
+        click?.Invoke();
+    }
 }

@@ -9,19 +9,29 @@ public class ClickEffect : MonoBehaviour
 
     private void Awake()
     {
-        particles = GetComponent<ParticleSystem>();    
+        particles = GetComponent<ParticleSystem>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
+    {
+        EventManager.current.click += onClick;
+    }
+
+    private void OnDestroy()
+    {
+        //unsubscribe to the click event
+        EventManager.current.click -= onClick;
+    }
+
+    //Plays particle at mouse location
+    private void onClick()
     {
         var emission = particles.emission;
 
-        if(Input.GetMouseButtonUp(0))
-        {
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = mousePos;
-            particles.Emit(1);
-        }
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = mousePos;
+        particles.Emit(1);
+
+        AudioManager.instance.Play("ClickSound");
     }
 }
