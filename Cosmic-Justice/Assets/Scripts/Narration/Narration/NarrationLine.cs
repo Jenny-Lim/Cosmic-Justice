@@ -11,18 +11,10 @@ public class NarrationLine : ScriptableObject
     [SerializeField]
     private NarrationCharacter m_Speaker; //holds the speaker of the line
 
+    [Header("Dialogue Text Manipulation")]
     [SerializeField]
-    [Multiline]
+    [TextArea]
     private string m_Text; //Holds the line of text being spoken
-
-    [SerializeField]
-    private Sprite m_CharacterImage1; //Holds the image of the character during this dialogue
-
-    [SerializeField]
-    private Sprite m_CharacterImage2;
-
-    [SerializeField]
-    private float m_TextSpeed = 0.1f;
 
     [SerializeField]
     private TMP_FontAsset m_Font;
@@ -30,10 +22,25 @@ public class NarrationLine : ScriptableObject
     [SerializeField]
     private float m_FontSize = 20f;
 
-    /*
     [SerializeField]
-    private UnityEvent m_LineEvent; //Holds events that are to be played during this dialogue
-    */
+    [Range(0f, 10f)]
+    private float m_TextSpeed = 0.1f;
+
+
+    [Header("Speaker Manipulation")]
+    [SerializeField]
+    private Sprite m_CharacterImage1; //Holds the image of the character during this dialogue
+
+    [SerializeField]
+    private Sprite m_CharacterImage2;
+
+
+    [Header("Events and Minigames")]
+    [SerializeField]
+    private Events m_events;
+
+    [SerializeField]
+    private Minigames m_minigames;
 
     [Flags]
     public enum Events
@@ -47,12 +54,6 @@ public class NarrationLine : ScriptableObject
     {
         Asteroid = 1,
     }
-
-    [SerializeField]
-    private Events m_events;
-
-    [SerializeField]
-    private Minigames m_minigames;
 
     public NarrationCharacter Speaker => m_Speaker; //Gets speaker's name
     public string Text => m_Text; //Gets the dialogue text
