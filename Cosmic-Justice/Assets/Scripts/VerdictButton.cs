@@ -1,20 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VerdictButton : MonoBehaviour
 {
+    private Animator anim;
+    private Button b;
+
     // Start is called before the first frame update
     void Start()
     {
+        b = GetComponent<Button>();
+        anim = GetComponent<Animator>();
+
         // animate it coming up
-        // make interactable
-        // some animation on press / function / text -- inheritance ??? switches ??
+        anim.Play("ButtonComeUp");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnButtonPress() // some animation on press / function / text -- inheritance ??? switches ??
     {
-        
+        anim.SetTrigger("Press");
+        //anim.ResetTrigger("Press");
+    }
+
+    public void DoneComeUp()
+    {
+        b.interactable = true; // object ref error
+        Debug.Log("done come up!");
     }
 }
