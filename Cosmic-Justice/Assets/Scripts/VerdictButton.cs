@@ -20,8 +20,8 @@ public class VerdictButton : MonoBehaviour
 
     public void OnButtonPress() // some animation on press / function / text -- inheritance ??? switches ??
     {
-        anim.SetTrigger("Press");
-        //anim.ResetTrigger("Press");
+        anim.SetBool("isPressed", true); // not working atm -- will fix very soon
+        //anim.SetBool("isPressed", false);
     }
 
     public void DoneComeUp()
