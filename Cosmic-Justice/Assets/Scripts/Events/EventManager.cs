@@ -63,4 +63,10 @@ public class EventManager : MonoBehaviour
     {
         click?.Invoke();
     }
+
+    public event Action<bool> dialogueClick;
+    public void DialogueClick(bool can)
+    {
+        dialogueClick?.Invoke(can);
+    }
 }

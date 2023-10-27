@@ -11,16 +11,22 @@ public class DialogueText : MonoBehaviour
 
     private float textSpeed = 0.1f; //Is how long it takes for the next letter to be written
 
+    private bool textOver;
+    private bool speedText;
+
     private void Awake()
     {
         textMeshProUGUI = GetComponent<TextMeshProUGUI>();
         textMeshProUGUI.text = string.Empty;
+        textOver = true;
+        speedText = false;
     }
 
     private void OnEnable()
     {
         //Empties text every time it is enabled
         textMeshProUGUI.text = string.Empty;
+        textOver = false;
     }
 
     private void Start()
@@ -36,6 +42,8 @@ public class DialogueText : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        textOver = false;
+
         //loop throuogh each char in text and print letter by letter. Wait for textSpeed amount of time before writing the next letter
         foreach (char c in text.ToCharArray())
         {
@@ -43,11 +51,21 @@ public class DialogueText : MonoBehaviour
             yield return new WaitForSeconds(textSpeed);
 
         }
+
+        textOver = true;
+
+        if (speedText)
+        {
+            EventManager.current.DialogueClick(true);
+        }
+      
+
     }
 
 
     public void startDialogue(string line, float speed, TMP_FontAsset font, float size)
     {
+        speedText = false;
         textMeshProUGUI.text = string.Empty; //Empty the text
         textMeshProUGUI.font = font;
         textMeshProUGUI.fontSize = size;
@@ -60,6 +78,11 @@ public class DialogueText : MonoBehaviour
 
     private void FastDialogue()
     {
-        textSpeed = 0;
+        if (!textOver)
+        {
+            EventManager.current.DialogueClick(false);
+            textSpeed = 0;
+            speedText = true;
+        }
     }
 }

@@ -28,15 +28,26 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     private bool canGoNext;
 
+    private bool canClickToNext;
+    private bool click;
+
     private void Awake()
     {
         m_DialogueChannel.OnDialogueNodeStart += OnDialogueNodeStart;
         m_DialogueChannel.OnDialogueNodeEnd += OnDialogueNodeEnd;
         eventManager.canDialogue += CanDialogueRequest;
         canGoNext = true;
+        canClickToNext = true;
+        click = false;
 
         gameObject.SetActive(false);
         m_ChoicesBoxTransform.gameObject.SetActive(false);
+    }
+
+    private void Start()
+    {
+        EventManager.current.dialogueClick += CanClickNext;
+        EventManager.current.click += Click;
     }
 
     private void OnDestroy()
@@ -44,19 +55,34 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         m_DialogueChannel.OnDialogueNodeEnd -= OnDialogueNodeEnd;
         m_DialogueChannel.OnDialogueNodeStart -= OnDialogueNodeStart;
         eventManager.canDialogue -= CanDialogueRequest;
+        EventManager.current.dialogueClick -= CanClickNext;
+        EventManager.current.click -= Click;
     }
 
     private void Update()
     {
-        if (m_ListenToInput && Input.GetButtonDown("Submit") && canGoNext)
+        Debug.Log(click);
+        if (m_ListenToInput && click && canClickToNext && canGoNext)
         {
             m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
         }
+        click = false;
     }
 
     private void CanDialogueRequest(bool can)
     {
         canGoNext = can;
+    }
+
+    private void Click()
+    {
+        click = true;
+    }
+
+    private void CanClickNext(bool can)
+    {
+        canClickToNext = can;
+        click = false;
     }
 
     //Reads from line at beginning of node starting
