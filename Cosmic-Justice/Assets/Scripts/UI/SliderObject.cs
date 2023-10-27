@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 
-public class SliderObject : MonoBehaviour
+public class SliderObject : MonoBehaviour // deprecated
 {
     private Slider slider;
     private RectTransform sliderRT;
