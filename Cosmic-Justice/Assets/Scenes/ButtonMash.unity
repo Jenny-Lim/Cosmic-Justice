@@ -984,14 +984,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needle: {fileID: 1729840271}
-  decrSpeed: 5
-  incrSpeed: 10
   statusText: {fileID: 933561}
   button: {fileID: 1695468934}
   timer: {fileID: 699742376}
   health: {fileID: 171203806}
   safeAreaStart: {fileID: 407341610}
   safeAreaEnd: {fileID: 397124121}
+  decrSpeed: 5
+  incrAmt: 10
   decrHealth: 5
   incrHealth: 5
 --- !u!114 &878370601

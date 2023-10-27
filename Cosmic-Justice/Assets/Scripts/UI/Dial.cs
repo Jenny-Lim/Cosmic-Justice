@@ -8,38 +8,28 @@ using Unity.VisualScripting;
 public class Dial : MonoBehaviour
 {
     [SerializeField] GameObject needle;
-
-    [SerializeField] float decrSpeed;
-    [SerializeField] float incrSpeed;
-
     [SerializeField] TMP_Text statusText;
     [SerializeField] Button button;
-    //[SerializeField] float yippeeRange;
     [SerializeField] Timer timer;
-
     [SerializeField] Slider health;
-
-    private float currAngle, rangeStart, rangeEnd;
     [SerializeField] GameObject safeAreaStart, safeAreaEnd;
 
+    [SerializeField] float decrSpeed;
+    [SerializeField] float incrAmt;
     [SerializeField] float decrHealth;
     [SerializeField] float incrHealth;
 
-    //private Vector2 pivotPt;
+    private float currAngle, rangeStart, rangeEnd;
+
     void Start()
     {
         health.maxValue = 50;
         health.value = 50;
 
-        //pivotPt = new Vector2(0,0.5f);
-
         currAngle = -90;
 
         rangeStart = Random.Range(-1, -170);
         rangeEnd = Random.Range(rangeStart, -180);
-
-        //safeAreaStart.RotateAroundPivot(rangeStart, pivotPt);
-        //safeAreaEnd.RotateAroundPivot(rangeEnd, pivotPt);
 
         safeAreaStart.transform.rotation = Quaternion.Euler(0f, 0f, rangeStart);
         safeAreaEnd.transform.rotation = Quaternion.Euler(0f, 0f, rangeEnd);
@@ -47,8 +37,6 @@ public class Dial : MonoBehaviour
 
     void Update()
     {
-        //needle.RotateAroundPivot(currAngle, pivotPt);
-
         Debug.Log("currAngle: " + currAngle);
         needle.transform.rotation = Quaternion.Euler(0f, 0f, currAngle);
     }
@@ -76,22 +64,8 @@ public class Dial : MonoBehaviour
         {
             if (currAngle < 0)
             {
-                currAngle += decrSpeed * Time.deltaTime; // angle is reversed
+                currAngle += decrSpeed * Time.deltaTime;
             }
-
-            // for main
-            //if (currAngle >= 180 - yippeeRange)
-            //{
-            //    statusText.text = "Yippee!";
-            //}
-            //else if (currAngle < 180 / 2)
-            //{
-            //    statusText.text = "uh oh";
-            //}
-            //else
-            //{
-            //    statusText.text = "Les gooo";
-            //}
 
             // for health
             if (currAngle <= rangeStart && currAngle >= rangeEnd)
@@ -109,11 +83,11 @@ public class Dial : MonoBehaviour
 
     }
 
-    public void IncrementDial() // swap from slider in editor
+    public void IncrementDial()
     {
         if (currAngle > -180)
         {
-            currAngle -= incrSpeed;
+            currAngle -= incrAmt;
         }
     }
 
