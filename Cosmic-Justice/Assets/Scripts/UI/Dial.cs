@@ -25,13 +25,13 @@ public class Dial : MonoBehaviour
     [SerializeField] float decrHealth;
     [SerializeField] float incrHealth;
 
-    private Vector2 pivotPt;
+    //private Vector2 pivotPt;
     void Start()
     {
         health.maxValue = 50;
         health.value = 50;
 
-        pivotPt = new Vector2(0,0.5f);
+        //pivotPt = new Vector2(0,0.5f);
 
         currAngle = -90;
 
@@ -96,10 +96,12 @@ public class Dial : MonoBehaviour
             // for health
             if (currAngle <= rangeStart && currAngle >= rangeEnd)
             {
+                statusText.text = "Phew";
                 health.value += incrHealth * Time.deltaTime;
             }
             else
             {
+                statusText.text = "Welp";
                 health.value -= decrHealth * Time.deltaTime;
             }
 
