@@ -994,6 +994,8 @@ MonoBehaviour:
   incrAmt: 10
   decrHealth: 5
   incrHealth: 5
+  minRand: 3
+  maxRand: 5
 --- !u!114 &878370601
 MonoBehaviour:
   m_ObjectHideFlags: 0
