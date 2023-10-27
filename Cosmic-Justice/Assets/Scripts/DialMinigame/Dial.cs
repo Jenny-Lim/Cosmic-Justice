@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Unity.VisualScripting;
 
 public class Dial : MonoBehaviour
 {
@@ -19,10 +18,11 @@ public class Dial : MonoBehaviour
     [SerializeField] float decrHealth;
     [SerializeField] float incrHealth;
 
-    private float currAngle, rangeStart, rangeEnd;
+    private float currAngle, rangeStart, rangeEnd; // angles work in negatives where you think the value would be positive, and vice versa
 
     void Start()
     {
+        health.interactable = false;
         health.maxValue = 50;
         health.value = 50;
 
