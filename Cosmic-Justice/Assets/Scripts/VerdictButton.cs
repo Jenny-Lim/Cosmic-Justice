@@ -23,7 +23,7 @@ public class VerdictButton : MonoBehaviour
         anim.SetTrigger("pressed");
     }
 
-    public void DoneComeUp()
+    public void DoneComeUp() // animation event
     {
         b.interactable = true; // object ref error
         Debug.Log("done come up!");
