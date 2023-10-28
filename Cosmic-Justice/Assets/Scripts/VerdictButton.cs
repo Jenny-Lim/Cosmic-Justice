@@ -25,7 +25,7 @@ public class VerdictButton : MonoBehaviour
 
     public void DoneComeUp() // animation event
     {
-        b.interactable = true; // object ref error
+        b.interactable = true;
         Debug.Log("done come up!");
     }
 }
