@@ -11,6 +11,8 @@ public class SceneLoader : MonoBehaviour
     [SerializeField]
     GameObject MasterSceneLoader;
 
+    public bool isPaused;
+
     private float MusicVolume;
     private float SFXvolume;
 
@@ -62,9 +64,40 @@ public class SceneLoader : MonoBehaviour
 
     }
 
+
+
+    public void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
     public void MainMenu()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void LevelOne()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void LevelTwo()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void LevelThree()
+    {
+        SceneManager.LoadScene(4);
     }
 
     public void QuitGame()
