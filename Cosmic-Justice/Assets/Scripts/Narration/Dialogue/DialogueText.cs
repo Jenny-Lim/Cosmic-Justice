@@ -42,13 +42,41 @@ public class DialogueText : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        Color defCol = textMeshProUGUI.color;
+
         textOver = false;
+
+        bool richText = false;
+        string richT = "";
 
         //loop throuogh each char in text and print letter by letter. Wait for textSpeed amount of time before writing the next letter
         foreach (char c in text.ToCharArray())
         {
-            textMeshProUGUI.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            //If the char c is the start of a rich text
+            if(c == '<')
+            {
+                richText = true;
+
+            }
+
+            //If there is a richText in the text
+            if (richText)
+            {
+                if (c == '>')
+                {
+                    richT += c;
+                    textMeshProUGUI.text += richT;
+                    richText = false;
+                }
+
+                richT += c;
+
+            }
+            else if(!richText)
+            {
+                textMeshProUGUI.text += c;
+                yield return new WaitForSeconds(textSpeed);
+            }
 
         }
 
@@ -63,12 +91,14 @@ public class DialogueText : MonoBehaviour
     }
 
 
-    public void startDialogue(string line, float speed, TMP_FontAsset font, float size)
+    //Method to start dialogue and set font, size, and speed
+    public void startDialogue(string line, float speed, TMP_FontAsset font, float size, Color color)
     {
         speedText = false;
         textMeshProUGUI.text = string.Empty; //Empty the text
         textMeshProUGUI.font = font;
         textMeshProUGUI.fontSize = size;
+        textMeshProUGUI.color = color;
         text = line;
         textSpeed = speed;
        

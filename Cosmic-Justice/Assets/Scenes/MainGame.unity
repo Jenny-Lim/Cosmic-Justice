@@ -3184,6 +3184,7 @@ MonoBehaviour:
   m_ChoiceControllerPrefab: {fileID: 5973865689683993422, guid: e69c3f050dca14342b04efb62832e315, type: 3}
   m_DialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   eventManager: {fileID: 1756292680}
+  dialoguePanel: {fileID: 1755579119}
 --- !u!114 &1341420162
 MonoBehaviour:
   m_ObjectHideFlags: 0
