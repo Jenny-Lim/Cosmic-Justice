@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: TheKnight_Character
   m_EditorClassIdentifier: 
   m_CharacterName: Sir Bentlion
+  m_DialoguePanel: {fileID: 0}
+  m_Font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}

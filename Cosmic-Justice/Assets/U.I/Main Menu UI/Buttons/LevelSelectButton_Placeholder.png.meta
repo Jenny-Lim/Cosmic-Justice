@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3cee8aaa9fc7cc74aa9d13096fbabd83
+guid: 82917d251bc2b1c4bb7ea643c697188b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 189, y: 81, z: 202, w: 58}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainMenuExitButton_Placeholder_0
+      name: LevelSelectButton_Placeholder_0
       rect:
         serializedVersion: 2
-        x: 183
-        y: 85
-        width: 886
-        height: 354
+        x: 182
+        y: 83
+        width: 887
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 279ffa3e97211094db9c76eee918fbd9
-      internalID: -2127665220
+      spriteID: 9600e753c7abeb44a82a4c636b8f018e
+      internalID: -1609295323
       vertices: []
       indices: 
       edges: []
@@ -134,14 +134,14 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MainMenuExitButton_Placeholder_0: -2127665220
+      LevelSelectButton_Placeholder_0: -1609295323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

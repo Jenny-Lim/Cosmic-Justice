@@ -7,8 +7,19 @@ public class ClickEffect : MonoBehaviour
     private ParticleSystem particles;
     private Vector2 mousePos;
 
+    public static ClickEffect instance;
     private void Awake()
     {
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
+
         particles = GetComponent<ParticleSystem>();
     }
 

@@ -26,6 +26,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     [SerializeField]
     private EventManager eventManager;
 
+    [SerializeField]
+    private Image dialoguePanel;
+
     private bool canGoNext;
 
     private bool canClickToNext;
@@ -92,9 +95,16 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         {
             gameObject.SetActive(true);
 
-            m_DialogueText.startDialogue(node.DialogueLine.Text, node.DialogueLine.TextSpeed, node.DialogueLine.Font, node.DialogueLine.FontSize);
+            //Start dialogue with function and give it the line, speed of dialogue, font, text size, and text color
+            m_DialogueText.startDialogue(node.DialogueLine.Text, node.DialogueLine.TextSpeed, node.DialogueLine.Speaker.Font, node.DialogueLine.FontSize, node.DialogueLine.Speaker.Color);
+            m_SpeakerText.color = node.DialogueLine.Speaker.Color;
             m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
-            m_SpeakerText.font = node.DialogueLine.Font;
+
+            if (node.DialogueLine.Speaker.DialoguePanel != null)
+                dialoguePanel.sprite = node.DialogueLine.Speaker.DialoguePanel;
+
+            if (node.DialogueLine.Speaker.Font != null)
+                m_SpeakerText.font = node.DialogueLine.Speaker.Font;
 
             //If there are events then run them
             if (node.DialogueLine.events != 0)

@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Line")]
 public class NarrationLine : ScriptableObject
@@ -15,9 +14,6 @@ public class NarrationLine : ScriptableObject
     [SerializeField]
     [TextArea]
     private string m_Text; //Holds the line of text being spoken
-
-    [SerializeField]
-    private TMP_FontAsset m_Font;
 
     [SerializeField]
     private float m_FontSize = 20f;
@@ -67,8 +63,6 @@ public class NarrationLine : ScriptableObject
     public Minigames minigame => m_minigames;
 
     public float TextSpeed => m_TextSpeed;
-
-    public TMP_FontAsset Font => m_Font;
 
     public float FontSize => m_FontSize;
 
