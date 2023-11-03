@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ccfbfcaf909480a47b38edd56f9999ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15ea09a23146aad4c8d134f507bccea0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -163,9 +163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidSprites:
-  - {fileID: 21300000, guid: ccfbfcaf909480a47b38edd56f9999ae, type: 3}
-  - {fileID: 21300000, guid: 535ad827f693cc5418274fc9b05b2dd5, type: 3}
-  - {fileID: 21300000, guid: 422d7fa4c0c289c4ba7b9096451ec69f, type: 3}
+  - {fileID: 21300000, guid: 15ea09a23146aad4c8d134f507bccea0, type: 3}
+  - {fileID: 21300000, guid: 4f8c5b335db305a46b054a412444bd17, type: 3}
+  - {fileID: 21300000, guid: 4f34aae9049cc494fb0fefb53c369c2e, type: 3}
   speed: 0.5
   maxLifeTime: 15
   minSize: 0.5
