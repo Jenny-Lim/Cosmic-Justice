@@ -64,7 +64,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     private void Update()
     {
-        Debug.Log(click);
         if (m_ListenToInput && click && canClickToNext && canGoNext)
         {
             m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
