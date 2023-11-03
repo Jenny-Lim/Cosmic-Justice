@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
+
 
 public class DialogueText : MonoBehaviour
 {
@@ -44,6 +44,8 @@ public class DialogueText : MonoBehaviour
     {
         Color defCol = textMeshProUGUI.color;
 
+        string hexCol = ColorUtility.ToHtmlStringRGB(defCol);
+
         textOver = false;
 
         bool richText = false;
@@ -65,11 +67,23 @@ public class DialogueText : MonoBehaviour
                 if (c == '>')
                 {
                     richT += c;
-                    textMeshProUGUI.text += richT;
+
+                    if (!richT.Equals("<color=\"default\">"))
+                    {
+                        textMeshProUGUI.text += richT;
+                        richT = "";
+                    }
+                    else
+                    {
+                        richT = "";
+                        textMeshProUGUI.text += "<color=#" + hexCol + ">";
+                    }
                     richText = false;
                 }
-
-                richT += c;
+                else
+                {
+                    richT += c;
+                }
 
             }
             else if(!richText)
