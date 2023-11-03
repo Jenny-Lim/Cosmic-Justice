@@ -990,9 +990,9 @@ MonoBehaviour:
   health: {fileID: 171203806}
   safeAreaStart: {fileID: 407341610}
   safeAreaEnd: {fileID: 397124121}
-  decrSpeed: 7
+  decrSpeed: 10
   incrAmt: 10
-  decrHealth: 5
+  decrHealth: 3
   incrHealth: 5
   minRand: 4
   maxRand: 7
