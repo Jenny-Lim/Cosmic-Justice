@@ -21,7 +21,7 @@ public class Dial : MonoBehaviour
     private float currAngle, rangeStart, rangeEnd; // angles work in negatives where you think the value would be positive, and vice versa
     private float randTime, t;
 
-    void Start()
+    void Start() // use width to alter range, make range check a collider enter, keep range the same
     {
         //gameIsOver = false; // have a default safe area
         t = 0f;
