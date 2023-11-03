@@ -990,12 +990,13 @@ MonoBehaviour:
   health: {fileID: 171203806}
   safeAreaStart: {fileID: 407341610}
   safeAreaEnd: {fileID: 397124121}
-  decrSpeed: 5
+  decrSpeed: 7
   incrAmt: 10
   decrHealth: 5
   incrHealth: 5
-  minRand: 3
-  maxRand: 5
+  minRand: 4
+  maxRand: 7
+  lerpSpeed: 0.0001
 --- !u!114 &878370601
 MonoBehaviour:
   m_ObjectHideFlags: 0

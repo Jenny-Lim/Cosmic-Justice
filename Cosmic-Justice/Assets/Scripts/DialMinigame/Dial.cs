@@ -16,20 +16,24 @@ public class Dial : MonoBehaviour
     [SerializeField] float decrSpeed, incrAmt;
     [SerializeField] float decrHealth, incrHealth;
     [SerializeField] float minRand, maxRand;
+    [SerializeField] float lerpSpeed;
 
     private float currAngle, rangeStart, rangeEnd; // angles work in negatives where you think the value would be positive, and vice versa
-    private float randTime;
+    private float randTime, t;
 
     void Start()
     {
+        //gameIsOver = false; // have a default safe area
+        t = 0f;
+
         health.interactable = false;
         health.maxValue = 50;
         health.value = 50;
 
         currAngle = -90;
 
-        rangeStart = Random.Range(-1, -170);
-        rangeEnd = Random.Range(rangeStart, -180);
+        rangeStart = Random.Range(0, -170);
+        rangeEnd = Random.Range(rangeStart + 1, -180);
 
         safeAreaStart.transform.rotation = Quaternion.Euler(0f, 0f, rangeStart);
         safeAreaEnd.transform.rotation = Quaternion.Euler(0f, 0f, rangeEnd);
@@ -39,29 +43,47 @@ public class Dial : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("currAngle: " + currAngle);
+        //Debug.Log("currAngle: " + currAngle);
         needle.transform.rotation = Quaternion.Euler(0f, 0f, currAngle);
 
-        safeAreaStart.transform.rotation = Quaternion.Euler(0f, 0f, rangeStart);
-        safeAreaEnd.transform.rotation = Quaternion.Euler(0f, 0f, rangeEnd);
+            //safeAreaStart.transform.rotation = Quaternion.Euler(0f, 0f, rangeStart);
+            safeAreaStart.transform.rotation = Quaternion.Lerp(safeAreaStart.transform.rotation, Quaternion.Euler(0f, 0f, rangeStart), t * lerpSpeed);
+
+            //safeAreaEnd.transform.rotation = Quaternion.Euler(0f, 0f, rangeEnd);
+            safeAreaEnd.transform.rotation = Quaternion.Lerp(safeAreaEnd.transform.rotation, Quaternion.Euler(0f, 0f, rangeEnd), t * lerpSpeed);
+
+        t += Time.deltaTime; // in fixed update pls
     }
 
     void FixedUpdate()
     {
         randTime -= Time.deltaTime;
-        if (randTime <= 0)
-        { // get random vals again
-            rangeStart = Random.Range(-1, -170);
-            rangeEnd = Random.Range(rangeStart, -180);
+        //t += Time.deltaTime;
 
-            randTime = Random.Range(minRand, maxRand);
-        }
+        //if (!gameIsOver)
+        //{ // get random vals again
+            if (randTime <= 0) // move into else
+            {
+                //rangeStart = Mathf.Lerp(rangeStart, Random.Range(0, -170), t * lerpSpeed);
+                //rangeEnd = Mathf.Lerp(rangeEnd, Random.Range(rangeStart + 1, -180), t * lerpSpeed);
+
+                rangeStart = Random.Range(0, -170);
+                rangeEnd = Random.Range(rangeStart + 1, -180);
+
+                randTime = Random.Range(minRand, maxRand);
+            }
+
+            //safeAreaStart.transform.rotation = Quaternion.Lerp(safeAreaStart.transform.rotation, Quaternion.Euler(0f, 0f, rangeStart), t * lerpSpeed);
+            //safeAreaEnd.transform.rotation = Quaternion.Lerp(safeAreaEnd.transform.rotation, Quaternion.Euler(0f, 0f, rangeEnd), t * lerpSpeed);
+        //}
+
 
         // loss
         if (currAngle >= 0 || health.value <= 0)
         {
             statusText.text = "You lose.";
             button.enabled = false;
+            //gameIsOver = true;
             // make time stop
             // exit here
         }
@@ -71,6 +93,8 @@ public class Dial : MonoBehaviour
         {
             statusText.text = "You Win!";
             button.enabled = false;
+            //gameIsOver = true;
+            // make time stop
             // exit here
         }
 
@@ -82,7 +106,7 @@ public class Dial : MonoBehaviour
             }
 
             // for health
-            if (currAngle <= rangeStart && currAngle >= rangeEnd)
+            if (currAngle <= rangeStart && currAngle >= rangeEnd) // could instead do this based on rotation
             {
                 statusText.text = "Phew";
                 health.value += incrHealth * Time.deltaTime;
