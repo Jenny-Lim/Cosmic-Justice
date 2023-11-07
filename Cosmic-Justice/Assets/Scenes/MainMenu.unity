@@ -159,14 +159,14 @@ MonoBehaviour:
     pitch: 0.1
     source: {fileID: 0}
     loop: 1
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: a5dc7adb83cebba428fc249709ad401d, type: 2}
   - name: ClickSound
     clip: {fileID: 8300000, guid: cb46b500495575847a99c7b0af7d3748, type: 3}
     volume: 0.5
     pitch: 1.53
     source: {fileID: 0}
     loop: 0
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
 --- !u!4 &165157014
 Transform:
   m_ObjectHideFlags: 0
