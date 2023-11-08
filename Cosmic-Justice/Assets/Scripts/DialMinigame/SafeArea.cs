@@ -12,7 +12,7 @@ public class SafeArea : MonoBehaviour
 
     private RectTransform rt;
 
-    void Start()
+    void Awake()
     {
         rt = GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(safeAreaWidth, rt.sizeDelta.y);
@@ -22,4 +22,14 @@ public class SafeArea : MonoBehaviour
     {
         dial.health.value += incrHealth * Time.deltaTime;
     } // OnTriggerStay2D
+
+    public float GetBase()
+    {
+        return rt.sizeDelta.x;
+    } // GetBase
+
+    public float GetSide()
+    {
+        return Mathf.Sqrt( Mathf.Pow(rt.sizeDelta.x/2,2) + Mathf.Pow(rt.sizeDelta.y,2) ); // pythagorean theorem
+    } // GetSide
 }
