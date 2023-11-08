@@ -11,12 +11,23 @@ public class SafeArea : MonoBehaviour
     [SerializeField] float safeAreaWidth;
 
     private RectTransform rt;
+    private PolygonCollider2D pc;
+    private Vector2[] points;
 
     void Awake()
     {
         rt = GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(safeAreaWidth, rt.sizeDelta.y);
-    } // Start
+
+        pc = GetComponent<PolygonCollider2D>(); // reshape collider
+
+        points = pc.points;
+
+        points[0].x = -1 * (safeAreaWidth / 2);
+        points[1].x = safeAreaWidth / 2;
+
+        pc.points = points;
+    } // Awake
 
     void OnTriggerStay2D()
     {
