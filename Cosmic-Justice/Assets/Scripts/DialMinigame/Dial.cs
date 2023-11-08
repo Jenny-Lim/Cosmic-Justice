@@ -19,9 +19,8 @@ public class Dial : MonoBehaviour
     [SerializeField] float decrHealth;
     [SerializeField] float minRand, maxRand;
     [SerializeField] float lerpSpeed;
-    [SerializeField] float rangeSize;
 
-    private float currAngle, rangeStart; // angles work in negatives where you think the value would be positive, and vice versa
+    private float currAngle, currHealthAngle; // angles work in negatives where you think the value would be positive, and vice versa
     private float randTime, t;
 
     void Start() // use width to alter range, make range check a collider enter, keep range the same
@@ -34,9 +33,10 @@ public class Dial : MonoBehaviour
 
         currAngle = 0;
 
-        rangeStart = Random.Range(-90, 90);
+        // Random.Range(-90, 90);
+        currHealthAngle = 0;
 
-        safeArea.transform.rotation = Quaternion.Euler(0f, 0f, rangeStart);
+        safeArea.transform.rotation = Quaternion.Euler(0f, 0f, currHealthAngle);
 
         randTime = Random.Range(minRand, maxRand);
     } // Start
@@ -44,7 +44,7 @@ public class Dial : MonoBehaviour
     void Update()
     {
         needle.transform.rotation = Quaternion.Euler(0f, 0f, currAngle);
-        safeArea.transform.rotation = Quaternion.Lerp(safeArea.transform.rotation, Quaternion.Euler(0f, 0f, rangeStart + rangeSize), t * lerpSpeed);
+        safeArea.transform.rotation = Quaternion.Lerp(safeArea.transform.rotation, Quaternion.Euler(0f, 0f, currHealthAngle), t * lerpSpeed);
     } // Update
 
     void FixedUpdate()
@@ -75,7 +75,7 @@ public class Dial : MonoBehaviour
         {
             if (randTime <= 0)
             {
-                rangeStart = Random.Range(-90, 90);
+                currHealthAngle = Random.Range(-90, 90);
                 randTime = Random.Range(minRand, maxRand);
             }
 
@@ -86,7 +86,7 @@ public class Dial : MonoBehaviour
                 currAngle += decrSpeed * Time.deltaTime;
             }
 
-            if (health.value >= health.maxValue)
+            if (health.value >= health.maxValue / 2)
             {
                 statusText.text = "Phew";
             }

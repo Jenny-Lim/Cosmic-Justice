@@ -6,7 +6,17 @@ using UnityEngine;
 public class SafeArea : MonoBehaviour
 {
     [SerializeField] Dial dial;
+
     [SerializeField] float incrHealth;
+    [SerializeField] float safeAreaWidth;
+
+    private RectTransform rt;
+
+    void Start()
+    {
+        rt = GetComponent<RectTransform>();
+        rt.sizeDelta = new Vector2(safeAreaWidth, rt.sizeDelta.y);
+    } // Start
 
     void OnTriggerStay2D()
     {
