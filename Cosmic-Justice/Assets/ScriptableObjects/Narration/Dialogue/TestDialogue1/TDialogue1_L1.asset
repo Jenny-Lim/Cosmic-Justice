@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: TDialogue1_L1
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
+  m_Listener: {fileID: 0}
   m_Text: Imma attack Emerald <color="green">for fun <color="default">with my goons
-  m_FontSize: 30
+  m_FontSize: 40
   m_TextSpeed: 0.05
-  m_CharacterImage1: {fileID: 21300000, guid: ccfbfcaf909480a47b38edd56f9999ae, type: 3}
-  m_CharacterImage2: {fileID: 21300000, guid: 422d7fa4c0c289c4ba7b9096451ec69f, type: 3}
-  m_events: 6
+  m_CharacterSprite1: test
+  m_CharacterSprite2: 
+  m_events: 2
   m_minigames: 0
