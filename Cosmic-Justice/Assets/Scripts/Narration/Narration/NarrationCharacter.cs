@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[System.Serializable]
+public struct CharacterSprites
+{
+    public string name;
+    public Sprite sprite;
+}
+
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Character")]
 public class NarrationCharacter : ScriptableObject
 {
@@ -25,4 +32,6 @@ public class NarrationCharacter : ScriptableObject
     public TMP_FontAsset Font => m_Font;
 
     public Color Color => m_Color;
+
+    public CharacterSprites[] sprites;
 }

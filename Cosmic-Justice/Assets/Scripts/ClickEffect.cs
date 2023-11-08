@@ -25,13 +25,21 @@ public class ClickEffect : MonoBehaviour
 
     private void Start()
     {
-        EventManager.current.click += onClick;
+        //EventManager.current.click += onClick;
     }
 
     private void OnDestroy()
     {
         //unsubscribe to the click event
-        EventManager.current.click -= onClick;
+        //EventManager.current.click -= onClick;
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            onClick();
+        }
     }
 
     //Plays particle at mouse location
