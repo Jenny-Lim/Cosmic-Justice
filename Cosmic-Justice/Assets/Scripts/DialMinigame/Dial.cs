@@ -42,7 +42,7 @@ public class Dial : MonoBehaviour
         sa = safeArea.GetComponent<SafeArea>();
         //c = width, a & b = height --- cosine law solving for angle C --- /2 because the pivot is in the center
         healthAngleCap = ( (Mathf.Acos( ( Mathf.Pow(sa.GetSide(),2) + Mathf.Pow(sa.GetSide(),2) - Mathf.Pow(sa.GetBase(),2) ) / ( 2 * sa.GetSide() * sa.GetSide() ) )) * Mathf.Rad2Deg ) / 2;
-        Debug.Log(healthAngleCap);
+        //Debug.Log(healthAngleCap);
 
         randTime = Random.Range(minRand, maxRand);
     } // Start
