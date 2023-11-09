@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: Imma attack Emerald <color="green">for fun <color="default">with my goons
   m_FontSize: 40
   m_TextSpeed: 0.05
-  m_CharacterSprite1: test
+  m_CharacterSprite1: neutral
   m_CharacterSprite2: 
   m_events: 2
   m_minigames: 0

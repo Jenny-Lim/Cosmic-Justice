@@ -190,6 +190,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 416657081679260296, guid: c373706687267554aa9ccc4d7ee92d1c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9760fa5a8fba3944491525485b0dd7dd, type: 2}
     - target: {fileID: 8963586334789655426, guid: c373706687267554aa9ccc4d7ee92d1c, type: 3}
       propertyPath: m_Name
       value: PS_Mouse

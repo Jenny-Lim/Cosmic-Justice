@@ -36,7 +36,8 @@ public class FirstCharacterChangeSprite : MonoBehaviour
 
         for(int i = 0; i < node.DialogueLine.Speaker.sprites.Length; i++)
         {
-            if (node.DialogueLine.Speaker.sprites[i].name == name)
+            string compareName = node.DialogueLine.Speaker.sprites[i].name;
+            if (string.Equals(name, compareName, System.StringComparison.CurrentCultureIgnoreCase))
             {
                 returnSprite = node.DialogueLine.Speaker.sprites[i].sprite;
                 break;
@@ -49,7 +50,7 @@ public class FirstCharacterChangeSprite : MonoBehaviour
         }
         else
         {
-            Debug.Log("Could not find a sprite with the name " + name + ". Please check to make sure the name is correct");
+            Debug.Log("Could not find a sprite for the speaker with the name " + name + " at " + node.DialogueLine.ToString() + ". Please check to make sure the name is correct");
             return null;
         }
     }

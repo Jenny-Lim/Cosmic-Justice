@@ -36,7 +36,8 @@ public class SecondCharacterChangeSprite : MonoBehaviour
 
         for (int i = 0; i < node.DialogueLine.Listener.sprites.Length; i++)
         {
-            if (node.DialogueLine.Listener.sprites[i].name == name)
+            string compareName = node.DialogueLine.Listener.sprites[i].name;
+            if (string.Equals(name, compareName, System.StringComparison.CurrentCultureIgnoreCase))
             {
                 returnSprite = node.DialogueLine.Listener.sprites[i].sprite;
                 break;
@@ -49,7 +50,7 @@ public class SecondCharacterChangeSprite : MonoBehaviour
         }
         else
         {
-            Debug.Log("Could not find a sprite with the name " + name + ". Please check to make sure the name is correct");
+            Debug.Log("Could not find a sprite for the listener with the name " + name + " at " + node.DialogueLine.ToString() + ". Please check to make sure the name is correct");
             return null;
         }
     }
