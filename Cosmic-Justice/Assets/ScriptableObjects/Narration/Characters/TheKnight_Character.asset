@@ -17,5 +17,15 @@ MonoBehaviour:
   m_Font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   sprites:
-  - name: test
-    sprite: {fileID: 21300000, guid: 19b24d0caf60c0c498ee08addadc75b6, type: 3}
+  - name: helmet
+    sprite: {fileID: 21300000, guid: b0a7110f1734c454ca5429025c50dcc5, type: 3}
+  - name: neutral
+    sprite: {fileID: 21300000, guid: 797b337387260124caca3fc637a2e866, type: 3}
+  - name: happy
+    sprite: {fileID: 21300000, guid: 63db0e6ffb3acef4ea7b96f2b8f84105, type: 3}
+  - name: angry
+    sprite: {fileID: 21300000, guid: 6b55358504f88ce4eb166fe03485e563, type: 3}
+  - name: sad
+    sprite: {fileID: 21300000, guid: 14faa9a9f32765d4fb36dd16a509ad0a, type: 3}
+  - name: stressed
+    sprite: {fileID: 21300000, guid: 59305e1a78a0e064dba4b7870bce78e8, type: 3}
