@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: TDialogue1_L2
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
+  m_Listener: {fileID: 0}
   m_Text: AND WHOS GONNA STOP ME!!!
   m_FontSize: 70
   m_TextSpeed: 0.1
-  m_CharacterImage1: {fileID: 0}
-  m_CharacterImage2: {fileID: 0}
+  m_CharacterSprite1: 
+  m_CharacterSprite2: 
   m_events: 1
-  m_minigames: 1
+  m_minigames: 2
