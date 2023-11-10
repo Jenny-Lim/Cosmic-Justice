@@ -18,6 +18,11 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     private UIDialogueChoiceController m_ChoiceControllerPrefab;
 
     [SerializeField]
+    private RectTransform verdictTransform;
+    [SerializeField]
+    private UIDialogueChoiceController verdictPrefab;
+
+    [SerializeField]
     private DialogueChannel m_DialogueChannel;
 
     private bool m_ListenToInput = false;
@@ -160,12 +165,24 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     public void Visit(ChoiceDialogueNode node)
     {
-        m_ChoicesBoxTransform.gameObject.SetActive(true);
+        if (!node.isVerdict) {
+            m_ChoicesBoxTransform.gameObject.SetActive(true);
 
-        foreach (DialogueChoice choice in node.Choices)
+            foreach (DialogueChoice choice in node.Choices)
+            {
+
+                UIDialogueChoiceController newChoice = Instantiate(m_ChoiceControllerPrefab, m_ChoicesBoxTransform);
+                newChoice.Choice = choice;
+            }
+        }
+        else
         {
-            UIDialogueChoiceController newChoice = Instantiate(m_ChoiceControllerPrefab, m_ChoicesBoxTransform);
-            newChoice.Choice = choice;
+            foreach (DialogueChoice choice in node.Choices)
+            {
+
+                UIDialogueChoiceController newChoice = Instantiate(verdictPrefab, verdictTransform);
+                newChoice.Choice = choice;
+            }
         }
     }
 }

@@ -18,10 +18,13 @@ public class DialogueChoice
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Dialogue/Node/Choice")]
 public class ChoiceDialogueNode : DialogueNode
 {
+    public bool isVerdict = false;
+
     [SerializeField]
     private DialogueChoice[] m_Choices;
     public DialogueChoice[] Choices => m_Choices;
 
+    
 
     public override bool CanBeFollowedByNode(DialogueNode node)
     {
