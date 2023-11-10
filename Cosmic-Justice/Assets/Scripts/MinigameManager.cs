@@ -2,10 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartandEndAsteroidEvent : MonoBehaviour
+public class MinigameManager : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject asteroidMinigame;
 
-    private void Start()
+    [SerializeField]
+    private GameObject dialMinigame;
+
+    [SerializeField]
+    private GameObject puzzleMinigame;
+
+
+    // Start is called before the first frame update
+    void Start()
     {
         //subscribe to the canvasShake event
         EventManager.current.asteroid += StartAsteroidMinigame;
@@ -22,12 +32,12 @@ public class StartandEndAsteroidEvent : MonoBehaviour
     private void StartAsteroidMinigame()
     {
         EventManager.current.CanDialogue(false);
-        gameObject.SetActive(true);
+        asteroidMinigame.SetActive(true);
     }
 
     private void EndAsteroidMinigame()
     {
         EventManager.current.CanDialogue(true);
-        gameObject.SetActive(false);
+        asteroidMinigame.SetActive(false);
     }
 }

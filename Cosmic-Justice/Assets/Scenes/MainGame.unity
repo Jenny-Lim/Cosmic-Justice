@@ -1269,6 +1269,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394004082}
   m_CullTransparentMesh: 1
+--- !u!1 &400507653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400507654}
+  - component: {fileID: 400507655}
+  m_Layer: 0
+  m_Name: MinigameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400507654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400507653}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9762068, y: -0.42274353, z: 0.73694104}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &400507655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400507653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7896652d2c2fbd743b53e3cad3c9adcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidMinigame: {fileID: 619057680}
+  dialMinigame: {fileID: 1773281793}
+  puzzleMinigame: {fileID: 0}
 --- !u!1 &419328652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,7 +2683,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 619057681}
-  - component: {fileID: 619057682}
   m_Layer: 5
   m_Name: Asteroids
   m_TagString: Untagged
@@ -2669,18 +2715,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.5}
   m_SizeDelta: {x: 0, y: 0.19000244}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &619057682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619057680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aed8859cbc7c4e247ad59b143715d5de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &638349112
 GameObject:
   m_ObjectHideFlags: 0
@@ -9350,6 +9384,7 @@ SceneRoots:
   - {fileID: 1756292681}
   - {fileID: 1818111062}
   - {fileID: 1956709918}
+  - {fileID: 400507654}
   - {fileID: 1014267407}
   - {fileID: 759628438}
   - {fileID: 1957604449}
