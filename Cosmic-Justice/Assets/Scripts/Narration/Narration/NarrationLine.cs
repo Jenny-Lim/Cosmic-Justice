@@ -53,12 +53,15 @@ public class NarrationLine : ScriptableObject
     {
         ShakeCanvas = 1,
         Character1SpriteChange = 2,
-        Character2SpriteChange = 4
+        Character2SpriteChange = 4,
+        CharacterFadeIn = 8,
+        CharacterFadeOut = 16
     }
 
     public enum Minigames
     {
         Asteroid = 1,
+        Dial = 2,
     }
 
     public NarrationCharacter Speaker => m_Speaker; //Gets speaker's name

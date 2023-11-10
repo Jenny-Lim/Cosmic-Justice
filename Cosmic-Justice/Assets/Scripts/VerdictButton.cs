@@ -33,5 +33,6 @@ public class VerdictButton : MonoBehaviour
     public void EndVerdict()
     {
         EventManager.current.EndAsteroid();
+        EventManager.current.CanDialogue(true);
     }
 }

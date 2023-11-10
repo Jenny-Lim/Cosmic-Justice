@@ -19,5 +19,5 @@ MonoBehaviour:
   m_TextSpeed: 0.05
   m_CharacterSprite1: neutral
   m_CharacterSprite2: 
-  m_events: 2
+  m_events: 10
   m_minigames: 0

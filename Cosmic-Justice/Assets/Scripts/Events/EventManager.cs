@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
@@ -40,6 +41,19 @@ public class EventManager : MonoBehaviour
         character2SpriteChange?.Invoke(node);
     }
 
+    public event Action characterFadeIn;
+    public void CharacterFadeIn()
+    {
+        characterFadeIn?.Invoke();
+    }
+
+    public event Action characterFadeOut;
+    public void CharacterFadeOut()
+    {
+        characterFadeOut?.Invoke();
+    }
+
+    // -------------------- Minigames -------------------- //
     public event Action asteroid;
     public void Asteroid()
     {
@@ -50,6 +64,18 @@ public class EventManager : MonoBehaviour
     public void EndAsteroid()
     {
         endAsteroid?.Invoke();
+    }
+
+    public event Action dial;
+    public void Dial()
+    {
+        dial?.Invoke();
+    }
+
+    public event Action endDial;
+    public void EndDial()
+    {
+        endDial?.Invoke();
     }
 
     public event Action<bool> canDialogue;
