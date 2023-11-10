@@ -21,11 +21,17 @@ public class VerdictButton : MonoBehaviour
     public void OnButtonPress() // some animation on press / function / text -- inheritance ??? switches ??
     {
         anim.SetTrigger("pressed");
+        //EventManager.current.EndAsteroid();
     }
 
     public void DoneComeUp() // animation event
     {
         b.interactable = true;
         Debug.Log("done come up!");
+    }
+
+    public void EndVerdict()
+    {
+        EventManager.current.EndAsteroid();
     }
 }
