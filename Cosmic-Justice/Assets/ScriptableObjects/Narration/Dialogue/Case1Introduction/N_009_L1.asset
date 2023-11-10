@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
   m_Name: N_009_L1
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
-  m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
-  m_Text: "\u201CEarth IV to Cosmic Sleepyhead! WAKE UP!!\u201D\r\n"
-  m_FontSize: 50
-  m_TextSpeed: 0.5
-  m_CharacterSprite1: angry
+  m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
+  m_Listener: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
+  m_Text: '"Bwuh?"'
+  m_FontSize: 25
+  m_TextSpeed: 0.01
+  m_CharacterSprite1: 
   m_CharacterSprite2: 
-  m_events: 0
+  m_events: 4
   m_minigames: 8
