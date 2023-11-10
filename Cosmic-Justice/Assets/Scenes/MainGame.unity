@@ -1681,7 +1681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.21737204}
-  m_AnchoredPosition: {x: 5.960022, y: -14.647034}
+  m_AnchoredPosition: {x: 5.959961, y: -14.647034}
   m_SizeDelta: {x: -13.66, y: -29.295}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425288105
@@ -2529,7 +2529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c708460be1f6c64458d920d72c8f6404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountTime: 50
+  amountTime: 30
 --- !u!114 &574210958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3220,7 +3220,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 920, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -3528,8 +3528,8 @@ MonoBehaviour:
   decrSpeed: 30
   incrAmt: 10
   decrHealth: 3
-  minRand: 4
-  maxRand: 7
+  minRand: 2
+  maxRand: 4
   lerpSpeed: 0.0001
 --- !u!114 &812711346
 MonoBehaviour:
@@ -7076,7 +7076,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1773281793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aed8859cbc7c4e247ad59b143715d5de, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a1961331c278cd43a71a0f8b03a8322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1783325930
