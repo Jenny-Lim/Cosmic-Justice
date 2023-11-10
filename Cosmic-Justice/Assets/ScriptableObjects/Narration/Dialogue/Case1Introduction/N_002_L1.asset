@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CI am a divine being! An arbiter of Justice! The true intergalactic
     distinction between black and white! Right and\u2026 less right!\u201D"
-  m_FontSize: 20
+  m_FontSize: 35
   m_TextSpeed: 0.1
   m_CharacterSprite1: 
   m_CharacterSprite2: 
