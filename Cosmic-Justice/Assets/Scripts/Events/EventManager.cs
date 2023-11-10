@@ -41,16 +41,28 @@ public class EventManager : MonoBehaviour
         character2SpriteChange?.Invoke(node);
     }
 
-    public event Action characterFadeIn;
-    public void CharacterFadeIn()
+    public event Action characterFadeInC1;
+    public void CharacterFadeInC1()
     {
-        characterFadeIn?.Invoke();
+        characterFadeInC1?.Invoke();
     }
 
-    public event Action characterFadeOut;
-    public void CharacterFadeOut()
+    public event Action characterFadeOutC1;
+    public void CharacterFadeOutC1()
     {
-        characterFadeOut?.Invoke();
+        characterFadeOutC1?.Invoke();
+    }
+
+    public event Action characterFadeInC2;
+    public void CharacterFadeInC2()
+    {
+        characterFadeInC2?.Invoke();
+    }
+
+    public event Action characterFadeOutC2;
+    public void CharacterFadeOutC2()
+    {
+        characterFadeOutC2?.Invoke();
     }
 
     // -------------------- Minigames -------------------- //

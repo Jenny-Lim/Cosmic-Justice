@@ -10,23 +10,44 @@ public class CharacterFade : MonoBehaviour
     [SerializeField]
     private float fadeTime = 1.5f;
 
+    private bool character1;
+
     // Start is called before the first frame update
     void Start()
     {
         cImage = gameObject.GetComponent<Image>();
-        EventManager.current.characterFadeIn += fadeIn;
-        EventManager.current.characterFadeOut += fadeOut;
+        EventManager.current.characterFadeInC1 += fadeInC1;
+        EventManager.current.characterFadeOutC1 += fadeOutC1;
+
+        EventManager.current.characterFadeInC2 += fadeInC2;
+        EventManager.current.characterFadeOutC2 += fadeOutC2;
+
+        if (transform.position.x < 0)
+            character1 = true;
+        else
+            character1 = false;
     }
 
     private void OnDestroy()
     {
-        EventManager.current.characterFadeIn -= fadeIn;
-        EventManager.current.characterFadeOut -= fadeOut;
+        EventManager.current.characterFadeInC2 -= fadeInC2;
+        EventManager.current.characterFadeOutC2 -= fadeOutC2;
     }
 
-    private void fadeIn()
+    private void fadeInC1()
     {
-        StartCoroutine(doFadeIn());
+        if (character1)
+        {
+            StartCoroutine(doFadeIn());
+        }
+    }
+
+    private void fadeInC2()
+    {
+        if (!character1)
+        {
+            StartCoroutine(doFadeIn());
+        }
     }
 
     private IEnumerator doFadeIn()
@@ -45,9 +66,20 @@ public class CharacterFade : MonoBehaviour
 
     }
 
-    private void fadeOut()
+    private void fadeOutC1()
     {
-        StartCoroutine(doFadeOut());
+        if (character1)
+        {
+            StartCoroutine(doFadeOut());
+        }
+    }
+
+    private void fadeOutC2()
+    {
+        if (!character1)
+        {
+            StartCoroutine(doFadeOut());
+        }
     }
 
     private IEnumerator doFadeOut()

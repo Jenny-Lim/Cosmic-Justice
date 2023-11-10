@@ -125,6 +125,7 @@ public class DialogueText : MonoBehaviour
         if (!textOver)
         {
             EventManager.current.DialogueClick(false);
+            Debug.Log("Speed");
             textSpeed = 0;
             speedText = true;
         }
