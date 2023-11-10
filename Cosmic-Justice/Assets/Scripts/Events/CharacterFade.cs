@@ -3,29 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterFadeIn : MonoBehaviour
+public class CharacterFade : MonoBehaviour
 {
     private Image cImage;
 
     [SerializeField]
     private float fadeTime = 1.5f;
 
-    private float startValue;
-    private float endValue;
-
     // Start is called before the first frame update
     void Start()
     {
         cImage = gameObject.GetComponent<Image>();
         EventManager.current.characterFadeIn += fadeIn;
-
-        startValue = 0;
-        endValue = 1;
+        EventManager.current.characterFadeOut += fadeOut;
     }
 
     private void OnDestroy()
     {
         EventManager.current.characterFadeIn -= fadeIn;
+        EventManager.current.characterFadeOut -= fadeOut;
     }
 
     private void fadeIn()
@@ -40,7 +36,28 @@ public class CharacterFadeIn : MonoBehaviour
         while (timeElapsed < fadeTime)
         {
             timeElapsed += Time.deltaTime;
-            float value = Mathf.Lerp(startValue, endValue, timeElapsed / fadeTime);
+            float value = Mathf.Lerp(0, 1, timeElapsed / fadeTime);
+            cImage.color = new Color(cImage.color.r, cImage.color.g, cImage.color.b, value);
+
+            yield return null;
+
+        }
+
+    }
+
+    private void fadeOut()
+    {
+        StartCoroutine(doFadeOut());
+    }
+
+    private IEnumerator doFadeOut()
+    {
+        float timeElapsed = 0;
+
+        while (timeElapsed < fadeTime)
+        {
+            timeElapsed += Time.deltaTime;
+            float value = Mathf.Lerp(1, 0, timeElapsed / fadeTime);
             cImage.color = new Color(cImage.color.r, cImage.color.g, cImage.color.b, value);
 
             yield return null;
