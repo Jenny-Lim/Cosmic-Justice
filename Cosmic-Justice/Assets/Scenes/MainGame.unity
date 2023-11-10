@@ -1316,6 +1316,7 @@ MonoBehaviour:
   asteroidMinigame: {fileID: 619057680}
   dialMinigame: {fileID: 1773281793}
   puzzleMinigame: {fileID: 0}
+  verdictMinigame: {fileID: 1736208225}
 --- !u!1 &419328652
 GameObject:
   m_ObjectHideFlags: 0
@@ -3636,7 +3637,7 @@ RectTransform:
   m_Father: {fileID: 1851888709}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5019,6 +5020,7 @@ GameObject:
   - component: {fileID: 1224104154}
   - component: {fileID: 1224104153}
   - component: {fileID: 1224104152}
+  - component: {fileID: 1224104157}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -5079,6 +5081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f72e95302c8a4498f356ad793f92fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 1341420159}
 --- !u!114 &1224104154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5135,18 +5138,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
-        m_TargetAssemblyTypeName: DialogueChannel, Assembly-CSharp
-        m_MethodName: RaiseRequestDialogue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 256aa74cb6e0b754db6bf1cc96d5dc3f, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1224104155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5185,6 +5176,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224104150}
   m_CullTransparentMesh: 1
+--- !u!114 &1224104157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224104150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9ea741763153c4e9ecacf8494a9a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Choice: {fileID: 2145144585}
+  m_DialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
 --- !u!1 &1302499180
 GameObject:
   m_ObjectHideFlags: 0
@@ -6760,7 +6765,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1736208226}
-  - component: {fileID: 1736208227}
   m_Layer: 5
   m_Name: Verdict
   m_TagString: Untagged
@@ -6789,18 +6793,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -177}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1736208227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736208225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aed8859cbc7c4e247ad59b143715d5de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1755579117
 GameObject:
   m_ObjectHideFlags: 0
@@ -7069,14 +7061,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1773281794}
-  - component: {fileID: 1773281795}
   m_Layer: 5
   m_Name: DialMinigame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1773281794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7101,18 +7092,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -177}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1773281795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773281793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a1961331c278cd43a71a0f8b03a8322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1783325930
 GameObject:
   m_ObjectHideFlags: 0
@@ -8171,6 +8150,7 @@ GameObject:
   - component: {fileID: 2051384157}
   - component: {fileID: 2051384156}
   - component: {fileID: 2051384155}
+  - component: {fileID: 2051384160}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -8231,6 +8211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f72e95302c8a4498f356ad793f92fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 1341420159}
 --- !u!114 &2051384157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8287,18 +8268,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
-        m_TargetAssemblyTypeName: DialogueChannel, Assembly-CSharp
-        m_MethodName: RaiseRequestDialogue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 256aa74cb6e0b754db6bf1cc96d5dc3f, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2051384158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8337,6 +8306,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051384153}
   m_CullTransparentMesh: 1
+--- !u!114 &2051384160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051384153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9ea741763153c4e9ecacf8494a9a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Choice: {fileID: 35597107}
+  m_DialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
 --- !u!1 &2051896483
 GameObject:
   m_ObjectHideFlags: 0
