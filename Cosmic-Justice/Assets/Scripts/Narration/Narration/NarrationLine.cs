@@ -52,10 +52,10 @@ public class NarrationLine : ScriptableObject
     public enum Events
     {
         ShakeCanvas = 1,
-        Character1SpriteChange = 2,
-        Character2SpriteChange = 4,
-        CharacterFadeIn = 8,
-        CharacterFadeOut = 16
+        CharacterFadeInC1 = 2,
+        CharacterFadeOutC1 = 4,
+        CharacterFadeInC2 = 8,
+        characterFadeOutC2 = 16
     }
 
     public enum Minigames
