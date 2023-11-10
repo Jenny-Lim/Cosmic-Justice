@@ -8,31 +8,33 @@ public class VerdictButton : MonoBehaviour
     private Animator anim;
     private Button b;
 
+    [SerializeField] GameObject dialoguePanel;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         b = GetComponent<Button>();
         anim = GetComponent<Animator>();
 
         // animate it coming up
+        dialoguePanel.SetActive(false);
         anim.Play("ButtonComeUp");
-    }
+    } // Start
 
-    public void OnButtonPress() // some animation on press / function / text -- inheritance ??? switches ??
+    public void OnButtonPress()
     {
         anim.SetTrigger("pressed");
-        //EventManager.current.EndAsteroid();
-    }
+    } // OnButtonPress
 
     public void DoneComeUp() // animation event
     {
         b.interactable = true;
         Debug.Log("done come up!");
-    }
+    } // DoneComeUp
 
-    public void EndVerdict()
+    public void EndVerdict() // animation event
     {
-        EventManager.current.EndAsteroid();
-        EventManager.current.CanDialogue(true);
-    }
+        EventManager.current.EndVerdict();
+        dialoguePanel.SetActive(true);
+    } // EndVerdict
 }

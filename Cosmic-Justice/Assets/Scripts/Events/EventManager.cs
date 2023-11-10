@@ -54,6 +54,7 @@ public class EventManager : MonoBehaviour
     }
 
     // -------------------- Minigames -------------------- //
+    //asteroid
     public event Action asteroid;
     public void Asteroid()
     {
@@ -65,7 +66,9 @@ public class EventManager : MonoBehaviour
     {
         endAsteroid?.Invoke();
     }
+    //end asteroid
 
+    //dial
     public event Action dial;
     public void Dial()
     {
@@ -77,6 +80,21 @@ public class EventManager : MonoBehaviour
     {
         endDial?.Invoke();
     }
+    //end dial
+
+    //verdict
+    public event Action verdict;
+    public void Verdict()
+    {
+        verdict?.Invoke();
+    }
+
+    public event Action endVerdict;
+    public void EndVerdict()
+    {
+        endVerdict?.Invoke();
+    }
+    //end verdict
 
     public event Action<bool> canDialogue;
     public void CanDialogue(bool can)
