@@ -16,11 +16,15 @@ public class SceneLoader : MonoBehaviour
     private float MusicVolume;
     private float SFXvolume;
 
+    private ScreenWipe screenWipe;
+
     public void Awake()
     {
         DontDestroyOnLoad(MasterSceneLoader);
         MusicVolume = 1.0f;
         SFXvolume = 1.0f;
+
+        screenWipe = FindObjectOfType<ScreenWipe>();
     }
 
     private void OnDisable()
@@ -46,7 +50,7 @@ public class SceneLoader : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(2);
+        StartLoadLevel(2);
     }
 
     public void Back()
@@ -64,8 +68,6 @@ public class SceneLoader : MonoBehaviour
 
     }
 
-
-
     public void Pause()
     {
         pauseMenu.SetActive(true);
@@ -82,22 +84,22 @@ public class SceneLoader : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(1);
+        StartLoadLevel(1);
     }
 
     public void LevelOne()
     {
-        SceneManager.LoadScene(2);
+        StartLoadLevel(2);
     }
 
     public void LevelTwo()
     {
-        SceneManager.LoadScene(3);
+        StartLoadLevel(3);
     }
 
     public void LevelThree()
     {
-        SceneManager.LoadScene(4);
+        StartLoadLevel(4);
     }
 
     public void QuitGame()
@@ -108,8 +110,29 @@ public class SceneLoader : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadScene(5);
+        StartLoadLevel(5);
     }
 
-   
+
+
+    public void StartLoadLevel(int levelIndex)
+    {
+        if(screenWipe != null)
+            StartCoroutine(LoadLevel(levelIndex));
+        else
+            SceneManager.LoadScene(levelIndex);
+    }
+
+    private IEnumerator LoadLevel(int levelIndex)
+    {
+        screenWipe.ToggleWipe(true);
+        while (!screenWipe.isDone)
+            yield return null;
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
+        while (!operation.isDone)
+            yield return null;
+
+        screenWipe.ToggleWipe(false);
+    }
 }
