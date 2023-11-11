@@ -8,11 +8,12 @@ public class VerdictButton : MonoBehaviour
     private Animator anim;
     private Button b;
 
-    [SerializeField] GameObject dialoguePanel;
+    private GameObject dialoguePanel;
 
     // Start is called before the first frame update
     void Awake()
     {
+        dialoguePanel = GameObject.FindWithTag("DialoguePanel");
         b = GetComponent<Button>();
         anim = GetComponent<Animator>();
 
@@ -34,7 +35,7 @@ public class VerdictButton : MonoBehaviour
 
     public void EndVerdict() // animation event
     {
-        EventManager.current.EndVerdict();
+        //EventManager.current.EndVerdict();
         dialoguePanel.SetActive(true);
     } // EndVerdict
 }

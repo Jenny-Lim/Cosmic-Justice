@@ -95,17 +95,17 @@ public class EventManager : MonoBehaviour
     //end dial
 
     //verdict
-    public event Action verdict;
-    public void Verdict()
-    {
-        verdict?.Invoke();
-    }
+    //public event Action verdict;
+    //public void Verdict()
+    //{
+    //    verdict?.Invoke();
+    //}
 
-    public event Action endVerdict;
-    public void EndVerdict()
-    {
-        endVerdict?.Invoke();
-    }
+    //public event Action endVerdict;
+    //public void EndVerdict()
+    //{
+    //    endVerdict?.Invoke();
+    //}
     //end verdict
 
     public event Action<bool> canDialogue;

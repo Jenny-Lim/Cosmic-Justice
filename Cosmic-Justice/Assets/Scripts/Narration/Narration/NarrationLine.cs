@@ -63,7 +63,7 @@ public class NarrationLine : ScriptableObject
         Asteroid = 1,
         Dial = 2,
         Puzzle = 4,
-        Verdict = 8
+        //Verdict = 8
     }
 
     public NarrationCharacter Speaker => m_Speaker; //Gets speaker's name

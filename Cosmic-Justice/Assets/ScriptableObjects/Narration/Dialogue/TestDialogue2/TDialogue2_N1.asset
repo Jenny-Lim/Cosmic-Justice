@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TDialogue2_N1
   m_EditorClassIdentifier: 
   m_DialogueLine: {fileID: 11400000, guid: de6626f48267f984f8c9e35f3bd7cc6b, type: 2}
+  isVerdict: 1
   m_Choices:
   - m_ChoicePreview: Guilty
     m_ChoiceNode: {fileID: 11400000, guid: 4cb05c35c304cbb409eb839263cbdddc, type: 2}

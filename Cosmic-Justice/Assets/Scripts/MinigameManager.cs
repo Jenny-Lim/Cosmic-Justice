@@ -13,8 +13,8 @@ public class MinigameManager : MonoBehaviour
     [SerializeField]
     private GameObject puzzleMinigame;
 
-    [SerializeField]
-    private GameObject verdictMinigame;
+    //[SerializeField]
+    //private GameObject verdictMinigame;
 
 
     // Start is called before the first frame update
@@ -25,8 +25,8 @@ public class MinigameManager : MonoBehaviour
         EventManager.current.endAsteroid += EndAsteroidMinigame;
         EventManager.current.dial += StartDialMinigame;
         EventManager.current.endDial += EndDialMinigame;
-        EventManager.current.verdict += StartVerdictMinigame;
-        EventManager.current.endVerdict += EndVerdictMinigame;
+        //EventManager.current.verdict += StartVerdictMinigame;
+        //EventManager.current.endVerdict += EndVerdictMinigame;
     }
 
     private void OnDestroy()
@@ -36,8 +36,8 @@ public class MinigameManager : MonoBehaviour
         EventManager.current.endAsteroid -= EndAsteroidMinigame;
         EventManager.current.dial -= StartDialMinigame;
         EventManager.current.endDial -= EndDialMinigame;
-        EventManager.current.verdict -= StartVerdictMinigame;
-        EventManager.current.endVerdict -= EndVerdictMinigame;
+        //EventManager.current.verdict -= StartVerdictMinigame;
+        //EventManager.current.endVerdict -= EndVerdictMinigame;
     }
 
     private void StartAsteroidMinigame()
@@ -63,15 +63,15 @@ public class MinigameManager : MonoBehaviour
         EventManager.current.CanDialogue(true);
         dialMinigame.SetActive(false);
     }
-    private void StartVerdictMinigame()
-    {
-        EventManager.current.CanDialogue(false);
-        verdictMinigame.SetActive(true);
-    }
+    //private void StartVerdictMinigame()
+    //{
+    //    EventManager.current.CanDialogue(false);
+    //    verdictMinigame.SetActive(true);
+    //}
 
-    private void EndVerdictMinigame()
-    {
-        EventManager.current.CanDialogue(true);
-        verdictMinigame.SetActive(false);
-    }
+    //private void EndVerdictMinigame()
+    //{
+    //    EventManager.current.CanDialogue(true);
+    //    verdictMinigame.SetActive(false);
+    //}
 }
