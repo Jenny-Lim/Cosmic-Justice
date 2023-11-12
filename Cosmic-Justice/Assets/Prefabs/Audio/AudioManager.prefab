@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8429352025097929384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4482849573137828552}
+  - component: {fileID: 2894444973886950961}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4482849573137828552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429352025097929384}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.0436535, y: 1.072395, z: 3689.683}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2894444973886950961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429352025097929384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218606dad880caf40a42a12e613c8885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: 892df653665253944afc24a8dc292968, type: 3}
+    volume: 0.241
+    pitch: 0.1
+    source: {fileID: 0}
+    loop: 1
+    mixer: {fileID: 24300002, guid: a5dc7adb83cebba428fc249709ad401d, type: 2}
+  - name: ClickSound
+    clip: {fileID: 8300000, guid: cb46b500495575847a99c7b0af7d3748, type: 3}
+    volume: 0.5
+    pitch: 1.53
+    source: {fileID: 0}
+    loop: 0
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+  - name: UI_Select_A
+    clip: {fileID: 8300000, guid: a02e60f63f84f6f4095e18ca5f5963ad, type: 3}
+    volume: 0.271
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}

@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
     [SerializeField]
     GameObject pauseMenu;
     [SerializeField]
-    GameObject MasterSceneLoader;
+    // GameObject MasterSceneLoader;
 
     public bool isPaused;
 
@@ -20,16 +20,11 @@ public class SceneLoader : MonoBehaviour
 
     public void Awake()
     {
-        DontDestroyOnLoad(MasterSceneLoader);
+        DontDestroyOnLoad(this.gameObject);
         MusicVolume = 1.0f;
         SFXvolume = 1.0f;
 
-        screenWipe = FindObjectOfType<ScreenWipe>();
-    }
-
-    private void OnDisable()
-    {
-       // SceneManager.LoadScene(1);
+        if(screenWipe == null) screenWipe = FindObjectOfType<ScreenWipe>();
     }
 
 
@@ -50,7 +45,7 @@ public class SceneLoader : MonoBehaviour
 
     public void PlayGame()
     {
-        StartLoadLevel(2);
+        StartLoadLevel(1);
     }
 
     public void Back()
@@ -84,12 +79,12 @@ public class SceneLoader : MonoBehaviour
 
     public void MainMenu()
     {
-        StartLoadLevel(1);
+        StartLoadLevel(0);
     }
 
     public void LevelOne()
     {
-        StartLoadLevel(2);
+        StartLoadLevel(1);
     }
 
     public void LevelTwo()
@@ -110,7 +105,7 @@ public class SceneLoader : MonoBehaviour
 
     public void Credits()
     {
-        StartLoadLevel(5);
+        StartLoadLevel(2);
     }
 
 
@@ -129,10 +124,31 @@ public class SceneLoader : MonoBehaviour
         while (!screenWipe.isDone)
             yield return null;
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
-        while (!operation.isDone)
-            yield return null;
+        // Subscribe to the sceneLoaded event
+        SceneManager.sceneLoaded += OnSceneLoaded;
 
-        screenWipe.ToggleWipe(false);
+        // Start loading the scene
+        SceneManager.LoadSceneAsync(levelIndex);
     }
+
+    // Method that will be called when the scene has finished loading
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Unsubscribe from the event to prevent it from being called if not needed
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        // Start an unwipe after a short delay to give the scene time to render
+        StartCoroutine(UnwipeScene());
+    }
+
+    private IEnumerator UnwipeScene()
+    {
+        // Optionally wait for the end of the frame to ensure the scene is rendered
+        yield return new WaitForEndOfFrame();
+
+        // Now trigger the wipe effect to end
+        screenWipe.ToggleWipe(false);
+        print("wiping in.");
+    }
+
 }

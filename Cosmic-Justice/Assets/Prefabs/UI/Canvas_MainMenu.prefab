@@ -50,6 +50,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScaleData: {fileID: 11400000, guid: c37d81907fac98745ae8158a6334aa84, type: 2}
   TweenOnEnable: 0
+  OnTweenStartEvent: 1
+  OnTweenStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6941948351538798400}
+        m_TargetAssemblyTypeName: AudioGetter, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UI_Select_A
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTweenCompleteEvent: 0
   AllowOnCompleteFromOnEnable: 0
   OnTweenComplete:
@@ -1043,6 +1059,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScaleData: {fileID: 11400000, guid: 2f9ef6ae5ccd8fe4980c2a2b68e10253, type: 2}
   TweenOnEnable: 1
+  OnTweenStartEvent: 0
+  OnTweenStart:
+    m_PersistentCalls:
+      m_Calls: []
   OnTweenCompleteEvent: 0
   AllowOnCompleteFromOnEnable: 0
   OnTweenComplete:
@@ -4720,6 +4740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5683835803326269255}
   - component: {fileID: 3901058421078833531}
+  - component: {fileID: 6941948351538798400}
   m_Layer: 0
   m_Name: Tweening
   m_TagString: Untagged
@@ -4768,6 +4789,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &6941948351538798400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7258930460726555403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508d0fe5294aeee44ad4b61e94ed8175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7463344320212765315
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,6 +4851,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScaleData: {fileID: 11400000, guid: 75d4a5e7a44d9994ba0f793e986a20ef, type: 2}
   TweenOnEnable: 0
+  OnTweenStartEvent: 0
+  OnTweenStart:
+    m_PersistentCalls:
+      m_Calls: []
   OnTweenCompleteEvent: 0
   AllowOnCompleteFromOnEnable: 0
   OnTweenComplete:

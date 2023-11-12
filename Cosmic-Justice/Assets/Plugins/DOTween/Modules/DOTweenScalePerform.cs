@@ -7,25 +7,25 @@ using UnityEngine.UI;
 
 public class DOTweenScalePerform : MonoBehaviour
 {
-    [Header("Data"), SerializeField] public DOTweenScale ScaleData;
+    [Header("-Data"), SerializeField] public DOTweenScale ScaleData;
 
     [Space(10)]
 
-    [Header("On Enabled")]
-    [Header("Settings")] public bool TweenOnEnable = false;
-
-    [Space(10)]
+    [Header("-On Enabled")] [Space(6)]
+    public bool TweenOnEnable = false;
+    [Space(4)] public bool OnTweenStartEvent = false;
+    [Space(4)] public UnityEvent OnTweenStart;
     
-    [Header("On Tween Complete")]
-    [Header("Settings")] public bool OnTweenCompleteEvent = false;
-    [Header("Settings")] public bool AllowOnCompleteFromOnEnable = false;
-    [Header("Settings")] public UnityEvent OnTweenComplete;
+    [Header("-On Tween Complete")] [Space(6)]
+    
+    [Space(4)] public bool OnTweenCompleteEvent = false;
+    [Space(4)] public bool AllowOnCompleteFromOnEnable = false;
+    [Space(4)] public UnityEvent OnTweenComplete;
 
-    [Space(10)]
+    [Space(6)]
 
-    [Header("Loop Settings")]
+    [Header("-Loop Settings")]
     public bool loopTween = false;
-
 
     private Color OriginalColor;
     private FontStyles originalFontStyle;
@@ -91,6 +91,7 @@ public class DOTweenScalePerform : MonoBehaviour
 
         if (tweener != null)
         {
+            tweener.OnStart(OnStart);
             tweener.onComplete += OnComplete; // Assign onComplete callback
 
             // If loop is true, set the tween to loop indefinitely
@@ -109,6 +110,16 @@ public class DOTweenScalePerform : MonoBehaviour
             _targetTransform = this.gameObject.transform;
             ShakeTransform(_targetTransform);
         }
+    }
+
+    private void OnStart()
+    {
+        if(OnTweenStartEvent)
+        {
+            if(!_isActivated) 
+                OnTweenStart.Invoke();
+        }
+        if(_isActivated) _isActivated = false;
     }
 
     private void OnComplete()

@@ -73,15 +73,15 @@ public class ScreenWipe : MonoBehaviour
     {
         isDone = false;
         if (blockScreen)
+        {
             wipeMode = WipeMode.WipingToBlocked;
+            wipeProgress = 0.0f; // The wipe starts from clear and moves to blocked
+        }
         else
+        {
             wipeMode = WipeMode.WipingToNotBlocked;
-
-        // Reset wipeProgress based on the mode
-        if (wipeMode == WipeMode.WipingToNotBlocked)
-            wipeProgress = 1.0f;
-        else if (wipeMode == WipeMode.WipingToBlocked)
-            wipeProgress = 0.0f;
+            wipeProgress = 1.0f; // The wipe starts from blocked and moves to clear
+        }
     }
     
     private void Update()

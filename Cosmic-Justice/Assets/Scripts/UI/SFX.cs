@@ -16,6 +16,9 @@ public class SFX : MonoBehaviour
 
 
     [SerializeField] private Slider volumeSlider;
+
+    private SceneLoader sceneLoader;
+
     public void OnChangeSlider(float Value)
     {
 
@@ -23,16 +26,26 @@ public class SFX : MonoBehaviour
         {
             case AudioMixMode.LogrithmicMixerVolume:
                 Mixer.SetFloat("Volume", Mathf.Log10(Value) * 20);
-                GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLoader>().SetSFXVolume(Value);
+
+                sceneLoader.SetMusicVolume(Value);
+
                 break;
         }
     }
 
     private void Start()
     {
+        GetSceneLoader();
 
-        volumeSlider.value = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLoader>().GetSFXVolume();
+        volumeSlider.value = sceneLoader.GetSFXVolume();
         Mixer.SetFloat("Volume", Mathf.Log10(volumeSlider.value) * 20);
+    }
+
+
+    private void GetSceneLoader()
+    {
+        if(sceneLoader == null) 
+            sceneLoader = FindObjectOfType<SceneLoader>();
     }
 
     public enum AudioMixMode
