@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CJ_Character
   m_EditorClassIdentifier: 
   m_CharacterName: CJ
-  m_DialoguePanel: {fileID: 0}
+  m_DialoguePanel: {fileID: 21300000, guid: ad94cb8aaf338f64eb68ce6f77e2a16c, type: 3}
   m_Font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  sprites: []
