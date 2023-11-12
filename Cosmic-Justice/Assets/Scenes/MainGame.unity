@@ -8998,6 +8998,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3981104024487227173, guid: fb1fd21684ae6834d81e3a31f6152857, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7705246896083816495, guid: fb1fd21684ae6834d81e3a31f6152857, type: 3}
       propertyPath: m_Color.a
       value: 0.20784314
