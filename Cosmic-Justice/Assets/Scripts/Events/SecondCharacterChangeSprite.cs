@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class SecondCharacterChangeSprite : MonoBehaviour
 {
     private Image image;
+    private NarrationCharacter character;
 
     private void Start()
     {
@@ -13,12 +15,19 @@ public class SecondCharacterChangeSprite : MonoBehaviour
 
         //subscribe to the canvasShake event
         EventManager.current.character2SpriteChange += ChangeSprite;
+        EventManager.current.setCharacter += SetCharacter;
     }
 
     private void OnDestroy()
     {
         //unsubscribe to the canvasShake event
         EventManager.current.character2SpriteChange -= ChangeSprite;
+        EventManager.current.setCharacter -= SetCharacter;
+    }
+
+    private void SetCharacter(DialogueNode node)
+    {
+        character = node.DialogueLine.Listener;
     }
 
     private void ChangeSprite(DialogueNode node)
@@ -39,7 +48,7 @@ public class SecondCharacterChangeSprite : MonoBehaviour
             string compareName = node.DialogueLine.Listener.sprites[i].name;
             if (string.Equals(name, compareName, System.StringComparison.CurrentCultureIgnoreCase))
             {
-                returnSprite = node.DialogueLine.Listener.sprites[i].sprite;
+                returnSprite = character.sprites[i].sprite;
                 break;
             }
         }

@@ -29,6 +29,12 @@ public class EventManager : MonoBehaviour
         canvasShake?.Invoke(node);
     }
 
+    public event Action<DialogueNode> setCharacter;
+    public void SetCharacters()
+    {
+        setCharacter?.Invoke(node);
+    }
+
     public event Action<DialogueNode> character1SpriteChange;
     public void Character1SpriteChange()
     {

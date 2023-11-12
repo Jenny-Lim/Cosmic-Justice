@@ -104,6 +104,20 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             m_SpeakerText.color = node.DialogueLine.Speaker.Color;
             m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
 
+            EventManager.current.GetNode(node);
+
+            //If there are events then run them
+            if (node.DialogueLine.events != 0)
+            {
+                //Save each event as a string in an array
+                string[] eventsList = node.DialogueLine.events.ToString().Split(", ");
+
+                foreach (string doEvent in eventsList)
+                {
+                    EventManager.current.Invoke(doEvent, 0);
+                }
+            }
+
             if (node.DialogueLine.Speaker.DialoguePanel != null)
                 dialoguePanel.sprite = node.DialogueLine.Speaker.DialoguePanel;
 
@@ -115,19 +129,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
             if (!string.IsNullOrEmpty(node.DialogueLine.CharacterSprite2))
                 EventManager.current.Invoke("Character2SpriteChange", 0);
-
-            //If there are events then run them
-            if (node.DialogueLine.events != 0)
-            {
-                EventManager.current.GetNode(node);
-                //Save each event as a string in an array
-                string[] eventsList = node.DialogueLine.events.ToString().Split(", ");
-
-                foreach (string doEvent in eventsList)
-                {
-                    EventManager.current.Invoke(doEvent, 0);
-                }
-            }
 
             node.Accept(this);
         }
