@@ -16,10 +16,14 @@ public class MinigameManager : MonoBehaviour
     //[SerializeField]
     //private GameObject verdictMinigame;
 
+    private AudioManager audioManager;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        if(audioManager == null) audioManager = FindObjectOfType<AudioManager>();
+
         //subscribe to the canvasShake event
         EventManager.current.asteroid += StartAsteroidMinigame;
         EventManager.current.endAsteroid += EndAsteroidMinigame;
@@ -44,25 +48,34 @@ public class MinigameManager : MonoBehaviour
     {
         EventManager.current.CanDialogue(false);
         asteroidMinigame.SetActive(true);
+
+        audioManager.Play("MiniGame_Track_A");
     }
 
     private void EndAsteroidMinigame()
     {
         EventManager.current.CanDialogue(true);
         asteroidMinigame.SetActive(false);
+
+        audioManager.Play("Ambient_Track_A");
     }
 
     private void StartDialMinigame()
     {
         EventManager.current.CanDialogue(false);
         dialMinigame.SetActive(true);
+
+        audioManager.Play("MiniGame_Track_A");
     }
 
     private void EndDialMinigame()
     {
         EventManager.current.CanDialogue(true);
         dialMinigame.SetActive(false);
+
+        audioManager.Play("Ambient_Track_A");
     }
+    
     //private void StartVerdictMinigame()
     //{
     //    EventManager.current.CanDialogue(false);
