@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 465d29ffbfe749d48b452cf7f5dfaf16, type: 3}
+  m_Name: N_024
+  m_EditorClassIdentifier: 
+  m_DialogueLine: {fileID: 11400000, guid: 4ad7b349fd674784fb254d2a570a9f37, type: 2}
+  isVerdict: 0
+  m_Choices:
+  - m_ChoicePreview: '"Sir Bentlion the Frozen Knight!"'
+    m_ChoiceNode: {fileID: 0}
+  - m_ChoicePreview: '"Landlord IV!"'
+    m_ChoiceNode: {fileID: 0}
