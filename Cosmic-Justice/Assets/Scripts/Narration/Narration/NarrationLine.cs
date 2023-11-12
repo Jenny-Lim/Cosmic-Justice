@@ -55,7 +55,8 @@ public class NarrationLine : ScriptableObject
         CharacterFadeInC1 = 2,
         CharacterFadeOutC1 = 4,
         CharacterFadeInC2 = 8,
-        characterFadeOutC2 = 16
+        CharacterFadeOutC2 = 16,
+        SetCharacters = 32
     }
 
     public enum Minigames

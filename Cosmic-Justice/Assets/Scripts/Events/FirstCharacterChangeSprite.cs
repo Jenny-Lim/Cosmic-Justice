@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class FirstCharacterChangeSprite : MonoBehaviour
 {
     private Image image;
+    private NarrationCharacter character;
 
     private void Start()
     {
@@ -13,12 +14,20 @@ public class FirstCharacterChangeSprite : MonoBehaviour
 
         //subscribe to the canvasShake event
         EventManager.current.character1SpriteChange += ChangeSprite;
+        EventManager.current.setCharacter += SetCharacter;
+
     }
 
     private void OnDestroy()
     {
         //unsubscribe to the canvasShake event
         EventManager.current.character1SpriteChange -= ChangeSprite;
+        EventManager.current.setCharacter -= SetCharacter;
+    }
+
+    private void SetCharacter(DialogueNode node)
+    {
+        character = node.DialogueLine.Speaker;
     }
 
     private void ChangeSprite(DialogueNode node)
@@ -39,7 +48,7 @@ public class FirstCharacterChangeSprite : MonoBehaviour
             string compareName = node.DialogueLine.Speaker.sprites[i].name;
             if (string.Equals(name, compareName, System.StringComparison.CurrentCultureIgnoreCase))
             {
-                returnSprite = node.DialogueLine.Speaker.sprites[i].sprite;
+                returnSprite = character.sprites[i].sprite;
                 break;
             }
         }
