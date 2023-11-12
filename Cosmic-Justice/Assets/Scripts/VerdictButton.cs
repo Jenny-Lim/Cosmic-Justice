@@ -18,13 +18,21 @@ public class VerdictButton : MonoBehaviour
         anim = GetComponent<Animator>();
 
         // animate it coming up
+        //dialoguePanel.SetActive(false);
+        //anim.Play("ButtonComeUp");
+    } // Start
+
+    void OnEnable()
+    {
+        Debug.Log("hi");
         dialoguePanel.SetActive(false);
         anim.Play("ButtonComeUp");
-    } // Start
+    }
 
     public void OnButtonPress()
     {
         anim.SetTrigger("pressed");
+        dialoguePanel.SetActive(true);
     } // OnButtonPress
 
     public void DoneComeUp() // animation event
@@ -36,6 +44,6 @@ public class VerdictButton : MonoBehaviour
     public void EndVerdict() // animation event
     {
         //EventManager.current.EndVerdict();
-        dialoguePanel.SetActive(true);
+        //dialoguePanel.SetActive(true);
     } // EndVerdict
 }

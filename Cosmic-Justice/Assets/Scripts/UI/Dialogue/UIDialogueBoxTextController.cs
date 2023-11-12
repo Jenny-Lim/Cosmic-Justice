@@ -178,6 +178,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         }
         else
         {
+            verdictTransform.gameObject.SetActive(true);
             foreach (DialogueChoice choice in node.Choices)
             {
 
