@@ -885,8 +885,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.335}
-  m_AnchoredPosition: {x: -0.43530273, y: 10.843994}
-  m_SizeDelta: {x: -0.87085, y: -22.688}
+  m_AnchoredPosition: {x: 10.830017, y: 10.843994}
+  m_SizeDelta: {x: -23.40002, y: -22.688}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359141760
 MonoBehaviour:
@@ -1594,8 +1594,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.25283834}
-  m_AnchoredPosition: {x: 5.959961, y: -0.16003418}
-  m_SizeDelta: {x: -13.66, y: -0.32999992}
+  m_AnchoredPosition: {x: 32.989895, y: -0.16003418}
+  m_SizeDelta: {x: -67.72021, y: -0.32999992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425288105
 MonoBehaviour:
@@ -3574,7 +3574,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2128092163}
-  MasterSceneLoader: {fileID: 0}
   isPaused: 0
 --- !u!4 &825426158
 Transform:
