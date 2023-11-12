@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec9dba023200b9f4fba2ef27f66bebb3, type: 3}
-  m_Name: N_009
+  m_Name: N_015
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: 0953520880208b14ebbbf339955f7e70, type: 2}
-  m_NextNode: {fileID: 11400000, guid: 492d5f332ac253746bccdb1394e33e5f, type: 2}
+  m_DialogueLine: {fileID: 11400000, guid: 860cfb27d1ea0de428317a021629473e, type: 2}
+  m_NextNode: {fileID: 11400000, guid: 1c6cd89d1e7775a469292fb4e15f5e65, type: 2}
