@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CSir Button! Please\u2026 I\u2019ll let you sleep on the bed again\u2026\u201D"
   m_FontSize: 30
   m_TextSpeed: 0.05
-  m_CharacterSprite1: 
-  m_CharacterSprite2: 
-  m_events: 0
+  m_CharacterSprite1: stressed
+  m_CharacterSprite2: happy
+  m_events: 34
   m_minigames: 0

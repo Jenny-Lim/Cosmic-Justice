@@ -15,9 +15,9 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CSorry boss, it\u2019s your turn on maintenance duty!\u201D"
-  m_FontSize: 30
+  m_FontSize: 34.9
   m_TextSpeed: 0.05
-  m_CharacterSprite1: 
+  m_CharacterSprite1: happy
   m_CharacterSprite2: 
-  m_events: 0
+  m_events: 50
   m_minigames: 0

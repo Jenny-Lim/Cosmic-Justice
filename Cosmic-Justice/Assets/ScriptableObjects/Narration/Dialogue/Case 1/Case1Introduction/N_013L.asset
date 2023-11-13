@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Text: "\u201CHis name is Sir. Button, the Honourable Immolator, Destroyer of
     Worlds, and he bows down to no one!\""
-  m_FontSize: 30
+  m_FontSize: 35
   m_TextSpeed: 0.01
   m_CharacterSprite1: 
   m_CharacterSprite2: 

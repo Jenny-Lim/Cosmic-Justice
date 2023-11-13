@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "That seems to please the small dragon-like creature as it nuzzles against
-    Leo\u2019s armour."
+  m_Text: '"Bleh..."'
   m_FontSize: 30
   m_TextSpeed: 0.05
   m_CharacterSprite1: 

@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CThis is not a place for emotion, bickering or anything other than
     LOGICAL PROGRESSION.\u201D"
-  m_FontSize: 50
+  m_FontSize: 45
   m_TextSpeed: 0.05
   m_CharacterSprite1: 
   m_CharacterSprite2: 

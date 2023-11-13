@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CNow, I\u2019m going to have both of you restate your cases in a
     more respectable and streamlined fashion so I can get to my cosmic lunch break.\""
-  m_FontSize: 50
+  m_FontSize: 35
   m_TextSpeed: 0.05
   m_CharacterSprite1: 
   m_CharacterSprite2: 

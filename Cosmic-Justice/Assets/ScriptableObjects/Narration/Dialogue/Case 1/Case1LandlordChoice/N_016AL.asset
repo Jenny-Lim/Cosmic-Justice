@@ -18,7 +18,7 @@ MonoBehaviour:
     You dare call me-\u201D"
   m_FontSize: 30
   m_TextSpeed: 0.05
-  m_CharacterSprite1: 
-  m_CharacterSprite2: 
-  m_events: 0
+  m_CharacterSprite1: angry
+  m_CharacterSprite2: angry
+  m_events: 42
   m_minigames: 0

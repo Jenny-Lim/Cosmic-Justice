@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_Text: "\r\u201CYou haven\u2019t the slightest respect for my time! I don\u2019t
     have to listen to this any longer, you metal clad fool.\u201D\r\n"
-  m_FontSize: 30
+  m_FontSize: 35
   m_TextSpeed: 0.01
   m_CharacterSprite1: angry
   m_CharacterSprite2: sad
