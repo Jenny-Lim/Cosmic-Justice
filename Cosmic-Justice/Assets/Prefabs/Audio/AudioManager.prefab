@@ -48,7 +48,7 @@ MonoBehaviour:
   - name: MainTheme
     clip: {fileID: 8300000, guid: 892df653665253944afc24a8dc292968, type: 3}
     volume: 0.241
-    pitch: 0.1
+    pitch: 1
     source: {fileID: 0}
     loop: 1
     mixer: {fileID: 24300002, guid: a5dc7adb83cebba428fc249709ad401d, type: 2}
