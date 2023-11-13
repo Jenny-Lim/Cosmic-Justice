@@ -51,6 +51,7 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 1
+    playOnAwake: 0
     mixer: {fileID: 24300002, guid: a5dc7adb83cebba428fc249709ad401d, type: 2}
   - name: ClickSound
     clip: {fileID: 8300000, guid: cb46b500495575847a99c7b0af7d3748, type: 3}
@@ -58,6 +59,7 @@ MonoBehaviour:
     pitch: 1.53
     source: {fileID: 0}
     loop: 0
+    playOnAwake: 0
     mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
   - name: UI_Select_A
     clip: {fileID: 8300000, guid: a02e60f63f84f6f4095e18ca5f5963ad, type: 3}
@@ -65,18 +67,21 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 0
+    playOnAwake: 0
     mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
   - name: Ambient_Track_A
     clip: {fileID: 8300000, guid: ca5434d50ebfb364eb2fbe721c8d2824, type: 3}
     volume: 0.16
     pitch: 1
     source: {fileID: 0}
-    loop: 0
+    loop: 1
+    playOnAwake: 0
     mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
   - name: MiniGame_Track_A
     clip: {fileID: 8300000, guid: 2a06b340969aef549be05a93fa9354a7, type: 3}
     volume: 0.16
     pitch: 1
     source: {fileID: 0}
-    loop: 0
+    loop: 1
+    playOnAwake: 0
     mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}

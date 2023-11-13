@@ -19,5 +19,7 @@ public class Sound
 
     public bool loop;
 
+    public bool playOnAwake = false;
+
     public AudioMixerGroup mixer;
 }

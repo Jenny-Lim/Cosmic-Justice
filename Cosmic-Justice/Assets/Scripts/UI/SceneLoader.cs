@@ -45,7 +45,7 @@ public class SceneLoader : MonoBehaviour
 
     public void PlayGame()
     {
-        StartLoadLevel(1);
+        StartLoadLevel(2);
     }
 
     public void Back()
@@ -79,22 +79,22 @@ public class SceneLoader : MonoBehaviour
 
     public void MainMenu()
     {
-        StartLoadLevel(0);
+        StartLoadLevel(1);
     }
 
     public void LevelOne()
     {
-        StartLoadLevel(1);
+        StartLoadLevel(2);
     }
 
     public void LevelTwo()
     {
-        StartLoadLevel(3);
+        StartLoadLevel(4);
     }
 
     public void LevelThree()
     {
-        StartLoadLevel(4);
+        StartLoadLevel(5);
     }
 
     public void QuitGame()
@@ -105,7 +105,7 @@ public class SceneLoader : MonoBehaviour
 
     public void Credits()
     {
-        StartLoadLevel(2);
+        StartLoadLevel(3);
     }
 
 
@@ -126,6 +126,19 @@ public class SceneLoader : MonoBehaviour
 
         // Subscribe to the sceneLoaded event
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+        //Plays music or stops it depending on the level loading
+        if (levelIndex == 1 || levelIndex == 3)
+        {
+            AudioManager.instance.Play("MainTheme");
+            AudioManager.instance.Stop("Ambient_Track_A");
+            AudioManager.instance.Stop("MiniGame_Track_A");
+        }
+        else
+        {
+            AudioManager.instance.Stop("MainTheme");
+            AudioManager.instance.Play("Ambient_Track_A");
+        }
 
         // Start loading the scene
         SceneManager.LoadSceneAsync(levelIndex);
