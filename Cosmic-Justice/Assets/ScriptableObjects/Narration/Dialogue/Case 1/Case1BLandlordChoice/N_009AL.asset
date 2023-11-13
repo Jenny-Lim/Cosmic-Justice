@@ -18,6 +18,8 @@ MonoBehaviour:
   m_FontSize: 50
   m_TextSpeed: 0.05
   m_CharacterSprite1: angry
-  m_CharacterSprite2: 
-  m_events: 35
+  m_CharacterSprite2: stressed
+  m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
+  m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
+  m_events: 3
   m_minigames: 0

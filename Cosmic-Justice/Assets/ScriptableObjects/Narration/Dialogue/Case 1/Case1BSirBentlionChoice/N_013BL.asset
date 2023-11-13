@@ -17,9 +17,11 @@ MonoBehaviour:
   m_Text: "\u201CI do my best to keep people housed but I need money to do it. All
     he\u2019s trying to give me are these teeny, shiny, worthless paper weights.
     I only accept cold, hard, ones and zeroes!\u201D"
-  m_FontSize: 35
+  m_FontSize: 31.8
   m_TextSpeed: 0.02
   m_CharacterSprite1: sad
-  m_CharacterSprite2: 
+  m_CharacterSprite2: stressed
+  m_character1: {fileID: 0}
+  m_character2: {fileID: 0}
   m_events: 0
   m_minigames: 0
