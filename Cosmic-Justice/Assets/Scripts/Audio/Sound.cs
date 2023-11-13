@@ -21,5 +21,7 @@ public class Sound
 
     public bool playOnAwake = false;
 
+    public bool canOverlap = false;
+
     public AudioMixerGroup mixer;
 }

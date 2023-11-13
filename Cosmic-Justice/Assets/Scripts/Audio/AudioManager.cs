@@ -57,7 +57,8 @@ public class AudioManager : MonoBehaviour
         //Ensure playing of the sound is done only when the sound is not currently being played
         if (!currentlyPlayingSounds.Contains(s))
         {
-            currentlyPlayingSounds.Add(s); //Sound is now playing so add it
+            if(!s.canOverlap)
+                currentlyPlayingSounds.Add(s); //Sound is now playing so add it
             s.source.Play();
         }
     }
