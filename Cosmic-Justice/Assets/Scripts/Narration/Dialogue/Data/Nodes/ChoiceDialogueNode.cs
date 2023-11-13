@@ -1,6 +1,8 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using TMPro;
+using Unity.VisualScripting;
 
 [Serializable]
 public class DialogueChoice
@@ -9,9 +11,21 @@ public class DialogueChoice
     private string m_ChoicePreview;
     [SerializeField]
     private DialogueNode m_ChoiceNode;
+    [SerializeField]
+    private Sprite m_ButtonSprite;
+    [SerializeField]
+    private TMP_FontAsset m_Font;
+    [SerializeField]
+    private Color m_FontColor = Color.black;
 
     public string ChoicePreview => m_ChoicePreview;
     public DialogueNode ChoiceNode => m_ChoiceNode;
+
+    public Sprite ButtonSprite => m_ButtonSprite;
+
+    public TMP_FontAsset Font => m_Font;
+
+    public Color FontColor => m_FontColor;
 }
 
 
