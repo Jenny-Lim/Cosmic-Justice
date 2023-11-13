@@ -8420,7 +8420,7 @@ GameObject:
   - component: {fileID: 2056235908}
   m_Layer: 5
   m_Name: VerdictPanel
-  m_TagString: Untagged
+  m_TagString: VerdictPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
