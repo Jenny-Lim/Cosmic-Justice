@@ -19,5 +19,7 @@ MonoBehaviour:
   m_TextSpeed: 0.1
   m_CharacterSprite1: angry
   m_CharacterSprite2: 
-  m_events: 33
+  m_character1: {fileID: 0}
+  m_character2: {fileID: 0}
+  m_events: 1
   m_minigames: 0

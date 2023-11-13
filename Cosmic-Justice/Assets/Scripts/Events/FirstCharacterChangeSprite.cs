@@ -27,7 +27,8 @@ public class FirstCharacterChangeSprite : MonoBehaviour
 
     private void SetCharacter(DialogueNode node)
     {
-        character = node.DialogueLine.Speaker;
+        if(node.DialogueLine.character1 != null)
+        character = node.DialogueLine.character1;
     }
 
     private void ChangeSprite(DialogueNode node)
@@ -40,12 +41,11 @@ public class FirstCharacterChangeSprite : MonoBehaviour
     //Function to get the sprite of the character based on the name of the sprite
     private Sprite GetSpriteFromName(DialogueNode node, string name)
     {
-
         Sprite returnSprite = null;
 
-        for(int i = 0; i < node.DialogueLine.Speaker.sprites.Length; i++)
+        for(int i = 0; i < character.sprites.Length; i++)
         {
-            string compareName = node.DialogueLine.Speaker.sprites[i].name;
+            string compareName = character.sprites[i].name;
             if (string.Equals(name, compareName, System.StringComparison.CurrentCultureIgnoreCase))
             {
                 returnSprite = character.sprites[i].sprite;

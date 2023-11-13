@@ -27,7 +27,8 @@ public class SecondCharacterChangeSprite : MonoBehaviour
 
     private void SetCharacter(DialogueNode node)
     {
-        character = node.DialogueLine.Listener;
+        if (node.DialogueLine.character2 != null)
+            character = node.DialogueLine.character2;
     }
 
     private void ChangeSprite(DialogueNode node)
@@ -43,9 +44,9 @@ public class SecondCharacterChangeSprite : MonoBehaviour
 
         Sprite returnSprite = null;
 
-        for (int i = 0; i < node.DialogueLine.Listener.sprites.Length; i++)
+        for (int i = 0; i < character.sprites.Length; i++)
         {
-            string compareName = node.DialogueLine.Listener.sprites[i].name;
+            string compareName = character.sprites[i].name;
             if (string.Equals(name, compareName, System.StringComparison.CurrentCultureIgnoreCase))
             {
                 returnSprite = character.sprites[i].sprite;

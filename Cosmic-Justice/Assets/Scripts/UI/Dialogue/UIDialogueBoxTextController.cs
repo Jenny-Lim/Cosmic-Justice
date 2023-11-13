@@ -124,6 +124,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             if (node.DialogueLine.Speaker.Font != null)
                 m_SpeakerText.font = node.DialogueLine.Speaker.Font;
 
+            if (node.DialogueLine.character1 != null || node.DialogueLine.character2 != null)
+                EventManager.current.Invoke("SetCharacters", 0);
+
             if (!string.IsNullOrEmpty(node.DialogueLine.CharacterSprite1))
                 EventManager.current.Invoke("Character1SpriteChange", 0);
 

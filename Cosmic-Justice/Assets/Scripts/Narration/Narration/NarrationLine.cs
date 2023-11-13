@@ -41,6 +41,12 @@ public class NarrationLine : ScriptableObject
     [SerializeField]
     private String m_CharacterSprite2;
 
+    [SerializeField]
+    private NarrationCharacter m_character1;
+
+    [SerializeField]
+    private NarrationCharacter m_character2;
+
     [Header("Events and Minigames")]
     [SerializeField]
     private Events m_events;
@@ -55,8 +61,7 @@ public class NarrationLine : ScriptableObject
         CharacterFadeInC1 = 2,
         CharacterFadeOutC1 = 4,
         CharacterFadeInC2 = 8,
-        CharacterFadeOutC2 = 16,
-        SetCharacters = 32
+        CharacterFadeOutC2 = 16
     }
 
     public enum Minigames
@@ -87,6 +92,10 @@ public class NarrationLine : ScriptableObject
     public string CharacterSprite1 => m_CharacterSprite1;
 
     public string CharacterSprite2 => m_CharacterSprite2;
+
+    public NarrationCharacter character1 => m_character1;
+
+    public NarrationCharacter character2 => m_character2;
 
     /*
     public UnityEvent LineEvent => m_LineEvent; //Gets the events associated with this dialogue
