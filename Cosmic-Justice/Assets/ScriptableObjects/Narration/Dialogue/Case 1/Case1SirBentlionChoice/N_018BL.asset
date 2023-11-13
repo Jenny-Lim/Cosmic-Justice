@@ -18,7 +18,7 @@ MonoBehaviour:
     control.\u201D"
   m_FontSize: 30
   m_TextSpeed: 0.02
-  m_CharacterSprite1: 
-  m_CharacterSprite2: 
+  m_CharacterSprite1: stressed
+  m_CharacterSprite2: frozen
   m_events: 34
   m_minigames: 0

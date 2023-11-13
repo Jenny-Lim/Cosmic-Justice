@@ -16,9 +16,9 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Text: "\u201CThat word does sound familiar\u2026 but what is a \u2018rent\u2019?
     Can I rend it with my trusty broadsword? Clobber it with a sturdy mace?\u201D"
-  m_FontSize: 30
+  m_FontSize: 34.9
   m_TextSpeed: 0.05
   m_CharacterSprite1: 
-  m_CharacterSprite2: 
+  m_CharacterSprite2: happy
   m_events: 0
   m_minigames: 0

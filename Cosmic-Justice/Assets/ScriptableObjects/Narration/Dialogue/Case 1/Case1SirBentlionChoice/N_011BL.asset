@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CThey did WHAT to gold?!\u201D\r\n"
   m_FontSize: 50
   m_TextSpeed: 0.02
-  m_CharacterSprite1: 
-  m_CharacterSprite2: 
+  m_CharacterSprite1: stressed
+  m_CharacterSprite2: stressed
   m_events: 1
   m_minigames: 0

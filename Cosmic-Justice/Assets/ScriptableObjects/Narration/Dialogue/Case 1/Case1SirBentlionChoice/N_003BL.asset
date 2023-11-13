@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\"This kind soul offered me housing, However he REFUSES to accept my valid
     methods of payment. His sudden aggression towards me is completely unwarranted!\u201D"
-  m_FontSize: 30
+  m_FontSize: 34.8
   m_TextSpeed: 0.05
   m_CharacterSprite1: 
   m_CharacterSprite2: 

@@ -17,9 +17,9 @@ MonoBehaviour:
   m_Text: "\u201CI fought side by side with my fellow knights, taking down a dragon
     for that very hoard! Those coins are precious! I didn\u2019t spend multiple millenia
     frozen in a forsaken glacier to be treated like some common rabble rouser-\u201D"
-  m_FontSize: 25
+  m_FontSize: 35.1
   m_TextSpeed: 0.02
-  m_CharacterSprite1: 
-  m_CharacterSprite2: 
+  m_CharacterSprite1: stressed
+  m_CharacterSprite2: angry
   m_events: 0
   m_minigames: 0
