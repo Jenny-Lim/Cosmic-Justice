@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
-  m_Name: N_14DL
+  m_Name: N_01FL
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CUnderstood. Thank you both.\u201D"
+  m_Text: "\u201CSir Bentlion. You have routinely fumbled in this world. It is no
+    longer this Landlord\u2019s responsibility to house you.\u201D"
   m_FontSize: 30
   m_TextSpeed: 0.1
-  m_CharacterSprite1: 
-  m_CharacterSprite2: 
-  m_character1: {fileID: 0}
-  m_character2: {fileID: 0}
-  m_events: 0
+  m_CharacterSprite1: happy
+  m_CharacterSprite2: sad
+  m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
+  m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
+  m_events: 10
   m_minigames: 0
