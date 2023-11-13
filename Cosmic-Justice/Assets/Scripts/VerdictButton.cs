@@ -11,9 +11,12 @@ public class VerdictButton : MonoBehaviour
     private GameObject dialoguePanel;
     private GameObject verdictPanel; // temp ??
 
+    private LayoutElement layoutElement;
+
     // Start is called before the first frame update
     void Awake()
     {
+        layoutElement = gameObject.GetComponent<LayoutElement>();
         dialoguePanel = GameObject.FindWithTag("DialoguePanel");
         b = GetComponent<Button>();
         anim = GetComponent<Animator>();
@@ -27,18 +30,24 @@ public class VerdictButton : MonoBehaviour
     {
         Debug.Log("hi");
         verdictPanel = GameObject.FindWithTag("VerdictPanel"); // temp ??
-        dialoguePanel.SetActive(false);
+        if (dialoguePanel) {
+            dialoguePanel.SetActive(false);
+        }
+        layoutElement.ignoreLayout = true;
         anim.Play("ButtonComeUp");
     }
 
     public void OnButtonPress()
     {
+        layoutElement.ignoreLayout = true;
         anim.SetTrigger("pressed");
+        b.interactable = false;
         dialoguePanel.SetActive(true);
     } // OnButtonPress
 
     public void DoneComeUp() // animation event
     {
+        layoutElement.ignoreLayout = false;
         b.interactable = true;
         Debug.Log("done come up!");
     } // DoneComeUp
