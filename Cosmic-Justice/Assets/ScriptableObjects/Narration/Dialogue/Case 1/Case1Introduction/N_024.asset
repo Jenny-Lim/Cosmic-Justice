@@ -16,6 +16,6 @@ MonoBehaviour:
   isVerdict: 0
   m_Choices:
   - m_ChoicePreview: '"Sir Bentlion the Frozen Knight!"'
-    m_ChoiceNode: {fileID: 0}
+    m_ChoiceNode: {fileID: 11400000, guid: 35b7e76e212a64942b36d676292fe783, type: 2}
   - m_ChoicePreview: '"Landlord IV!"'
-    m_ChoiceNode: {fileID: 0}
+    m_ChoiceNode: {fileID: 11400000, guid: 77075bde7415fe1419296433b8a95d8f, type: 2}

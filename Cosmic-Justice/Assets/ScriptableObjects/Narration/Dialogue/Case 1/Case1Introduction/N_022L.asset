@@ -18,7 +18,7 @@ MonoBehaviour:
     more respectable and streamlined fashion so I can get to my cosmic lunch break.\""
   m_FontSize: 50
   m_TextSpeed: 0.05
-  m_CharacterSprite1: sad
+  m_CharacterSprite1: 
   m_CharacterSprite2: 
   m_events: 0
   m_minigames: 8

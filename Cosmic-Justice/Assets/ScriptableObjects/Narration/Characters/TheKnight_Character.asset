@@ -29,3 +29,5 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 14faa9a9f32765d4fb36dd16a509ad0a, type: 3}
   - name: stressed
     sprite: {fileID: 21300000, guid: 59305e1a78a0e064dba4b7870bce78e8, type: 3}
+  - name: frozen
+    sprite: {fileID: 21300000, guid: 558f2e927f199874b82def10dbccdfd8, type: 3}
