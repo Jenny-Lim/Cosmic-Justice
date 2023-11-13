@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1765248591878196438}
   - component: {fileID: 3481765876763934499}
   - component: {fileID: 4677729184527407903}
+  - component: {fileID: 7752020589757926160}
   m_Layer: 5
   m_Name: VerdictButton
   m_TagString: Untagged
@@ -39,7 +40,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8504483054331137526
@@ -148,7 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f72e95302c8a4498f356ad793f92fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 0}
 --- !u!95 &3481765876763934499
 Animator:
   serializedVersion: 5
@@ -184,6 +184,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Choice: {fileID: 4626269168704054488}
   m_DialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
+  m_ButtonSprite: {fileID: 0}
+  m_Font: {fileID: 0}
+  m_FontColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &7752020589757926160
 MonoBehaviour:
   m_ObjectHideFlags: 0
