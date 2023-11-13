@@ -2,6 +2,7 @@ using UnityEngine.Audio;
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -40,7 +41,10 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("MainTheme");
+        if (SceneManager.GetActiveScene().buildIndex != 2)
+            Play("MainTheme");
+        else
+            Play("Ambient_Track_A");
     }
 
     //Plays a sound based on a name
@@ -74,5 +78,29 @@ public class AudioManager : MonoBehaviour
         }
         currentlyPlayingSounds.Remove(s);
         s.source.Stop();
+    }
+
+    //Pause a sound based on a name
+    public void Pause(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        s.source.Pause();
+    }
+
+    //Unpause a sound based on a name
+    public void UnPause(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        s.source.UnPause();
     }
 }

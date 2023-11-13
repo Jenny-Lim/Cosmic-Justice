@@ -16,13 +16,10 @@ public class MinigameManager : MonoBehaviour
     //[SerializeField]
     //private GameObject verdictMinigame;
 
-    private AudioManager audioManager;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        if(audioManager == null) audioManager = FindObjectOfType<AudioManager>();
 
         //subscribe to the canvasShake event
         EventManager.current.asteroid += StartAsteroidMinigame;
@@ -49,7 +46,8 @@ public class MinigameManager : MonoBehaviour
         EventManager.current.CanDialogue(false);
         asteroidMinigame.SetActive(true);
 
-        audioManager.Play("MiniGame_Track_A");
+        AudioManager.instance.Pause("Ambient_Track_A");
+        AudioManager.instance.Play("MiniGame_Track_A");
     }
 
     private void EndAsteroidMinigame()
@@ -57,7 +55,8 @@ public class MinigameManager : MonoBehaviour
         EventManager.current.CanDialogue(true);
         asteroidMinigame.SetActive(false);
 
-        audioManager.Play("Ambient_Track_A");
+        AudioManager.instance.UnPause("Ambient_Track_A");
+        AudioManager.instance.Stop("MiniGame_Track_A");
     }
 
     private void StartDialMinigame()
@@ -65,7 +64,8 @@ public class MinigameManager : MonoBehaviour
         EventManager.current.CanDialogue(false);
         dialMinigame.SetActive(true);
 
-        audioManager.Play("MiniGame_Track_A");
+        AudioManager.instance.Pause("Ambient_Track_A");
+        AudioManager.instance.Play("MiniGame_Track_A");
     }
 
     private void EndDialMinigame()
@@ -73,7 +73,8 @@ public class MinigameManager : MonoBehaviour
         EventManager.current.CanDialogue(true);
         dialMinigame.SetActive(false);
 
-        audioManager.Play("Ambient_Track_A");
+        AudioManager.instance.UnPause("Ambient_Track_A");
+        AudioManager.instance.Stop("MiniGame_Track_A");
     }
     
     //private void StartVerdictMinigame()
