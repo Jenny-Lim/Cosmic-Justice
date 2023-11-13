@@ -182,8 +182,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             int i = 0;
             foreach (DialogueChoice choice in node.Choices)
             {
-                verdictTransform.anchoredPosition += new Vector2(verdictTransform.anchoredPosition.x * i, 0);
+                //verdictTransform.anchoredPosition += new Vector2(verdictTransform.anchoredPosition.x * i, 0);
                 UIDialogueChoiceController newChoice = Instantiate(verdictPrefab, verdictTransform);
+                newChoice.transform.position += new Vector3(newChoice.transform.position.x * i, 0 ,0);
                 newChoice.Choice = choice;
                 i++;
             }
