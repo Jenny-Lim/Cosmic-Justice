@@ -179,11 +179,13 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         else
         {
             verdictTransform.gameObject.SetActive(true);
+            int i = 0;
             foreach (DialogueChoice choice in node.Choices)
             {
-
+                verdictTransform.anchoredPosition += new Vector2(verdictTransform.anchoredPosition.x * i, 0);
                 UIDialogueChoiceController newChoice = Instantiate(verdictPrefab, verdictTransform);
                 newChoice.Choice = choice;
+                i++;
             }
         }
     }

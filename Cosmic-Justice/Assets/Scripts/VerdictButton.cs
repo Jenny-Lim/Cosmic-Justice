@@ -30,7 +30,7 @@ public class VerdictButton : MonoBehaviour
     {
         Debug.Log("hi");
         verdictPanel = GameObject.FindWithTag("VerdictPanel"); // temp ??
-        if (dialoguePanel) {
+        if (dialoguePanel) { // im aware this isnt amazing
             dialoguePanel.SetActive(false);
         }
         layoutElement.ignoreLayout = true;
@@ -42,7 +42,10 @@ public class VerdictButton : MonoBehaviour
         layoutElement.ignoreLayout = true;
         anim.SetTrigger("pressed");
         b.interactable = false;
-        dialoguePanel.SetActive(true);
+        if (dialoguePanel)
+        {
+            dialoguePanel.SetActive(true);
+        }
     } // OnButtonPress
 
     public void DoneComeUp() // animation event
