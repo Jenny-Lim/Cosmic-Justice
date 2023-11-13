@@ -9,6 +9,7 @@ public class VerdictButton : MonoBehaviour
     private Button b;
 
     private GameObject dialoguePanel;
+    private GameObject verdictPanel; // temp ??
 
     // Start is called before the first frame update
     void Awake()
@@ -25,6 +26,7 @@ public class VerdictButton : MonoBehaviour
     void OnEnable()
     {
         Debug.Log("hi");
+        verdictPanel = GameObject.FindWithTag("VerdictPanel"); // temp ??
         dialoguePanel.SetActive(false);
         anim.Play("ButtonComeUp");
     }
@@ -45,5 +47,7 @@ public class VerdictButton : MonoBehaviour
     {
         //EventManager.current.EndVerdict();
         //dialoguePanel.SetActive(true);
+        //this.gameObject.SetActive(false);
+        verdictPanel.SetActive(false); // temp ??
     } // EndVerdict
 }
