@@ -7,7 +7,7 @@ public class EndCutscene : MonoBehaviour
 {
     private VideoPlayer player;
 
-    private float videoLength =3;
+    private float videoLength;
 
     private SceneLoader sceneLoader;
 
@@ -15,7 +15,7 @@ public class EndCutscene : MonoBehaviour
     void Start()
     {
         player = GetComponent<VideoPlayer>();
-        //videoLength = (float) player.clip.length;
+        videoLength = (float) player.clip.length;
         sceneLoader = FindAnyObjectByType<SceneLoader>();
         StartCoroutine(NextScene());
     }

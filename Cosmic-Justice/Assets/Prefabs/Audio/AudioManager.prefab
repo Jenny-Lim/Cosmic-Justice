@@ -70,7 +70,7 @@ MonoBehaviour:
     source: {fileID: 0}
     loop: 0
     playOnAwake: 0
-    canOverlap: 0
+    canOverlap: 1
     mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
   - name: Ambient_Track_A
     clip: {fileID: 8300000, guid: ca5434d50ebfb364eb2fbe721c8d2824, type: 3}
