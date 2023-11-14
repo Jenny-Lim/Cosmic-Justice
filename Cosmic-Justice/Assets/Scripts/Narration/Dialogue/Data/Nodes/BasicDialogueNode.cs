@@ -4,7 +4,7 @@ using UnityEngine;
 public class BasicDialogueNode : DialogueNode
 {
     [SerializeField]
-    private DialogueNode m_NextNode;
+    public DialogueNode m_NextNode;
     public DialogueNode NextNode => m_NextNode;
 
 

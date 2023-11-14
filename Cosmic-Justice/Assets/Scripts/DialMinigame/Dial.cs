@@ -15,7 +15,7 @@ public class Dial : MonoBehaviour
     [SerializeField] GameObject safeArea;
 
     [SerializeField] Dialogue lose;
-    [SerializeField] DialogueChannel dialogueChannel;
+    [SerializeField] BasicDialogueNode prevNode, winNode, loseNode; // track who you picked
 
     // variables
     [SerializeField] float decrSpeed, incrAmt;
@@ -70,7 +70,7 @@ public class Dial : MonoBehaviour
             button.enabled = false;
             EventManager.current.EndDial();
             // go to lose node + reset (ie,. reset + put the minigame back on in the line)
-            //dialogueChannel.RaiseRequestDialogue(lose);
+            prevNode.m_NextNode = loseNode;
         }
 
         // win
@@ -79,6 +79,7 @@ public class Dial : MonoBehaviour
             statusText.text = winStatus;
             button.enabled = false;
             EventManager.current.EndDial();
+            prevNode.m_NextNode = winNode;
         }
 
         else

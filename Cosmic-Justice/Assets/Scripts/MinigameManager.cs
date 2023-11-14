@@ -41,9 +41,10 @@ public class MinigameManager : MonoBehaviour
 
     void hidePanel()
     {
-        dialogueBox.cull = false;
-        dialogueText.cull = false;
-        characterName.cull = false;
+        Debug.Log("hi");
+        dialogueBox.cull = true;
+        dialogueText.cull = true;
+        characterName.cull = true;
     }
 
     void showPanel()
