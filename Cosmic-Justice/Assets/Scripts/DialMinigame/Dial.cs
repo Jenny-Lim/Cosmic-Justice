@@ -64,6 +64,7 @@ public class Dial : MonoBehaviour
         {
             statusText.text = "You lose.";
             button.enabled = false;
+            EventManager.current.EndDial();
             // make time stop
             // exit here
         }
@@ -73,6 +74,7 @@ public class Dial : MonoBehaviour
         {
             statusText.text = "You Win!";
             button.enabled = false;
+            EventManager.current.EndDial();
             // make time stop
             // exit here
         }
