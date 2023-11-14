@@ -960,8 +960,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.335}
-  m_AnchoredPosition: {x: -542.04, y: 89.29999}
-  m_SizeDelta: {x: -1342.07, y: -192.4}
+  m_AnchoredPosition: {x: -542.04, y: 92.75}
+  m_SizeDelta: {x: -1342.07, y: -185.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359141760
 MonoBehaviour:
@@ -3456,9 +3456,9 @@ RectTransform:
   - {fileID: 2051896484}
   - {fileID: 1832885797}
   - {fileID: 231371095}
-  - {fileID: 2056235907}
   - {fileID: 3070533}
   - {fileID: 1341420160}
+  - {fileID: 2056235907}
   - {fileID: 1798145202}
   - {fileID: 1736208226}
   - {fileID: 1773281794}
@@ -3685,12 +3685,16 @@ MonoBehaviour:
   timer: {fileID: 574210957}
   health: {fileID: 421043902}
   safeArea: {fileID: 1760017865}
-  decrSpeed: 40
+  decrSpeed: 45.1
   incrAmt: 16
   decrHealth: 5
   minRand: 2
   maxRand: 4
-  lerpSpeed: 0.0002
+  lerpSpeed: 0.0001
+  winStatus: The Knight Is Defrosted!
+  loseStatus: The Knight Is Still Frozen...
+  doingWellStatus: Warmer!
+  inTroubleStatus: Colder!
 --- !u!114 &812711346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3762,7 +3766,7 @@ RectTransform:
   m_Father: {fileID: 1851888709}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4020,8 +4024,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.51000005, y: 0.120000005}
   m_AnchorMax: {x: 0.51000005, y: 0.120000005}
-  m_AnchoredPosition: {x: -1.3990364, y: -0.3999939}
-  m_SizeDelta: {x: 1.9199982, y: 2.1399994}
+  m_AnchoredPosition: {x: -0.71, y: -0.3999939}
+  m_SizeDelta: {x: 1.95, y: 2.14}
   m_Pivot: {x: 0.86, y: 0.5}
 --- !u!50 &903293107
 Rigidbody2D:
@@ -7173,10 +7177,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 812711344}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 702, y: 714.29}
+  m_AnchorMin: {x: 0.51000005, y: 0.120000005}
+  m_AnchorMax: {x: 0.51000005, y: 0.120000005}
+  m_AnchoredPosition: {x: -0.93, y: -2.5100002}
+  m_SizeDelta: {x: 703.92, y: 664.49}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1760017867
 MonoBehaviour:
@@ -7294,7 +7298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1773281794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8604,7 +8608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2056235907
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8621,7 +8625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -80, y: -448}
+  m_AnchoredPosition: {x: -80, y: -381.5}
   m_SizeDelta: {x: 761.7, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2056235910
@@ -9435,7 +9439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e49d272e6ac3d41933dca46384b4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0
+  waitTime: 3.5
   dialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   dialogue: {fileID: 11400000, guid: 8ceaa0e2b28743a43ae66e65e4aa571a, type: 2}
 --- !u!1 &2128092163

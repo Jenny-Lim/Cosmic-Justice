@@ -15,10 +15,10 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\u201CUnderstood. Thank you both.\u201D"
-  m_FontSize: 30
+  m_FontSize: 35.4
   m_TextSpeed: 0.1
-  m_CharacterSprite1: 
-  m_CharacterSprite2: 
+  m_CharacterSprite1: neutral
+  m_CharacterSprite2: neutral
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
   m_events: 0

@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
-  m_Name: N_0.5DL
+  m_Name: N_01.5DL
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 0}
-  m_Listener: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
-  m_Text: 
-  m_FontSize: 20
+  m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
+  m_Listener: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
+  m_Text: '"Gah!"'
+  m_FontSize: 44.9
   m_TextSpeed: 0.1
-  m_CharacterSprite1: 
-  m_CharacterSprite2: frozen
-  m_character1: {fileID: 0}
+  m_CharacterSprite1: stressed
+  m_CharacterSprite2: stressed
+  m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
-  m_events: 4
+  m_events: 11
   m_minigames: 0

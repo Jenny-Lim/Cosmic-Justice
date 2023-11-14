@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_Listener: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
-  m_Text: "\u201CWe will be departing on our own terms, you wench. You have committed
-    a great betrayal I will not soon forget. Me and Sir Button will forge our own
-    paths.\u201D "
+  m_Text: "\u201CWe will be departing on our own terms, you wretch. You have committed
+    a great betrayal I will not soon forget. Sir Button and I shall forge our own
+    path into the future.\u201D "
   m_FontSize: 30
   m_TextSpeed: 0.1
   m_CharacterSprite1: neutral
-  m_CharacterSprite2: sad
+  m_CharacterSprite2: angry
   m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_character2: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_events: 0

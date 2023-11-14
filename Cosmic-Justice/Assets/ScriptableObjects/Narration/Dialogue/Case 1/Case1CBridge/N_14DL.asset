@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CThis verdict shall be final- and enacted for the rest of ternity!\u201D"
+  m_Text: 
   m_FontSize: 30
   m_TextSpeed: 0.1
   m_CharacterSprite1: stressed

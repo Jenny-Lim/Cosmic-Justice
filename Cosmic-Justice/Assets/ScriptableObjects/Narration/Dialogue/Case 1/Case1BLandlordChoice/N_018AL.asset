@@ -15,8 +15,8 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CLook, I know he\u2019s a good guy. Really, I do! He\u2019s actually
-    a really good tenant, at least compared to that Lunar Hydra family in B7. *shudders*
-    He\u2019s just\u2026 so oblivious to the new reality going on around him.\u201D"
+    a really good tenant, at least compared to that Lunar Hydra family in B7. He\u2019s
+    just\u2026 so oblivious to the new reality going on around him.\u201D"
   m_FontSize: 30.1
   m_TextSpeed: 0.05
   m_CharacterSprite1: sad

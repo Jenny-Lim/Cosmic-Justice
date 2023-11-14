@@ -15,14 +15,13 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CYour honour. I\u2019d love to house him forever, but his inability
-    to console with Dibbles and Particle Accelerator Toasters\u2122 and the monthly
-    Romp of the Cosmic Fox just makes me worried. If he won\u2019t learn, he needs
-    to leave.\u201D"
+    to understand how to use our currency of cosmic Dibbles and Particle Accelerator
+    Toasters\u2122 just makes me worried. If he won\u2019t learn, he needs to leave.\u201D"
   m_FontSize: 30
   m_TextSpeed: 0.1
-  m_CharacterSprite1: helmet
-  m_CharacterSprite2: neutral
-  m_character1: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
-  m_character2: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
-  m_events: 8
+  m_CharacterSprite1: angry
+  m_CharacterSprite2: 
+  m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
+  m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
+  m_events: 0
   m_minigames: 0
