@@ -60,6 +60,6 @@ public class VerdictButton : MonoBehaviour
         //EventManager.current.EndVerdict();
         //dialoguePanel.SetActive(true);
         //this.gameObject.SetActive(false);
-        verdictPanel.SetActive(false);
+        verdictPanel.SetActive(false); // timing is off
     } // EndVerdict
 }
