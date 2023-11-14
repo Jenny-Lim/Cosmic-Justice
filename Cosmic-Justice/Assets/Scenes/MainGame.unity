@@ -960,7 +960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.335}
-  m_AnchoredPosition: {x: -542.04, y: 92.75}
+  m_AnchoredPosition: {x: -542.04004, y: 92.75}
   m_SizeDelta: {x: -1342.07, y: -185.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359141760
@@ -1318,6 +1318,9 @@ MonoBehaviour:
   asteroidMinigame: {fileID: 619057680}
   dialMinigame: {fileID: 1773281793}
   puzzleMinigame: {fileID: 0}
+  dialogueBox: {fileID: 1755579120}
+  dialogueText: {fileID: 425288106}
+  characterName: {fileID: 359141761}
 --- !u!1 &419328652
 GameObject:
   m_ObjectHideFlags: 0

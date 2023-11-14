@@ -16,6 +16,9 @@ public class MinigameManager : MonoBehaviour
     //[SerializeField]
     //private GameObject verdictMinigame;
 
+    [SerializeField]
+    private CanvasRenderer dialogueBox, dialogueText, characterName;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +44,23 @@ public class MinigameManager : MonoBehaviour
         //EventManager.current.endVerdict -= EndVerdictMinigame;
     }
 
+    void hidePanel()
+    {
+        dialogueBox.cull = false;
+        dialogueText.cull = false;
+        characterName.cull = false;
+    }
+
+    void showPanel()
+    {
+        dialogueBox.cull = false;
+        dialogueText.cull = false;
+        characterName.cull = false;
+    }
+
     private void StartAsteroidMinigame()
     {
+        hidePanel();
         EventManager.current.CanDialogue(false);
         asteroidMinigame.SetActive(true);
 
@@ -52,6 +70,7 @@ public class MinigameManager : MonoBehaviour
 
     private void EndAsteroidMinigame()
     {
+        showPanel();
         EventManager.current.CanDialogue(true);
         asteroidMinigame.SetActive(false);
 
@@ -61,6 +80,7 @@ public class MinigameManager : MonoBehaviour
 
     private void StartDialMinigame()
     {
+        hidePanel();
         EventManager.current.CanDialogue(false);
         dialMinigame.SetActive(true);
 
@@ -70,6 +90,7 @@ public class MinigameManager : MonoBehaviour
 
     private void EndDialMinigame()
     {
+        showPanel();
         EventManager.current.CanDialogue(true);
         dialMinigame.SetActive(false);
 
