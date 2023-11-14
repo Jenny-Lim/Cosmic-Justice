@@ -3688,6 +3688,8 @@ MonoBehaviour:
   timer: {fileID: 574210957}
   health: {fileID: 421043902}
   safeArea: {fileID: 1760017865}
+  lose: {fileID: 11400000, guid: 2341a021e161d4c4b998077275422549, type: 2}
+  dialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   decrSpeed: 45.1
   incrAmt: 16
   decrHealth: 5

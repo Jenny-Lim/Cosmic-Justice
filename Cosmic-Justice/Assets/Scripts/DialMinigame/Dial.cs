@@ -13,7 +13,9 @@ public class Dial : MonoBehaviour
     [SerializeField] Timer timer;
     [SerializeField] public Slider health;
     [SerializeField] GameObject safeArea;
-    [SerializeField] DialogueNode loseNode;
+
+    [SerializeField] Dialogue lose;
+    [SerializeField] DialogueChannel dialogueChannel;
 
     // variables
     [SerializeField] float decrSpeed, incrAmt;
@@ -67,7 +69,8 @@ public class Dial : MonoBehaviour
             statusText.text = loseStatus;
             button.enabled = false;
             EventManager.current.EndDial();
-            // go to lose node + reset
+            // go to lose node + reset (ie,. reset + put the minigame back on in the line)
+            //dialogueChannel.RaiseRequestDialogue(lose);
         }
 
         // win
