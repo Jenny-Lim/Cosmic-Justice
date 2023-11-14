@@ -14,7 +14,6 @@ public class Dial : MonoBehaviour
     [SerializeField] public Slider health;
     [SerializeField] GameObject safeArea;
 
-    [SerializeField] Dialogue lose;
     [SerializeField] BasicDialogueNode prevNode1, prevNode2, winNode, loseNode; // track who you picked
 
     // variables
