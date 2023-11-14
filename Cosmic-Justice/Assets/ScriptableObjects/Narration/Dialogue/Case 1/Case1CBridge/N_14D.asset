@@ -21,7 +21,7 @@ MonoBehaviour:
     m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
     m_FontColor: {r: 1, g: 1, b: 1, a: 0}
   - m_ChoicePreview: GIVE THE KNIGHT A CHANGE
-    m_ChoiceNode: {fileID: 0}
+    m_ChoiceNode: {fileID: 11400000, guid: 87589b469129906499899945ae3e7543, type: 2}
     m_ButtonSprite: {fileID: 21300000, guid: b5b7088ef5d221d40a3df15eeeb128fa, type: 3}
     m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
     m_FontColor: {r: 1, g: 1, b: 1, a: 0}
