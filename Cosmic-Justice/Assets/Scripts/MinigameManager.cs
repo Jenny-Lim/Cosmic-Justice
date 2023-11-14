@@ -4,24 +4,16 @@ using UnityEngine;
 
 public class MinigameManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject asteroidMinigame;
 
     [SerializeField]
-    private GameObject dialMinigame;
-
-    [SerializeField]
-    private GameObject puzzleMinigame;
+    private GameObject asteroidMinigame, dialMinigame, puzzleMinigame;
 
     //[SerializeField]
     //private GameObject verdictMinigame;
 
     [SerializeField]
     private CanvasRenderer dialogueBox, dialogueText, characterName;
-
-    [SerializeField]
-    private DialogueNode winNode, loseNode;
-
+    
 
     // Start is called before the first frame update
     void Start()

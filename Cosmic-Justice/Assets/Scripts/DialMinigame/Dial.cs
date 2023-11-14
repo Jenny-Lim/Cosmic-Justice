@@ -13,6 +13,7 @@ public class Dial : MonoBehaviour
     [SerializeField] Timer timer;
     [SerializeField] public Slider health;
     [SerializeField] GameObject safeArea;
+    [SerializeField] DialogueNode loseNode;
 
     // variables
     [SerializeField] float decrSpeed, incrAmt;
@@ -66,8 +67,7 @@ public class Dial : MonoBehaviour
             statusText.text = loseStatus;
             button.enabled = false;
             EventManager.current.EndDial();
-            // make time stop
-            // exit here
+            // go to lose node + reset
         }
 
         // win
@@ -76,8 +76,6 @@ public class Dial : MonoBehaviour
             statusText.text = winStatus;
             button.enabled = false;
             EventManager.current.EndDial();
-            // make time stop
-            // exit here
         }
 
         else
