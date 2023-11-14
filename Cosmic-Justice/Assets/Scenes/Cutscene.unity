@@ -237,6 +237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grain Overlay Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7705246896083816495, guid: fb1fd21684ae6834d81e3a31f6152857, type: 3}
+      propertyPath: m_Color.a
+      value: 0.015686275
+      objectReference: {fileID: 0}
     - target: {fileID: 8968120668826659479, guid: fb1fd21684ae6834d81e3a31f6152857, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -669,6 +673,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037832922}
   m_CullTransparentMesh: 1
+--- !u!1001 &1139646655
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4883533704505240619, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: priority
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070550721008639811, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.20731536
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070550721008639811, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.19848311
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070550721008639811, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.2755575
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070550721008639811, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070550721008639811, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070550721008639811, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070550721008639811, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070550721008639811, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070550721008639811, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070550721008639811, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207085955165229485, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_Name
+      value: Post Processing Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207085955165229485, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7e0892a869dfb4744a828ef2160aea73, type: 3}
 --- !u!1001 &1263054824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -766,12 +835,14 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -872,5 +943,6 @@ SceneRoots:
   - {fileID: 767072727}
   - {fileID: 1451464403}
   - {fileID: 474850890}
+  - {fileID: 1139646655}
   - {fileID: 957288743}
   - {fileID: 1263054824}
