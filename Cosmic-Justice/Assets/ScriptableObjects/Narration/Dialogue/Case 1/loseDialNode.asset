@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: loseDialNode
   m_EditorClassIdentifier: 
   m_DialogueLine: {fileID: 11400000, guid: e6dbdd303df32834ca87478f52d9acd4, type: 2}
-  m_NextNode: {fileID: 0}
+  m_NextNode: {fileID: 11400000, guid: 359ee16784586c64aa546a5d053bc314, type: 2}

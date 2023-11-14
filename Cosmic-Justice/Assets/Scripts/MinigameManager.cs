@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MinigameManager : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class MinigameManager : MonoBehaviour
     //private GameObject verdictMinigame;
 
     [SerializeField]
-    private CanvasRenderer dialogueBox, dialogueText, characterName;
+    private CanvasRenderer dialogueText, characterName;
+    [SerializeField]
+    private Image dialogueBox;
     
 
     // Start is called before the first frame update
@@ -42,14 +45,14 @@ public class MinigameManager : MonoBehaviour
     void hidePanel()
     {
         Debug.Log("hi");
-        dialogueBox.cull = true;
+        dialogueBox.enabled = false;
         dialogueText.cull = true;
         characterName.cull = true;
     }
 
     void showPanel()
     {
-        dialogueBox.cull = false;
+        dialogueBox.enabled = true;
         dialogueText.cull = false;
         characterName.cull = false;
     }
