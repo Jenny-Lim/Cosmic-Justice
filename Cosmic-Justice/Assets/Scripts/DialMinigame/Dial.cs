@@ -19,6 +19,7 @@ public class Dial : MonoBehaviour
     [SerializeField] float decrHealth;
     [SerializeField] float minRand, maxRand;
     [SerializeField] float lerpSpeed;
+    [SerializeField] string winStatus, loseStatus, doingWellStatus, inTroubleStatus;
 
     private float currAngle, currHealthAngle, healthAngleCap; // angles work in negatives where you think the value would be positive, and vice versa
     private float randTime, t;
@@ -62,7 +63,7 @@ public class Dial : MonoBehaviour
         // loss
         if (health.value <= 0)
         {
-            statusText.text = "You lose.";
+            statusText.text = loseStatus;
             button.enabled = false;
             EventManager.current.EndDial();
             // make time stop
@@ -72,7 +73,7 @@ public class Dial : MonoBehaviour
         // win
         else if (timer.GetTime() <= 0)
         {
-            statusText.text = "You Win!";
+            statusText.text = winStatus;
             button.enabled = false;
             EventManager.current.EndDial();
             // make time stop
@@ -98,11 +99,11 @@ public class Dial : MonoBehaviour
 
             if (health.value >= health.maxValue / 2)
             {
-                statusText.text = "Doing well...";
+                statusText.text = doingWellStatus;
             }
             else
             {
-                statusText.text = "Welp";
+                statusText.text = inTroubleStatus;
                 
             }
 
