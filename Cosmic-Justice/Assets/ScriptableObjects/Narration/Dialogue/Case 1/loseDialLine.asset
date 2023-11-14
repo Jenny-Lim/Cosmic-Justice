@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
   m_Name: loseDialLine
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 0}
-  m_Listener: {fileID: 0}
-  m_Text: 
+  m_Speaker: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
+  m_Listener: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
+  m_Text: '"Sir Button, melt that loser out of his predicament."'
   m_FontSize: 20
   m_TextSpeed: 0.1
-  m_CharacterSprite1: 
-  m_CharacterSprite2: 
-  m_character1: {fileID: 0}
-  m_character2: {fileID: 0}
+  m_CharacterSprite1: happy
+  m_CharacterSprite2: happy
+  m_character1: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
+  m_character2: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_events: 0
   m_minigames: 0
