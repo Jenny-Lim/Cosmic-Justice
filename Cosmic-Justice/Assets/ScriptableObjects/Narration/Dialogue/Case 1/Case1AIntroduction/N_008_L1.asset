@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
-  m_Text: "\u201CEarth IV to Cosmic Sleepyhead! WAKE UP!!\u201D\r\n"
+  m_Text: "\u201CEarth to Cosmic Sleepyhead! WAKE UP!!\u201D\r\n"
   m_FontSize: 55
   m_TextSpeed: 0.1
   m_CharacterSprite1: angry
