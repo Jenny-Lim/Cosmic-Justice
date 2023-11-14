@@ -19,6 +19,9 @@ public class MinigameManager : MonoBehaviour
     [SerializeField]
     private CanvasRenderer dialogueBox, dialogueText, characterName;
 
+    [SerializeField]
+    private DialogueNode winNode, loseNode;
+
 
     // Start is called before the first frame update
     void Start()
