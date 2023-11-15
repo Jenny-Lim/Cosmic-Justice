@@ -27,6 +27,15 @@ public class SceneLoader : MonoBehaviour
         if(screenWipe == null) screenWipe = FindObjectOfType<ScreenWipe>();
     }
 
+    private void Start()
+    {
+        EventManager.current.endGame += Credits;
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.current.endGame -= Credits;
+    }
 
     public void SetMusicVolume(float volume)
     {

@@ -71,6 +71,12 @@ public class EventManager : MonoBehaviour
         characterFadeOutC2?.Invoke();
     }
 
+    public event Action endGame;
+    public void EndGame()
+    {
+        endGame?.Invoke();
+    }
+
     // -------------------- Minigames -------------------- //
     //asteroid
     public event Action asteroid;

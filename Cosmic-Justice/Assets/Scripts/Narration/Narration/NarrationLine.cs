@@ -66,10 +66,12 @@ public class NarrationLine : ScriptableObject
 
     public enum Minigames
     {
+        None = 0,
         Asteroid = 1,
         Dial = 2,
         Puzzle = 4,
         //Verdict = 8
+        EndGame = 8
     }
 
     public NarrationCharacter Speaker => m_Speaker; //Gets speaker's name
