@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Milkyway Studios
-  productName: Cosmic Justice
+  productName: CosmicJustice
   defaultCursor: {fileID: 2800000, guid: 7f90da099675244468e02fdc775bc27b, type: 3}
   cursorHotspot: {x: 60, y: 64}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
