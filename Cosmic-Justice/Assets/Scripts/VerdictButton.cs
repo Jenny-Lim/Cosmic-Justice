@@ -42,6 +42,7 @@ public class VerdictButton : MonoBehaviour
         //layoutElement.ignoreLayout = true;
         anim.SetTrigger("pressed");
         b.interactable = false;
+        verdictPanel.SetActive(false);
         if (dialoguePanel)
         {
             dialoguePanel.SetActive(true);
@@ -60,6 +61,6 @@ public class VerdictButton : MonoBehaviour
         //EventManager.current.EndVerdict();
         //dialoguePanel.SetActive(true);
         //this.gameObject.SetActive(false);
-        verdictPanel.SetActive(false); // timing is off
+        //verdictPanel.SetActive(false); // timing is off
     } // EndVerdict
 }
