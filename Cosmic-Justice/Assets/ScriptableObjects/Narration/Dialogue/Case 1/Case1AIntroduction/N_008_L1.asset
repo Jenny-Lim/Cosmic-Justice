@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CEarth to Cosmic Sleepyhead! WAKE UP!!\u201D\r\n"
   m_FontSize: 55
-  m_TextSpeed: 0.1
+  m_TextSpeed: 0.01
   m_CharacterSprite1: angry
   m_CharacterSprite2: 
   m_character1: {fileID: 0}

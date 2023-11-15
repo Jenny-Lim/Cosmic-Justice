@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
-  m_Name: N_003_L1
+  m_Name: N_004_L1 1
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
-  m_Listener: {fileID: 0}
-  m_Text: "\u201CThule, I hate Mondays.\u201D"
+  m_Speaker: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
+  m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
+  m_Text: "\u201CUhhh\u2026 big boss CJ?\u201D\r\n"
   m_FontSize: 40
   m_TextSpeed: 0.01
-  m_CharacterSprite1: 
+  m_CharacterSprite1: stressed
   m_CharacterSprite2: 
-  m_character1: {fileID: 0}
+  m_character1: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
   m_character2: {fileID: 0}
-  m_events: 0
+  m_events: 2
   m_minigames: 0
