@@ -29,7 +29,7 @@ public class EndCutscene : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0))
             sceneLoader.StartLoadLevel(1);
     }
 }
