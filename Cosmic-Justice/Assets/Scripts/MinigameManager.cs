@@ -90,8 +90,8 @@ public class MinigameManager : MonoBehaviour
     private void EndDialMinigame()
     {
         showPanel();
-        EventManager.current.CanDialogue(true);
         dialMinigame.SetActive(false);
+        EventManager.current.CanDialogue(true);
 
         AudioManager.instance.UnPause("Ambient_Track_A");
         AudioManager.instance.Stop("MiniGame_Track_A");
