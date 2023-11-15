@@ -3,6 +3,9 @@ using UnityEngine.UI;
 
 public class ScreenWipe : MonoBehaviour
 {
+    [SerializeField] private WipeData[] data;
+    public WipeData[] Data => data;
+
     public enum FillMethod 
     {
         Horizontal,
@@ -15,6 +18,7 @@ public class ScreenWipe : MonoBehaviour
     public FillMethod fillMethod = FillMethod.Horizontal;
 
     [SerializeField] [Range(0.1f, 3f)] private float wipeSpeed = 1f;
+    public float WipeSpeed => wipeSpeed;
 
     private Image image;
 
@@ -41,7 +45,7 @@ public class ScreenWipe : MonoBehaviour
         ToggleWipe(false);
     }
 
-    private void SetFillMethod()
+    public void SetFillMethod()
     {
         if(image != null)
         {

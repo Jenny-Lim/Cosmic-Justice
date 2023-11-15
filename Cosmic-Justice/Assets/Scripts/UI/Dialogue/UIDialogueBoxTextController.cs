@@ -156,8 +156,11 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         //If there is a minigame then run it
         if (node != null && node.DialogueLine.minigame != 0)
         {
-            Debug.Log(node.DialogueLine.minigame.ToString());
-            EventManager.current.Invoke(node.DialogueLine.minigame.ToString(), 0);
+            if (node.DialogueLine.minigame.ToString() != "None")
+            {
+                Debug.Log(node.DialogueLine.minigame.ToString());
+                EventManager.current.Invoke(node.DialogueLine.minigame.ToString(), 0);
+            }
         }
     }
 

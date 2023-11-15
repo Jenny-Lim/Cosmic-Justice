@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CSir Bentlion. You have routinely fumbled in adjusting in this universe.
     It is no longer this Landlord\u2019s responsibility to house you.\u201D"
   m_FontSize: 30
-  m_TextSpeed: 0.1
+  m_TextSpeed: 0.01
   m_CharacterSprite1: happy
   m_CharacterSprite2: sad
   m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}

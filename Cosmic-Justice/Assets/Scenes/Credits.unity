@@ -1393,7 +1393,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\nEvan Sawatsky\r\nAaron Sun\n\rSky Atkinson\r\nMo Qamar\r\nCaithlyn Garcia\nAlyssa
-    Capps\nJenny Lim\n\rUI Ethan Neufeld\r\r"
+    Capps\nJenny Lim\n\rEthan Neufeld\r\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
   m_sharedMaterial: {fileID: -7896125596273876221, guid: 087dc9c2214599349a74d846ca892563, type: 2}

@@ -27,6 +27,15 @@ public class SceneLoader : MonoBehaviour
         if(screenWipe == null) screenWipe = FindObjectOfType<ScreenWipe>();
     }
 
+    private void Start()
+    {
+        EventManager.current.endGame += Credits;
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.current.endGame -= Credits;
+    }
 
     public void SetMusicVolume(float volume)
     {
@@ -123,6 +132,8 @@ public class SceneLoader : MonoBehaviour
 
     private IEnumerator LoadLevel(int levelIndex)
     {
+        SetScreenWipeData(levelIndex);
+
         screenWipe.ToggleWipe(true);
         while (!screenWipe.isDone)
             yield return null;
@@ -167,4 +178,15 @@ public class SceneLoader : MonoBehaviour
         print("wiping in.");
     }
 
+    private void SetScreenWipeData(int levelIndex)
+    {
+        for (int i = 0; i < screenWipe.Data.Length; i++)
+        {
+            if(screenWipe.Data[i].sceneIndex == levelIndex)
+            {
+                screenWipe.fillMethod = screenWipe.Data[i].fillMethod;
+                screenWipe.SetFillMethod();
+            }
+        }
+    }
 }

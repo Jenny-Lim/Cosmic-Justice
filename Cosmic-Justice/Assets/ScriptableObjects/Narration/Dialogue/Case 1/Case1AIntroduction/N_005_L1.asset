@@ -18,7 +18,7 @@ MonoBehaviour:
     them out of the court\u2019s airlock\u2026 like I used to before Carl from accounting
     reported me to Humanoid Relations.\u201D"
   m_FontSize: 33
-  m_TextSpeed: 0.1
+  m_TextSpeed: 0.01
   m_CharacterSprite1: 
   m_CharacterSprite2: 
   m_character1: {fileID: 0}
