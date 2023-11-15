@@ -3688,7 +3688,6 @@ MonoBehaviour:
   timer: {fileID: 574210957}
   health: {fileID: 421043902}
   safeArea: {fileID: 1760017865}
-  lose: {fileID: 11400000, guid: 2341a021e161d4c4b998077275422549, type: 2}
   prevNode1: {fileID: 11400000, guid: ed51a5e3a4c8d2b479951099fb3c30e6, type: 2}
   prevNode2: {fileID: 11400000, guid: 6dcdaf822feaf3d49a9f6dee817bad99, type: 2}
   winNode: {fileID: 11400000, guid: 359ee16784586c64aa546a5d053bc314, type: 2}
@@ -6560,7 +6559,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602432490}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2743.331}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
