@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CCalm down, Leo. I don\u2019t need anything from you yet. Let\u2019s
     head back home and we can talk, okay?\u201D"
   m_FontSize: 30
-  m_TextSpeed: 0.1
+  m_TextSpeed: 0.01
   m_CharacterSprite1: happy
   m_CharacterSprite2: happy
   m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
