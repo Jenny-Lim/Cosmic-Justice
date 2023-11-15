@@ -27,8 +27,16 @@ public class Dial : MonoBehaviour
     private float randTime, t;
     private SafeArea sa;
 
+    void Awake()
+    {
+        prevNode1.m_NextNode = null;
+        prevNode2.m_NextNode = null;
+    }
+
     void Start() // use width to alter range, make range check a collider enter, keep range the same
     {
+        
+
         t = 0f;
 
         health.interactable = false;
@@ -67,10 +75,11 @@ public class Dial : MonoBehaviour
         {
             statusText.text = loseStatus;
             button.enabled = false;
-            EventManager.current.EndDial();
             // go to lose node + reset?? (ie,. reset + put the minigame back on in the line)
             prevNode1.m_NextNode = loseNode; // scuffed
             prevNode2.m_NextNode = loseNode;
+            EventManager.current.EndDial();
+            
         }
 
         // win
@@ -78,9 +87,10 @@ public class Dial : MonoBehaviour
         {
             statusText.text = winStatus;
             button.enabled = false;
-            EventManager.current.EndDial();
             prevNode1.m_NextNode = winNode; // scuffed
             prevNode2.m_NextNode = winNode;
+            EventManager.current.EndDial();
+            
         }
 
         else
