@@ -479,8 +479,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 541.73, y: -55.77}
-  m_SizeDelta: {x: 634.73, y: 634.73}
+  m_AnchoredPosition: {x: 539.6, y: 67}
+  m_SizeDelta: {x: 840.8, y: 857.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &231371097
 MonoBehaviour:
@@ -3688,7 +3688,6 @@ MonoBehaviour:
   timer: {fileID: 574210957}
   health: {fileID: 421043902}
   safeArea: {fileID: 1760017865}
-  lose: {fileID: 11400000, guid: 2341a021e161d4c4b998077275422549, type: 2}
   prevNode1: {fileID: 11400000, guid: ed51a5e3a4c8d2b479951099fb3c30e6, type: 2}
   prevNode2: {fileID: 11400000, guid: 6dcdaf822feaf3d49a9f6dee817bad99, type: 2}
   winNode: {fileID: 11400000, guid: 359ee16784586c64aa546a5d053bc314, type: 2}
@@ -7712,8 +7711,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -528.71, y: -57.79}
-  m_SizeDelta: {x: 638.78, y: 638.78}
+  m_AnchoredPosition: {x: -532, y: 73}
+  m_SizeDelta: {x: 840.8, y: 857.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1832885798
 MonoBehaviour:
