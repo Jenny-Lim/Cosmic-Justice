@@ -18,6 +18,8 @@ public class CharacterFade : MonoBehaviour
     private bool fadeIn = false;
     private bool fadeOut = false;
 
+    private bool canSpeedUp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,20 +30,30 @@ public class CharacterFade : MonoBehaviour
         EventManager.current.characterFadeInC2 += fadeInC2;
         EventManager.current.characterFadeOutC2 += fadeOutC2;
 
+        EventManager.current.canDialogue += CanSpeedUp;
+
         EventManager.current.click += Quicken;
 
         if (transform.position.x < 0)
             character1 = true;
         else
             character1 = false;
+
+        canSpeedUp = true;
     }
 
     private void OnDestroy()
     {
         EventManager.current.characterFadeInC2 -= fadeInC2;
         EventManager.current.characterFadeOutC2 -= fadeOutC2;
+        EventManager.current.canDialogue -= CanSpeedUp;
 
         EventManager.current.click -= Quicken;
+    }
+
+    private void CanSpeedUp(bool can)
+    {
+        canSpeedUp = can;
     }
 
     private void fadeInC1()
@@ -133,6 +145,7 @@ public class CharacterFade : MonoBehaviour
     private void Quicken()
     {
         if (fadeIn || fadeOut)
-            timeElapsed = fadeTime - 0.001f;
+            if(canSpeedUp)
+                timeElapsed = fadeTime - 0.001f;
     }
 }

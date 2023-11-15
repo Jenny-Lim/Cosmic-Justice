@@ -14,12 +14,16 @@ public class DialogueText : MonoBehaviour
     private bool textOver;
     private bool speedText;
 
+
+    private bool canSpeedUp;
+
     private void Awake()
     {
         textMeshProUGUI = GetComponent<TextMeshProUGUI>();
         textMeshProUGUI.text = string.Empty;
         textOver = true;
         speedText = false;
+        canSpeedUp = true;
     }
 
     private void OnEnable()
@@ -32,13 +36,19 @@ public class DialogueText : MonoBehaviour
     private void Start()
     {
         EventManager.current.click += FastDialogue;
+        EventManager.current.canDialogue += CanSpeedDialogue;
     }
 
     private void OnDestroy()
     {
         EventManager.current.click -= FastDialogue;
+        EventManager.current.canDialogue -= CanSpeedDialogue;
     }
 
+    private void CanSpeedDialogue(bool can)
+    {
+        canSpeedUp = can;
+    }
 
     IEnumerator TypeLine()
     {
@@ -122,10 +132,9 @@ public class DialogueText : MonoBehaviour
 
     private void FastDialogue()
     {
-        if (!textOver)
+        if (!textOver && canSpeedUp)
         {
             EventManager.current.DialogueClick(false);
-            Debug.Log("Speed");
             textSpeed = 0;
             speedText = true;
         }
