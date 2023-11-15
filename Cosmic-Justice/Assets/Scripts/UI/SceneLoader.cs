@@ -27,6 +27,15 @@ public class SceneLoader : MonoBehaviour
         if(screenWipe == null) screenWipe = FindObjectOfType<ScreenWipe>();
     }
 
+    private void Start()
+    {
+        EventManager.current.endGame += Credits;
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.current.endGame -= Credits;
+    }
 
     public void SetMusicVolume(float volume)
     {
@@ -68,6 +77,7 @@ public class SceneLoader : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        EventManager.current.CanDialogue(false);
     }
 
     public void Resume()
@@ -75,10 +85,12 @@ public class SceneLoader : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        EventManager.current.CanDialogue(true);
     }
 
     public void MainMenu()
     {
+        Time.timeScale = 1f;
         StartLoadLevel(1);
     }
 

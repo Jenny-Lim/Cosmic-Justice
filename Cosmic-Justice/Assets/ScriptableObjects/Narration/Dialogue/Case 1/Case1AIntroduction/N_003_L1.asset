@@ -16,8 +16,10 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CThule, I hate Mondays.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.2
+  m_TextSpeed: 0.01
   m_CharacterSprite1: 
   m_CharacterSprite2: 
+  m_character1: {fileID: 0}
+  m_character2: {fileID: 0}
   m_events: 0
   m_minigames: 0
