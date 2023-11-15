@@ -172,5 +172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7cc9aaeadf6b844cbb620c153554058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+  - {fileID: 11400000, guid: e30d620590a3e904f8bccbc925aaf9c4, type: 2}
+  - {fileID: 11400000, guid: 1d4e633206a8b5746aa98b86f5b0bc57, type: 2}
+  - {fileID: 11400000, guid: 5263f04ef29bc964ca9027a1483f4a05, type: 2}
+  - {fileID: 11400000, guid: 7460051a29ef17348b9ba9b5c5662018, type: 2}
   fillMethod: 1
   wipeSpeed: 1
