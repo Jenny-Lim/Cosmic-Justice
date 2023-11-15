@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ac49b0062e82441a95da813456b989, type: 3}
   m_Name: Wipe_MainGame
   m_EditorClassIdentifier: 
-  fillMethod: 4
+  fillMethod: 0
   sceneIndex: 2

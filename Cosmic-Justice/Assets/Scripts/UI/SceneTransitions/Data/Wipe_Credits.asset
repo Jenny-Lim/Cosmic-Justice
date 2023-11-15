@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ac49b0062e82441a95da813456b989, type: 3}
   m_Name: Wipe_Credits
   m_EditorClassIdentifier: 
-  fillMethod: 3
+  fillMethod: 4
   sceneIndex: 3
