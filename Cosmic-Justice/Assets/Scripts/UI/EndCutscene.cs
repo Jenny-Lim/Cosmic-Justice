@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Video;
 
 public class EndCutscene : MonoBehaviour
@@ -24,5 +25,11 @@ public class EndCutscene : MonoBehaviour
     {
         yield return new WaitForSeconds(videoLength);
         sceneLoader.StartLoadLevel(1);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            sceneLoader.StartLoadLevel(1);
     }
 }
