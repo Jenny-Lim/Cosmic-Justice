@@ -137,6 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Choice: {fileID: 2773801561090243264}
   m_DialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
+  m_ButtonSprite: {fileID: 0}
+  m_Font: {fileID: 0}
+  m_FontColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &4846074182809949033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,10 +252,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.5
+  m_fontSize: 18
   m_fontSizeBase: 16.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
