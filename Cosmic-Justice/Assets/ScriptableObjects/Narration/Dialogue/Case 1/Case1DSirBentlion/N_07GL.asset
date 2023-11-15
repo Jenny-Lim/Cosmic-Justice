@@ -19,7 +19,7 @@ MonoBehaviour:
     A butter knife that is also a magnificent sword? A sword that is also a sword?
     A Dragon\u2019s skull?\u201D"
   m_FontSize: 25
-  m_TextSpeed: 0.1
+  m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
   m_CharacterSprite2: happy
   m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}

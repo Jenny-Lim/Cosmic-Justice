@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CChirp!\u201D\r\n"
   m_FontSize: 50
-  m_TextSpeed: 0.1
+  m_TextSpeed: 0.01
   m_CharacterSprite1: happy
   m_CharacterSprite2: happy
   m_character1: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
