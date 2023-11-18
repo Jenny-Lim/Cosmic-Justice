@@ -30,7 +30,7 @@ public class Dial : MonoBehaviour
 
     void OnEnable() // use width to alter range, make range check a collider enter, keep range the same
     {
-        prevNode1.m_NextNode = null;
+        prevNode1.m_NextNode = null; // with this current system, this should be set before the minigame (so sprites are appropriate)
         prevNode2.m_NextNode = null;
 
         t = 0f;
@@ -52,7 +52,7 @@ public class Dial : MonoBehaviour
         //Debug.Log(healthAngleCap);
 
         randTime = Random.Range(minRand, maxRand);
-    } // Start
+    } // OnEnable
 
     void Update()
     {
