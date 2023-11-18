@@ -15,6 +15,7 @@ public class Dial : MonoBehaviour
     [SerializeField] GameObject safeArea;
 
     [SerializeField] BasicDialogueNode prevNode1, prevNode2, winNode, loseNode; // track who you picked
+    [SerializeField] DialogueChannel dialogueChannel;
 
     // variables
     [SerializeField] float decrSpeed, incrAmt;
@@ -27,15 +28,10 @@ public class Dial : MonoBehaviour
     private float randTime, t;
     private SafeArea sa;
 
-    void Awake()
+    void OnEnable() // use width to alter range, make range check a collider enter, keep range the same
     {
         prevNode1.m_NextNode = null;
         prevNode2.m_NextNode = null;
-    }
-
-    void Start() // use width to alter range, make range check a collider enter, keep range the same
-    {
-        
 
         t = 0f;
 
@@ -75,12 +71,13 @@ public class Dial : MonoBehaviour
         {
             statusText.text = loseStatus;
             button.enabled = false;
-            // setting nodes dont do anything during runtime
-            // https://forum.unity.com/threads/change-scriptableobject-at-runtime.1008376/
+            // setting so's weird behaviour, probably due to timing -- make a minigame so with list of possible prev nodes, and win and lose node
             prevNode1.m_NextNode = loseNode; // scuffed
             prevNode2.m_NextNode = loseNode;
+
+            dialogueChannel.RaiseRequestDialogueNode(loseNode);
+
             EventManager.current.EndDial();
-            
         }
 
         // win
@@ -90,7 +87,10 @@ public class Dial : MonoBehaviour
             button.enabled = false;
             prevNode1.m_NextNode = winNode; // scuffed
             prevNode2.m_NextNode = winNode;
-            EventManager.current.EndDial();
+
+            dialogueChannel.RaiseRequestDialogueNode(winNode);
+
+            //EventManager.current.EndDial();
             
         }
 

@@ -3828,6 +3828,7 @@ MonoBehaviour:
   prevNode2: {fileID: 11400000, guid: 6dcdaf822feaf3d49a9f6dee817bad99, type: 2}
   winNode: {fileID: 11400000, guid: 359ee16784586c64aa546a5d053bc314, type: 2}
   loseNode: {fileID: 11400000, guid: de6a1723ad8c0c141958f8bda602f4a8, type: 2}
+  dialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   decrSpeed: 45.1
   incrAmt: 16
   decrHealth: 5
