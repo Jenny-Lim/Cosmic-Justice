@@ -75,7 +75,8 @@ public class Dial : MonoBehaviour
         {
             statusText.text = loseStatus;
             button.enabled = false;
-            // go to lose node + reset?? (ie,. reset + put the minigame back on in the line)
+            // setting nodes dont do anything during runtime
+            // https://forum.unity.com/threads/change-scriptableobject-at-runtime.1008376/
             prevNode1.m_NextNode = loseNode; // scuffed
             prevNode2.m_NextNode = loseNode;
             EventManager.current.EndDial();
