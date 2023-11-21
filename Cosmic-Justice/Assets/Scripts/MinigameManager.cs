@@ -37,8 +37,8 @@ public class MinigameManager : MonoBehaviour
         //EventManager.current.verdict += StartVerdictMinigame;
         //EventManager.current.endVerdict += EndVerdictMinigame;
 
-        current.isWon = false;
-        current.isDone = false;
+        //isWon = false;
+        //isDone = false;
     }
 
     private void OnDestroy()
@@ -99,7 +99,7 @@ public class MinigameManager : MonoBehaviour
 
     private void EndDialMinigame()
     {
-        current.isDone = true;
+        isDone = true;
         showPanel();
         dialMinigame.SetActive(false);
         EventManager.current.CanDialogue(true);

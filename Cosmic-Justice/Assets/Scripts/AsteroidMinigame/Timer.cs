@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            EventManager.current.EndDial();
+            //EventManager.current.EndDial();
             EventManager.current.EndAsteroid();
         }
     }

@@ -92,7 +92,7 @@ public class Dial : MonoBehaviour
             //dialogueChannel.RaiseRequestDialogueNode(winNode);
             MinigameManager.current.isWon = true;
 
-            //EventManager.current.EndDial();
+            EventManager.current.EndDial();
 
         }
 
