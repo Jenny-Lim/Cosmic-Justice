@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36356dd0f3b11b4499fd7f96ed1ff6e6, type: 3}
-  m_Name: New Minigame Dialogue Node
+  m_Name: dialMinigameNode
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: 56c958f6bcadae948a0c885beb2d46fa, type: 2}
+  m_DialogueLine: {fileID: 11400000, guid: 561fdda346af55e44b40649d3709c691, type: 2}
   m_Paths:
   - m_PathNode: {fileID: 11400000, guid: de6a1723ad8c0c141958f8bda602f4a8, type: 2}
     isWinningPath: 0
