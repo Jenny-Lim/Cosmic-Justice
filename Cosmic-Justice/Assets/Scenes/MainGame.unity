@@ -1315,6 +1315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7896652d2c2fbd743b53e3cad3c9adcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWon: 0
+  isDone: 0
   asteroidMinigame: {fileID: 619057680}
   dialMinigame: {fileID: 1773281793}
   puzzleMinigame: {fileID: 0}
@@ -6188,6 +6190,7 @@ MonoBehaviour:
   m_ChoiceControllerPrefab: {fileID: 5973865689683993422, guid: e69c3f050dca14342b04efb62832e315, type: 3}
   verdictTransform: {fileID: 2056235907}
   verdictPrefab: {fileID: 4677729184527407903, guid: 39e87abb1b19eab44808294a88bdd8b2, type: 3}
+  MinigameControllerPrefab: {fileID: 2711622048530231050, guid: e9f94802c62615b4eacf9d66c82ddc51, type: 3}
   m_DialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   eventManager: {fileID: 1756292680}
   dialoguePanel: {fileID: 1755579119}

@@ -14,7 +14,7 @@ public class Dial : MonoBehaviour
     [SerializeField] public Slider health;
     [SerializeField] GameObject safeArea;
 
-    [SerializeField] BasicDialogueNode prevNode1, prevNode2, winNode, loseNode; // track who you picked
+    //[SerializeField] BasicDialogueNode prevNode1, prevNode2, winNode, loseNode; // track who you picked
     [SerializeField] DialogueChannel dialogueChannel;
 
     // variables
@@ -30,8 +30,8 @@ public class Dial : MonoBehaviour
 
     void OnEnable() // use width to alter range, make range check a collider enter, keep range the same
     {
-        prevNode1.m_NextNode = null; // with this current system, this should be set before the minigame (so sprites are appropriate)
-        prevNode2.m_NextNode = null;
+        //prevNode1.m_NextNode = null; // with this current system, this should be set before the minigame (so sprites are appropriate)
+        //prevNode2.m_NextNode = null;
 
         t = 0f;
 
@@ -72,10 +72,11 @@ public class Dial : MonoBehaviour
             statusText.text = loseStatus;
             button.enabled = false;
             // setting so's weird behaviour, probably due to timing -- make a minigame so with list of possible prev nodes, and win and lose node
-            prevNode1.m_NextNode = loseNode; // scuffed
-            prevNode2.m_NextNode = loseNode;
+            //prevNode1.m_NextNode = loseNode; // scuffed
+            //prevNode2.m_NextNode = loseNode;
 
-            dialogueChannel.RaiseRequestDialogueNode(loseNode);
+            //dialogueChannel.RaiseRequestDialogueNode(loseNode);
+            MinigameManager.current.isWon = false;
 
             EventManager.current.EndDial();
         }
@@ -85,13 +86,14 @@ public class Dial : MonoBehaviour
         {
             statusText.text = winStatus;
             button.enabled = false;
-            prevNode1.m_NextNode = winNode; // scuffed
-            prevNode2.m_NextNode = winNode;
+            //prevNode1.m_NextNode = winNode; // scuffed
+            //prevNode2.m_NextNode = winNode;
 
-            dialogueChannel.RaiseRequestDialogueNode(winNode);
+            //dialogueChannel.RaiseRequestDialogueNode(winNode);
+            MinigameManager.current.isWon = true;
 
             //EventManager.current.EndDial();
-            
+
         }
 
         else

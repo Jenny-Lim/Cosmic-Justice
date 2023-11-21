@@ -23,6 +23,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     private UIDialogueChoiceController verdictPrefab;
 
     [SerializeField]
+    private DialogueMinigameController MinigameControllerPrefab;
+
+    [SerializeField]
     private DialogueChannel m_DialogueChannel;
 
     private bool m_ListenToInput = false;
@@ -195,6 +198,15 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
                 newChoice.Choice = choice;
                 i++;
             }
+        }
+    }
+
+    public void Visit(MinigameDialogueNode node)
+    {
+        foreach (DialogueMinigame m in node.Paths)
+        {
+            DialogueMinigameController newController = Instantiate(MinigameControllerPrefab);
+            newController.path = m;
         }
     }
 }

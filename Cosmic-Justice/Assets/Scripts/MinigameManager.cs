@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class MinigameManager : MonoBehaviour
 {
 
+    public static MinigameManager current;
+    public bool isWon, isDone;
+
     [SerializeField]
     private GameObject asteroidMinigame, dialMinigame, puzzleMinigame;
 
@@ -16,7 +19,11 @@ public class MinigameManager : MonoBehaviour
     private CanvasRenderer dialogueText, characterName;
     [SerializeField]
     private Image dialogueBox;
-    
+
+    private void Awake()
+    {
+        current = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +36,9 @@ public class MinigameManager : MonoBehaviour
         EventManager.current.endDial += EndDialMinigame;
         //EventManager.current.verdict += StartVerdictMinigame;
         //EventManager.current.endVerdict += EndVerdictMinigame;
+
+        current.isWon = false;
+        current.isDone = false;
     }
 
     private void OnDestroy()
@@ -44,7 +54,7 @@ public class MinigameManager : MonoBehaviour
 
     void hidePanel()
     {
-        Debug.Log("hi");
+        
         dialogueBox.enabled = false;
         dialogueText.cull = true;
         characterName.cull = true;
@@ -89,6 +99,7 @@ public class MinigameManager : MonoBehaviour
 
     private void EndDialMinigame()
     {
+        current.isDone = true;
         showPanel();
         dialMinigame.SetActive(false);
         EventManager.current.CanDialogue(true);
@@ -96,7 +107,7 @@ public class MinigameManager : MonoBehaviour
         AudioManager.instance.UnPause("Ambient_Track_A");
         AudioManager.instance.Stop("MiniGame_Track_A");
     }
-    
+
     //private void StartVerdictMinigame()
     //{
     //    EventManager.current.CanDialogue(false);
