@@ -7,8 +7,8 @@ public class DialogueMinigameController : MonoBehaviour
     [SerializeField]
     private DialogueChannel m_DialogueChannel;
 
-    public DialogueNode m_MinigameNextNode;
-    public bool m_IsWinningPath;
+    private DialogueNode m_MinigameNextNode;
+    private bool m_IsWinningPath;
 
     public DialogueMinigame path
     {
