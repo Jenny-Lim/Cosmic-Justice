@@ -10,7 +10,7 @@ public class Dial : MonoBehaviour
     [SerializeField] GameObject needle;
     [SerializeField] TMP_Text statusText;
     [SerializeField] Button button;
-    [SerializeField] Timer timer;
+    [SerializeField] public Timer timer; // made public
     [SerializeField] public Slider health;
     [SerializeField] GameObject safeArea;
 
@@ -32,6 +32,7 @@ public class Dial : MonoBehaviour
     {
         //prevNode1.m_NextNode = null; // with this current system, this should be set before the minigame (so sprites are appropriate)
         //prevNode2.m_NextNode = null;
+        timer.enabled = false; // new
 
         t = 0f;
 

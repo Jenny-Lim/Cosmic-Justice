@@ -6,7 +6,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [SerializeField]
-    private float amountTime = 60f;
+    public float amountTime = 60f; // made public
 
     private TextMeshProUGUI text;
 
@@ -43,5 +43,10 @@ public class Timer : MonoBehaviour
     public float GetTime()
     {
         return tempTime;
+    }
+
+    public void SetTime(float time) // new
+    {
+        tempTime = time;
     }
 }

@@ -960,7 +960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.335}
-  m_AnchoredPosition: {x: -542.04, y: 92.75}
+  m_AnchoredPosition: {x: -542.04004, y: 92.75}
   m_SizeDelta: {x: -1342.07, y: -185.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359141760
@@ -2663,7 +2663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c708460be1f6c64458d920d72c8f6404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountTime: 30
+  amountTime: 10
 --- !u!114 &574210958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3826,10 +3826,6 @@ MonoBehaviour:
   timer: {fileID: 574210957}
   health: {fileID: 421043902}
   safeArea: {fileID: 1760017865}
-  prevNode1: {fileID: 11400000, guid: ed51a5e3a4c8d2b479951099fb3c30e6, type: 2}
-  prevNode2: {fileID: 11400000, guid: 6dcdaf822feaf3d49a9f6dee817bad99, type: 2}
-  winNode: {fileID: 11400000, guid: 359ee16784586c64aa546a5d053bc314, type: 2}
-  loseNode: {fileID: 11400000, guid: de6a1723ad8c0c141958f8bda602f4a8, type: 2}
   dialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   decrSpeed: 45.1
   incrAmt: 16

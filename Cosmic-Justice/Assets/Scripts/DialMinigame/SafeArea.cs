@@ -31,8 +31,14 @@ public class SafeArea : MonoBehaviour
 
     void OnTriggerStay2D()
     {
+        dial.timer.enabled = true; // new
         dial.health.value += incrHealth * Time.deltaTime;
     } // OnTriggerStay2D
+
+    void OnTriggerExit2D(Collider2D collision) // new
+    {
+        dial.timer.SetTime(dial.timer.amountTime);
+    } // OnTriggerExit2D
 
     public float GetBase()
     {
