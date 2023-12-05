@@ -21,7 +21,7 @@ public class Dial : MonoBehaviour
     [SerializeField] float decrSpeed, incrAmt;
     [SerializeField] float decrHealth;
     [SerializeField] float minRand, maxRand;
-    [SerializeField] float lerpSpeed;
+    [SerializeField] public float lerpSpeed;
     [SerializeField] string winStatus, loseStatus, doingWellStatus, inTroubleStatus;
 
     private float currAngle, currHealthAngle, healthAngleCap; // angles work in negatives where you think the value would be positive, and vice versa

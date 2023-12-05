@@ -35,9 +35,10 @@ public class SafeArea : MonoBehaviour
         dial.health.value += incrHealth * Time.deltaTime;
     } // OnTriggerStay2D
 
-    void OnTriggerExit2D(Collider2D collision) // new -- everytime you fail, lerpspeed slower
+    void OnTriggerExit2D(Collider2D collision) // new
     {
         dial.timer.SetTime(dial.timer.amountTime);
+        dial.lerpSpeed -= dial.lerpSpeed * 0.2f; // everytime you fail, lerpspeed slower
     } // OnTriggerExit2D
 
     public float GetBase()
