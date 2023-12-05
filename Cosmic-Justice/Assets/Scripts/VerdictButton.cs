@@ -11,19 +11,12 @@ public class VerdictButton : MonoBehaviour
     private GameObject dialoguePanel;
     private GameObject verdictPanel;
 
-    //private LayoutElement layoutElement;
-
     // Start is called before the first frame update
     void Awake()
     {
-        //layoutElement = gameObject.GetComponent<LayoutElement>();
         dialoguePanel = GameObject.FindWithTag("DialoguePanel");
         b = GetComponent<Button>();
         anim = GetComponent<Animator>();
-
-        // animate it coming up
-        //dialoguePanel.SetActive(false);
-        //anim.Play("ButtonComeUp");
     } // Start
 
     void OnEnable()
@@ -33,7 +26,6 @@ public class VerdictButton : MonoBehaviour
         if (dialoguePanel) { // im aware this isnt amazing
             dialoguePanel.SetActive(false);
         }
-        //layoutElement.ignoreLayout = true;
         //anim.Play("ButtonComeUp");
         StartCoroutine("ButtonComeUp");
     }
@@ -44,67 +36,59 @@ public class VerdictButton : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator DeleteChildren()
-    {
-        foreach (Transform child in verdictPanel.transform)
-        {
-            Destroy(child.gameObject);
-        }
-        yield return null;
-    }
-
-    IEnumerator DisableChildren()
+    void EnORDisableChildren(bool value)
     {
         foreach (Transform child in verdictPanel.transform)
         {
             Button b = child.gameObject.GetComponent<Button>();
             if (b)
             {
-                b.interactable = false;
+                b.interactable = value;
             }
         }
-        yield return null;
     }
 
     public void OnButtonPress()
     {
-        //layoutElement.ignoreLayout = true;
+        Debug.Log("pressed");
         anim.SetTrigger("pressed");
-
-        //StartCoroutine("ButtonGoDown");
-
-        StartCoroutine("DisableChildren");
-        //b.interactable = false;
-        //verdictPanel.SetActive(false);
-        //if (dialoguePanel)
-        //{
-        //    dialoguePanel.SetActive(true);
-        //}
+        EnORDisableChildren(false);
     } // OnButtonPress
 
     public void DoneComeUp() // animation event
     {
-        //layoutElement.ignoreLayout = false;
-        b.interactable = true;
+        EnORDisableChildren(true);
         Debug.Log("done come up!");
     } // DoneComeUp
 
-
+    IEnumerator EndingVerdict()
+    {
+        foreach (Transform child in verdictPanel.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        yield return new WaitForSeconds(10f);
+        Debug.Log("deleted children");
+        if (dialoguePanel) // i hate you so much
+        {
+            dialoguePanel.SetActive(true);
+        }
+    }
     public void EndVerdict() // animation event
     {
-        //EventManager.current.EndVerdict();
-        //dialoguePanel.SetActive(true);
-        //this.gameObject.SetActive(false);
-        //verdictPanel.SetActive(false); // timing is off
+        //foreach (Transform child in verdictPanel.transform)
+        //{
+        //    Destroy(child.gameObject);
+        //}
 
-        //b.interactable = false;
-        //verdictPanel.SetActive(false);
-        StartCoroutine("DeleteChildren");
+        //if (dialoguePanel) // i hate you so much
+        //    {
+        //        dialoguePanel.SetActive(true);
+        //    }
 
-            if (dialoguePanel) // i hate you so much -- probably want to play with the animator
-            {
-                dialoguePanel.SetActive(true);
-            }
+        Debug.Log("in end verdict");
+
+        StartCoroutine("EndingVerdict");
 
     } // EndVerdict
 }
