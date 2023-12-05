@@ -48,6 +48,17 @@ public class VerdictButton : MonoBehaviour
         }
     }
 
+    IEnumerator HideChildren() // move this outside -- onto panel
+    {
+        Debug.Log("InHideChildren");
+        foreach (Transform child in verdictPanel.transform)
+        {
+            child.gameObject.GetComponent<CanvasRenderer>().cull = true;
+            child.GetChild(0).gameObject.GetComponent<CanvasRenderer>().cull = true;
+        }
+        yield return new WaitForSeconds(10f);
+    }
+
     public void OnButtonPress()
     {
         Debug.Log("pressed");
@@ -61,34 +72,15 @@ public class VerdictButton : MonoBehaviour
         Debug.Log("done come up!");
     } // DoneComeUp
 
-    IEnumerator EndingVerdict()
+    public void EndVerdict() // animation event
     {
-        foreach (Transform child in verdictPanel.transform)
-        {
-            Destroy(child.gameObject);
-        }
-        yield return new WaitForSeconds(10f);
-        Debug.Log("deleted children");
+        StartCoroutine("HideChildren"); // hide them first, destroy later in panel controller
+
         if (dialoguePanel) // i hate you so much
         {
             dialoguePanel.SetActive(true);
         }
-    }
-    public void EndVerdict() // animation event
-    {
-        //foreach (Transform child in verdictPanel.transform)
-        //{
-        //    Destroy(child.gameObject);
-        //}
-
-        //if (dialoguePanel) // i hate you so much
-        //    {
-        //        dialoguePanel.SetActive(true);
-        //    }
 
         Debug.Log("in end verdict");
-
-        StartCoroutine("EndingVerdict");
-
     } // EndVerdict
 }
