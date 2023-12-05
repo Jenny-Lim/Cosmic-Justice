@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
-  m_Text: '"I''ve got to keep the temperature stable..."'
+  m_Text: '"..."'
   m_FontSize: 30
   m_TextSpeed: 0.1
   m_CharacterSprite1: 
