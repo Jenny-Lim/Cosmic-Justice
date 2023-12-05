@@ -34,19 +34,52 @@ public class VerdictButton : MonoBehaviour
             dialoguePanel.SetActive(false);
         }
         //layoutElement.ignoreLayout = true;
+        //anim.Play("ButtonComeUp");
+        StartCoroutine("ButtonComeUp");
+    }
+
+    IEnumerator ButtonComeUp()
+    {
         anim.Play("ButtonComeUp");
+        yield return null;
+    }
+
+    IEnumerator DeleteChildren()
+    {
+        foreach (Transform child in verdictPanel.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        yield return null;
+    }
+
+    IEnumerator DisableChildren()
+    {
+        foreach (Transform child in verdictPanel.transform)
+        {
+            Button b = child.gameObject.GetComponent<Button>();
+            if (b)
+            {
+                b.interactable = false;
+            }
+        }
+        yield return null;
     }
 
     public void OnButtonPress()
     {
         //layoutElement.ignoreLayout = true;
         anim.SetTrigger("pressed");
-        b.interactable = false;
-        verdictPanel.SetActive(false);
-        if (dialoguePanel)
-        {
-            dialoguePanel.SetActive(true);
-        }
+
+        //StartCoroutine("ButtonGoDown");
+
+        StartCoroutine("DisableChildren");
+        //b.interactable = false;
+        //verdictPanel.SetActive(false);
+        //if (dialoguePanel)
+        //{
+        //    dialoguePanel.SetActive(true);
+        //}
     } // OnButtonPress
 
     public void DoneComeUp() // animation event
@@ -56,11 +89,22 @@ public class VerdictButton : MonoBehaviour
         Debug.Log("done come up!");
     } // DoneComeUp
 
+
     public void EndVerdict() // animation event
     {
         //EventManager.current.EndVerdict();
         //dialoguePanel.SetActive(true);
         //this.gameObject.SetActive(false);
         //verdictPanel.SetActive(false); // timing is off
+
+        //b.interactable = false;
+        //verdictPanel.SetActive(false);
+        StartCoroutine("DeleteChildren");
+
+            if (dialoguePanel) // i hate you so much -- probably want to play with the animator
+            {
+                dialoguePanel.SetActive(true);
+            }
+
     } // EndVerdict
 }
