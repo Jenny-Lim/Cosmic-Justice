@@ -38,7 +38,10 @@ public class SafeArea : MonoBehaviour
     void OnTriggerExit2D(Collider2D collision) // new
     {
         dial.timer.SetTime(dial.timer.amountTime);
-        dial.lerpSpeed -= dial.lerpSpeed * 0.2f; // everytime you fail, lerpspeed slower
+        if (dial.lerpSpeed > 0) {
+            Debug.Log(dial.lerpSpeed);
+            dial.lerpSpeed -= dial.lerpSpeed * 0.2f; // everytime you fail, lerpspeed slower
+        }
     } // OnTriggerExit2D
 
     public float GetBase()
