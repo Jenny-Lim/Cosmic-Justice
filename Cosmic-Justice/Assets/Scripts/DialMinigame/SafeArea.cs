@@ -31,11 +31,11 @@ public class SafeArea : MonoBehaviour
 
     void OnTriggerStay2D()
     {
-        dial.timer.enabled = true; // new
+        dial.timer.enabled = true;
         dial.health.value += incrHealth * Time.deltaTime;
     } // OnTriggerStay2D
 
-    void OnTriggerExit2D(Collider2D collision) // new
+    void OnTriggerExit2D(Collider2D collision)
     {
         dial.timer.SetTime(dial.timer.amountTime);
         if (dial.lerpSpeed > 0) {

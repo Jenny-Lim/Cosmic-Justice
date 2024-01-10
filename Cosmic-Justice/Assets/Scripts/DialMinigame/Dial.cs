@@ -10,11 +10,10 @@ public class Dial : MonoBehaviour
     [SerializeField] GameObject needle;
     [SerializeField] TMP_Text statusText;
     [SerializeField] Button button;
-    [SerializeField] public Timer timer; // made public
+    [SerializeField] public Timer timer;
     [SerializeField] public Slider health;
     [SerializeField] GameObject safeArea;
 
-    //[SerializeField] BasicDialogueNode prevNode1, prevNode2, winNode, loseNode; // track who you picked
     [SerializeField] DialogueChannel dialogueChannel;
 
     // variables
@@ -28,11 +27,9 @@ public class Dial : MonoBehaviour
     private float randTime, t;
     private SafeArea sa;
 
-    void OnEnable() // use width to alter range, make range check a collider enter, keep range the same
+    void OnEnable()
     {
-        //prevNode1.m_NextNode = null; // with this current system, this should be set before the minigame (so sprites are appropriate)
-        //prevNode2.m_NextNode = null;
-        timer.enabled = false; // new
+        timer.enabled = false;
 
         t = 0f;
 
@@ -42,7 +39,6 @@ public class Dial : MonoBehaviour
 
         currAngle = 0;
 
-        // Random.Range(-90, 90);
         currHealthAngle = 0;
 
         safeArea.transform.rotation = Quaternion.Euler(0f, 0f, currHealthAngle);
@@ -63,7 +59,7 @@ public class Dial : MonoBehaviour
 
     void FixedUpdate()
     {
-        t += Time.deltaTime; // in fixed update pls
+        t += Time.deltaTime;
 
         randTime -= Time.deltaTime;
 
@@ -72,11 +68,7 @@ public class Dial : MonoBehaviour
         {
             statusText.text = loseStatus;
             button.enabled = false;
-            // setting so's weird behaviour, probably due to timing -- make a minigame so with list of possible prev nodes, and win and lose node
-            //prevNode1.m_NextNode = loseNode; // scuffed
-            //prevNode2.m_NextNode = loseNode;
 
-            //dialogueChannel.RaiseRequestDialogueNode(loseNode);
             MinigameManager.current.isWon = false;
 
             EventManager.current.EndDial();
@@ -87,10 +79,7 @@ public class Dial : MonoBehaviour
         {
             statusText.text = winStatus;
             button.enabled = false;
-            //prevNode1.m_NextNode = winNode; // scuffed
-            //prevNode2.m_NextNode = winNode;
 
-            //dialogueChannel.RaiseRequestDialogueNode(winNode);
             MinigameManager.current.isWon = true;
 
             EventManager.current.EndDial();
@@ -101,9 +90,7 @@ public class Dial : MonoBehaviour
         {
             if (randTime <= 0)
             {
-                //currHealthAngle = Random.Range(-90, 90);
                 currHealthAngle = Random.Range(-90 + healthAngleCap, 90 - healthAngleCap);
-                //currHealthAngle = 90 - healthAngleCap;
                 randTime = Random.Range(minRand, maxRand);
             }
 
