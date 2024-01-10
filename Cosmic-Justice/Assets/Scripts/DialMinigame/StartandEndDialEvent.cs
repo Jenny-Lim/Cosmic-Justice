@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartandEndDialEvent : MonoBehaviour
+public class StartandEndDialEvent : MonoBehaviour // UNUSED
 {
     private void Start()
     {
