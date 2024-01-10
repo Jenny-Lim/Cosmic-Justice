@@ -91,7 +91,7 @@ public class MinigameManager : MonoBehaviour
     {
         hidePanel();
         EventManager.current.CanDialogue(false);
-        dialMinigame.SetActive(true);
+        dialMinigame.SetActive(true); // on enable, animate them going up
 
         AudioManager.instance.Pause("Ambient_Track_A");
         AudioManager.instance.Play("MiniGame_Track_A");
@@ -101,6 +101,7 @@ public class MinigameManager : MonoBehaviour
     {
         isDone = true;
         showPanel();
+        // make them go down
         dialMinigame.SetActive(false);
         EventManager.current.CanDialogue(true);
 
