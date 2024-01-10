@@ -8,7 +8,7 @@ public class UIDialogueChoiceController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI m_Choice;
     [SerializeField]
-    private DialogueChannel m_DialogueChannel;
+    public DialogueChannel m_DialogueChannel;
     [SerializeField]
     private Sprite m_ButtonSprite;
     [SerializeField]
@@ -16,7 +16,7 @@ public class UIDialogueChoiceController : MonoBehaviour
     [SerializeField]
     private Color m_FontColor;
 
-    private DialogueNode m_ChoiceNextNode;
+    public DialogueNode m_ChoiceNextNode;
     private TextMeshProUGUI text;
     private Image image;
 
@@ -57,6 +57,7 @@ public class UIDialogueChoiceController : MonoBehaviour
 
     private void OnClick()
     {
+        // only do this if not verdict -- overriden
         m_DialogueChannel.RaiseRequestDialogueNode(m_ChoiceNextNode);
     }
 }

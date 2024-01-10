@@ -11,30 +11,30 @@ public class VerdictButton : MonoBehaviour
     private GameObject dialoguePanel;
     private GameObject verdictPanel;
 
-    // Start is called before the first frame update
+    [SerializeField] private UIDialogueChoiceController_Verdict verdictController;
+
     void Awake()
     {
         dialoguePanel = GameObject.FindWithTag("DialoguePanel");
         b = GetComponent<Button>();
         anim = GetComponent<Animator>();
-    } // Start
+    } // Awake
 
     void OnEnable()
     {
         Debug.Log("hi");
         verdictPanel = GameObject.FindWithTag("VerdictPanel");
-        if (dialoguePanel) { // im aware this isnt amazing
+        if (dialoguePanel) {
             dialoguePanel.SetActive(false);
         }
-        //anim.Play("ButtonComeUp");
         StartCoroutine("ButtonComeUp");
-    }
+    } // OnEnable
 
     IEnumerator ButtonComeUp()
     {
         anim.Play("ButtonComeUp");
         yield return null;
-    }
+    } // ButtonComeUp
 
     void EnORDisableChildren(bool value)
     {
@@ -46,7 +46,7 @@ public class VerdictButton : MonoBehaviour
                 b.interactable = value;
             }
         }
-    }
+    } // EnORDisableChildren
 
     IEnumerator HideChildren() // move this outside -- onto panel
     {
@@ -57,7 +57,7 @@ public class VerdictButton : MonoBehaviour
             child.GetChild(0).gameObject.GetComponent<CanvasRenderer>().cull = true;
         }
         yield return new WaitForSeconds(10f);
-    }
+    } // HideChildren
 
     public void OnButtonPress()
     {
@@ -76,10 +76,7 @@ public class VerdictButton : MonoBehaviour
     {
         StartCoroutine("HideChildren"); // hide them first, destroy later in panel controller
 
-        if (dialoguePanel) // i hate you so much
-        {
-            dialoguePanel.SetActive(true);
-        }
+        verdictController.GoToNext();
 
         Debug.Log("in end verdict");
     } // EndVerdict

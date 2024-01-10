@@ -20,7 +20,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     [SerializeField]
     private RectTransform verdictTransform;
     [SerializeField]
-    private UIDialogueChoiceController verdictPrefab;
+    private UIDialogueChoiceController_Verdict verdictPrefab;
 
     [SerializeField]
     private DialogueMinigameController MinigameControllerPrefab;
@@ -192,7 +192,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             foreach (DialogueChoice choice in node.Choices)
             {
                 //verdictTransform.anchoredPosition += new Vector2(verdictTransform.anchoredPosition.x * i, 0);
-                UIDialogueChoiceController newChoice = Instantiate(verdictPrefab, verdictTransform); // have transform be -half the width of the button on start
+                UIDialogueChoiceController_Verdict newChoice = Instantiate(verdictPrefab, verdictTransform); // have transform be -half the width of the button on start
                 RectTransform rt = newChoice.GetComponent<Button>().GetComponent<RectTransform>();
                 newChoice.transform.localPosition += new Vector3(rt.sizeDelta.x * i, 0 ,0);
                 newChoice.Choice = choice;

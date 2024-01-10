@@ -960,7 +960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.335}
-  m_AnchoredPosition: {x: -542.04004, y: 92.75}
+  m_AnchoredPosition: {x: -542.04, y: 92.75}
   m_SizeDelta: {x: -1342.07, y: -185.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359141760
@@ -6185,7 +6185,7 @@ MonoBehaviour:
   m_ChoicesBoxTransform: {fileID: 507174596}
   m_ChoiceControllerPrefab: {fileID: 5973865689683993422, guid: e69c3f050dca14342b04efb62832e315, type: 3}
   verdictTransform: {fileID: 2056235907}
-  verdictPrefab: {fileID: 4677729184527407903, guid: 39e87abb1b19eab44808294a88bdd8b2, type: 3}
+  verdictPrefab: {fileID: 9164488731955033800, guid: 39e87abb1b19eab44808294a88bdd8b2, type: 3}
   MinigameControllerPrefab: {fileID: 2711622048530231050, guid: e9f94802c62615b4eacf9d66c82ddc51, type: 3}
   m_DialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   eventManager: {fileID: 1756292680}
