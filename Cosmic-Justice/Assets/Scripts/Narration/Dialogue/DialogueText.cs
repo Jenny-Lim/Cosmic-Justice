@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Audio;
 
 
 public class DialogueText : MonoBehaviour
@@ -104,6 +105,7 @@ public class DialogueText : MonoBehaviour
 
         }
 
+        AudioManager.instance.CharacterDoneSpeaking();
         textOver = true;
 
         if (speedText)
@@ -116,7 +118,7 @@ public class DialogueText : MonoBehaviour
 
 
     //Method to start dialogue and set font, size, and speed
-    public void startDialogue(string line, float speed, TMP_FontAsset font, float size, Color color)
+    public void startDialogue(string line, float speed, TMP_FontAsset font, float size, Color color, AudioClip voice)
     {
         speedText = false;
         textMeshProUGUI.text = string.Empty; //Empty the text
@@ -125,6 +127,7 @@ public class DialogueText : MonoBehaviour
         textMeshProUGUI.color = color;
         text = line;
         textSpeed = speed;
+        AudioManager.instance.PlayCharacterSpeaking(voice);
        
         //Start typing the dialogue
         StartCoroutine(TypeLine());

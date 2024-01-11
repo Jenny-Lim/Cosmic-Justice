@@ -1320,6 +1320,7 @@ MonoBehaviour:
   asteroidMinigame: {fileID: 619057680}
   dialMinigame: {fileID: 1773281793}
   puzzleMinigame: {fileID: 0}
+  nextButton: {fileID: 0}
   dialogueText: {fileID: 425288106}
   characterName: {fileID: 359141761}
   dialogueBox: {fileID: 1755579119}
@@ -9766,6 +9767,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[5].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: CharacterSpeaking
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[5].mixer
+      value: 
+      objectReference: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[5].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.16
+      objectReference: {fileID: 0}
     - target: {fileID: 4482849573137828552, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.0436535

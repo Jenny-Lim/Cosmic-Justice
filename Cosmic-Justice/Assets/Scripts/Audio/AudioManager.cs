@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     private List<Sound> currentlyPlayingSounds;
+
+    private Sound characterSpeak;
+
+    private bool characterSpeaking;
 
     private void Awake()
     {
@@ -37,6 +42,8 @@ public class AudioManager : MonoBehaviour
             s.source.playOnAwake = s.playOnAwake;
             s.source.outputAudioMixerGroup = s.mixer;
         }
+
+        characterSpeaking = false;
     }
 
     private void Start()
@@ -45,6 +52,8 @@ public class AudioManager : MonoBehaviour
             Play("MainTheme");
         else
             Play("Ambient_Track_A");
+
+        characterSpeak = Array.Find(sounds, sound => sound.name == "CharacterSpeaking");
     }
 
     //Plays a sound based on a name
@@ -102,5 +111,38 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.UnPause();
+    }
+
+    public void PlayCharacterSpeaking(AudioClip clip)
+    {
+        if (clip == null)
+            return;
+
+        characterSpeaking = true;
+
+        characterSpeak.source.clip = clip;
+
+        characterSpeak.source.pitch = UnityEngine.Random.Range(0.5f, 3f);
+        characterSpeak.source.Play();
+
+        StartCoroutine(Speaking());
+    }
+
+    private IEnumerator Speaking()
+    {
+        float clipLength = characterSpeak.source.clip.length;
+
+        while (characterSpeaking)
+        {
+            yield return new WaitForSeconds(clipLength);
+
+            characterSpeak.source.pitch = UnityEngine.Random.Range(0.5f, 3f);
+            characterSpeak.source.Play();
+        }
+    }
+
+    public void CharacterDoneSpeaking()
+    {
+        characterSpeaking = false;
     }
 }

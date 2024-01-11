@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using TMPro;
 
 [System.Serializable]
@@ -25,6 +26,9 @@ public class NarrationCharacter : ScriptableObject
     [SerializeField]
     private Color m_Color = Color.black;
 
+    [SerializeField]
+    private AudioClip voice;
+
     public string CharacterName => m_CharacterName; //A public access for the character name
 
     public Sprite DialoguePanel => m_DialoguePanel; //Public access for the dialogue panel image
@@ -32,6 +36,8 @@ public class NarrationCharacter : ScriptableObject
     public TMP_FontAsset Font => m_Font;
 
     public Color Color => m_Color;
+
+    public AudioClip Voice => voice;
 
     public CharacterSprites[] sprites;
 }

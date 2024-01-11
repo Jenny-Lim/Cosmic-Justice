@@ -104,7 +104,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             gameObject.SetActive(true);
 
             //Start dialogue with function and give it the line, speed of dialogue, font, text size, and text color
-            m_DialogueText.startDialogue(node.DialogueLine.Text, node.DialogueLine.TextSpeed, node.DialogueLine.Speaker.Font, node.DialogueLine.FontSize, node.DialogueLine.Speaker.Color);
+            m_DialogueText.startDialogue(node.DialogueLine.Text, node.DialogueLine.TextSpeed, node.DialogueLine.Speaker.Font, node.DialogueLine.FontSize, node.DialogueLine.Speaker.Color, node.DialogueLine.Speaker.Voice);
             m_SpeakerText.color = node.DialogueLine.Speaker.Color;
             m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
 
