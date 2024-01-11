@@ -39,6 +39,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     private bool canGoNext;
 
+    //Handles the clicking of the button
     private bool canClickToNext;
     private bool click;
 

@@ -14,7 +14,6 @@ public class DialogueText : MonoBehaviour
     private bool textOver;
     private bool speedText;
 
-
     private bool canSpeedUp;
 
     private void Awake()
@@ -99,7 +98,8 @@ public class DialogueText : MonoBehaviour
             else if(!richText)
             {
                 textMeshProUGUI.text += c;
-                yield return new WaitForSeconds(textSpeed);
+                if(textSpeed != 0)
+                    yield return new WaitForSeconds(textSpeed);
             }
 
         }
@@ -135,7 +135,7 @@ public class DialogueText : MonoBehaviour
         if (!textOver && canSpeedUp)
         {
             EventManager.current.DialogueClick(false);
-            textSpeed = 0;
+            textSpeed = 0.00001f;
             speedText = true;
         }
     }
