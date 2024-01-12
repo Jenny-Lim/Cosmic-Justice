@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -102,24 +103,34 @@ public class MinigameManager : MonoBehaviour
     private void EndDialMinigame()
     {
         isDone = true;
-        // make them go down -- dial TEST --
-        DeskObject dialObj = dialMinigame.transform.Find("Dial").GetComponent<DeskObject>();
-        if (dialObj)
+
+        DeskObject[] deskObjects = dialMinigame.transform.GetComponentsInChildren<DeskObject>(); // make this into a method -- parameter being the minigame parent
+        List<DeskObject> objList = new List<DeskObject>();
+
+        objList.AddRange(deskObjects);
+
+        foreach(DeskObject obj in objList.ToList())
         {
-            Debug.Log("obj found");
-            dialObj.BringDown();
-
-            if (dialObj.broughtDown) // still part of test
+            obj.BringDown();
+            if (obj.broughtDown)
             {
-                dialMinigame.SetActive(false);
-                showPanel();
-                EventManager.current.CanDialogue(true);
-
-                AudioManager.instance.UnPause("Ambient_Track_A");
-                AudioManager.instance.Stop("MiniGame_Track_A");
+                objList.Remove(obj);
             }
         }
+
+        if (objList.Count <= 0)
+        {
+            Debug.Log("can move on");
+            dialMinigame.SetActive(false);
+            showPanel();
+            EventManager.current.CanDialogue(true);
+
+            AudioManager.instance.UnPause("Ambient_Track_A");
+            AudioManager.instance.Stop("MiniGame_Track_A");
+        } // make this into a method
     }
+
+    // UNUSED
 
     //private void StartVerdictMinigame()
     //{
