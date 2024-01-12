@@ -3952,6 +3952,7 @@ GameObject:
   - component: {fileID: 812711347}
   - component: {fileID: 812711346}
   - component: {fileID: 812711345}
+  - component: {fileID: 812711348}
   m_Layer: 5
   m_Name: Dial
   m_TagString: Untagged
@@ -4047,6 +4048,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812711343}
   m_CullTransparentMesh: 1
+--- !u!114 &812711348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812711343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8294e47d75921468a95dc6efe7526b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveUpBy: {x: 0, y: 3, z: 0}
+  totalTime_UP: 1
+  totalTime_DOWN: 1
+  broughtDown: 0
 --- !u!1 &813536880
 GameObject:
   m_ObjectHideFlags: 0
@@ -6722,6 +6739,7 @@ GameObject:
   - component: {fileID: 1555650603}
   - component: {fileID: 1555650602}
   - component: {fileID: 1555650601}
+  - component: {fileID: 1555650605}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6844,6 +6862,22 @@ RectTransform:
   m_AnchoredPosition: {x: 201, y: -105}
   m_SizeDelta: {x: 140, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1555650605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555650600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8294e47d75921468a95dc6efe7526b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveUpBy: {x: 0, y: 3, z: 0}
+  totalTime_UP: 2
+  totalTime_DOWN: 2
+  broughtDown: 0
 --- !u!1 &1571870955
 GameObject:
   m_ObjectHideFlags: 0
