@@ -47,9 +47,16 @@ public class NarrationLine : ScriptableObject
     [SerializeField]
     private NarrationCharacter m_character2;
 
-    [Header("Events and Minigames")]
+    [Header("Events, Minigames, Animations")]
     [SerializeField]
     private Events m_events;
+
+
+    [SerializeField]
+    private Animations m_leftCharacterAnimation;
+
+    [SerializeField]
+    private Animations m_rightCharacterAnimation;
 
     [SerializeField]
     private Minigames m_minigames;
@@ -62,6 +69,15 @@ public class NarrationLine : ScriptableObject
         CharacterFadeOutC1 = 4,
         CharacterFadeInC2 = 8,
         CharacterFadeOutC2 = 16
+    }
+
+    public enum Animations
+    {
+        Idle = 0,
+        Sad = 1,
+        Angry = 2,
+        Stressed = 4,
+        Happy = 8
     }
 
     public enum Minigames
@@ -86,6 +102,10 @@ public class NarrationLine : ScriptableObject
     public Events events => m_events;
 
     public Minigames minigame => m_minigames;
+
+    public Animations leftCharacterAnimation => m_leftCharacterAnimation;
+
+    public Animations rightCharacterAnimation => m_rightCharacterAnimation;
 
     public float TextSpeed => m_TextSpeed;
 
