@@ -47,6 +47,13 @@ public class EventManager : MonoBehaviour
         character2SpriteChange?.Invoke(node);
     }
 
+    public event Action<DialogueNode> characterAnimation;
+    public void CharacterAnimation()
+    {
+        characterAnimation?.Invoke(node);
+    }
+
+
     public event Action characterFadeInC1;
     public void CharacterFadeInC1()
     {

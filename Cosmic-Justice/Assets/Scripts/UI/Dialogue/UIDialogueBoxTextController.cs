@@ -110,6 +110,8 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
             EventManager.current.GetNode(node);
 
+            EventManager.current.Invoke("CharacterAnimation", 0);
+
             //If there are events then run them
             if (node.DialogueLine.events != 0)
             {
