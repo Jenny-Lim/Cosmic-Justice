@@ -104,7 +104,7 @@ public class MinigameManager : MonoBehaviour
     {
         isDone = true;
 
-        DeskObject[] deskObjects = dialMinigame.transform.GetComponentsInChildren<DeskObject>(); // make this into a method
+        DeskObject[] deskObjects = dialMinigame.transform.GetComponentsInChildren<DeskObject>(); // make this into a method -- parameter being the minigame parent
         List<DeskObject> objList = new List<DeskObject>();
 
         objList.AddRange(deskObjects);
