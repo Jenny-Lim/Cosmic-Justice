@@ -14,6 +14,7 @@ public class DeskObject : MonoBehaviour
     void Start()
     {
         startPos = this.transform.position;
+        // disable all minigame components
     }
 
     void FixedUpdate()
