@@ -1320,7 +1320,7 @@ MonoBehaviour:
   asteroidMinigame: {fileID: 619057680}
   dialMinigame: {fileID: 1773281793}
   puzzleMinigame: {fileID: 0}
-  nextButton: {fileID: 0}
+  nextButton: {fileID: 518898628}
   dialogueText: {fileID: 425288106}
   characterName: {fileID: 359141761}
   dialogueBox: {fileID: 1755579119}
@@ -2309,7 +2309,7 @@ GameObject:
   - component: {fileID: 518898631}
   - component: {fileID: 518898630}
   m_Layer: 5
-  m_Name: Skip/Next
+  m_Name: Skip/NextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

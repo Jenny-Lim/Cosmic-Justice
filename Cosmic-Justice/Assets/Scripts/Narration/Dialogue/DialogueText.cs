@@ -17,6 +17,8 @@ public class DialogueText : MonoBehaviour
 
     private bool canSpeedUp;
 
+    [SerializeField] private bool instant = true;
+
     private void Awake()
     {
         textMeshProUGUI = GetComponent<TextMeshProUGUI>();
@@ -101,6 +103,8 @@ public class DialogueText : MonoBehaviour
                 textMeshProUGUI.text += c;
                 if(textSpeed != 0)
                     yield return new WaitForSeconds(textSpeed);
+                else if(!instant)
+                    yield return new WaitForSeconds(textSpeed);
             }
 
         }
@@ -138,7 +142,7 @@ public class DialogueText : MonoBehaviour
         if (!textOver && canSpeedUp)
         {
             EventManager.current.DialogueClick(false);
-            textSpeed = 0.00001f;
+            textSpeed = 0.0f;
             speedText = true;
         }
     }
