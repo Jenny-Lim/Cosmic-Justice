@@ -32,12 +32,14 @@ public class SafeArea : MonoBehaviour
     void OnTriggerStay2D()
     {
         dial.timer.enabled = true;
+        dial.timer.UnpauseTime();
         dial.health.value += incrHealth * Time.deltaTime;
     } // OnTriggerStay2D
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        dial.timer.SetTime(dial.timer.amountTime);
+        dial.timer.SetTime(dial.timer.amountTime); // maybe dont reset
+        dial.timer.PauseTime();
         if (dial.lerpSpeed > 0) {
             Debug.Log(dial.lerpSpeed);
             dial.lerpSpeed -= dial.lerpSpeed * 0.2f; // everytime you fail, lerpspeed slower
