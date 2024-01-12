@@ -102,13 +102,23 @@ public class MinigameManager : MonoBehaviour
     private void EndDialMinigame()
     {
         isDone = true;
-        showPanel();
-        // make them go down
-        dialMinigame.SetActive(false);
-        EventManager.current.CanDialogue(true);
+        // make them go down -- dial TEST --
+        DeskObject dialObj = dialMinigame.transform.Find("Dial").GetComponent<DeskObject>();
+        if (dialObj)
+        {
+            Debug.Log("obj found");
+            dialObj.BringDown();
 
-        AudioManager.instance.UnPause("Ambient_Track_A");
-        AudioManager.instance.Stop("MiniGame_Track_A");
+            if (dialObj.broughtDown) // still part of test
+            {
+                dialMinigame.SetActive(false);
+                showPanel();
+                EventManager.current.CanDialogue(true);
+
+                AudioManager.instance.UnPause("Ambient_Track_A");
+                AudioManager.instance.Stop("MiniGame_Track_A");
+            }
+        }
     }
 
     //private void StartVerdictMinigame()
