@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CAn everlasting thanks to you for seeing reason, almighty judge!
     And Landlord, I will not disappoint you. What doth you require? A loyal bodyguard?
     A butter knife that is also a magnificent sword? A sword that is also a sword?
-    A Dragon\u2019s skull?\u201D"
+    A Dragon\u2019s skull made into a sword?\u201D\r\n"
   m_FontSize: 25
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
@@ -25,4 +25,6 @@ MonoBehaviour:
   m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_events: 0
+  m_leftCharacterAnimation: 0
+  m_rightCharacterAnimation: 8
   m_minigames: 0
