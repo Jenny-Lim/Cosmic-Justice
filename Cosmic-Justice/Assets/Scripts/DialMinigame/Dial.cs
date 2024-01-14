@@ -13,6 +13,7 @@ public class Dial : MonoBehaviour
     [SerializeField] public Timer timer;
     [SerializeField] public Slider health;
     [SerializeField] GameObject safeArea;
+    [SerializeField] Minigame parent;
 
     [SerializeField] DialogueChannel dialogueChannel;
 
@@ -30,6 +31,7 @@ public class Dial : MonoBehaviour
     void OnEnable()
     {
         timer.enabled = false;
+        button.interactable = false;
 
         t = 0f;
 
@@ -53,12 +55,24 @@ public class Dial : MonoBehaviour
 
     void Update()
     {
+        if (!parent.GetPlayable())
+        {
+            return;
+        }
+
         needle.transform.rotation = Quaternion.Euler(0f, 0f, currAngle);
         safeArea.transform.rotation = Quaternion.Lerp(safeArea.transform.rotation, Quaternion.Euler(0f, 0f, currHealthAngle), t * lerpSpeed);
     } // Update
 
     void FixedUpdate()
     {
+        if (!parent.GetPlayable())
+        {
+            return;
+        }
+
+        button.interactable = true;
+
         t += Time.deltaTime;
 
         randTime -= Time.deltaTime;

@@ -90,45 +90,71 @@ public class MinigameManager : MonoBehaviour
         AudioManager.instance.Stop("MiniGame_Track_A");
     }
 
+    // could possibly make these cleaner -- HOW TO USE: attach minigame script onto minigame parent, control minigame functioning through its "playablility" bool
+
+    IEnumerator StartMinigameAnim(GameObject minigame, string audioToPlay, string audioToPause)
+    {
+        DeskObject[] deskObjects = minigame.transform.GetComponentsInChildren<DeskObject>();
+        List<DeskObject> objList = new List<DeskObject>();
+
+        objList.AddRange(deskObjects);
+
+        foreach (DeskObject obj in objList.ToList())
+        {
+            yield return new WaitUntil(() => obj.broughtUp);
+            objList.Remove(obj);
+        }
+
+        yield return new WaitUntil(() => objList.Count <= 0);
+        Minigame m = minigame.GetComponent<Minigame>();
+        m.SetPlayability(true);
+        AudioManager.instance.Pause(audioToPause);
+        AudioManager.instance.Play(audioToPlay);
+        yield return null;
+    } // StartMinigameAnim
+
+    IEnumerator StopMinigameAnim(GameObject minigame, string audioToStop, string audioToUnPause)
+    {
+        Minigame m = minigame.GetComponent<Minigame>();
+        m.SetPlayability(false);
+
+        DeskObject[] deskObjects = minigame.transform.GetComponentsInChildren<DeskObject>();
+        List<DeskObject> objList = new List<DeskObject>();
+
+        objList.AddRange(deskObjects);
+
+        foreach (DeskObject obj in objList.ToList())
+        {
+            obj.BringDown();
+            yield return new WaitUntil(() => obj.broughtDown);
+            objList.Remove(obj);
+        }
+
+        yield return new WaitUntil(() => objList.Count <= 0);
+        minigame.SetActive(false);
+        showPanel();
+        EventManager.current.CanDialogue(true);
+
+        AudioManager.instance.UnPause("Ambient_Track_A");
+        AudioManager.instance.Stop("MiniGame_Track_A");
+        yield return null;
+    } // StopMinigameAnim
+
     private void StartDialMinigame()
     {
         hidePanel();
         EventManager.current.CanDialogue(false);
         dialMinigame.SetActive(true); // on enable, animate them going up
 
-        AudioManager.instance.Pause("Ambient_Track_A");
-        AudioManager.instance.Play("MiniGame_Track_A");
-    }
+        StartCoroutine(StartMinigameAnim(dialMinigame, "MiniGame_Track_A", "Ambient_Track_A"));
+    } // StartDialMinigame
 
     private void EndDialMinigame()
     {
-        isDone = true;
+        isDone = true; // i dont remember what this was for
+        StartCoroutine(StopMinigameAnim(dialMinigame, "MiniGame_Track_A", "Ambient_Track_A"));
+    } // EndDialMinigame
 
-        DeskObject[] deskObjects = dialMinigame.transform.GetComponentsInChildren<DeskObject>(); // make this into a method -- parameter being the minigame parent
-        List<DeskObject> objList = new List<DeskObject>();
-
-        objList.AddRange(deskObjects);
-
-        foreach(DeskObject obj in objList.ToList())
-        {
-            obj.BringDown();
-            if (obj.broughtDown)
-            {
-                objList.Remove(obj);
-            }
-        }
-
-        if (objList.Count <= 0)
-        {
-            Debug.Log("can move on");
-            dialMinigame.SetActive(false);
-            showPanel();
-            EventManager.current.CanDialogue(true);
-
-            AudioManager.instance.UnPause("Ambient_Track_A");
-            AudioManager.instance.Stop("MiniGame_Track_A");
-        } // make this into a method
-    }
 
     // UNUSED
 

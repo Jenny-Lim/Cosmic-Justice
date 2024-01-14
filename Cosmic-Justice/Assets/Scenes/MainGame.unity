@@ -996,7 +996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.335}
-  m_AnchoredPosition: {x: -372.4001, y: 221}
+  m_AnchoredPosition: {x: -372.40015, y: 221}
   m_SizeDelta: {x: -1535, y: -185.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359141760
@@ -3978,7 +3978,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -138.99998}
+  m_AnchoredPosition: {x: 0, y: -278}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &812711345
@@ -3999,6 +3999,7 @@ MonoBehaviour:
   timer: {fileID: 574210957}
   health: {fileID: 421043902}
   safeArea: {fileID: 1760017865}
+  parent: {fileID: 1773281795}
   dialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   decrSpeed: 45.1
   incrAmt: 16
@@ -4064,6 +4065,7 @@ MonoBehaviour:
   totalTime_UP: 1
   totalTime_DOWN: 1
   broughtDown: 0
+  broughtUp: 0
 --- !u!1 &813536880
 GameObject:
   m_ObjectHideFlags: 0
@@ -6859,7 +6861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 201, y: -105}
+  m_AnchoredPosition: {x: 201, y: -234}
   m_SizeDelta: {x: 140, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1555650605
@@ -6878,6 +6880,7 @@ MonoBehaviour:
   totalTime_UP: 2
   totalTime_DOWN: 2
   broughtDown: 0
+  broughtUp: 0
 --- !u!1 &1571870955
 GameObject:
   m_ObjectHideFlags: 0
@@ -7543,7 +7546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.335}
-  m_AnchoredPosition: {x: 0, y: 94.1994}
+  m_AnchoredPosition: {x: 0, y: 94.19941}
   m_SizeDelta: {x: -600, y: 158.60123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755579119
@@ -7777,6 +7780,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1773281794}
+  - component: {fileID: 1773281795}
   m_Layer: 5
   m_Name: DialMinigame
   m_TagString: Untagged
@@ -7811,6 +7815,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -177}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1773281795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773281793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb1e07027fd53246a032aaf3146a204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1783325930
 GameObject:
   m_ObjectHideFlags: 0

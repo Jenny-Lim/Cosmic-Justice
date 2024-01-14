@@ -9,12 +9,11 @@ public class DeskObject : MonoBehaviour
     [SerializeField] float totalTime_UP, totalTime_DOWN;
     float timePassed, t;
     bool enabled, bringDown;
-    public bool broughtDown;
+    public bool broughtDown, broughtUp;
 
     void Start()
     {
         startPos = this.transform.position;
-        // disable all minigame components
     }
 
     void FixedUpdate()
@@ -32,7 +31,7 @@ public class DeskObject : MonoBehaviour
                 this.transform.position = startPos + moveUpBy;
                 enabled = false;
                 timePassed = 0;
-                // enable minigame component
+                broughtUp = true;
             }
         }
         if (bringDown)
@@ -47,7 +46,7 @@ public class DeskObject : MonoBehaviour
             {
                 this.transform.position = startPos;
                 bringDown = false;
-                timePassed = 0;
+                //timePassed = 0; // this gotta stay commented
                 broughtDown = true;
             }
         }
