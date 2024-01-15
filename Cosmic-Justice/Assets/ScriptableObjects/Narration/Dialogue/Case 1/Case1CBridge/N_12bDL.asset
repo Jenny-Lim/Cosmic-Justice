@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
-  m_Text: "\u201CYour honour\u2026 I\u2019d love to house him forever, but his inability
-    to use his apartment\u2019s Atomic Toaster or pay me a single Dibble of rent
-    leaves me worried.\""
+  m_Text: "\"If he won\u2019t learn, he needs to leave.\u201D"
   m_FontSize: 30
   m_TextSpeed: 0.1
   m_CharacterSprite1: angry
