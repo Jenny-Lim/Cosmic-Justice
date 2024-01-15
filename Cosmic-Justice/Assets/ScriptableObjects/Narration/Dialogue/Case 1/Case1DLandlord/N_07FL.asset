@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CWait\u2026 really? That\u2019s it? I thought you\u2019d put up more
     of a fight\u2026\u201D\r\n"
-  m_FontSize: 50
+  m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
   m_CharacterSprite2: sad

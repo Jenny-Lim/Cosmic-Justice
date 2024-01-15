@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CYour honour\u2026 I\u2019d love to house him forever, but his inability
     to use his apartment\u2019s Atomic Toaster or pay me a single Dibble of rent
     leaves me worried.\""
-  m_FontSize: 30
+  m_FontSize: 40
   m_TextSpeed: 0.1
   m_CharacterSprite1: angry
   m_CharacterSprite2: sad

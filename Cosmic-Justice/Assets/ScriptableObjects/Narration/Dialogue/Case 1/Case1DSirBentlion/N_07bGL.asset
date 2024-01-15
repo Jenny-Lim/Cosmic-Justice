@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\"What doth you require? A loyal bodyguard? A butter knife that is also
     a magnificent sword? A sword that is also a sword? A Dragon\u2019s skull made
     into a sword?\u201D\r\n"
-  m_FontSize: 25
+  m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
   m_CharacterSprite2: happy

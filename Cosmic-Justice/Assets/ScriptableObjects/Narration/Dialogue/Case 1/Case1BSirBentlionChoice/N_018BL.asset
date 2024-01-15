@@ -16,11 +16,13 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_Text: "\u201CYou should fix that boss man. The draft in here is getting out of
     control.\u201D"
-  m_FontSize: 30
+  m_FontSize: 40
   m_TextSpeed: 0.02
   m_CharacterSprite1: stressed
   m_CharacterSprite2: frozen
   m_character1: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
   m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_events: 2
+  m_leftCharacterAnimation: 0
+  m_rightCharacterAnimation: 0
   m_minigames: 0

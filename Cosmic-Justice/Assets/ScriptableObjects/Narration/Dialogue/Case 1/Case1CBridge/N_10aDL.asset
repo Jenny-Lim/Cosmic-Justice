@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CI am a Knight, your honour. I made an oath to my kingdom. I simply
     wish to understand this strange place\u2026 for my friends.\""
-  m_FontSize: 30.1
+  m_FontSize: 40
   m_TextSpeed: 0.1
   m_CharacterSprite1: neutral
   m_CharacterSprite2: stressed

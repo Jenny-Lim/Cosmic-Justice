@@ -17,11 +17,13 @@ MonoBehaviour:
   m_Text: "\u201CI fought side by side with my fellow knights, taking down a dragon
     for that very hoard! Those coins are precious! I didn\u2019t spend multiple millenia
     frozen in a forsaken glacier to be treated like some common rabble rouser-\u201D"
-  m_FontSize: 30.7
+  m_FontSize: 40
   m_TextSpeed: 0.02
   m_CharacterSprite1: angry
   m_CharacterSprite2: angry
   m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_events: 0
+  m_leftCharacterAnimation: 0
+  m_rightCharacterAnimation: 0
   m_minigames: 0

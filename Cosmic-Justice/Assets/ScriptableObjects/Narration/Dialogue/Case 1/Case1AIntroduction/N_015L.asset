@@ -23,4 +23,6 @@ MonoBehaviour:
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
   m_events: 9
+  m_leftCharacterAnimation: 0
+  m_rightCharacterAnimation: 0
   m_minigames: 0

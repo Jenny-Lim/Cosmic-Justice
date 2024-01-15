@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CI no longer have anything to fight for. You\u2019ve made that clear.\u201D
     \r\n"
-  m_FontSize: 30
+  m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
   m_CharacterSprite2: sad

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\u201CB-but your honour!\u201D\r\n"
-  m_FontSize: 50
+  m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: angry
   m_CharacterSprite2: happy

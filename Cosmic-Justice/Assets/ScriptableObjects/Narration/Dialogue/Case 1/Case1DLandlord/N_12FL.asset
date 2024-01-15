@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CBlegh, blegh...\u201D"
-  m_FontSize: 30.6
+  m_FontSize: 65
   m_TextSpeed: 0.01
   m_CharacterSprite1: sad
   m_CharacterSprite2: sad
