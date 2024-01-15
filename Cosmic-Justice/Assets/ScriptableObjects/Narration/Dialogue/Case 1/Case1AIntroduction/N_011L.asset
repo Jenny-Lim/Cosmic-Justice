@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CYou must hear my plea! I simply wish to reside on your property,
     oh honourable Landlord! How many times must I prove my unwavering loyalty to
     thy cause?\u201D"
-  m_FontSize: 35
+  m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: 
   m_CharacterSprite2: stressed
