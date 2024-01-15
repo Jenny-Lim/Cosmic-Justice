@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
-  m_Name: N_12DL
+  m_Name: N_10aDL
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
+  m_Speaker: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
-  m_Text: "\u201CYour honour\u2026 I\u2019d love to house him forever, but his inability
-    to use his apartment\u2019s Atomic Toaster or pay me a single Dibble of rent
-    leaves me worried. If he won\u2019t learn, he needs to leave.\u201D"
-  m_FontSize: 30
+  m_Text: "\u201CI am a Knight, your honour. I made an oath to my kingdom. I simply
+    wish to understand this strange place\u2026 for my friends.\""
+  m_FontSize: 30.1
   m_TextSpeed: 0.1
-  m_CharacterSprite1: angry
-  m_CharacterSprite2: sad
+  m_CharacterSprite1: neutral
+  m_CharacterSprite2: stressed
   m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
-  m_events: 8
-  m_leftCharacterAnimation: 2
+  m_events: 0
+  m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 0
