@@ -81,7 +81,7 @@ public class Dial : MonoBehaviour
         if (health.value <= 0)
         {
             statusText.text = loseStatus;
-            button.enabled = false;
+            button.interactable = false;
 
             MinigameManager.current.isWon = false;
 
@@ -92,7 +92,7 @@ public class Dial : MonoBehaviour
         else if (timer.GetTime() <= 0)
         {
             statusText.text = winStatus;
-            button.enabled = false;
+            button.interactable = false;
 
             MinigameManager.current.isWon = true;
 

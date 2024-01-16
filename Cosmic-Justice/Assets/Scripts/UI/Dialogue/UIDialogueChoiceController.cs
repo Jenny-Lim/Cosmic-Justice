@@ -8,7 +8,7 @@ public class UIDialogueChoiceController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI m_Choice;
     [SerializeField]
-    public DialogueChannel m_DialogueChannel;
+    protected DialogueChannel m_DialogueChannel;
     [SerializeField]
     private Sprite m_ButtonSprite;
     [SerializeField]
@@ -16,7 +16,7 @@ public class UIDialogueChoiceController : MonoBehaviour
     [SerializeField]
     private Color m_FontColor;
 
-    public DialogueNode m_ChoiceNextNode;
+    protected DialogueNode m_ChoiceNextNode;
     private TextMeshProUGUI text;
     private Image image;
 
