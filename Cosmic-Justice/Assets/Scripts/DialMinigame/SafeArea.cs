@@ -38,7 +38,7 @@ public class SafeArea : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        dial.timer.SetTime(dial.timer.amountTime); // maybe dont reset
+        //dial.timer.SetTime(dial.timer.amountTime); // maybe dont reset
         dial.timer.PauseTime();
         if (dial.lerpSpeed > 0) {
             Debug.Log(dial.lerpSpeed);

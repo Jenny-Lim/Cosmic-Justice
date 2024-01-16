@@ -11,6 +11,7 @@ public class Dial : MonoBehaviour
     [SerializeField] TMP_Text statusText;
     [SerializeField] Button button;
     [SerializeField] public Timer timer;
+    [SerializeField] public TMP_Text timerText;
     [SerializeField] public Slider health;
     [SerializeField] GameObject safeArea;
     [SerializeField] Minigame parent;
@@ -31,6 +32,8 @@ public class Dial : MonoBehaviour
     void OnEnable()
     {
         timer.enabled = false;
+        timerText.text = timer.amountTime.ToString();
+
         button.interactable = false;
 
         t = 0f;
