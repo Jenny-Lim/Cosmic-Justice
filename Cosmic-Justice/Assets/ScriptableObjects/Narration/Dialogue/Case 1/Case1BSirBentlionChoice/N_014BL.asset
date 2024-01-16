@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Text: "\u201CI fought side by side with my fellow knights, taking down a dragon
     for that very hoard! Those coins are precious! I didn\u2019t spend multiple millenia
-    frozen in a forsaken glacier to be treated like some common rabble rouser-\u201D"
+    frozen in a forsaken glacier to be treated like some <i>common rabble rouser-</i>\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.02
   m_CharacterSprite1: angry

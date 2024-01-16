@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CI do my best to keep people housed but I need money to do it. All
     he\u2019s trying to give me are these teeny, shiny, worthless paper weights.
-    I only accept cold, hard, ones and zeroes!\u201D"
+    I only accept <b>cold, hard, ones and zeroes!</b>\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.02
   m_CharacterSprite1: sad

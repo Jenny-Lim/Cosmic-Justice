@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
-  m_Text: "\u201CI-I\u2019m more than just that! You see, I offer\u2026 <color=\"yellow\">
-    slightly below average prices!<color=\"white\">\""
+  m_Text: "\u201CI-I\u2019m more than just that! You see, I offer\u2026 <i><color=\"yellow\">
+    slightly below average prices!<color=\"white\"></i>\""
   m_FontSize: 40
   m_TextSpeed: 0.05
   m_CharacterSprite1: stressed
@@ -23,6 +23,6 @@ MonoBehaviour:
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
   m_events: 0
-  m_leftCharacterAnimation: 0
+  m_leftCharacterAnimation: 8
   m_rightCharacterAnimation: 0
   m_minigames: 0

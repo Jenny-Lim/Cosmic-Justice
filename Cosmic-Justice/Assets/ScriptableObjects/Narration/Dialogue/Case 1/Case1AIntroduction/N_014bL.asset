@@ -23,5 +23,5 @@ MonoBehaviour:
   m_character2: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_events: 9
   m_leftCharacterAnimation: 0
-  m_rightCharacterAnimation: 0
+  m_rightCharacterAnimation: 8
   m_minigames: 0
