@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
-  m_Text: "\u201CYour honour, I simply wish to be paid to keep my complex afloat.
-    And I don\u2019t need it being burned or destroyed either. Please tell him how
-    deep out of his element he is!\u201D"
+  m_Text: "\u201CYour honour, I just need to be paid to keep my complex afloat. What
+    I don\u2019t need is it being reduced to ash. Please tell him how deep out of
+    his element he is!\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
   m_CharacterSprite1: stressed

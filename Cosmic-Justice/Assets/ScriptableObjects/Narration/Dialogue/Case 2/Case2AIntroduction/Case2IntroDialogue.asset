@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec9dba023200b9f4fba2ef27f66bebb3, type: 3}
-  m_Name: N_002Bb
+  m_Script: {fileID: 11500000, guid: 59349bf22ac25884cbbc11797eea1f7d, type: 3}
+  m_Name: Case2IntroDialogue
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: 054127898e725284597448a5afdbcc39, type: 2}
-  m_NextNode: {fileID: 11400000, guid: e3ae31b0b92f0f146a7e11ecbbed08c8, type: 2}
+  m_FirstNode: {fileID: 11400000, guid: 252df9c2506b1e94dbecd94475041a79, type: 2}
