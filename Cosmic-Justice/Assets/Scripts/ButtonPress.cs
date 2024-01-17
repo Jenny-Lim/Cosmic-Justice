@@ -14,7 +14,7 @@ public class ButtonPress : MonoBehaviour
 
     public void OnButtonPress()
     {
-        Debug.Log("pressed");
+        //Debug.Log("pressed");
         anim.SetTrigger("pressed");
     } // OnButtonPress
 
