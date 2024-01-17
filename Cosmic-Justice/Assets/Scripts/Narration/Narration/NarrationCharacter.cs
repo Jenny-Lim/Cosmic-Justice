@@ -29,6 +29,9 @@ public class NarrationCharacter : ScriptableObject
     [SerializeField]
     private AudioClip voice;
 
+    [SerializeField]
+    private bool left;
+
     public string CharacterName => m_CharacterName; //A public access for the character name
 
     public Sprite DialoguePanel => m_DialoguePanel; //Public access for the dialogue panel image
@@ -40,4 +43,6 @@ public class NarrationCharacter : ScriptableObject
     public AudioClip Voice => voice;
 
     public CharacterSprites[] sprites;
+
+    public bool Left => left;
 }

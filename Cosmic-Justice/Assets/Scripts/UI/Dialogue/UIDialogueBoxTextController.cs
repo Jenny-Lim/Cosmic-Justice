@@ -37,6 +37,12 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     [SerializeField]
     private Image dialoguePanel;
 
+    [SerializeField]
+    private RectTransform speakerTagPosition;
+
+    [SerializeField]
+    private RectTransform[] characterNamePositions;
+
     private bool canGoNext;
 
     //Handles the clicking of the button
@@ -107,6 +113,20 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             m_DialogueText.startDialogue(node.DialogueLine.Text, node.DialogueLine.TextSpeed, node.DialogueLine.Speaker.Font, node.DialogueLine.FontSize, node.DialogueLine.Speaker.Color, node.DialogueLine.Speaker.Voice);
             m_SpeakerText.color = node.DialogueLine.Speaker.Color;
             m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
+
+            string speakerName = node.DialogueLine.Speaker.CharacterName;
+
+            if (speakerName != "The Cosmic Justice")
+            {
+                if(node.DialogueLine.Speaker.Left)
+                    speakerTagPosition.position = characterNamePositions[0].position;
+                else
+                    speakerTagPosition.position = characterNamePositions[2].position;
+            }
+            else
+            {
+                speakerTagPosition.position = characterNamePositions[1].position;
+            }
 
             EventManager.current.GetNode(node);
 

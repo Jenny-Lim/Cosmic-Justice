@@ -8,6 +8,9 @@ public class SC_CursorTrail : MonoBehaviour
     public float endWidth = 0f;
     public float trailTime = 0.24f;
 
+    [HideInInspector]
+    public TrailRenderer trail;
+
     Transform trailTransform;
     Camera thisCamera;
 
@@ -18,7 +21,7 @@ public class SC_CursorTrail : MonoBehaviour
 
         GameObject trailObj = new GameObject("Mouse Trail");
         trailTransform = trailObj.transform;
-        TrailRenderer trail = trailObj.AddComponent<TrailRenderer>();
+        trail = trailObj.AddComponent<TrailRenderer>();
         trail.time = -1f;
         MoveTrailToCursor(Input.mousePosition);
         trail.time = trailTime;

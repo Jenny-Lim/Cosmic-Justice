@@ -76,6 +76,11 @@ public class SceneLoader : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
+
+        SC_CursorTrail trail = FindObjectOfType<SC_CursorTrail>();
+        trail.trail.Clear();
+        trail.trail.enabled = false;
+
         isPaused = true;
         EventManager.current.CanDialogue(false);
     }
@@ -84,6 +89,10 @@ public class SceneLoader : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+
+        SC_CursorTrail trail = FindObjectOfType<SC_CursorTrail>();
+        trail.trail.enabled = true;
+
         isPaused = false;
         EventManager.current.CanDialogue(true);
     }
@@ -91,6 +100,10 @@ public class SceneLoader : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1f;
+
+        SC_CursorTrail trail = FindObjectOfType<SC_CursorTrail>();
+        trail.trail.enabled = true;
+
         StartLoadLevel(1);
     }
 
