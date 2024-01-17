@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Dial : MonoBehaviour
+public class Dial : MonoBehaviour // TIMER INACTIVE RN
 {
     // objects
     [SerializeField] GameObject needle;
@@ -40,7 +40,8 @@ public class Dial : MonoBehaviour
 
         health.interactable = false;
         health.maxValue = 50;
-        health.value = health.maxValue;
+        //health.value = health.maxValue;
+        health.value = 0;
 
         currAngle = 0;
 
@@ -80,19 +81,7 @@ public class Dial : MonoBehaviour
 
         randTime -= Time.deltaTime;
 
-        // loss
-        if (health.value <= 0)
-        {
-            statusText.text = loseStatus;
-            button.interactable = false;
-
-            MinigameManager.current.isWon = false;
-
-            EventManager.current.EndDial();
-        }
-
-        // win
-        else if (timer.GetTime() <= 0)
+        if (health.value >= health.maxValue) // new
         {
             statusText.text = winStatus;
             button.interactable = false;
@@ -100,8 +89,30 @@ public class Dial : MonoBehaviour
             MinigameManager.current.isWon = true;
 
             EventManager.current.EndDial();
-
         }
+
+        //// loss
+        //if (health.value <= 0)
+        //{
+        //    statusText.text = loseStatus;
+        //    button.interactable = false;
+
+        //    MinigameManager.current.isWon = false;
+
+        //    EventManager.current.EndDial();
+        //}
+
+        // win
+        //else if (timer.GetTime() <= 0)
+        //{
+        //    statusText.text = winStatus;
+        //    button.interactable = false;
+
+        //    MinigameManager.current.isWon = true;
+
+        //    EventManager.current.EndDial();
+
+        //}
 
         else
         {
