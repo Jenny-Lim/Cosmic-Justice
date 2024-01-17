@@ -125,9 +125,14 @@ public class MinigameManager : MonoBehaviour
 
         objList.AddRange(deskObjects);
 
-        foreach (DeskObject obj in objList.ToList())
+        foreach (DeskObject obj in objList)
         {
             obj.BringDown();
+        }
+
+        foreach (DeskObject obj in objList.ToList())
+        {
+            //obj.BringDown();
             yield return new WaitUntil(() => obj.broughtDown);
             objList.Remove(obj);
         }
