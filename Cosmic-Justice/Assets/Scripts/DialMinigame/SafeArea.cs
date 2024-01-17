@@ -41,7 +41,7 @@ public class SafeArea : MonoBehaviour
         //dial.timer.SetTime(dial.timer.amountTime); // maybe dont reset
         dial.timer.PauseTime();
         if (dial.lerpSpeed > 0) {
-            Debug.Log(dial.lerpSpeed);
+            //Debug.Log(dial.lerpSpeed);
             dial.lerpSpeed -= dial.lerpSpeed * 0.2f; // everytime you fail, lerpspeed slower
         }
     } // OnTriggerExit2D

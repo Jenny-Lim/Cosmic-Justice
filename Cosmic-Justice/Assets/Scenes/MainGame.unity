@@ -9785,7 +9785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e8294e47d75921468a95dc6efe7526b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpBy: {x: 0, y: -5, z: 0}
+  moveUpBy: {x: 0, y: -2.5, z: 0}
   totalTime_UP: 1
   totalTime_DOWN: 1
   broughtDown: 0
