@@ -11,7 +11,7 @@ public class MinigameManager : MonoBehaviour
     public bool isWon, isDone;
 
     [SerializeField]
-    private GameObject asteroidMinigame, dialMinigame, puzzleMinigame, nextButton;
+    private GameObject asteroidMinigame, dialMinigame, puzzleMinigame, nextButton, nameTag;
 
     //[SerializeField]
     //private GameObject verdictMinigame;
@@ -60,6 +60,7 @@ public class MinigameManager : MonoBehaviour
         dialogueText.cull = true;
         nextButton.SetActive(false);
         characterName.cull = true;
+        nameTag.SetActive(false);
     }
 
     void showPanel()
@@ -68,6 +69,7 @@ public class MinigameManager : MonoBehaviour
         nextButton.SetActive(true);
         dialogueText.cull = false;
         characterName.cull = false;
+        nameTag.SetActive(true);
     }
 
     private void StartAsteroidMinigame()

@@ -1451,6 +1451,7 @@ MonoBehaviour:
   dialMinigame: {fileID: 1773281793}
   puzzleMinigame: {fileID: 0}
   nextButton: {fileID: 518898628}
+  nameTag: {fileID: 643182786}
   dialogueText: {fileID: 425288106}
   characterName: {fileID: 359141761}
   dialogueBox: {fileID: 1755579119}
@@ -2301,7 +2302,7 @@ MonoBehaviour:
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
+  m_ReverseArrangement: 1
 --- !u!1 &512584313
 GameObject:
   m_ObjectHideFlags: 0
