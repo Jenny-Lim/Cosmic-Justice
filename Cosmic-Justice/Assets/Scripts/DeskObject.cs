@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeskObject : MonoBehaviour
+public class DeskObject : MonoBehaviour // for reverse functioning, inherit from this and override onenable + bringdown to do the opposite
 {
     Vector3 startPos;
     [SerializeField] Vector3 moveUpBy;
