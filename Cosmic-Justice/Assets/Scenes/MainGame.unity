@@ -4246,6 +4246,7 @@ MonoBehaviour:
   health: {fileID: 421043902}
   safeArea: {fileID: 1760017865}
   parent: {fileID: 1773281795}
+  fill: {fileID: 813536882}
   dialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   decrSpeed: 45.1
   incrAmt: 16
@@ -4257,6 +4258,7 @@ MonoBehaviour:
   loseStatus: The Knight Is Still Frozen...
   doingWellStatus: Warmer!
   inTroubleStatus: Colder!
+  inSuperTroubleStatus: Yikes...
 --- !u!222 &812711347
 CanvasRenderer:
   m_ObjectHideFlags: 0

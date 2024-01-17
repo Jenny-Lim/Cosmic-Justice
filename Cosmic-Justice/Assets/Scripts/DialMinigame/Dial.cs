@@ -15,6 +15,7 @@ public class Dial : MonoBehaviour // TIMER INACTIVE RN
     [SerializeField] public Slider health;
     [SerializeField] GameObject safeArea;
     [SerializeField] Minigame parent;
+    [SerializeField] Image fill;
 
     [SerializeField] DialogueChannel dialogueChannel;
 
@@ -23,11 +24,17 @@ public class Dial : MonoBehaviour // TIMER INACTIVE RN
     [SerializeField] float decrHealth;
     [SerializeField] float minRand, maxRand;
     [SerializeField] public float lerpSpeed;
-    [SerializeField] string winStatus, loseStatus, doingWellStatus, inTroubleStatus;
+    [SerializeField] string winStatus, loseStatus, doingWellStatus, inTroubleStatus, inSuperTroubleStatus;
 
     private float currAngle, currHealthAngle, healthAngleCap; // angles work in negatives where you think the value would be positive, and vice versa
     private float randTime, t;
     private SafeArea sa;
+
+    void Start()
+    {
+        fill.color = new Color(0, 1, 1, 1);
+        statusText.text = inSuperTroubleStatus;
+    }
 
     void OnEnable()
     {
@@ -129,14 +136,29 @@ public class Dial : MonoBehaviour // TIMER INACTIVE RN
                 currAngle += decrSpeed * Time.deltaTime;
             }
 
-            if (health.value >= health.maxValue / 2)
+            if (health.value >= health.maxValue * .75)
+            {
+                // color = orange
+                fill.color = new Color(1, 0.5f, 0, 1);
+            }
+            else if (health.value >= health.maxValue / 2)
             {
                 statusText.text = doingWellStatus;
+                // color = yellow
+                fill.color = new Color(1, 1, 0, 1);
+            }
+            else if (health.value <= health.maxValue / 4)
+            {
+                statusText.text = inSuperTroubleStatus;
+                // color = blue
+                fill.color = new Color(0, 1, 1, 1);
             }
             else
             {
                 statusText.text = inTroubleStatus;
-                
+                // color = green
+                fill.color = new Color(0, 1, 0, 1);
+
             }
 
         }
