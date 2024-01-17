@@ -49,6 +49,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     private bool canClickToNext;
     private bool click;
 
+    [HideInInspector]
+    public DialogueNode currNode;
+
     private void Awake()
     {
         m_DialogueChannel.OnDialogueNodeStart += OnDialogueNodeStart;
@@ -107,6 +110,8 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     {
         if (canGoNext)
         {
+            currNode = node;
+
             gameObject.SetActive(true);
 
             //Start dialogue with function and give it the line, speed of dialogue, font, text size, and text color

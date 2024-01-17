@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59349bf22ac25884cbbc11797eea1f7d, type: 3}
-  m_Name: TDialogue1
+  m_Name: Case1DebugChoice
   m_EditorClassIdentifier: 
-  m_FirstNode: {fileID: 11400000, guid: 3e3c6533a7a0cd44c8fe3c68164864aa, type: 2}
+  m_FirstNode: {fileID: 11400000, guid: 2a384f7ce68b1e547a8188cf8bef77bc, type: 2}
