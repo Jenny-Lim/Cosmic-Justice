@@ -153,7 +153,7 @@ public class MinigameManager : MonoBehaviour
 
     private void EndDialMinigame()
     {
-        isDone = true; // i dont remember what this was for
+        isDone = true;
         StartCoroutine(StopMinigameAnim(dialMinigame, "MiniGame_Track_A", "Ambient_Track_A"));
     } // EndDialMinigame
 
