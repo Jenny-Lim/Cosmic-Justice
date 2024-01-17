@@ -20,6 +20,7 @@ public class DeskObject : MonoBehaviour
     {
         if (enabled)
         {
+            AudioManager.instance.Play("ClickSound"); // make it the new string
             timePassed += Time.deltaTime;
             t = timePassed / totalTime_UP;
 
@@ -36,6 +37,7 @@ public class DeskObject : MonoBehaviour
         }
         if (bringDown)
         {
+            AudioManager.instance.Play("ClickSound");
             timePassed += Time.deltaTime;
             t = timePassed / totalTime_DOWN;
 
