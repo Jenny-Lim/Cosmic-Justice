@@ -22,6 +22,6 @@ MonoBehaviour:
   m_character1: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
   m_character2: {fileID: 0}
   m_events: 2
-  m_leftCharacterAnimation: 4
+  m_leftCharacterAnimation: 1
   m_rightCharacterAnimation: 0
   m_minigames: 0
