@@ -24,7 +24,7 @@ public class Dial : MonoBehaviour // TIMER INACTIVE RN
     [SerializeField] float decrHealth;
     [SerializeField] float minRand, maxRand;
     [SerializeField] public float lerpSpeed;
-    [SerializeField] string winStatus, loseStatus, doingWellStatus, inTroubleStatus, inSuperTroubleStatus;
+    [SerializeField] string winStatus, loseStatus, doingWellStatus, inTroubleStatus;
 
     private float currAngle, currHealthAngle, healthAngleCap; // angles work in negatives where you think the value would be positive, and vice versa
     private float randTime, t;
@@ -32,8 +32,8 @@ public class Dial : MonoBehaviour // TIMER INACTIVE RN
 
     void Start()
     {
-        fill.color = new Color(0, 1, 1, 1);
-        statusText.text = inSuperTroubleStatus;
+        fill.color = new Color(1, 1, 0, 1); // start at yellow
+        statusText.text = inTroubleStatus;
     }
 
     void OnEnable()
@@ -136,31 +136,34 @@ public class Dial : MonoBehaviour // TIMER INACTIVE RN
                 currAngle += decrSpeed * Time.deltaTime;
             }
 
-            if (health.value >= health.maxValue * .75)
+            // colors
+            if (health.value >= health.maxValue * .66)
+            {
+                // color = red
+                fill.color = new Color(1, 0, 0, 1);
+            }
+            else if (health.value <= health.maxValue / 3)
+            {
+                // color = yellow
+                fill.color = new Color(1, 1, 0, 1);
+            }
+            else
             {
                 // color = orange
                 fill.color = new Color(1, 0.5f, 0, 1);
             }
-            else if (health.value >= health.maxValue / 2)
+            // end colors
+
+            // statuses
+            if (health.value >= health.maxValue /2)
             {
                 statusText.text = doingWellStatus;
-                // color = yellow
-                fill.color = new Color(1, 1, 0, 1);
-            }
-            else if (health.value <= health.maxValue / 4)
-            {
-                statusText.text = inSuperTroubleStatus;
-                // color = blue
-                fill.color = new Color(0, 1, 1, 1);
             }
             else
             {
                 statusText.text = inTroubleStatus;
-                // color = green
-                fill.color = new Color(0, 1, 0, 1);
-
             }
-
+            // end statuses
         }
 
     } // FixedUpdate
