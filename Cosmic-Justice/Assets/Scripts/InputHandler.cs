@@ -40,8 +40,8 @@ public class InputHandler : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.C))
             {
-                channel.RaiseDialogueNodeEnd(currentNode.currNode);
-                channel.RaiseDialogueEnd(case1Start);
+                channel.OnDialogueRequested(case1Start);
+                //channel.RaiseDialogueNodeEnd(currentNode.currNode);
                 channel.RaiseRequestDialogueNode(case1ChoiceDebug.FirstNode);
             }
 

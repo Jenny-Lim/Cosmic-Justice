@@ -1,0 +1,1033 @@
+fileFormatVersion: 2
+guid: 715dc07d2c1b04c4c93f91e9e2849ce6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_6
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7751984ca862346b3739afcb5d6e90
+      internalID: 1657725204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_7
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693e15254fd6d674f98954ff8e2f3212
+      internalID: -1049230159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0248b9d62bb1148a8619145fb0abe2
+      internalID: -416358551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_9
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1aa255838fcdeb409d0809c9c4da651
+      internalID: -1660748716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_10
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156a3149ae594b44ca91bb3a5e89d7b7
+      internalID: -484995170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_11
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1c99700b8a7fd40a2329acb7364768
+      internalID: 1375292496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_12
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b255f8763334844af9006f51f3b0c8
+      internalID: 1061949622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_13
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c425fce12227949b9685e4e7c320ec
+      internalID: -223308698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_14
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ec8c96ef84f404db964aafa5fa10cb
+      internalID: 589116485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_15
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76536202c2838f6449e0977eadc3b6bc
+      internalID: 459442409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e465609a8042144abb4e68fb1b2a31
+      internalID: 559155536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_17
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b06e67112dfae2478d9de55ddbb7b97
+      internalID: 1754244367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_18
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b9d7b22c4a23e459ac48369f131484
+      internalID: -476144996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_19
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4696d17e9e168e4c965769e05949596
+      internalID: 720687764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_20
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f27dcba986063f4fb22766daca1de85
+      internalID: 1145516849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_21
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebaac71cd7b9b2843affab75d4c2ebef
+      internalID: -2000592319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_22
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601c9880f7fc59841be1d72f148b9391
+      internalID: 1096422301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_23
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6b23cdc5fd99148a418ff6bb1532ab
+      internalID: -2007976603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb482c0c4a4f3044b16447d7df663be
+      internalID: -403461426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_25
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475b901cb9a6bef4e9ce1f0b2846e68a
+      internalID: 1033446283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_26
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491783bd36172b64cbaafdd5677fc4ba
+      internalID: 503802669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_27
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ba038b97b25054489fef648d5d7eef
+      internalID: 1807064942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_28
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03fac671def5e794e8445bfc496aa259
+      internalID: -1060928865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_29
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d76fdd1c3a3444b95d1fcfbd7f0672
+      internalID: -762802923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_30
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbac66771fee6284d98d4f75f837bad1
+      internalID: 862855931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_31
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb2aedaa8bcf9448a35d370eda691bc
+      internalID: -897702528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7773b604c4566447a7b2c3653a60aab
+      internalID: 726597321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_33
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcb98c9bbea36e4694fee30a1911f35
+      internalID: 1163699622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_34
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90223c94717e7b54f83ec661d75a99dd
+      internalID: 181522828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_35
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e53eaf16d89c9443ba0384b9973fe52
+      internalID: -1939808827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_36
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8869f7bb76f79648b8c99d90f4f6139
+      internalID: 209415661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_37
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6d82ce9a517b346acf982c84451311
+      internalID: 1658445975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_38
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0293f605f2cebaf4887ccb42ee15c794
+      internalID: -671298143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_39
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6957530dd39d80747817cf0d5539208d
+      internalID: 1152392981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5d452e91a296642a31508396c448d6
+      internalID: -225393692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_1
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4386d5a978b8c4da64abd8bc4ad18d
+      internalID: -1169333703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_2
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597c9ec89b3bff74e91a64a1ddcb42e3
+      internalID: -249417160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_3
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71eeeaef7f2bc4c42b8955cdbaef7843
+      internalID: 2021091504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_4
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c427f18e53aa7d4288a290306e67bbe
+      internalID: -434632175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Landlord_IdleBlinking_5
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db765cf827b59db4c82595ea4274abb9
+      internalID: -1925891508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Landlord_IdleBlinking_0: -225393692
+      Landlord_IdleBlinking_1: -1169333703
+      Landlord_IdleBlinking_10: -484995170
+      Landlord_IdleBlinking_11: 1375292496
+      Landlord_IdleBlinking_12: 1061949622
+      Landlord_IdleBlinking_13: -223308698
+      Landlord_IdleBlinking_14: 589116485
+      Landlord_IdleBlinking_15: 459442409
+      Landlord_IdleBlinking_16: 559155536
+      Landlord_IdleBlinking_17: 1754244367
+      Landlord_IdleBlinking_18: -476144996
+      Landlord_IdleBlinking_19: 720687764
+      Landlord_IdleBlinking_2: -249417160
+      Landlord_IdleBlinking_20: 1145516849
+      Landlord_IdleBlinking_21: -2000592319
+      Landlord_IdleBlinking_22: 1096422301
+      Landlord_IdleBlinking_23: -2007976603
+      Landlord_IdleBlinking_24: -403461426
+      Landlord_IdleBlinking_25: 1033446283
+      Landlord_IdleBlinking_26: 503802669
+      Landlord_IdleBlinking_27: 1807064942
+      Landlord_IdleBlinking_28: -1060928865
+      Landlord_IdleBlinking_29: -762802923
+      Landlord_IdleBlinking_3: 2021091504
+      Landlord_IdleBlinking_30: 862855931
+      Landlord_IdleBlinking_31: -897702528
+      Landlord_IdleBlinking_32: 726597321
+      Landlord_IdleBlinking_33: 1163699622
+      Landlord_IdleBlinking_34: 181522828
+      Landlord_IdleBlinking_35: -1939808827
+      Landlord_IdleBlinking_36: 209415661
+      Landlord_IdleBlinking_37: 1658445975
+      Landlord_IdleBlinking_38: -671298143
+      Landlord_IdleBlinking_39: 1152392981
+      Landlord_IdleBlinking_4: -434632175
+      Landlord_IdleBlinking_5: -1925891508
+      Landlord_IdleBlinking_6: 1657725204
+      Landlord_IdleBlinking_7: -1049230159
+      Landlord_IdleBlinking_8: -416358551
+      Landlord_IdleBlinking_9: -1660748716
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

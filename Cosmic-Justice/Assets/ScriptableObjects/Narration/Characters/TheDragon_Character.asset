@@ -16,16 +16,63 @@ MonoBehaviour:
   m_DialoguePanel: {fileID: 21300000, guid: 1ec236644594a39439691280a38da29d, type: 3}
   m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  voice: {fileID: 0}
+  voice: {fileID: 8300000, guid: ca7cf21a614af2c4f9a6e863edbc5f09, type: 3}
   left: 0
   sprites:
   - name: neutral
-    sprite: {fileID: 21300000, guid: 175680df6ec7c6347bb48c64cfaa5a5a, type: 3}
+    FramesPerSecond: 12
+    sprite:
+    - {fileID: -283064690, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -2013230669, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -1934067028, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 618847140, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 651613411, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 2130640742, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -6531280, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -278336518, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -311522515, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 923603634, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 825247166, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -1977235869, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 14112409, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -275736960, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 588750208, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -270317876, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 492278751, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 2113182506, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 4626748, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -1929392444, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 1974319429, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 1032128358, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 2020964753, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 107771059, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -673475799, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -758629831, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -885441395, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -1994841916, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -366697439, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -838265288, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -1212509420, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 880884577, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -1312172360, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 1813575167, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: 234592298, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -1599149009, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -1050355685, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
+    - {fileID: -1894451958, guid: 4ef243252475f42419a297173c62c4e4, type: 3}
   - name: happy
-    sprite: {fileID: 21300000, guid: c5fc199a0ee371a48a11b7457d7d98c2, type: 3}
+    FramesPerSecond: 0
+    sprite:
+    - {fileID: 21300000, guid: c5fc199a0ee371a48a11b7457d7d98c2, type: 3}
   - name: angry
-    sprite: {fileID: 21300000, guid: c9298f89ccea8574ab671565b3893cb5, type: 3}
+    FramesPerSecond: 0
+    sprite:
+    - {fileID: 21300000, guid: c9298f89ccea8574ab671565b3893cb5, type: 3}
   - name: sad
-    sprite: {fileID: 21300000, guid: 237279fb131d1f44baba4f7d8350d8c4, type: 3}
+    FramesPerSecond: 0
+    sprite:
+    - {fileID: 21300000, guid: 237279fb131d1f44baba4f7d8350d8c4, type: 3}
   - name: stressed
-    sprite: {fileID: 21300000, guid: b9d28b436f1e7524fbf173d1a876bef2, type: 3}
+    FramesPerSecond: 0
+    sprite:
+    - {fileID: 21300000, guid: b9d28b436f1e7524fbf173d1a876bef2, type: 3}

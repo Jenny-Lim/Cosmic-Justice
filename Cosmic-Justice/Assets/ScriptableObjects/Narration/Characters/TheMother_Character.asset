@@ -17,14 +17,20 @@ MonoBehaviour:
   m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   voice: {fileID: 0}
+  left: 0
   sprites:
   - name: neutral
-    sprite: {fileID: 21300000, guid: a0f0af80ed82eaf438292da5402a906c, type: 3}
+    sprite:
+    - {fileID: 0}
   - name: happy
-    sprite: {fileID: 21300000, guid: 4d2c97b2127ab654fba74aaa6b4c2c82, type: 3}
+    sprite:
+    - {fileID: 0}
   - name: angry
-    sprite: {fileID: 21300000, guid: 1d4412b6f51715441b1ecfd136e44363, type: 3}
+    sprite:
+    - {fileID: 0}
   - name: sad
-    sprite: {fileID: 21300000, guid: f63fe4f65b71f5840ab9ceab81062738, type: 3}
+    sprite:
+    - {fileID: 0}
   - name: stressed
-    sprite: {fileID: 21300000, guid: af096081b1f2f1941989cf9fcd100530, type: 3}
+    sprite:
+    - {fileID: 0}

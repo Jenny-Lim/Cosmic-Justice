@@ -1,0 +1,989 @@
+fileFormatVersion: 2
+guid: 4ef243252475f42419a297173c62c4e4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ade790c81fb3574eb83af0b47ec7d78
+      internalID: -283064690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_1
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec61379be9fffc4f823dfd2626dfdb6
+      internalID: -2013230669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_2
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63770c95d3f52a94585d4e8a69e5384e
+      internalID: -1934067028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_3
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1739209e885184fab0a86b734ffbc8
+      internalID: 618847140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_4
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccdee2b4fdd3015489ed25810d5999e9
+      internalID: 651613411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_5
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7707dad615465604d9742c475ad07cab
+      internalID: 2130640742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_6
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26247846ca888aa428c851fec149a2dd
+      internalID: -6531280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_7
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48eb211f3ae7e9549b87d5a101d5479d
+      internalID: -278336518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5356c8c01e47261459d44e13cec1c217
+      internalID: -311522515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_9
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5143e3f5a5bbae4cacd2d4098291f61
+      internalID: 923603634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_10
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b2899724b3db24eb251b5a62db6d79
+      internalID: 825247166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_11
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc524b3b13821a44b3d57487be1deb5
+      internalID: -1977235869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_12
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c129fc0b9075444aec5caff57410bc
+      internalID: 14112409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_13
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547af710dd62c424993187cf13076354
+      internalID: -275736960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_14
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7383a71c37d694e8b4782e6f5520d1
+      internalID: 588750208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_15
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d2ab4bd7f3da24ab6f51969ab2401a
+      internalID: -270317876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceba766825c13714c8cc7673d4bc8005
+      internalID: 492278751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_17
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5090ed822191840922c893463f44b0
+      internalID: 2113182506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_18
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885343a76a913dc4cbcf058fef9a65cd
+      internalID: 4626748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_19
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fcdcbfef3116e8418f97125e15f059b
+      internalID: -1929392444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_20
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86308482c7098d447b63d80523a31848
+      internalID: 1974319429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_21
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da6ba329b596114e9f27ba596f8f7d4
+      internalID: 1032128358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_22
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cbd06748692294ebde988069f7ef93
+      internalID: 2020964753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_23
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11743d71602ab540a4eec5787b42ad3
+      internalID: 107771059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6867917b171d1484eb1785df088670a6
+      internalID: -673475799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_25
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b6f5e6de7d0c248920c904756ae0e2
+      internalID: -758629831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_26
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d791a8ca61cbcc44888bed13322d1a0
+      internalID: -885441395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_27
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0319d9bfe61107546bd666fc4b77627c
+      internalID: -1994841916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_28
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52ac949f30b43a41a1352b9cae08388
+      internalID: -366697439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_29
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57846e44a534d914cbdc1985f48c2f00
+      internalID: -838265288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_30
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98df923ace3acb04790fcc8debfed571
+      internalID: -1212509420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_31
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657fa0c48363a7247bf3918042f39c54
+      internalID: 880884577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8f51da18d53d44394a4ba6555968a9
+      internalID: -1312172360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_33
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa372c1b3a4a4614f96d4fa5ca11dcc8
+      internalID: 1813575167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_34
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a2a4bac055d334fb5e9cd888e89770
+      internalID: 234592298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_35
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d682ebf4401f748ba84d8b7ac6885d
+      internalID: -1599149009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_36
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811edd022b8e0f04591f2fef037581ba
+      internalID: -1050355685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirButton_IdleBlinking_37
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fa78514552b0d4e8a21c361705aa42
+      internalID: -1894451958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SirButton_IdleBlinking_0: -283064690
+      SirButton_IdleBlinking_1: -2013230669
+      SirButton_IdleBlinking_10: 825247166
+      SirButton_IdleBlinking_11: -1977235869
+      SirButton_IdleBlinking_12: 14112409
+      SirButton_IdleBlinking_13: -275736960
+      SirButton_IdleBlinking_14: 588750208
+      SirButton_IdleBlinking_15: -270317876
+      SirButton_IdleBlinking_16: 492278751
+      SirButton_IdleBlinking_17: 2113182506
+      SirButton_IdleBlinking_18: 4626748
+      SirButton_IdleBlinking_19: -1929392444
+      SirButton_IdleBlinking_2: -1934067028
+      SirButton_IdleBlinking_20: 1974319429
+      SirButton_IdleBlinking_21: 1032128358
+      SirButton_IdleBlinking_22: 2020964753
+      SirButton_IdleBlinking_23: 107771059
+      SirButton_IdleBlinking_24: -673475799
+      SirButton_IdleBlinking_25: -758629831
+      SirButton_IdleBlinking_26: -885441395
+      SirButton_IdleBlinking_27: -1994841916
+      SirButton_IdleBlinking_28: -366697439
+      SirButton_IdleBlinking_29: -838265288
+      SirButton_IdleBlinking_3: 618847140
+      SirButton_IdleBlinking_30: -1212509420
+      SirButton_IdleBlinking_31: 880884577
+      SirButton_IdleBlinking_32: -1312172360
+      SirButton_IdleBlinking_33: 1813575167
+      SirButton_IdleBlinking_34: 234592298
+      SirButton_IdleBlinking_35: -1599149009
+      SirButton_IdleBlinking_36: -1050355685
+      SirButton_IdleBlinking_37: -1894451958
+      SirButton_IdleBlinking_4: 651613411
+      SirButton_IdleBlinking_5: 2130640742
+      SirButton_IdleBlinking_6: -6531280
+      SirButton_IdleBlinking_7: -278336518
+      SirButton_IdleBlinking_8: -311522515
+      SirButton_IdleBlinking_9: 923603634
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

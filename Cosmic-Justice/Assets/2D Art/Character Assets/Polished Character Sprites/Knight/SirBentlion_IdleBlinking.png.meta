@@ -1,0 +1,989 @@
+fileFormatVersion: 2
+guid: 7b638b0400fae0f4e8298fc2502904eb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a4c3ab66ebd5c408a27e91a281389c
+      internalID: -1367475129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_1
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67259f5be0fc11b4a92dd9a5582a1771
+      internalID: 395110951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_2
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11cf4c25672a3184389ab5117680b4e8
+      internalID: 630873947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_3
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ee22a5760da8e45ba9431ce2921cc8
+      internalID: -2101375401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_4
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331873cf8f508814faad933da9bcf447
+      internalID: -401829882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_5
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a9516f85af0724c86bd1abf1536495
+      internalID: 1906290165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_6
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03842830346a02c479f587800bdb92d9
+      internalID: 1464442672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_7
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 12000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d95f6a4f0f40e3498a572a364a3110a
+      internalID: -1083878593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b25065934d3f0742bfb9d6ac2600bff
+      internalID: 17553332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_9
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37c9301d7285bd4cabd560ba9c5c2cf
+      internalID: 1256638786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_10
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0afb3714d39444ebe861c0a93e6734
+      internalID: -903195281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_11
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849d1561460bdb14bb40abfd68b5679e
+      internalID: -441527875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_12
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808797ef8f24b7b4cae100b1fdeccd7c
+      internalID: -1750519021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_13
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e258f9c3b8412408cbf8042c4419e1
+      internalID: 466692663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_14
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3f15da4d53599429782f1263641a3f
+      internalID: 1362915850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_15
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 9000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1109f60d7ce177046a53670acc23bb64
+      internalID: 598137896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bf901b720ce4149a8834f9dd3e6ed5
+      internalID: -1604139052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_17
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e944beaeb1d5f44bcbb96a3727956d
+      internalID: 1998151786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_18
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dfdff280d3c02b42a1f80d28ed6d9c8
+      internalID: 1943728011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_19
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1796f8eef32dcb040987a8f29a97e4e2
+      internalID: 477029035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_20
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc9026496c46104e9dc4ac0fdeba3d6
+      internalID: -1329751771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_21
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617f125a914364c4782c56793469d9f2
+      internalID: -880795153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_22
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6baa79568153341be07ff349ea0e6c
+      internalID: -1037961720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_23
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 6000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5eab176b0361140bbec329192e3a17
+      internalID: -1699030890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c263347d87e384292aed5e8ab8e113
+      internalID: 1924140850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_25
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81eada201fbdaee4d8788267c799ad1d
+      internalID: -826212444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_26
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3914fc6138ff3f045a9503e4ef14b90e
+      internalID: 873842227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_27
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2dec8d4f4002d840b529f871adf051a
+      internalID: 785043773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_28
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e513c89148badf40a620422591ead31
+      internalID: -1828802367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_29
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec83549a8f39574398ecd98dd217043
+      internalID: 1891111500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_30
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0472fb465a0ce4db1cc387225c9b22
+      internalID: 1409203861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_31
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 3000
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc4aac8f4ab02148b3aece3b7cbe14b
+      internalID: -1298426758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfec7379a0913864a8a7c1c1a35cb6be
+      internalID: -1673094459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_33
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefc646fc9bbe5e409ddb9b8b1c2d86f
+      internalID: -1374952091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_34
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1968f82686243943ac2550873583e01
+      internalID: 1005510896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_35
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6883e5bfcfa17341b4e15aec6921a71
+      internalID: -989825999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_36
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f909ed8441b45448ab7ab6167f6e15f
+      internalID: -1371640841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SirBentlion_IdleBlinking_37
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 0
+        width: 2000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80375cd80490804fbb5bfdd8bc91fc3
+      internalID: -1209617582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SirBentlion_IdleBlinking_0: -1367475129
+      SirBentlion_IdleBlinking_1: 395110951
+      SirBentlion_IdleBlinking_10: -903195281
+      SirBentlion_IdleBlinking_11: -441527875
+      SirBentlion_IdleBlinking_12: -1750519021
+      SirBentlion_IdleBlinking_13: 466692663
+      SirBentlion_IdleBlinking_14: 1362915850
+      SirBentlion_IdleBlinking_15: 598137896
+      SirBentlion_IdleBlinking_16: -1604139052
+      SirBentlion_IdleBlinking_17: 1998151786
+      SirBentlion_IdleBlinking_18: 1943728011
+      SirBentlion_IdleBlinking_19: 477029035
+      SirBentlion_IdleBlinking_2: 630873947
+      SirBentlion_IdleBlinking_20: -1329751771
+      SirBentlion_IdleBlinking_21: -880795153
+      SirBentlion_IdleBlinking_22: -1037961720
+      SirBentlion_IdleBlinking_23: -1699030890
+      SirBentlion_IdleBlinking_24: 1924140850
+      SirBentlion_IdleBlinking_25: -826212444
+      SirBentlion_IdleBlinking_26: 873842227
+      SirBentlion_IdleBlinking_27: 785043773
+      SirBentlion_IdleBlinking_28: -1828802367
+      SirBentlion_IdleBlinking_29: 1891111500
+      SirBentlion_IdleBlinking_3: -2101375401
+      SirBentlion_IdleBlinking_30: 1409203861
+      SirBentlion_IdleBlinking_31: -1298426758
+      SirBentlion_IdleBlinking_32: -1673094459
+      SirBentlion_IdleBlinking_33: -1374952091
+      SirBentlion_IdleBlinking_34: 1005510896
+      SirBentlion_IdleBlinking_35: -989825999
+      SirBentlion_IdleBlinking_36: -1371640841
+      SirBentlion_IdleBlinking_37: -1209617582
+      SirBentlion_IdleBlinking_4: -401829882
+      SirBentlion_IdleBlinking_5: 1906290165
+      SirBentlion_IdleBlinking_6: 1464442672
+      SirBentlion_IdleBlinking_7: -1083878593
+      SirBentlion_IdleBlinking_8: 17553332
+      SirBentlion_IdleBlinking_9: 1256638786
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

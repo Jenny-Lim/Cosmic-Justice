@@ -1,4 +1,6 @@
 
+using System.Diagnostics;
+
 public class DialogueException : System.Exception
 {
     public DialogueException(string message)

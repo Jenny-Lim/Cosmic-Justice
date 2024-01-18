@@ -8,6 +8,8 @@ public class SecondCharacterChangeSprite : MonoBehaviour
 {
     private Image image;
     private NarrationCharacter character;
+    private Sprite[] currentSprite;
+    private float fps;
 
     private void Start()
     {
@@ -33,16 +35,55 @@ public class SecondCharacterChangeSprite : MonoBehaviour
 
     private void ChangeSprite(DialogueNode node)
     {
-        Sprite newSprite = GetSpriteFromName(node, node.DialogueLine.CharacterSprite2);
 
-        image.sprite = newSprite;
+        Sprite[] newSprite = GetSpriteFromName(node, node.DialogueLine.CharacterSprite2);
+        
+        if (newSprite.Equals(currentSprite))
+            return;
+
+        currentSprite = newSprite;
+
+        if (newSprite.Length == 0)
+        {
+            Debug.Log("No sprites were given");
+            return;
+        }
+
+        if (newSprite.Length <= 1)
+        {
+            StopAllCoroutines();
+            image.sprite = newSprite[0];
+        }
+        else
+        {
+            StopAllCoroutines();
+            StartCoroutine(LoopFrames2(newSprite));
+        }
+    }
+
+    IEnumerator LoopFrames2(Sprite[] frames)
+    {
+
+        if (fps == 0)
+            fps = 0.083f;
+
+        float framesPerSecond = fps;
+
+        while (true)
+        {
+            for (int i = 0; i < frames.Length; i++)
+            {
+                image.sprite = frames[i];
+                yield return new WaitForSeconds(framesPerSecond);
+            }
+        }
     }
 
     //Function to get the sprite of the character based on the name of the sprite
-    private Sprite GetSpriteFromName(DialogueNode node, string name)
+    private Sprite[] GetSpriteFromName(DialogueNode node, string name)
     {
 
-        Sprite returnSprite = null;
+        Sprite[] returnSprite = null;
 
         for (int i = 0; i < character.sprites.Length; i++)
         {
@@ -50,6 +91,8 @@ public class SecondCharacterChangeSprite : MonoBehaviour
             if (string.Equals(name, compareName, System.StringComparison.CurrentCultureIgnoreCase))
             {
                 returnSprite = character.sprites[i].sprite;
+                if (character.sprites[i].FramesPerSecond != 0)
+                    fps = (1000 / character.sprites[i].FramesPerSecond) / 1000;
                 break;
             }
         }

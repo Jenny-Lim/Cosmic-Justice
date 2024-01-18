@@ -8,7 +8,8 @@ using TMPro;
 public struct CharacterSprites
 {
     public string name;
-    public Sprite sprite;
+    public int FramesPerSecond;
+    public Sprite[] sprite;
 }
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Character")]
