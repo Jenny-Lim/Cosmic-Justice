@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class SC_CursorTrail : MonoBehaviour
 {
-    public Color trailColor = new Color(1, 0, 0.38f);
+    public Gradient trailColor;
     public float distanceFromCamera = 5;
     public float startWidth = 0.1f;
     public float endWidth = 0f;
     public float trailTime = 0.24f;
+    public Material trailMaterial;
 
     [HideInInspector]
     public TrailRenderer trail;
@@ -28,8 +29,8 @@ public class SC_CursorTrail : MonoBehaviour
         trail.startWidth = startWidth;
         trail.endWidth = endWidth;
         trail.numCapVertices = 2;
-        trail.sharedMaterial = new Material(Shader.Find("Unlit/Color"));
-        trail.sharedMaterial.color = trailColor;
+        trail.sharedMaterial = trailMaterial;
+        trail.colorGradient = trailColor;
     }
 
     // Update is called once per frame
