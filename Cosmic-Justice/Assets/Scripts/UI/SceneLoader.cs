@@ -18,9 +18,12 @@ public class SceneLoader : MonoBehaviour
 
     private ScreenWipe screenWipe;
 
+    private bool transitioning;
+
     public void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+        transitioning = false;
         MusicVolume = 1.0f;
         SFXvolume = 1.0f;
 
@@ -137,6 +140,10 @@ public class SceneLoader : MonoBehaviour
 
     public void StartLoadLevel(int levelIndex)
     {
+        if (transitioning)
+            return;
+
+        transitioning = true;
         if(screenWipe != null)
             StartCoroutine(LoadLevel(levelIndex));
         else
@@ -169,6 +176,8 @@ public class SceneLoader : MonoBehaviour
 
         // Start loading the scene
         SceneManager.LoadSceneAsync(levelIndex);
+
+        transitioning = false;
     }
 
     // Method that will be called when the scene has finished loading
