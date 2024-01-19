@@ -117,6 +117,9 @@ public class MinigameManager : MonoBehaviour
 
     IEnumerator StopMinigameAnim(GameObject minigame, string audioToStop, string audioToUnPause)
     {
+        AudioManager.instance.UnPause(audioToUnPause);
+        AudioManager.instance.Stop(audioToStop);
+
         Minigame m = minigame.GetComponent<Minigame>();
         m.SetPlayability(false);
 
@@ -142,8 +145,6 @@ public class MinigameManager : MonoBehaviour
         showPanel();
         EventManager.current.CanDialogue(true);
 
-        AudioManager.instance.UnPause("Ambient_Track_A");
-        AudioManager.instance.Stop("MiniGame_Track_A");
         yield return null;
     } // StopMinigameAnim
 

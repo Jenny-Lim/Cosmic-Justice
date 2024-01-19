@@ -20,7 +20,6 @@ public class DeskObject : MonoBehaviour // for reverse functioning, inherit from
     {
         if (enabled)
         {
-            AudioManager.instance.Play("ClickSound"); // make it the new string
             timePassed += Time.deltaTime;
             t = timePassed / totalTime_UP;
 
@@ -37,7 +36,6 @@ public class DeskObject : MonoBehaviour // for reverse functioning, inherit from
         }
         if (bringDown)
         {
-            AudioManager.instance.Play("ClickSound");
             timePassed += Time.deltaTime;
             t = timePassed / totalTime_DOWN;
 
@@ -55,11 +53,13 @@ public class DeskObject : MonoBehaviour // for reverse functioning, inherit from
     }
     void OnEnable() 
     {
+        AudioManager.instance.Play("DeskMovementA");
         enabled = true;
     }
 
     public void BringDown()
     {
+        AudioManager.instance.Play("DeskMovementA"); // probably want a different sound
         bringDown = true;
     }
 }
