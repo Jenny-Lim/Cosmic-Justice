@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
-  m_Text: "\u201CI\u2019m trying my best <size=80%>but he\u2019s gonna make me <size=60%>punch
-    a hole in his <size=40%>stupid metal shirt.\u201D"
+  m_Text: "\u201CI\u2019m trying my best <size=90%>but he\u2019s gonna make me <size=80%>punch
+    a hole in his <size=70%>stupid metal shirt.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.02
   m_CharacterSprite1: angry
