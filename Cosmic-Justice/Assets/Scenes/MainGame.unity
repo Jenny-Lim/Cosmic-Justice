@@ -4342,7 +4342,6 @@ MonoBehaviour:
   loseStatus: The Knight Is Still Frozen...
   doingWellStatus: Warmer!
   inTroubleStatus: Colder!
-  inSuperTroubleStatus: Yikes...
 --- !u!222 &812711347
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10664,7 +10663,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
       propertyPath: sounds.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
       propertyPath: sounds.Array.data[5].clip
@@ -10679,6 +10678,14 @@ PrefabInstance:
       value: CharacterSpeaking
       objectReference: {fileID: 0}
     - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 45fbadc3c5d163047930d740a89ffbf0, type: 3}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: DeskMovementA
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
       propertyPath: sounds.Array.data[5].mixer
       value: 
       objectReference: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
@@ -10687,8 +10694,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[6].mixer
+      value: 
+      objectReference: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
       propertyPath: sounds.Array.data[5].volume
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[6].canOverlap
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4482849573137828552, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
       propertyPath: m_LocalPosition.x
