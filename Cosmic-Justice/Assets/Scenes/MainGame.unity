@@ -11730,6 +11730,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 45fbadc3c5d163047930d740a89ffbf0, type: 3}
     - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[6].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
       propertyPath: sounds.Array.data[6].name
       value: DeskMovementA
       objectReference: {fileID: 0}
