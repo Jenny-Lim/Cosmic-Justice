@@ -6888,6 +6888,7 @@ MonoBehaviour:
   - {fileID: 554035957}
   - {fileID: 1912851091}
   - {fileID: 908927168}
+  main: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   currNode: {fileID: 0}
 --- !u!114 &1341420162
 MonoBehaviour:
@@ -8781,15 +8782,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818111061}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3935d85a0be88b4ea95e98fb55eaaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  channel: {fileID: 0}
-  currentNode: {fileID: 0}
-  case1Start: {fileID: 0}
-  case1ChoiceDebug: {fileID: 0}
+  channel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
+  leftCharacter: {fileID: 1832885798}
+  rightCharacter: {fileID: 231371097}
+  case1ChoiceDebug: {fileID: 11400000, guid: 44d879f3b44d8504583e7078aaa3d3d9, type: 2}
+  case1VerdictDebug: {fileID: 11400000, guid: d7b3878cdc8a2d3448bdd280bc2005ff, type: 2}
+  case1MinigameDebug: {fileID: 11400000, guid: b5a95f516cb47c74fa7516298a73d92c, type: 2}
 --- !u!1 &1825351636
 GameObject:
   m_ObjectHideFlags: 0

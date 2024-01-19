@@ -20,12 +20,18 @@ public class DialogueInstigator : MonoBehaviour
         m_DialogueChannel.OnDialogueNodeRequested += m_DialogueSequencer.StartDialogueNode;
     }
 
+    private void Start()
+    {
+        EventManager.current.debug += m_DialogueSequencer.DebugMode;
+    }
+
     private void OnDestroy()
     {
         m_DialogueChannel.OnDialogueNodeRequested -= m_DialogueSequencer.StartDialogueNode;
         m_DialogueChannel.OnDialogueRequested -= m_DialogueSequencer.StartDialogue;
 
         m_DialogueSequencer.OnDialogueNodeEnd -= m_DialogueChannel.RaiseDialogueNodeEnd;
+        EventManager.current.debug -= m_DialogueSequencer.DebugMode;
         m_DialogueSequencer.OnDialogueNodeStart -= m_DialogueChannel.RaiseDialogueNodeStart;
         m_DialogueSequencer.OnDialogueEnd -= OnDialogueEnd;
         m_DialogueSequencer.OnDialogueStart -= OnDialogueStart;

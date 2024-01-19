@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Dialogue/Dialogue Channel")]
 public class DialogueChannel : ScriptableObject
 {
+
     public delegate void DialogueCallback(Dialogue dialogue);
     public DialogueCallback OnDialogueRequested;
     public DialogueCallback OnDialogueStart;
@@ -42,4 +43,5 @@ public class DialogueChannel : ScriptableObject
     {
         OnDialogueNodeEnd?.Invoke(node);
     }
+
 }

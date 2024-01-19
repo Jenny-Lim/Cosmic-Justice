@@ -144,4 +144,10 @@ public class EventManager : MonoBehaviour
     {
         dialogueClick?.Invoke(can);
     }
+
+    public event Action debug;
+    public void Debug()
+    {
+        debug?.Invoke();
+    }
 }

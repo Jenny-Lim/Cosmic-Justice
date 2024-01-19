@@ -43,6 +43,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     [SerializeField]
     private RectTransform[] characterNamePositions;
 
+    [SerializeField]
+    private NarrationCharacter main;
+
     private bool canGoNext;
 
     //Handles the clicking of the button
@@ -119,9 +122,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             m_SpeakerText.color = node.DialogueLine.Speaker.Color;
             m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
 
-            string speakerName = node.DialogueLine.Speaker.CharacterName;
+            NarrationCharacter speakerName = node.DialogueLine.Speaker;
 
-            if (speakerName != "The Cosmic Justice")
+            if (speakerName != main)
             {
                 if(node.DialogueLine.Speaker.Left)
                     speakerTagPosition.position = characterNamePositions[0].position;
