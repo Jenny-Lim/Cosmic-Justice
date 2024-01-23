@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
-  m_Text: "\"...Nothing. I just\u2026 I keep trying to tell him! Gold hasn\u2019t
-    been worth anything since all minerals were funged in 3818!\u201D"
+  m_Text: "\u201C...Nothing, I just\u2026 I keep trying to tell him! Gold hasn\u2019t
+    been worth anything since the 3018 Dibblification of all mineral wealth.\u201D\r\n"
   m_FontSize: 40
   m_TextSpeed: 0.02
   m_CharacterSprite1: stressed
