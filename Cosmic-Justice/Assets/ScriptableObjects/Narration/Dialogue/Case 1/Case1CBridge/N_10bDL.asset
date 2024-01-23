@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
-  m_Text: "\"Give me time, and I will learn these unfamiliar customs.\u201D\r\n"
+  m_Text: "\"Give me time, and I shall learn these unfamiliar customs, currencies,
+    and space laws.\u201D\r\n"
   m_FontSize: 40
   m_TextSpeed: 0.1
   m_CharacterSprite1: neutral
