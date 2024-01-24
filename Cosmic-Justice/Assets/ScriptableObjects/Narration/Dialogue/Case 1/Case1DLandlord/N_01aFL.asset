@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CSir Bentlion. You have approached this situation with too much honour
-    and not enough logic.\""
+  m_Text: "\u201CSir Bentlion. Your failure to provide proper payment and your inability
+    to control Suir Button are unacceptable.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: happy

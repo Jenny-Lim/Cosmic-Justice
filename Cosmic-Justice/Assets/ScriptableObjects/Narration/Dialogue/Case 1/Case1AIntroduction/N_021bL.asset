@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: '"Brabbo..."'
+  m_Text: '"Brabbo..." <i>The quiet fluttering of Button''s wings slows. </i>'
   m_FontSize: 40
   m_TextSpeed: 0.05
   m_CharacterSprite1: sad

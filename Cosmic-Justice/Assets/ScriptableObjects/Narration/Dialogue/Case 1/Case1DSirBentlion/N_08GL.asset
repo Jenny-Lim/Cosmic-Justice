@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CCalm down, Sir Knight. I don\u2019t need anything from you yet.
-    Let\u2019s head back home and we can talk about a payment plan, okay?\u201D"
+  m_Text: "\u201CHeheh. Calm down, Leo. Nothing too much, yet. I might get you set
+    up with a monster huntin\u2019 friend of mine stationed on Rockallor 8 to get
+    you some Dibbles.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: stressed

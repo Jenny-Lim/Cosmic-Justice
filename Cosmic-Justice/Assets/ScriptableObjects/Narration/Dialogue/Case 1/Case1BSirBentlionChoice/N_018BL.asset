@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
   m_Listener: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_Text: "\u201CYou should fix that, CJ. My secretary panel doesn't have access
-    to the temperature controls... There must've been a failure.\u201D"
+    to the temperature controls... probably Carl's fault.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.02
   m_CharacterSprite1: stressed

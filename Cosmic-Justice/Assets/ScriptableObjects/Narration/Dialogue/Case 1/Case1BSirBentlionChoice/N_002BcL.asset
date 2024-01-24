@@ -16,14 +16,14 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CI\u2019ve found myself in a most baffling and backwards of futures\u2026
     After this beautiful and noble creature freed me from my icy prison on what I
-    knew as Earth, nothing has been the same.\u201D\r\n"
+    once knew as Earth, nothing has been the same.\u201D\r\n"
   m_FontSize: 40
   m_TextSpeed: 0.05
   m_CharacterSprite1: 
   m_CharacterSprite2: sad
   m_character1: {fileID: 0}
-  m_character2: {fileID: 0}
-  m_events: 0
+  m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
+  m_events: 8
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 1
   m_minigames: 0

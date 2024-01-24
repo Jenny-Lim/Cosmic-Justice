@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_Listener: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
-  m_Text: "\"BWEGH!\u201D"
+  m_Text: "\"BWEGH!\u201D <i>The small creature beams defiantly! </i>"
   m_FontSize: 65
   m_TextSpeed: 0.01
   m_CharacterSprite1: angry

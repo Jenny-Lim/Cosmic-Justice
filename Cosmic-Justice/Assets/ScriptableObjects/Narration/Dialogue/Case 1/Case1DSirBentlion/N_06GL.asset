@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CI suppose I have no choice\u2026 He does add a lot of... <i>whimsy</i>
-    wherever he goes, at least.\u201D "
+  m_Text: "\u201CI suppose lining the complex with Nagasotne has ben a long time
+    coming\u2026 The two do add a lot of... <i>whimsy</i> wherever they goes, at
+    least.\u201D "
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: sad
