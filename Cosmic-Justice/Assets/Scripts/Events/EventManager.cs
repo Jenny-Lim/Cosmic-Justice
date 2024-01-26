@@ -139,6 +139,12 @@ public class EventManager : MonoBehaviour
         click?.Invoke();
     }
 
+    public event Action nextClick;
+    public void NextClick()
+    {
+        nextClick?.Invoke();
+    }
+
     public event Action<bool> dialogueClick;
     public void DialogueClick(bool can)
     {

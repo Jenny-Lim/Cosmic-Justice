@@ -20,6 +20,9 @@ public class InputHandler : MonoBehaviour
     [SerializeField] private Dialogue case1VerdictDebug;
     [SerializeField] private Dialogue case1MinigameDebug;
 
+    [Header("--------Case 2 Debug Dialogues--------")]
+    [SerializeField] private Dialogue case2StartDebug;
+
 
 
     private void Awake()
@@ -32,10 +35,20 @@ public class InputHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetMouseButtonUp(0))
+        {
+            EventManager.current.MouseClick();
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (!case1)
                 case1 = true;
+        }else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            if(!case2)
+                case2 = true;
         }
 
         if (case1)
@@ -61,8 +74,14 @@ public class InputHandler : MonoBehaviour
                 ShowCharacters();
                 case1 = false;
             }
-
-
+        }else if (case2)
+        {
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case2StartDebug.FirstNode);
+                case1 = false;
+            }
         }
     }
 

@@ -71,7 +71,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     private void Start()
     {
         EventManager.current.dialogueClick += CanClickNext;
-        EventManager.current.click += Click;
+        EventManager.current.nextClick += Click;
     }
 
     private void OnDestroy()
@@ -80,7 +80,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         m_DialogueChannel.OnDialogueNodeStart -= OnDialogueNodeStart;
         eventManager.canDialogue -= CanDialogueRequest;
         EventManager.current.dialogueClick -= CanClickNext;
-        EventManager.current.click -= Click;
+        EventManager.current.nextClick -= Click;
     }
 
     private void Update()
@@ -99,7 +99,10 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     private void Click()
     {
-        click = true;
+        if (canGoNext)
+        {
+            click = true;
+        }
     }
 
     private void CanClickNext(bool can)
