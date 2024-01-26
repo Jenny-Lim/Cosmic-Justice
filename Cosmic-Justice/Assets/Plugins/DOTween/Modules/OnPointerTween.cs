@@ -34,7 +34,7 @@ public class OnPointerTween : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
             if(useRotateTween) RotateOnEnter?.PerformTween(transform);
 
-            // if(useMoveTween) MoveOnEnter?.PerformTween(transform, transform);
+            //if(useMoveTween) MoveOnEnter?.PerformTween(transform, transform);
 
             isTweening = true;
         }
