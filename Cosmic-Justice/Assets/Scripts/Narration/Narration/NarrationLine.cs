@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
+// JENNY LOOK AT THIS
+
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Line")]
 public class NarrationLine : ScriptableObject
 {

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
+// JENNY LOOK AT THIS
+
 public class SecondCharacterChangeSprite : MonoBehaviour
 {
     private Image image;

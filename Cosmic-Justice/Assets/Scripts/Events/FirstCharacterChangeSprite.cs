@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+// JENNY LOOK AT THIS
+
 public class FirstCharacterChangeSprite : MonoBehaviour
 {
     private Image image;

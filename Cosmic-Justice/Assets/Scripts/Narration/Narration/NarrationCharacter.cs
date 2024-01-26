@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Audio;
 using TMPro;
 
+// JENNY LOOK AT THIS
+
 [System.Serializable]
 public struct CharacterSprites
 {
