@@ -690,6 +690,10 @@ PrefabInstance:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 1739085347}
+    - target: {fileID: 4961694978611900786, guid: 5e78ea2b2d9f9b046933a2e979103bc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c6efcfb271944564f9bb069ac6e7881a, type: 2}
     - target: {fileID: 5126668723027809265, guid: 5e78ea2b2d9f9b046933a2e979103bc0, type: 3}
       propertyPath: m_Name
       value: Bobblehead
@@ -718,6 +722,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7522686094599653458, guid: 5e78ea2b2d9f9b046933a2e979103bc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5290848c43a673f499abca008c8cdc63, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
