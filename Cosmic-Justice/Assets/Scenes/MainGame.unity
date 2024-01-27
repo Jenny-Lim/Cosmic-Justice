@@ -754,6 +754,8 @@ GameObject:
   - component: {fileID: 136299696}
   - component: {fileID: 136299698}
   - component: {fileID: 136299697}
+  - component: {fileID: 136299700}
+  - component: {fileID: 136299699}
   m_Layer: 5
   m_Name: Hands (1)
   m_TagString: Untagged
@@ -793,7 +795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -818,6 +820,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136299695}
   m_CullTransparentMesh: 1
+--- !u!114 &136299699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136299695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3335867ef2f99084b94bd1a2ae6cc56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &136299700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136299695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe83b5794f63e92498db911196a8df71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeTime: 1.5
 --- !u!1 &213986227
 GameObject:
   m_ObjectHideFlags: 0
@@ -3883,11 +3910,11 @@ RectTransform:
   m_Children:
   - {fileID: 1123799000}
   - {fileID: 136299696}
-  m_Father: {fileID: 1341420160}
+  m_Father: {fileID: 759628438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -136}
+  m_AnchoredPosition: {x: 0, y: -323.68}
   m_SizeDelta: {x: 2453.1, y: 379.34998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &619057680
@@ -4803,6 +4830,7 @@ RectTransform:
   - {fileID: 1832885797}
   - {fileID: 231371095}
   - {fileID: 3070533}
+  - {fileID: 605900220}
   - {fileID: 1341420160}
   - {fileID: 2056235907}
   - {fileID: 1798145202}
@@ -6458,6 +6486,8 @@ GameObject:
   - component: {fileID: 1123799000}
   - component: {fileID: 1123799002}
   - component: {fileID: 1123799001}
+  - component: {fileID: 1123799004}
+  - component: {fileID: 1123799003}
   m_Layer: 5
   m_Name: Hands
   m_TagString: Untagged
@@ -6497,7 +6527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6522,6 +6552,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123798999}
   m_CullTransparentMesh: 1
+--- !u!114 &1123799003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123798999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe83b5794f63e92498db911196a8df71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeTime: 1.5
+--- !u!114 &1123799004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123798999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3335867ef2f99084b94bd1a2ae6cc56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1134077992
 GameObject:
   m_ObjectHideFlags: 0
@@ -7959,7 +8014,6 @@ RectTransform:
   - {fileID: 507174596}
   - {fileID: 518898629}
   - {fileID: 799263745}
-  - {fileID: 605900220}
   m_Father: {fileID: 759628438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7995,6 +8049,7 @@ MonoBehaviour:
   - {fileID: 1912851091}
   - {fileID: 908927168}
   main: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
+  hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
   currNode: {fileID: 0}
 --- !u!114 &1341420162
 MonoBehaviour:

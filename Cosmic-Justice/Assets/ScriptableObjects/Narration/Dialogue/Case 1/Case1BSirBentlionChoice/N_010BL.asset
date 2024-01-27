@@ -20,8 +20,10 @@ MonoBehaviour:
   m_TextSpeed: 0.02
   m_CharacterSprite1: stressed
   m_CharacterSprite2: 
+  m_CJHandsSprite: CJHands_Void
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
+  m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
   m_events: 0
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0

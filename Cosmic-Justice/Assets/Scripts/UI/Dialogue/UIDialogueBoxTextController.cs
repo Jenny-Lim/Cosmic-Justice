@@ -46,6 +46,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     [SerializeField]
     private NarrationCharacter main;
 
+    [SerializeField]
+    private Hands hands;
+
     private bool canGoNext;
 
     //Handles the clicking of the button
@@ -161,7 +164,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             if (node.DialogueLine.Speaker.Font != null)
                 m_SpeakerText.font = node.DialogueLine.Speaker.Font;
 
-            if (node.DialogueLine.character1 != null || node.DialogueLine.character2 != null)
+            if (node.DialogueLine.character1 != null || node.DialogueLine.character2 != null || node.DialogueLine.hands != null)
                 EventManager.current.Invoke("SetCharacters", 0);
 
             if (!string.IsNullOrEmpty(node.DialogueLine.CharacterSprite1))
@@ -169,6 +172,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
             if (!string.IsNullOrEmpty(node.DialogueLine.CharacterSprite2))
                 EventManager.current.Invoke("Character2SpriteChange", 0);
+
+            if (!string.IsNullOrEmpty(node.DialogueLine.CJHandsSprite))
+                EventManager.current.Invoke("HandsSpriteChange", 0);
 
             node.Accept(this);
         }
