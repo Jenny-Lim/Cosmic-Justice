@@ -7,10 +7,13 @@ using UnityEngine.UI;
 public class HandsBringUp : MonoBehaviour
 {
     private Image cImage;
+    Vector3 startPos;
     [SerializeField]
     private float fadeTime = 1.5f;
 
-    private float timeElapsed = 0;
+    [SerializeField] Vector3 moveUpBy;
+
+    private float timeElapsed = 0, t;
 
     private bool fadeIn = false;
     private bool fadeOut = false;
@@ -24,6 +27,7 @@ public class HandsBringUp : MonoBehaviour
         EventManager.current.handsFadeIn += fadeInHands;
         EventManager.current.handsFadeOut += fadeOutHands;
         canSpeedUp = true;
+        startPos = this.transform.position;
     }
 
     private void CanSpeedUp(bool can)
@@ -72,13 +76,13 @@ public class HandsBringUp : MonoBehaviour
         while (timeElapsed < fadeTime)
         {
             timeElapsed += Time.deltaTime;
-            float value = Mathf.Lerp(0, 1, timeElapsed / fadeTime);
-            cImage.color = new Color(cImage.color.r, cImage.color.g, cImage.color.b, value);
+            t = timeElapsed / fadeTime;
+            this.transform.position = Vector3.Lerp(startPos, startPos + moveUpBy, t);
 
             yield return null;
 
         }
-
+        this.transform.position = startPos + moveUpBy;
         fadeIn = false;
 
     }
@@ -91,13 +95,13 @@ public class HandsBringUp : MonoBehaviour
         while (timeElapsed < fadeTime)
         {
             timeElapsed += Time.deltaTime;
-            float value = Mathf.Lerp(1, 0, timeElapsed / fadeTime);
-            cImage.color = new Color(cImage.color.r, cImage.color.g, cImage.color.b, value);
+            t = timeElapsed / fadeTime;
+            this.transform.position = Vector3.Lerp(startPos + moveUpBy, startPos, t);
 
             yield return null;
 
         }
-
+        this.transform.position = startPos;
         fadeOut = false;
 
     }
