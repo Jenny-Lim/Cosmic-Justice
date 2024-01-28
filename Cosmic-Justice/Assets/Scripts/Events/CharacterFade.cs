@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+// JENNY LOOK AT THIS
+
 public class CharacterFade : MonoBehaviour
 {
     private Image cImage;

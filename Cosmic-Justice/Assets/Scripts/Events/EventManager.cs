@@ -47,6 +47,12 @@ public class EventManager : MonoBehaviour
         character2SpriteChange?.Invoke(node);
     }
 
+    public event Action<DialogueNode> handsSpriteChange;
+    public void HandsSpriteChange()
+    {
+        handsSpriteChange?.Invoke(node);
+    }
+
     public event Action<DialogueNode> characterAnimation;
     public void CharacterAnimation()
     {
@@ -76,6 +82,18 @@ public class EventManager : MonoBehaviour
     public void CharacterFadeOutC2()
     {
         characterFadeOutC2?.Invoke();
+    }
+
+    public event Action handsFadeIn;
+    public void HandsFadeIn()
+    {
+        handsFadeIn?.Invoke();
+    }
+
+    public event Action handsFadeOut;
+    public void HandsFadeOut()
+    {
+       handsFadeOut?.Invoke();
     }
 
     public event Action endGame;
@@ -139,9 +157,21 @@ public class EventManager : MonoBehaviour
         click?.Invoke();
     }
 
+    public event Action nextClick;
+    public void NextClick()
+    {
+        nextClick?.Invoke();
+    }
+
     public event Action<bool> dialogueClick;
     public void DialogueClick(bool can)
     {
         dialogueClick?.Invoke(can);
+    }
+
+    public event Action debug;
+    public void Debug()
+    {
+        debug?.Invoke();
     }
 }

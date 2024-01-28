@@ -95,7 +95,7 @@ Material:
     - _OcclusionStrength: 1
     - _Panner_Speed: 0.33
     - _Parallax: 0.02
-    - _Pulse_Speed: 0.03
+    - _Pulse_Speed: 0.01
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

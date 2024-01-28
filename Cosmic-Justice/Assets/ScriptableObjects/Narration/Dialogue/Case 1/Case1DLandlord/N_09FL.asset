@@ -19,8 +19,10 @@ MonoBehaviour:
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
   m_CharacterSprite2: sad
+  m_CJHandsSprite: CJHands_Void
   m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
+  m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
   m_events: 0
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0

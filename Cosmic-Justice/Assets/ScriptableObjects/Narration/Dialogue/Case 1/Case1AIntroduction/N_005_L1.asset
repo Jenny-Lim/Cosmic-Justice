@@ -14,15 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
-  m_Text: "\u201CAll they do is argue and bicker. I only wish I could cast all of
-    them out of the court\u2019s airlock\u2026 like I used to before Carl from accounting
-    reported me to Humanoid Relations.\u201D"
+  m_Text: "<i>All they do is argue and bicker. I only wish I could cast all of them
+    out of the court\u2019s airlock\u2026 like I used to before Carl from accounting
+    reported me to Humanoid Relations.</i>"
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: 
   m_CharacterSprite2: 
+  m_CJHandsSprite: CJHands_Void
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
+  m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
   m_events: 0
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0

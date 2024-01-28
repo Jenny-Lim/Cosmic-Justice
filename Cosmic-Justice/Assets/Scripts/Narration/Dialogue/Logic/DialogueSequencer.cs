@@ -90,4 +90,12 @@ public class DialogueSequencer
             throw new DialogueException("Trying to stop a dialogue node that ins't running.");
         }
     }
+
+    public void DebugMode()
+    {
+        EndDialogue(m_CurrentDialogue);
+        StopDialogueNode(m_CurrentNode);
+        m_CurrentDialogue = null;
+        m_CurrentNode = null;
+    }
 }

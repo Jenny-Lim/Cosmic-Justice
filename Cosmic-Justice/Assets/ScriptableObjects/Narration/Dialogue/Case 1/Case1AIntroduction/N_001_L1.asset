@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "<i>\u201CWhat am I doing here?\u201D</i>"
+  m_Text: <i>What am I doing here?</i>
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: 
   m_CharacterSprite2: 
+  m_CJHandsSprite: CJHands_Void
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
-  m_events: 0
+  m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
+  m_events: 32
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 0

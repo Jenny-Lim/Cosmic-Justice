@@ -14,14 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_Listener: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
-  m_Text: "\u201CThat word does sound familiar\u2026 but what is a \u2018rent\u2019?
-    Can I rend it with my trusty broadsword? Clobber it with a sturdy mace?\u201D"
+  m_Text: "\u201CAnd I\u2019ve payed my due amount! You simply refuse to see the
+    value of pure, ornate gold! It's so shiny! and shimmering! How could so much
+    change over the millenia?\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
   m_CharacterSprite1: 
   m_CharacterSprite2: happy
+  m_CJHandsSprite: CJHands_Void
   m_character1: {fileID: 0}
   m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
+  m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
   m_events: 0
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 8
