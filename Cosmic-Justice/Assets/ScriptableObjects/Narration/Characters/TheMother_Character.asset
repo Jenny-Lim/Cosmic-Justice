@@ -17,10 +17,10 @@ MonoBehaviour:
   m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   voice: {fileID: 0}
-  left: 0
+  left: 1
   sprites:
   - name: neutral
-    FramesPerSecond: 0
+    FramesPerSecond: 1
     sprite:
     - {fileID: 21300000, guid: f6d8ca7bdd786e241984170a9944aaeb, type: 3}
   - name: happy
