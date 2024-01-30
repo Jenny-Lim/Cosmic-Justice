@@ -19,7 +19,7 @@ MonoBehaviour:
   m_FontSize: 35
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
-  m_CharacterSprite2: 
+  m_CharacterSprite2: neutral
   m_CJHandsSprite: 
   m_character1: {fileID: 0}
   m_character2: {fileID: 11400000, guid: 02d13fca7d61ceb42b741cc4d3fa1ea9, type: 2}
