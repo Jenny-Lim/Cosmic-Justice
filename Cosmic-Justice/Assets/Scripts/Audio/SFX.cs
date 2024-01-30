@@ -19,6 +19,10 @@ public class SFX : MonoBehaviour
 
     private SceneLoader sceneLoader;
 
+    private float SFXVolumeSaved;
+
+    public Slider SFXSlider;
+
     public void OnChangeSlider(float Value)
     {
 
@@ -27,7 +31,9 @@ public class SFX : MonoBehaviour
             case AudioMixMode.LogrithmicMixerVolume:
                 Mixer.SetFloat("Volume", Mathf.Log10(Value) * 20);
 
-                sceneLoader.SetMusicVolume(Value);
+                PlayerPrefs.SetFloat("SFXVolume", Value);
+
+                //sceneLoader.SetMusicVolume(Value);
 
                 break;
         }
@@ -35,10 +41,14 @@ public class SFX : MonoBehaviour
 
     private void Start()
     {
-        GetSceneLoader();
+        //GetSceneLoader();
 
-        volumeSlider.value = sceneLoader.GetSFXVolume();
-        Mixer.SetFloat("Volume", Mathf.Log10(volumeSlider.value) * 20);
+        SFXVolumeSaved = PlayerPrefs.GetFloat("SFXVolume");
+        Mixer.SetFloat("Volume", Mathf.Log10(SFXVolumeSaved) * 20);
+        SFXSlider.value = SFXVolumeSaved;
+
+        //volumeSlider.value = sceneLoader.GetSFXVolume();
+        //Mixer.SetFloat("Volume", Mathf.Log10(volumeSlider.value) * 20);
     }
 
 

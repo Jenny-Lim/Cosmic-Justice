@@ -16,6 +16,9 @@ public class Music : MonoBehaviour
 
     private SceneLoader sceneLoader;
 
+    private float MusicVolumeSaved;
+
+    public Slider MusicSlider;
 
     [SerializeField] private Slider volumeSlider;
     public void OnChangeSlider(float Value)
@@ -26,7 +29,10 @@ public class Music : MonoBehaviour
             case AudioMixMode.LogrithmicMixerVolume:
                 Mixer.SetFloat("Volume", Mathf.Log10(Value) * 20);
 
-                sceneLoader.SetMusicVolume(Value);
+                PlayerPrefs.SetFloat("MusicVolume", Value);
+
+
+                //sceneLoader.SetMusicVolume(Value);
 
                 break;
         }
@@ -34,10 +40,14 @@ public class Music : MonoBehaviour
 
     private void Start()
     {
-        GetSceneLoader();
+        //GetSceneLoader();
 
-        volumeSlider.value = sceneLoader.GetMusicVolume();
-        Mixer.SetFloat("Volume", Mathf.Log10(volumeSlider.value) * 20);
+        MusicVolumeSaved = PlayerPrefs.GetFloat("MusicVolume");
+        Mixer.SetFloat("Volume", Mathf.Log10(MusicVolumeSaved) * 20);
+        MusicSlider.value = MusicVolumeSaved;
+
+        //volumeSlider.value = sceneLoader.GetMusicVolume();
+        //Mixer.SetFloat("Volume", Mathf.Log10(volumeSlider.value) * 20);
     }
 
     private void GetSceneLoader()
