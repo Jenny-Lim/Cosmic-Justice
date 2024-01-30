@@ -58,6 +58,7 @@ public class SceneLoader : MonoBehaviour
     public void PlayGame()
     {
         StartLoadLevel(2);
+        //SceneManager.LoadScene(2);
     }
 
     public void Back()
