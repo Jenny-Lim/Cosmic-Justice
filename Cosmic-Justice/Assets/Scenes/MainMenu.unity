@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &507165603 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2547008733662671880, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+  m_PrefabInstance: {fileID: 7222405659764993187}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &593734420 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6917636446598534915, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+  m_PrefabInstance: {fileID: 7222405659764993187}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1115384167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1246,12 +1268,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3128102497683140404, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3327178437357139238, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: AudioSource
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3327178437357139238, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: MusicSlider
+      value: 
+      objectReference: {fileID: 507165603}
     - target: {fileID: 3388620518997474003, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1584,6 +1610,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6961491260028245442, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: SFXSlider
+      value: 
+      objectReference: {fileID: 593734420}
     - target: {fileID: 6980200548558478225, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
