@@ -18,7 +18,7 @@ MonoBehaviour:
     of a fight\u2026\u201D\r\n"
   m_FontSize: 40
   m_TextSpeed: 0.01
-  m_CharacterSprite1: neutral
+  m_CharacterSprite1: sad
   m_CharacterSprite2: sad
   m_CJHandsSprite: CJHands_Void
   m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}

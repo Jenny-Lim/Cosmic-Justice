@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CHe just keeps tossing me these worthless shiny coins and telling
     me Sir Button is \u2018well behaved\u2019 and \u2018has only ever burned down
-    twenty-two trees\u2019.\u201D"
+    twenty-two ancient oaks\u2019.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
   m_CharacterSprite1: neutral

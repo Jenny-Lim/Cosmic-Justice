@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: '"Bao!" <i> Sir Button yearns for the battlefield. </i>'
+  m_Text: '"Bao!" <i>The creature''s eyes narrow in anticipation. Sir Button yearns
+    for the battlefield. </i>'
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral

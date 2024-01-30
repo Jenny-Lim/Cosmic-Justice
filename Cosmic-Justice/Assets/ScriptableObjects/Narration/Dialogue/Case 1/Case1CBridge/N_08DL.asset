@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CBweh\u2026\u201D"
-  m_FontSize: 65
+  m_Text: "\u201CBweh\u2026\u201D <i>Sir Button chirps timidly.</i>"
+  m_FontSize: 50
   m_TextSpeed: 0.1
   m_CharacterSprite1: 
   m_CharacterSprite2: sad

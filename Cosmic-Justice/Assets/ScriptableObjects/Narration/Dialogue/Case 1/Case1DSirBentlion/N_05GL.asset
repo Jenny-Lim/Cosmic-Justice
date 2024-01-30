@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CChirp!\u201D\r\n"
-  m_FontSize: 65
+  m_Text: "\u201CChirp!\u201D <i>The warm creature buzzes with excitement!</i>\r\n"
+  m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: angry
   m_CharacterSprite2: happy
