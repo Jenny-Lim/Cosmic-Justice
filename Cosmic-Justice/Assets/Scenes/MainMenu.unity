@@ -1024,7 +1024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 367646165910839832, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -185.07855
       objectReference: {fileID: 0}
     - target: {fileID: 406619230233454137, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1268,7 +1268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3128102497683140404, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3327178437357139238, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: AudioSource

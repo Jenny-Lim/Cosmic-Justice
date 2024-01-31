@@ -23,6 +23,9 @@ public class InputHandler : MonoBehaviour
     [Header("--------Case 2 Debug Dialogues--------")]
     [SerializeField] private Dialogue case2StartDebug;
 
+    [Header("--------Case 3 Debug Dialogues--------")]
+    [SerializeField] private Dialogue case3StartDebug;
+
 
 
     private void Awake()
@@ -35,7 +38,7 @@ public class InputHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Space))
         {
             EventManager.current.MouseClick();
         }
@@ -44,12 +47,32 @@ public class InputHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (!case1)
+            {
                 case1 = true;
+                case2 = false;
+                case3 = false;
+            }
+
         }else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            if(!case2)
+            if (!case2)
+            {
                 case2 = true;
+                case1 = false;
+                case3 = false;
+            }
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            if (!case3)
+            {
+                case3 = true;
+                case2 = false;
+                case1 = false;
+            }
+        }
+
+
 
         if (case1)
         {
@@ -80,7 +103,16 @@ public class InputHandler : MonoBehaviour
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case2StartDebug.FirstNode);
-                case1 = false;
+                case2 = false;
+            }
+        }
+        else if (case3)
+        {
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case3StartDebug.FirstNode);
+                case3 = false;
             }
         }
     }
