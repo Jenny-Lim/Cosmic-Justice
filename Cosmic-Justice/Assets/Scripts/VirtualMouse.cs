@@ -17,8 +17,6 @@ public class VirtualMouse : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-
-        Cursor.visible = false;
     }
 
         // Update is called once per frame
