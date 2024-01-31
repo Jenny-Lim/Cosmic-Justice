@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1f8894d850aac94b918db24cb9ade4c, type: 3}
-  m_Name: TheLandlord_Character
+  m_Name: Landlord_Character
   m_EditorClassIdentifier: 
   m_CharacterName: Landlord Ferrin
   m_DialoguePanel: {fileID: 21300000, guid: 98ad25d1e21acfe47b988b37598dd118, type: 3}

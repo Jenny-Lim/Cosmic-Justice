@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1f8894d850aac94b918db24cb9ade4c, type: 3}
-  m_Name: TheKnight_Character
+  m_Name: Knight_Character
   m_EditorClassIdentifier: 
   m_CharacterName: Leo Bentlion
   m_DialoguePanel: {fileID: 21300000, guid: dedb8aa77b210424ab5053e3603fde9c, type: 3}
