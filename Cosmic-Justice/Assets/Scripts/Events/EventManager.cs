@@ -174,4 +174,10 @@ public class EventManager : MonoBehaviour
     {
         debug?.Invoke();
     }
+
+    public event Action sceneLoad;
+    public void SceneLoaded()
+    {
+        sceneLoad?.Invoke();
+    }
 }

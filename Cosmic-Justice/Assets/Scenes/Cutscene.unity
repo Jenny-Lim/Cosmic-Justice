@@ -192,7 +192,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 671964560}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -238,6 +238,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grain Overlay Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3981104024487227173, guid: fb1fd21684ae6834d81e3a31f6152857, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 671964560}
     - target: {fileID: 7705246896083816495, guid: fb1fd21684ae6834d81e3a31f6152857, type: 3}
       propertyPath: m_Color.a
       value: 0.015686275

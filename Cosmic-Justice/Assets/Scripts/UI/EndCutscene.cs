@@ -24,12 +24,12 @@ public class EndCutscene : MonoBehaviour
     private IEnumerator NextScene()
     {
         yield return new WaitForSeconds(videoLength);
-        sceneLoader.StartLoadLevel(1);
+        sceneLoader.StartLoadLevel(2);
     }
 
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0))
-            sceneLoader.StartLoadLevel(1);
+            sceneLoader.StartLoadLevel(2);
     }
 }

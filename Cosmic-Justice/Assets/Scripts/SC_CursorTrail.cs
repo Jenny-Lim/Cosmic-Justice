@@ -15,6 +15,8 @@ public class SC_CursorTrail : MonoBehaviour
     Transform trailTransform;
     Camera thisCamera;
 
+    private bool virtualMouse;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +26,17 @@ public class SC_CursorTrail : MonoBehaviour
         trailTransform = trailObj.transform;
         trail = trailObj.AddComponent<TrailRenderer>();
         trail.time = -1f;
-        MoveTrailToCursor(Input.mousePosition);
         trail.time = trailTime;
         trail.startWidth = startWidth;
         trail.endWidth = endWidth;
         trail.numCapVertices = 2;
         trail.sharedMaterial = trailMaterial;
         trail.colorGradient = trailColor;
+
+        if (VirtualMouse.instance != null)
+            virtualMouse = true;
+
+        MoveTrailToCursor(Input.mousePosition);
     }
 
     // Update is called once per frame
@@ -41,6 +47,9 @@ public class SC_CursorTrail : MonoBehaviour
 
     void MoveTrailToCursor(Vector3 screenPosition)
     {
-        trailTransform.position = thisCamera.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, distanceFromCamera));
+        if (!virtualMouse)
+            trailTransform.position = thisCamera.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, distanceFromCamera));
+        else
+            trailTransform.position = VirtualMouse.instance.mouseTrailPos.position;
     }
 }

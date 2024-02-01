@@ -57,7 +57,7 @@ public class SceneLoader : MonoBehaviour
 
     public void PlayGame()
     {
-        StartLoadLevel(2);
+        StartLoadLevel(1);
         //SceneManager.LoadScene(2);
     }
 
@@ -189,6 +189,8 @@ public class SceneLoader : MonoBehaviour
 
         // Start an unwipe after a short delay to give the scene time to render
         StartCoroutine(UnwipeScene());
+
+        EventManager.current.SceneLoaded();
     }
 
     private IEnumerator UnwipeScene()
