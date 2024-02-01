@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
+using UnityEngine.InputSystem.LowLevel;
 
 public class VirtualMouse : MonoBehaviour
 {
@@ -13,7 +15,11 @@ public class VirtualMouse : MonoBehaviour
     public GameObject virtualmouse;
     public RectTransform mousePosition;
     public RectTransform mouseTrailPos;
+    public VirtualMouseInput virtualMouseTrue; 
+    public TrailRenderer mouseTrail;
 
+    public InputActionAsset input;
+    
     private void Awake()
     {
         if (instance == null)
@@ -32,6 +38,12 @@ public class VirtualMouse : MonoBehaviour
 
         EventManager.current.sceneLoad += FindSceneCamera;
         FindSceneCamera();
+
+        mousePosition.anchoredPosition = Input.mousePosition / canvas.scaleFactor;
+
+        Mouse.current.WarpCursorPosition(mousePosition.anchoredPosition);
+        InputState.Change(Mouse.current.position, mousePosition.anchoredPosition);
+
     }
 
     private void OnDestroy()
@@ -47,6 +59,27 @@ public class VirtualMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //If mouse is moved
+        if (Input.GetAxis("Mouse X") != 0 && Input.GetAxis("Mouse Y") != 0)
+        {
 
+            Vector3 mousePos = Input.mousePosition / canvas.scaleFactor;
+            mousePosition.anchoredPosition = mousePos;
+
+            virtualMouseTrue.enabled = false;
+        }
+        else
+        {
+            virtualMouseTrue.enabled = true;
+        }
+
+
+    }
+
+    private void LateUpdate()
+    {
+        //Constantly move the mouse to be at the virtual mouse
+        Mouse.current.WarpCursorPosition(mousePosition.anchoredPosition);
+        InputState.Change(Mouse.current.position, mousePosition.anchoredPosition);
     }
 }

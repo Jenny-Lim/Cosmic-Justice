@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CursorMode: 0
-  m_CursorGraphic: {fileID: 0}
+  m_CursorGraphic: {fileID: 1741552820953833332}
   m_CursorTransform: {fileID: 569474090828844814}
   m_CursorSpeed: 800
   m_ScrollSpeed: 45
@@ -256,6 +256,9 @@ MonoBehaviour:
   virtualmouse: {fileID: 4202956596917689601}
   mousePosition: {fileID: 569474090828844814}
   mouseTrailPos: {fileID: 836614963921664926}
+  virtualMouseTrue: {fileID: 638828287980119166}
+  mouseTrail: {fileID: 0}
+  input: {fileID: -944628639613478452, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
 --- !u!1001 &1500649038301496274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -360,6 +363,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2256057921407137868, guid: ddf7bd6b64b950046b63f9f8dfe63860, type: 3}
   m_PrefabInstance: {fileID: 1500649038301496274}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1741552820953833332 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 934599491849706662, guid: ddf7bd6b64b950046b63f9f8dfe63860, type: 3}
+  m_PrefabInstance: {fileID: 1500649038301496274}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4202956596917689601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4202956596917689601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3350826113543167699, guid: ddf7bd6b64b950046b63f9f8dfe63860, type: 3}

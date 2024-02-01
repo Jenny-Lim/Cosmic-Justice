@@ -12,6 +12,7 @@ public class EndCutscene : MonoBehaviour
 
     private SceneLoader sceneLoader;
 
+
     // Start is called before the first frame update
     void Start()
     {
