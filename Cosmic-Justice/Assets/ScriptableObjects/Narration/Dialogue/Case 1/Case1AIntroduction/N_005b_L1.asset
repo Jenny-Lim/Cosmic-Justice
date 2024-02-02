@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
-  m_Text: ' <i>lLike I used to before Carl from accounting reported me to Humanoid
+  m_Text: ' <i>Like I used to before Carl from accounting reported me to Humanoid
     Relations.</i>'
   m_FontSize: 40
   m_TextSpeed: 0.01
