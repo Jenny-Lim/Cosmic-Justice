@@ -39,11 +39,6 @@ public class VirtualMouse : MonoBehaviour
         EventManager.current.sceneLoad += FindSceneCamera;
         FindSceneCamera();
 
-        mousePosition.anchoredPosition = Input.mousePosition / canvas.scaleFactor;
-
-        Mouse.current.WarpCursorPosition(mousePosition.anchoredPosition);
-        InputState.Change(Mouse.current.position, mousePosition.anchoredPosition);
-
     }
 
     private void OnDestroy()
@@ -70,6 +65,10 @@ public class VirtualMouse : MonoBehaviour
         }
         else
         {
+            //Constantly move the mouse to be at the virtual mouse
+            Mouse.current.WarpCursorPosition(mousePosition.anchoredPosition);
+            InputState.Change(Mouse.current.position, mousePosition.anchoredPosition);
+
             virtualMouseTrue.enabled = true;
         }
 
