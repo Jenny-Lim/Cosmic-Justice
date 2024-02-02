@@ -19,12 +19,12 @@ MonoBehaviour:
   m_FontSize: 50
   m_TextSpeed: 0.01
   m_CharacterSprite1: sad
-  m_CharacterSprite2: happy
+  m_CharacterSprite2: neutral
   m_CJHandsSprite: 
   m_character1: {fileID: 11400000, guid: 11d4b2b628b7b114fad06b59138ac37b, type: 2}
-  m_character2: {fileID: 11400000, guid: 02d13fca7d61ceb42b741cc4d3fa1ea9, type: 2}
+  m_character2: {fileID: 11400000, guid: fbc922fd669368a4e87faac4b91bf3f7, type: 2}
   m_hands: {fileID: 0}
-  m_events: 1
+  m_events: 8
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 0
