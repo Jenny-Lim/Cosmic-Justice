@@ -9,7 +9,7 @@ public class VirtualMouseUI : MonoBehaviour
 
     private VirtualMouseInput virtualMouseInput;
 
-    private void Awake()
+    private void Start()
     {
         virtualMouseInput = GetComponent<VirtualMouseInput>();
     }
