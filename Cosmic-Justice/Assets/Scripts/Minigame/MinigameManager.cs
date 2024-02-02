@@ -11,7 +11,9 @@ public class MinigameManager : MonoBehaviour
     public bool isWon, isDone;
 
     [SerializeField]
-    private GameObject asteroidMinigame, dialMinigame, puzzleMinigame, nextButton, nameTag;
+    private GameObject nextButton, nameTag;
+
+    //asteroidMinigame, dialMinigame, puzzleMinigame,
 
     //[SerializeField]
     //private GameObject verdictMinigame;
@@ -31,10 +33,13 @@ public class MinigameManager : MonoBehaviour
     {
 
         //subscribe to the canvasShake event
-        EventManager.current.asteroid += StartAsteroidMinigame;
-        EventManager.current.endAsteroid += EndAsteroidMinigame;
-        EventManager.current.dial += StartDialMinigame;
-        EventManager.current.endDial += EndDialMinigame;
+        EventManager.current.asteroid += StartMinigame;
+        EventManager.current.endAsteroid += EndMinigame;
+        EventManager.current.dial += StartMinigame;
+        EventManager.current.endDial += EndMinigame;
+        EventManager.current.puzzle += StartMinigame;
+        EventManager.current.endPuzzle += EndMinigame;
+
         //EventManager.current.verdict += StartVerdictMinigame;
         //EventManager.current.endVerdict += EndVerdictMinigame;
 
@@ -45,10 +50,12 @@ public class MinigameManager : MonoBehaviour
     private void OnDestroy()
     {
         //unsubscribe to the canvasShake event
-        EventManager.current.asteroid -= StartAsteroidMinigame;
-        EventManager.current.endAsteroid -= EndAsteroidMinigame;
-        EventManager.current.dial -= StartDialMinigame;
-        EventManager.current.endDial -= EndDialMinigame;
+        EventManager.current.asteroid -= StartMinigame;
+        EventManager.current.endAsteroid -= EndMinigame;
+        EventManager.current.dial -= StartMinigame;
+        EventManager.current.endDial -= EndMinigame;
+        EventManager.current.puzzle -= StartMinigame;
+        EventManager.current.endPuzzle -= EndMinigame;
         //EventManager.current.verdict -= StartVerdictMinigame;
         //EventManager.current.endVerdict -= EndVerdictMinigame;
     }
@@ -72,27 +79,27 @@ public class MinigameManager : MonoBehaviour
         nameTag.SetActive(true);
     }
 
-    private void StartAsteroidMinigame()
-    {
-        hidePanel();
-        EventManager.current.CanDialogue(false);
-        asteroidMinigame.SetActive(true);
+    //private void StartAsteroidMinigame()
+    //{
+    //    hidePanel();
+    //    EventManager.current.CanDialogue(false);
+    //    //asteroidMinigame.SetActive(true);
 
-        AudioManager.instance.Pause("Ambient_Track_A");
-        AudioManager.instance.Play("MiniGame_Track_A");
-    }
+    //    AudioManager.instance.Pause("Ambient_Track_A");
+    //    AudioManager.instance.Play("MiniGame_Track_A");
+    //}
 
-    private void EndAsteroidMinigame()
-    {
-        showPanel();
-        EventManager.current.CanDialogue(true);
-        asteroidMinigame.SetActive(false);
+    //private void EndAsteroidMinigame()
+    //{
+    //    showPanel();
+    //    EventManager.current.CanDialogue(true);
+    //    asteroidMinigame.SetActive(false);
 
-        AudioManager.instance.UnPause("Ambient_Track_A");
-        AudioManager.instance.Stop("MiniGame_Track_A");
-    }
+    //    AudioManager.instance.UnPause("Ambient_Track_A");
+    //    AudioManager.instance.Stop("MiniGame_Track_A");
+    //}
 
-    // could possibly make these cleaner -- HOW TO USE: attach minigame script onto minigame parent, control minigame functioning through its "playablility" bool
+    // HOW TO USE: attach minigame script onto minigame parent, control minigame functioning through its "playablility" bool
 
     IEnumerator StartMinigameAnim(GameObject minigame, string audioToPlay, string audioToPause)
     {
@@ -148,20 +155,36 @@ public class MinigameManager : MonoBehaviour
         yield return null;
     } // StopMinigameAnim
 
-    private void StartDialMinigame()
+    //private void StartDialMinigame()
+    //{
+    //    hidePanel();
+    //    EventManager.current.CanDialogue(false);
+    //    dialMinigame.SetActive(true); // on enable, animate them going up
+
+    //    StartCoroutine(StartMinigameAnim(dialMinigame, "MiniGame_Track_A", "Ambient_Track_A"));
+    //} // StartDialMinigame
+
+    //private void EndDialMinigame()
+    //{
+    //    isDone = true;
+    //    StartCoroutine(StopMinigameAnim(dialMinigame, "MiniGame_Track_A", "Ambient_Track_A"));
+    //} // EndDialMinigame
+
+    private void StartMinigame(GameObject minigame)
     {
         hidePanel();
         EventManager.current.CanDialogue(false);
-        dialMinigame.SetActive(true); // on enable, animate them going up
+        minigame.SetActive(true); // on enable, animate them going up
 
-        StartCoroutine(StartMinigameAnim(dialMinigame, "MiniGame_Track_A", "Ambient_Track_A"));
+        StartCoroutine(StartMinigameAnim(minigame, "MiniGame_Track_A", "Ambient_Track_A"));
     } // StartDialMinigame
 
-    private void EndDialMinigame()
+    private void EndMinigame(GameObject minigame)
     {
         isDone = true;
-        StartCoroutine(StopMinigameAnim(dialMinigame, "MiniGame_Track_A", "Ambient_Track_A"));
-    } // EndDialMinigame
+        StartCoroutine(StopMinigameAnim(minigame, "MiniGame_Track_A", "Ambient_Track_A"));
+    }
+
 
 
     // UNUSED

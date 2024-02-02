@@ -15,13 +15,15 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\u201CW-what? Who are you? I\u2019m between cases at the moment and I
-    can assure you I haven\u2019t the time for-\u201D"
+    have soft tacos to eat. I can assure you I haven\u2019t the time for this\u201D\r\n"
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
   m_CharacterSprite2: 
+  m_CJHandsSprite: 
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
+  m_hands: {fileID: 0}
   m_events: 0
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0

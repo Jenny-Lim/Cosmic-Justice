@@ -2067,9 +2067,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWon: 0
   isDone: 0
-  asteroidMinigame: {fileID: 619057680}
-  dialMinigame: {fileID: 1773281793}
-  puzzleMinigame: {fileID: 0}
   nextButton: {fileID: 518898628}
   nameTag: {fileID: 643182786}
   dialogueText: {fileID: 425288106}
@@ -2504,6 +2501,7 @@ MonoBehaviour:
   turningSpeed: 0.7
   lives: 3
   textMeshProUGUI: {fileID: 2068516886}
+  timer: {fileID: 1693861254}
 --- !u!114 &422636828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4091,6 +4089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 619057681}
+  - component: {fileID: 619057682}
   m_Layer: 5
   m_Name: Asteroids
   m_TagString: Untagged
@@ -4123,6 +4122,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.5}
   m_SizeDelta: {x: 0, y: 0.19000244}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &619057682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619057680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb1e07027fd53246a032aaf3146a204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &638349112
 GameObject:
   m_ObjectHideFlags: 0
@@ -5001,6 +5012,7 @@ RectTransform:
   - {fileID: 2056235907}
   - {fileID: 1798145202}
   - {fileID: 1736208226}
+  - {fileID: 1534452392}
   - {fileID: 1773281794}
   - {fileID: 619057681}
   - {fileID: 2128092164}
@@ -8857,6 +8869,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531911043}
   m_CullTransparentMesh: 1
+--- !u!1 &1534452391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1534452392}
+  - component: {fileID: 1534452393}
+  m_Layer: 5
+  m_Name: PuzzleMinigame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1534452392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534452391}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 759628438}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1534452393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534452391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb1e07027fd53246a032aaf3146a204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1538201117
 GameObject:
   m_ObjectHideFlags: 0
@@ -10084,6 +10140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b8fb46cf8d3d94eb6cf946f6157524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialMinigame: {fileID: 1773281793}
+  puzzleMinigame: {fileID: 1534452391}
+  asteroidMinigame: {fileID: 619057680}
 --- !u!4 &1756292681
 Transform:
   m_ObjectHideFlags: 0

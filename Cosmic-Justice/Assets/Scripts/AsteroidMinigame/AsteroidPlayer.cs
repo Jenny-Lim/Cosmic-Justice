@@ -25,6 +25,8 @@ public class AsteroidPlayer : MonoBehaviour
 
     private float turningDir;
 
+    [SerializeField] Timer timer;
+
     private void Awake()
     {
         rgBd = GetComponent<Rigidbody2D>();
@@ -56,6 +58,8 @@ public class AsteroidPlayer : MonoBehaviour
         {
             turningDir = 0.0f;
         }
+
+        if (timer.GetTime() <= 0) { EventManager.current.EndAsteroid(); }
     }
 
     private void FixedUpdate()
