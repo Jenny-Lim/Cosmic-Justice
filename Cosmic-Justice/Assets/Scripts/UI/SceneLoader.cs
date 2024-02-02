@@ -189,8 +189,6 @@ public class SceneLoader : MonoBehaviour
 
         // Start an unwipe after a short delay to give the scene time to render
         StartCoroutine(UnwipeScene());
-
-        EventManager.current.SceneLoaded();
     }
 
     private IEnumerator UnwipeScene()
@@ -201,6 +199,8 @@ public class SceneLoader : MonoBehaviour
         // Now trigger the wipe effect to end
         screenWipe.ToggleWipe(false);
         print("wiping in.");
+
+        EventManager.current.SceneLoaded();
     }
 
     private void SetScreenWipeData(int levelIndex)

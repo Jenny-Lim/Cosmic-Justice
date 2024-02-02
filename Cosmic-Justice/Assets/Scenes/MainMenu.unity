@@ -214,9 +214,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9760fa5a8fba3944491525485b0dd7dd, type: 2}
+    - target: {fileID: 5198401224859486368, guid: c373706687267554aa9ccc4d7ee92d1c, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+    - target: {fileID: 5198401224859486368, guid: c373706687267554aa9ccc4d7ee92d1c, type: 3}
+      propertyPath: input.m_Id
+      value: 5da70abe-1072-41a2-8a55-8028a471c224
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198401224859486368, guid: c373706687267554aa9ccc4d7ee92d1c, type: 3}
+      propertyPath: input.m_Name
+      value: Input
+      objectReference: {fileID: 0}
     - target: {fileID: 8963586334789655426, guid: c373706687267554aa9ccc4d7ee92d1c, type: 3}
       propertyPath: m_Name
       value: PS_Mouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963586334789655426, guid: c373706687267554aa9ccc4d7ee92d1c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9173540258241694411, guid: c373706687267554aa9ccc4d7ee92d1c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -908,6 +924,26 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1886666946}
+    - target: {fileID: 402591578066308818, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 569474090828844814, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 569474090828844814, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 569474090828844814, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 569474090828844814, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 569474090828844814, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1337
@@ -916,6 +952,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 532
       objectReference: {fileID: 0}
+    - target: {fileID: 836614963921664926, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7.899994
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741552820953833332, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -447846002, guid: 26e6c4330443bf24b9546fcf2b728631, type: 3}
     - target: {fileID: 7347050719675136226, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
       propertyPath: m_Name
       value: Canvas_VirtualMouse
@@ -926,7 +970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7517497217071827709, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7861410115871774937, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
       propertyPath: m_Pivot.x
