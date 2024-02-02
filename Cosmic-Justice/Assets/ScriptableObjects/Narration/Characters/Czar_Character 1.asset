@@ -22,20 +22,20 @@ MonoBehaviour:
   - name: neutral
     FramesPerSecond: 0
     sprite:
-    - {fileID: 21300000, guid: b88f94fc23f948b428155cda85a5df27, type: 3}
+    - {fileID: 21300000, guid: 713334f43e9ea6a46845ef062a132662, type: 3}
   - name: happy
     FramesPerSecond: 0
     sprite:
-    - {fileID: 0}
+    - {fileID: 21300000, guid: 34b558c78a075d7429e511d184895caa, type: 3}
   - name: angry
     FramesPerSecond: 0
     sprite:
-    - {fileID: 0}
+    - {fileID: 21300000, guid: c52dadd6e1e05464faa565eff6d48dbd, type: 3}
   - name: sad
     FramesPerSecond: 0
     sprite:
-    - {fileID: 0}
+    - {fileID: 21300000, guid: b0f763c8fea94bc46b0b256b2ff6e0b9, type: 3}
   - name: stressed
     FramesPerSecond: 0
     sprite:
-    - {fileID: 0}
+    - {fileID: 21300000, guid: edde07026f34c12429e38db682f5fb8d, type: 3}
