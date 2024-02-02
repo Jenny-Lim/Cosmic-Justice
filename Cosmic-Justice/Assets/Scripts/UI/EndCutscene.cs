@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.Video;
 
@@ -12,6 +13,7 @@ public class EndCutscene : MonoBehaviour
 
     private SceneLoader sceneLoader;
 
+    public InputActionAsset input;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,7 @@ public class EndCutscene : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0) || input.FindAction("Interact").WasReleasedThisFrame())
             sceneLoader.StartLoadLevel(2);
     }
 }

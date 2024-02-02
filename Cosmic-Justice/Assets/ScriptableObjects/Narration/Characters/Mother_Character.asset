@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mother_Character
   m_EditorClassIdentifier: 
   m_CharacterName: Madame Entium
-  m_DialoguePanel: {fileID: 21300000, guid: 7e80a9e4ec18b174f9a1284bdbae5cfa, type: 3}
+  m_DialoguePanel: {fileID: 21300000, guid: dd2c066b97feda441a8305fc19399634, type: 3}
   m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   voice: {fileID: 0}

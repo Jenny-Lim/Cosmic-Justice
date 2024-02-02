@@ -23,6 +23,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (disableDrag == false)
         {
             parentAfterDrag = transform.parent;
+            Debug.Log(parentAfterDrag);
             transform.SetParent(transform.root);
             transform.SetAsLastSibling();
             image.raycastTarget = false;

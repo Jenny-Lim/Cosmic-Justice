@@ -270,8 +270,7 @@ MonoBehaviour:
   mousePosition: {fileID: 569474090828844814}
   mouseTrailPos: {fileID: 836614963921664926}
   virtualMouseTrue: {fileID: 638828287980119166}
-  mouseTrail: {fileID: 0}
-  input: {fileID: -944628639613478452, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+  mouseTrail: {fileID: 1431281918538468152}
 --- !u!1001 &1500649038301496274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -280,6 +279,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8390371150962918425}
     m_Modifications:
+    - target: {fileID: 508782561054607594, guid: ddf7bd6b64b950046b63f9f8dfe63860, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1383816688911928540, guid: ddf7bd6b64b950046b63f9f8dfe63860, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -360,8 +363,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: VirtualMouse
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2420405832215914211, guid: ddf7bd6b64b950046b63f9f8dfe63860, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -374,6 +376,11 @@ RectTransform:
 --- !u!224 &836614963921664926 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2256057921407137868, guid: ddf7bd6b64b950046b63f9f8dfe63860, type: 3}
+  m_PrefabInstance: {fileID: 1500649038301496274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &1431281918538468152 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 508782561054607594, guid: ddf7bd6b64b950046b63f9f8dfe63860, type: 3}
   m_PrefabInstance: {fileID: 1500649038301496274}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1741552820953833332 stripped
