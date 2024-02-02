@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ClickEffect : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class ClickEffect : MonoBehaviour
     private Vector2 mousePos;
 
     public static ClickEffect instance;
+
+    private bool virtualMouse;
+
+    public InputActionAsset input;
+
     private void Awake()
     {
         if (instance == null)
@@ -21,6 +27,12 @@ public class ClickEffect : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         particles = GetComponent<ParticleSystem>();
+
+        /*
+        if (VirtualMouse.instance != null)
+            virtualMouse = true;
+        else
+            virtualMouse = false;*/
     }
 
     private void Start()
@@ -36,7 +48,7 @@ public class ClickEffect : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Space) || input.FindAction("Interact").WasReleasedThisFrame())
         {
             onClick();
         }
@@ -47,7 +59,10 @@ public class ClickEffect : MonoBehaviour
     {
         var emission = particles.emission;
 
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (!virtualMouse)
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        else
+            mousePos = VirtualMouse.instance.mousePosition.position;
         transform.position = mousePos;
         particles.Emit(1);
 
