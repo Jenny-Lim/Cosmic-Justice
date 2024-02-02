@@ -21,6 +21,9 @@ public class EventManager : MonoBehaviour
         node = saveNode;
     }
 
+    [SerializeField]
+    GameObject dialMinigame, puzzleMinigame, asteroidMinigame;
+
     //---------------------- Events --------------------------//
 
     public event Action<DialogueNode> canvasShake;
@@ -104,32 +107,45 @@ public class EventManager : MonoBehaviour
 
     // -------------------- Minigames -------------------- //
     //asteroid
-    public event Action asteroid;
+    public event Action<GameObject> asteroid;
     public void Asteroid()
     {
-        asteroid?.Invoke();
+        asteroid?.Invoke(asteroidMinigame);
     }
 
-    public event Action endAsteroid;
+    public event Action<GameObject> endAsteroid;
     public void EndAsteroid()
     {
-        endAsteroid?.Invoke();
+        endAsteroid?.Invoke(asteroidMinigame);
     }
     //end asteroid
 
     //dial
-    public event Action dial;
+    public event Action<GameObject> dial;
     public void Dial()
     {
-        dial?.Invoke();
+        dial?.Invoke(dialMinigame);
     }
 
-    public event Action endDial;
+    public event Action<GameObject> endDial;
     public void EndDial()
     {
-        endDial?.Invoke();
+        endDial?.Invoke(dialMinigame);
     }
     //end dial
+
+    public event Action<GameObject> puzzle;
+    public void Puzzle()
+    {
+        puzzle?.Invoke(puzzleMinigame);
+    }
+
+    public event Action<GameObject> endPuzzle;
+    public void EndPuzzle()
+    {
+        endPuzzle?.Invoke(puzzleMinigame);
+    }
+    //end puzzle
 
     //verdict
     //public event Action verdict;
