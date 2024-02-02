@@ -15,14 +15,15 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 11d4b2b628b7b114fad06b59138ac37b, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\"I was briefly parked to adjust my seat and appease my children when
-    an absolute DOLT shoved me out of the expecting mother\u2019s spot! He even got
-    a ticket!\u201D "
+    an absolute DOLT shoved me out of the expecting mother\u2019s spot!\u201D "
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
   m_CharacterSprite2: 
+  m_CJHandsSprite: 
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
+  m_hands: {fileID: 0}
   m_events: 0
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0

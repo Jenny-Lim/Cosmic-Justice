@@ -17,10 +17,12 @@ MonoBehaviour:
   m_Text: "\u201CEXACTLY!\u201D "
   m_FontSize: 70
   m_TextSpeed: 0.01
-  m_CharacterSprite1: neutral
+  m_CharacterSprite1: angry
   m_CharacterSprite2: 
+  m_CJHandsSprite: 
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
+  m_hands: {fileID: 0}
   m_events: 1
   m_leftCharacterAnimation: 8
   m_rightCharacterAnimation: 0
