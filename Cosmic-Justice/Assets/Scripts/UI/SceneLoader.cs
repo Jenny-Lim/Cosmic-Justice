@@ -108,7 +108,7 @@ public class SceneLoader : MonoBehaviour
         SC_CursorTrail trail = FindObjectOfType<SC_CursorTrail>();
         trail.trail.enabled = true;
 
-        StartLoadLevel(1);
+        StartLoadLevel(0);
     }
 
     public void LevelOne()

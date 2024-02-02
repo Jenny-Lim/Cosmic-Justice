@@ -16,15 +16,15 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201COh no you don\u2019t! I can\u2019t let the Czar get in trouble!
     VAPORIZE!\u201D "
-  m_FontSize: 35
+  m_FontSize: 40
   m_TextSpeed: 0.01
-  m_CharacterSprite1: neutral
-  m_CharacterSprite2: neutral
+  m_CharacterSprite1: stressed
+  m_CharacterSprite2: angry
   m_CJHandsSprite: 
   m_character1: {fileID: 0}
   m_character2: {fileID: 11400000, guid: 02d13fca7d61ceb42b741cc4d3fa1ea9, type: 2}
   m_hands: {fileID: 0}
   m_events: 9
-  m_leftCharacterAnimation: 0
-  m_rightCharacterAnimation: 0
+  m_leftCharacterAnimation: 4
+  m_rightCharacterAnimation: 2
   m_minigames: 0
