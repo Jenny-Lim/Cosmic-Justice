@@ -28,10 +28,13 @@ public class AudioManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+    }
 
+    private void Start()
+    {
         currentlyPlayingSounds = new List<Sound>();
 
-        foreach(Sound s in sounds)
+        foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -44,10 +47,7 @@ public class AudioManager : MonoBehaviour
         }
 
         characterSpeaking = false;
-    }
 
-    private void Start()
-    {
         if (SceneManager.GetActiveScene().buildIndex != 2)
             Play("MainTheme");
         else

@@ -24,10 +24,14 @@ public class SceneLoader : MonoBehaviour
 
     public void Awake()
     {
+
         if (instance == null)
             instance = this;
         else
         {
+            if (instance.pauseMenu == null && this.pauseMenu != null)
+                instance.pauseMenu = this.pauseMenu;
+
             Destroy(gameObject);
             return;
         }

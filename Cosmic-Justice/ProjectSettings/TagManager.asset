@@ -7,6 +7,7 @@ TagManager:
   - Asteroid
   - DialoguePanel
   - VerdictPanel
+  - SceneLoader
   layers:
   - Default
   - TransparentFX

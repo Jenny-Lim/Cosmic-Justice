@@ -680,6 +680,7 @@ MonoBehaviour:
   AudioSource: {fileID: 0}
   MixMode: 0
   volumeSlider: {fileID: 6917636446598534915}
+  SFXSlider: {fileID: 0}
 --- !u!1 &1722806796517582332
 GameObject:
   m_ObjectHideFlags: 0
@@ -4355,6 +4356,7 @@ GameObject:
   - component: {fileID: 4805192687915743695}
   - component: {fileID: 5044164657642342917}
   - component: {fileID: 6198742600737409859}
+  - component: {fileID: 949339616268506639}
   m_Layer: 5
   m_Name: Canvas_MainMenu
   m_TagString: Untagged
@@ -4489,6 +4491,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &949339616268506639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7141403070046024825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ded37c23e2af8418fb546c3e437367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playButton: {fileID: 4006959029530635717}
+  select01Button: {fileID: 5108366441719029847}
+  exitButton: {fileID: 3388620518997474003}
 --- !u!1 &7195421705933826270
 GameObject:
   m_ObjectHideFlags: 0
@@ -4979,6 +4996,7 @@ MonoBehaviour:
   Mixer: {fileID: 24100000, guid: a5dc7adb83cebba428fc249709ad401d, type: 2}
   AudioSource: {fileID: 0}
   MixMode: 0
+  MusicSlider: {fileID: 0}
   volumeSlider: {fileID: 2547008733662671880}
 --- !u!1 &7572317142914360742
 GameObject:
