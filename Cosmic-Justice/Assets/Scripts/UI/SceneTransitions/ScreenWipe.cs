@@ -30,12 +30,21 @@ public class ScreenWipe : MonoBehaviour
 
     public bool isDone { get; private set; }
 
+    public static ScreenWipe instance;
 
     private void Awake()
     {
         image = GetComponentInChildren<Image>();
 
         SetFillMethod();
+
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         DontDestroyOnLoad(gameObject);
     }

@@ -20,8 +20,18 @@ public class SceneLoader : MonoBehaviour
 
     private bool transitioning;
 
+    public static SceneLoader instance;
+
     public void Awake()
     {
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         DontDestroyOnLoad(this.gameObject);
         transitioning = false;
         MusicVolume = 1.0f;
@@ -176,10 +186,13 @@ public class SceneLoader : MonoBehaviour
         }
 
         // Start loading the scene
-        SceneManager.LoadSceneAsync(levelIndex);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelIndex);
+        while (!asyncLoad.isDone)
+            yield return null;
 
         transitioning = false;
     }
+
 
     // Method that will be called when the scene has finished loading
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -213,5 +226,10 @@ public class SceneLoader : MonoBehaviour
                 screenWipe.SetFillMethod();
             }
         }
+    }
+
+    private void Update()
+    {
+        Debug.Log(transitioning);
     }
 }
