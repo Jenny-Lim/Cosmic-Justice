@@ -4505,6 +4505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playButton: {fileID: 4006959029530635717}
   select01Button: {fileID: 5108366441719029847}
+  creditButton: {fileID: 4843661325748798332}
   exitButton: {fileID: 3388620518997474003}
 --- !u!1 &7195421705933826270
 GameObject:

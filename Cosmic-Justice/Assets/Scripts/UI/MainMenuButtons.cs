@@ -8,6 +8,7 @@ public class MainMenuButtons : MonoBehaviour
 {
     [SerializeField] private Button playButton;
     [SerializeField] private Button select01Button;
+    [SerializeField] protected Button creditButton;
     [SerializeField] private Button exitButton;
 
 
@@ -15,6 +16,7 @@ public class MainMenuButtons : MonoBehaviour
     {
         playButton.onClick.AddListener(PlayClicked);
         select01Button.onClick.AddListener(SelectCase01Clicked);
+        creditButton.onClick.AddListener(CreditClicked);
         exitButton.onClick.AddListener(QuitClicked);
     }
 
@@ -26,6 +28,11 @@ public class MainMenuButtons : MonoBehaviour
     private void SelectCase01Clicked()
     {
         SceneLoader.instance.LevelOne();
+    }
+
+    private void CreditClicked()
+    {
+        SceneLoader.instance.Credits();
     }
 
     private void QuitClicked()

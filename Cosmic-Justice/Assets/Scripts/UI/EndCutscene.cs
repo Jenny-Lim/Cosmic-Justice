@@ -15,9 +15,12 @@ public class EndCutscene : MonoBehaviour
 
     public InputActionAsset input;
 
+    private bool videoPlaying;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        videoPlaying = true;
         player = GetComponent<VideoPlayer>();
         videoLength = (float) player.clip.length;
         sceneLoader = FindAnyObjectByType<SceneLoader>();
@@ -33,6 +36,14 @@ public class EndCutscene : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0) || input.FindAction("Interact").WasReleasedThisFrame())
-            sceneLoader.StartLoadLevel(2);
+        {
+            if (videoPlaying)
+            {
+                videoPlaying = false;
+                //player.Stop();
+                StopAllCoroutines();
+                sceneLoader.StartLoadLevel(2);
+            }
+        }
     }
 }
