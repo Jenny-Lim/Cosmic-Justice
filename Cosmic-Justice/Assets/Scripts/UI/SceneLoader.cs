@@ -177,7 +177,7 @@ public class SceneLoader : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
 
         //Plays music or stops it depending on the level loading
-        if (levelIndex == 1 || levelIndex == 3)
+        if (levelIndex == 0 || levelIndex == 1 || levelIndex == 3)
         {
             AudioManager.instance.Play("MainTheme");
             AudioManager.instance.Stop("Ambient_Track_A");
@@ -188,6 +188,8 @@ public class SceneLoader : MonoBehaviour
             AudioManager.instance.Stop("MainTheme");
             AudioManager.instance.Play("Ambient_Track_A");
         }
+
+        EventManager.current.endGame -= Credits;
 
         // Start loading the scene
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelIndex);
@@ -218,6 +220,8 @@ public class SceneLoader : MonoBehaviour
         print("wiping in.");
 
         EventManager.current.SceneLoaded();
+
+        EventManager.current.endGame += Credits;
     }
 
     private void SetScreenWipeData(int levelIndex)
