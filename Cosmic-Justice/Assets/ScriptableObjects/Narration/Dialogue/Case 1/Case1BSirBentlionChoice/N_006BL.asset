@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CYou\u2019re\u2026 really exhausting. You\u2019d think after the
     upteenth time I told him it was worthless he would LISTEN.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.05
+  m_TextSpeed: 0.01
   m_CharacterSprite1: angry
   m_CharacterSprite2: sad
   m_CJHandsSprite: CJHands_Void

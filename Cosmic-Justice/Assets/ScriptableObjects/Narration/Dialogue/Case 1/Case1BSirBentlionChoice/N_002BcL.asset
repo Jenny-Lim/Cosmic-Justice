@@ -18,7 +18,7 @@ MonoBehaviour:
     After this beautiful and noble creature freed me from my icy prison on what I
     once knew as Earth, nothing has been the same.\u201D\r\n"
   m_FontSize: 40
-  m_TextSpeed: 0.05
+  m_TextSpeed: 0.01
   m_CharacterSprite1: 
   m_CharacterSprite2: sad
   m_CJHandsSprite: CJHands_Void

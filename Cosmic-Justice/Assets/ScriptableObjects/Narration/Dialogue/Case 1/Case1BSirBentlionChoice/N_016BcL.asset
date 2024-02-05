@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CNow that you mention it, my robes are flowing more than usual. There
     might be a draft.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.02
+  m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
   m_CharacterSprite2: sad
   m_CJHandsSprite: CJHands_Void

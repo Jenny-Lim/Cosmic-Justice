@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CI-I\u2019m more than just that! You see, I offer\u2026 <i><color=\"yellow\">
     slightly below average prices!<color=\"white\"></i>\""
   m_FontSize: 40
-  m_TextSpeed: 0.05
+  m_TextSpeed: 0.01
   m_CharacterSprite1: stressed
   m_CharacterSprite2: 
   m_CJHandsSprite: CJHands_Void

@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CYou should fix that, CJ. My secretary panel doesn't have access
     to the temperature controls... probably Carl's fault.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.02
+  m_TextSpeed: 0.01
   m_CharacterSprite1: stressed
   m_CharacterSprite2: frozen
   m_CJHandsSprite: CJHands_Void

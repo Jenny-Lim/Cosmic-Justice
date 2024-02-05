@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CN-not\u2026 particularly\u2026\u201D "
   m_FontSize: 40
-  m_TextSpeed: 0.05
+  m_TextSpeed: 0.01
   m_CharacterSprite1: sad
   m_CharacterSprite2: sad
   m_CJHandsSprite: CJHands_Void

@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\"I do my best to keep people housed but I need money to do it. All he\u2019s
     trying to give me are these teeny, shiny, worthless paper weights.\""
   m_FontSize: 40
-  m_TextSpeed: 0.02
+  m_TextSpeed: 0.01
   m_CharacterSprite1: sad
   m_CharacterSprite2: stressed
   m_CJHandsSprite: CJHands_Void

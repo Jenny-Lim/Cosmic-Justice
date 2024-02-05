@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CHey is- is it getting c-colder in here for anyone else?\u201D\r\n"
   m_FontSize: 40
-  m_TextSpeed: 0.02
+  m_TextSpeed: 0.01
   m_CharacterSprite1: angry
   m_CharacterSprite2: sad
   m_CJHandsSprite: CJHands_Void

@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CI fought side by side with my fellow knights, taking down a Lich
     King for that very hoard!\""
   m_FontSize: 40
-  m_TextSpeed: 0.02
+  m_TextSpeed: 0.01
   m_CharacterSprite1: angry
   m_CharacterSprite2: angry
   m_CJHandsSprite: CJHands_Void

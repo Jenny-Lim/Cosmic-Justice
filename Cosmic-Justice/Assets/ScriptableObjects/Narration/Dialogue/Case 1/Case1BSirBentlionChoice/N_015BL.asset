@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_Text: "\u201CSir Bentlion. Calm down.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.02
+  m_TextSpeed: 0.01
   m_CharacterSprite1: angry
   m_CharacterSprite2: stressed
   m_CJHandsSprite: CJHands_Void
