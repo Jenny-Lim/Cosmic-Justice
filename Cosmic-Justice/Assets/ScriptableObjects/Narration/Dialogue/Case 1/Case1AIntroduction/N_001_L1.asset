@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: <i>What am I doing here?</i>
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: 
   m_CharacterSprite2: 
   m_CJHandsSprite: CJHands_Void

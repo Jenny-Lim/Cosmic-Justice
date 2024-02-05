@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CI only ask that Leo pays me anything at all! I don\u2019t even charge
     him for his pet-\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: 
   m_CharacterSprite2: 
   m_CJHandsSprite: CJHands_Void

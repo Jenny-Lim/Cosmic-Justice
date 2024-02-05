@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CWait\u2026 really? That\u2019s it? I thought you\u2019d put up more
     of a fight\u2026\u201D\r\n"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: sad
   m_CharacterSprite2: sad
   m_CJHandsSprite: CJHands_Void

@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CWhat doth you require? A sword that can fell a mighty unslayable
     sourdough loaf?\u201D\r"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: neutral
   m_CharacterSprite2: happy
   m_CJHandsSprite: CJHands_Void

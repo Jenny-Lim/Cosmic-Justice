@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CBwaga Bregh!\u201D <i> The fiery fiend nuzzles up to Leo's armor,
     leaving a small ash mark on his shoulder. </i>\r\n"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: 
   m_CharacterSprite2: happy
   m_CJHandsSprite: CJHands_Void

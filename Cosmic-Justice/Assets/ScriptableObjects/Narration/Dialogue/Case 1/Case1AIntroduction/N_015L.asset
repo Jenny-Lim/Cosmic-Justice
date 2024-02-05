@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CI don\u2019t care what it's name is, it\u2019s not allowed to BURN
     HOLES in the NEW CARPET-\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: angry
   m_CharacterSprite2: stressed
   m_CJHandsSprite: CJHands_Void

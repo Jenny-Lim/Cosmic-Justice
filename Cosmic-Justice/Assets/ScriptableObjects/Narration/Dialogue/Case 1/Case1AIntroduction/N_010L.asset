@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CI\u2019m doing my best to understand you, Leo. You\u2019re almost
     as dense and out of touch as the armour you wear.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: angry
   m_CharacterSprite2: helmet
   m_CJHandsSprite: CJHands_Void

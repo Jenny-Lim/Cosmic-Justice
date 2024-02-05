@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CI do. And I know how kind you used to be. Give him time to mourn
     the loss of his bachelor pad.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: sad
   m_CharacterSprite2: sad
   m_CJHandsSprite: CJHands_Void

@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201COh. you're back. Glad we can get back to the arrangements.\u201D\r\n"
   m_FontSize: 40
-  m_TextSpeed: 0.1
+  m_TextSpeed: 0.05
   m_CharacterSprite1: neutral
   m_CharacterSprite2: 
   m_CJHandsSprite: CJHands_Void

@@ -18,7 +18,7 @@ MonoBehaviour:
     I simply wish to understand this strange place\u2026 and defrost what is left
     of my life.\""
   m_FontSize: 40
-  m_TextSpeed: 0.1
+  m_TextSpeed: 0.05
   m_CharacterSprite1: neutral
   m_CharacterSprite2: stressed
   m_CJHandsSprite: CJHands_Void

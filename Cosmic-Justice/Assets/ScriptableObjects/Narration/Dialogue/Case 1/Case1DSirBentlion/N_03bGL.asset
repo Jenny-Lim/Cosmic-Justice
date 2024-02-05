@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: '"I hereby command you to assist him with his housing needs, and all needed
     fireproofing!"'
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: stressed
   m_CharacterSprite2: happy
   m_CJHandsSprite: CJHands_Void

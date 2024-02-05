@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: ' <i>Like I used to before Carl from accounting reported me to Humanoid
     Relations.</i>'
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: 
   m_CharacterSprite2: 
   m_CJHandsSprite: CJHands_Void

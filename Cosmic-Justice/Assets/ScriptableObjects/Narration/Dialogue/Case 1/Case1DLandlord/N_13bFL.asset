@@ -18,7 +18,7 @@ MonoBehaviour:
     through the vast expanse of space with the assistance of Sir. Button. They approach
     a nearby planet.
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: sad
   m_CharacterSprite2: sad
   m_CJHandsSprite: CJHands_Void

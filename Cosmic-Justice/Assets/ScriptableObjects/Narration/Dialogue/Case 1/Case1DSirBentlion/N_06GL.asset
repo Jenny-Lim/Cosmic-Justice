@@ -18,7 +18,7 @@ MonoBehaviour:
     coming\u2026 These two do add a lot of... <i>whimsy</i> wherever they go, at
     least.\u201D "
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: neutral
   m_CharacterSprite2: happy
   m_CJHandsSprite: CJHands_Void

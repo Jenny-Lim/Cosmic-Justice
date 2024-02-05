@@ -18,7 +18,7 @@ MonoBehaviour:
     I don\u2019t need is it being reduced to ash. Or getting rid of those burn marks
     every few weeks...\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: neutral
   m_CharacterSprite2: stressed
   m_CJHandsSprite: CJHands_Void

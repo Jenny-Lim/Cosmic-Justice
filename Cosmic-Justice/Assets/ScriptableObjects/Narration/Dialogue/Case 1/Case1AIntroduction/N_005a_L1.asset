@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "<i>All they do is argue and bicker. I only wish I could cast all of them
     out of the court\u2019s airlock\u2026</i>"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: 
   m_CharacterSprite2: 
   m_CJHandsSprite: CJHands_Void

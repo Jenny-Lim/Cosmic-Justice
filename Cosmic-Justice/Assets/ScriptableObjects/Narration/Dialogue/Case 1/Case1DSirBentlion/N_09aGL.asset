@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CThat sounds like a mission worthy of a Knight of Nivictus! May I
     bring Sir. Button?\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: neutral
   m_CharacterSprite2: happy
   m_CJHandsSprite: CJHands_Void

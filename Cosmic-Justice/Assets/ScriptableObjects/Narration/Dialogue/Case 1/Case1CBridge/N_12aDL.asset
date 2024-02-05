@@ -18,7 +18,7 @@ MonoBehaviour:
     to use his apartment\u2019s Atomic Toaster or pay me a single Dibble of rent
     leaves me worried.\""
   m_FontSize: 40
-  m_TextSpeed: 0.1
+  m_TextSpeed: 0.05
   m_CharacterSprite1: angry
   m_CharacterSprite2: sad
   m_CJHandsSprite: CJHands_Void

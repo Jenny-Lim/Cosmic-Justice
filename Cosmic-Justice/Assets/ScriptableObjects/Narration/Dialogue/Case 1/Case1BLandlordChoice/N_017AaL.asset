@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CHe\u2019s s-sorry, okay? A-and does anyone else feel that ch-chill?\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   m_CharacterSprite1: neutral
   m_CharacterSprite2: stressed
   m_CJHandsSprite: CJHands_Void
