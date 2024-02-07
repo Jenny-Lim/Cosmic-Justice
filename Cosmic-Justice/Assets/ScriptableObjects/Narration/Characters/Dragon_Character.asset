@@ -76,3 +76,7 @@ MonoBehaviour:
     FramesPerSecond: 0
     sprite:
     - {fileID: 21300000, guid: b9d28b436f1e7524fbf173d1a876bef2, type: 3}
+  - name: cute
+    FramesPerSecond: 0
+    sprite:
+    - {fileID: 21300000, guid: 55a84e9ee46a7cf4a8ea548c142e2720, type: 3}
