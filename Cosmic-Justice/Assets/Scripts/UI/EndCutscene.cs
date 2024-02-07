@@ -9,41 +9,51 @@ public class EndCutscene : MonoBehaviour
 {
     private VideoPlayer player;
 
-    private float videoLength;
-
-    private SceneLoader sceneLoader;
+    private float videoLength; //The total number of frames of the video
+    private float currFrame; //The current frame of the video
 
     public InputActionAsset input;
 
     private bool videoPlaying;
+
+    [SerializeField] private float speedUpValue = 2;
 
     // Start is called before the first frame update
     void Awake()
     {
         videoPlaying = true;
         player = GetComponent<VideoPlayer>();
-        videoLength = (float) player.clip.length;
-        sceneLoader = FindAnyObjectByType<SceneLoader>();
-        StartCoroutine(NextScene());
-    }
-
-    private IEnumerator NextScene()
-    {
-        yield return new WaitForSeconds(videoLength);
-        sceneLoader.StartLoadLevel(2);
+        videoLength = player.frameCount;
     }
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0) || input.FindAction("Interact").WasReleasedThisFrame())
+        if(currFrame < videoLength)
         {
-            if (videoPlaying)
+            currFrame = player.frame + 1;
+
+            if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0) || input.FindAction("Interact").WasReleasedThisFrame())
             {
-                videoPlaying = false;
-                //player.Stop();
-                StopAllCoroutines();
-                sceneLoader.StartLoadLevel(2);
+                if (videoPlaying)
+                {
+                    videoPlaying = false;
+                    //player.Stop();
+                    StopAllCoroutines();
+                    SceneLoader.instance.StartLoadLevel(2);
+                }
             }
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                player.playbackSpeed = speedUpValue;
+            }
+            else if (Input.GetKeyUp(KeyCode.W))
+                player.playbackSpeed = 1;
+
+        }
+        else
+        {
+            SceneLoader.instance.StartLoadLevel(2);
         }
     }
 }
