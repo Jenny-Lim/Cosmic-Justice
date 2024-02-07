@@ -20,36 +20,39 @@ public class SC_CursorTrail : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        thisCamera = GetComponent<Camera>();
-
-        GameObject trailObj = new GameObject("Mouse Trail");
-        trailTransform = trailObj.transform;
-        trail = trailObj.AddComponent<TrailRenderer>();
-        trail.time = -1f;
-        trail.time = trailTime;
-        trail.startWidth = startWidth;
-        trail.endWidth = endWidth;
-        trail.numCapVertices = 2;
-        trail.sharedMaterial = trailMaterial;
-        trail.colorGradient = trailColor;
-
         if (VirtualMouse.instance != null)
             virtualMouse = true;
 
-        MoveTrailToCursor(Input.mousePosition);
+        if (!virtualMouse)
+        {
+            thisCamera = GetComponent<Camera>();
+
+            GameObject trailObj = new GameObject("Mouse Trail");
+            trailTransform = trailObj.transform;
+            trail = trailObj.AddComponent<TrailRenderer>();
+            trail.time = -1f;
+            trail.time = trailTime;
+            trail.startWidth = startWidth;
+            trail.endWidth = endWidth;
+            trail.numCapVertices = 2;
+            trail.sharedMaterial = trailMaterial;
+            trail.colorGradient = trailColor;
+            trail.sortingOrder = 2;
+
+            MoveTrailToCursor(Input.mousePosition);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        MoveTrailToCursor(Input.mousePosition);
+        if(!virtualMouse)
+            MoveTrailToCursor(Input.mousePosition);
     }
 
     void MoveTrailToCursor(Vector3 screenPosition)
     {
         if (!virtualMouse)
             trailTransform.position = thisCamera.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, distanceFromCamera));
-        else
-            trailTransform.position = VirtualMouse.instance.mouseTrailPos.position;
     }
 }
