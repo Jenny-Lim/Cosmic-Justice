@@ -30,10 +30,13 @@ public class Dial : MonoBehaviour // TIMER INACTIVE RN
     private float randTime, t;
     private SafeArea sa;
 
+    private int numClicks;
+
     void Start()
     {
         fill.color = new Color(1, 1, 0, 1); // start at yellow
         statusText.text = inTroubleStatus;
+        numClicks = 0;
     }
 
     void OnEnable()
@@ -170,6 +173,11 @@ public class Dial : MonoBehaviour // TIMER INACTIVE RN
 
     public void IncrementDial()
     {
+        numClicks++;
+
+        if (numClicks % 2 == 0)
+            return;
+
         if (currAngle > -180)
         {
             currAngle -= incrAmt;

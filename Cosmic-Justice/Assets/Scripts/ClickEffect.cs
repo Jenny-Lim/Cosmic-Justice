@@ -28,16 +28,16 @@ public class ClickEffect : MonoBehaviour
 
         particles = GetComponent<ParticleSystem>();
 
-        /*
-        if (VirtualMouse.instance != null)
-            virtualMouse = true;
-        else
-            virtualMouse = false;*/
     }
 
     private void Start()
     {
         //EventManager.current.click += onClick;
+
+        if (VirtualMouse.instance != null)
+            virtualMouse = true;
+        else
+            virtualMouse = false;
     }
 
     private void OnDestroy()

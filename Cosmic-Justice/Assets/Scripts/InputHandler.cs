@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class InputHandler : MonoBehaviour
 {
+
+    public InputActionAsset controller;
 
     private bool case1;
     private bool case2;
@@ -38,7 +41,7 @@ public class InputHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Space))
+        if(Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Space) || controller.FindAction("Interact").WasReleasedThisFrame())
         {
             EventManager.current.MouseClick();
         }

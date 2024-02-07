@@ -19,6 +19,10 @@ public class VirtualMouse : MonoBehaviour
     public VirtualMouseInput virtualMouseTrue;
     public TrailRenderer mouseTrail;
 
+    private bool mouseLeft;
+
+    private bool mouseMoved;
+
     private void Awake()
     {
         if (instance == null)
@@ -50,12 +54,17 @@ public class VirtualMouse : MonoBehaviour
 
     private void FindSceneCamera()
     {
-        canvas.worldCamera = Camera.main;
+        if(Camera.main != null)
+            canvas.worldCamera = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (canvas.worldCamera == null)
+            FindSceneCamera();
+
         //If mouse is moved
         if (Input.GetAxis("Mouse X") != 0.0f || Input.GetAxis("Mouse Y") != 0.0f)
         {
@@ -64,11 +73,15 @@ public class VirtualMouse : MonoBehaviour
                 Vector3 mousePos = Input.mousePosition / canvas.scaleFactor;
                 mousePosition.anchoredPosition = mousePos;
 
+                mouseMoved = true;
+
                 InputState.Change(virtualMouseTrue.virtualMouse.position, mousePos);
             }
         }
         else if(MouseScreenCheck())
         {
+            mouseMoved = false;
+
             //Constantly move the mouse to be at the virtual mouse
             Mouse.current.WarpCursorPosition(mousePosition.anchoredPosition);
             InputState.Change(Mouse.current.position, mousePosition.anchoredPosition);
@@ -81,18 +94,27 @@ public class VirtualMouse : MonoBehaviour
 #if UNITY_EDITOR
         if (Input.mousePosition.x <= 0 || Input.mousePosition.y <= 0 || Input.mousePosition.x >= Handles.GetMainGameViewSize().x - 1 || Input.mousePosition.y >= Handles.GetMainGameViewSize().y - 1)
         {
+            if (!mouseMoved)
+                return true;
+
             if (!Cursor.visible)
             {
                 Cursor.visible = true;
+                mouseLeft = true;
             }
+
 
             return false;
         }
 #else
         if (Input.mousePosition.x <= 0 || Input.mousePosition.y <= 0 || Input.mousePosition.x >= Screen.width - 1 || Input.mousePosition.y >= Screen.height - 1) {
+            if (!mouseMoved)
+                return true;    
+        
             if(!Cursor.visible)
             {
                 Cursor.visible = true;
+                mouseLeft = true;
             }
         
             return false;
@@ -100,11 +122,31 @@ public class VirtualMouse : MonoBehaviour
 #endif
         else
         {
-            if(Cursor.visible)
+
+            if (Cursor.visible)
             {
                 Cursor.visible = false;
+
+                if (mouseLeft)
+                {
+                    mouseLeft = false;
+                    mouseTrail.enabled = false;
+
+                    StartCoroutine(RenableTrail());
+                }
+
             }
+
+
             return true;
         }
+    }
+
+    //Re-enables the trail 
+    private IEnumerator RenableTrail()
+    {
+        yield return new WaitForSeconds(0.01f);
+        mouseTrail.Clear();
+        mouseTrail.enabled = true;
     }
 }
