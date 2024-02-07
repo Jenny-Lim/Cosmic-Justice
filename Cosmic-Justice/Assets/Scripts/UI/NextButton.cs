@@ -16,6 +16,12 @@ public class NextButton : MonoBehaviour
         nextButton.onClick.AddListener(Click);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Space))
+            EventManager.current.NextClick();
+    }
+
 
     private void Click()
     {
