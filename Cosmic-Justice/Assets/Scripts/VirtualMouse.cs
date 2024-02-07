@@ -21,6 +21,8 @@ public class VirtualMouse : MonoBehaviour
 
     private bool mouseLeft;
 
+    private bool mouseMoved;
+
     private void Awake()
     {
         if (instance == null)
@@ -71,11 +73,15 @@ public class VirtualMouse : MonoBehaviour
                 Vector3 mousePos = Input.mousePosition / canvas.scaleFactor;
                 mousePosition.anchoredPosition = mousePos;
 
+                mouseMoved = true;
+
                 InputState.Change(virtualMouseTrue.virtualMouse.position, mousePos);
             }
         }
         else if(MouseScreenCheck())
         {
+            mouseMoved = false;
+
             //Constantly move the mouse to be at the virtual mouse
             Mouse.current.WarpCursorPosition(mousePosition.anchoredPosition);
             InputState.Change(Mouse.current.position, mousePosition.anchoredPosition);
@@ -88,6 +94,9 @@ public class VirtualMouse : MonoBehaviour
 #if UNITY_EDITOR
         if (Input.mousePosition.x <= 0 || Input.mousePosition.y <= 0 || Input.mousePosition.x >= Handles.GetMainGameViewSize().x - 1 || Input.mousePosition.y >= Handles.GetMainGameViewSize().y - 1)
         {
+            if (!mouseMoved)
+                return true;
+
             if (!Cursor.visible)
             {
                 Cursor.visible = true;
@@ -99,6 +108,9 @@ public class VirtualMouse : MonoBehaviour
         }
 #else
         if (Input.mousePosition.x <= 0 || Input.mousePosition.y <= 0 || Input.mousePosition.x >= Screen.width - 1 || Input.mousePosition.y >= Screen.height - 1) {
+            if (!mouseMoved)
+                return true;    
+        
             if(!Cursor.visible)
             {
                 Cursor.visible = true;
