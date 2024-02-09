@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
+  m_Name: N_002BaL
+  m_EditorClassIdentifier: 
+  m_Speaker: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
+  m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
+  m_Text: "\u201CYes your honour! I am Sir Leo Bentlion, noble knight of house Nivictus
+    and champion of Camelot! This is my noble companion: Sir Button!\u201D"
+  m_FontSize: 40
+  m_TextSpeed: 0.05
+  m_CharacterSprite1: 
+  m_CharacterSprite2: happy
+  m_CJHandsSprite: CJHands_Void
+  m_character1: {fileID: 0}
+  m_character2: {fileID: 0}
+  m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
+  m_events: 0
+  m_leftCharacterAnimation: 0
+  m_rightCharacterAnimation: 8
+  m_minigames: 0
