@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: N_019B
   m_EditorClassIdentifier: 
   m_DialogueLine: {fileID: 11400000, guid: 7f1c35983cb340b429ffacc364d798de, type: 2}
-  m_NextNode: {fileID: 0}
+  m_NextNode: {fileID: 11400000, guid: b8ab4c081ec551644a94a3cb85243d85, type: 2}
