@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
-  m_Name: N_01bDL
+  m_Name: N_019AL
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
+  m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
-  m_Text: '"Gah!"'
+  m_Text: "\u201CI\u2019ll keep that in mind. Now, Sir Knight, tell me your side
+    of the tale, and keep it streamlined, please.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
-  m_CharacterSprite1: stressed
-  m_CharacterSprite2: stressed
+  m_CharacterSprite1: neutral
+  m_CharacterSprite2: 
   m_CJHandsSprite: CJHands_Void
   m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
-  m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
+  m_character2: {fileID: 0}
   m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
-  m_events: 11
+  m_events: 0
   m_leftCharacterAnimation: 0
-  m_rightCharacterAnimation: 2
+  m_rightCharacterAnimation: 0
   m_minigames: 0
