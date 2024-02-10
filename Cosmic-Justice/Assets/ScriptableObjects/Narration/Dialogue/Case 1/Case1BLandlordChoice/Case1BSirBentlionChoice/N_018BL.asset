@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
   m_Name: N_018BL
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
+  m_Speaker: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Listener: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
-  m_Text: '"I have a b-b-bad feeling ab-bout this..."'
+  m_Text: '"Wha-?"'
   m_FontSize: 40
   m_TextSpeed: 0.05
-  m_CharacterSprite1: neutral
+  m_CharacterSprite1: stressed
   m_CharacterSprite2: stressed
   m_CJHandsSprite: CJHands_Void
   m_character1: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
@@ -25,5 +25,5 @@ MonoBehaviour:
   m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
   m_events: 0
   m_leftCharacterAnimation: 0
-  m_rightCharacterAnimation: 0
+  m_rightCharacterAnimation: 2
   m_minigames: 0
