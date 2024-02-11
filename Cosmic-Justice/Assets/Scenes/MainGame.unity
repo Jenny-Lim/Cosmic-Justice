@@ -5314,7 +5314,7 @@ MonoBehaviour:
   decrHealth: 5
   minRand: 2
   maxRand: 4
-  lerpSpeed: 0.0001
+  lerpSpeed: 0.001
   winStatus: The Knight Is Defrosted!
   loseStatus: The Knight Is Still Frozen...
   doingWellStatus: Warmer!
