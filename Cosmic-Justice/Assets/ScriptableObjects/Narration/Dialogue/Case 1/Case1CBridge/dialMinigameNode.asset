@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DialogueLine: {fileID: 11400000, guid: 561fdda346af55e44b40649d3709c691, type: 2}
   m_Paths:
-  - m_PathNode: {fileID: 11400000, guid: de6a1723ad8c0c141958f8bda602f4a8, type: 2}
+  - m_PathNode: {fileID: 11400000, guid: cb72581214615bd4f99aa272fcc8c636, type: 2}
     isWinningPath: 0
-  - m_PathNode: {fileID: 11400000, guid: 359ee16784586c64aa546a5d053bc314, type: 2}
+  - m_PathNode: {fileID: 11400000, guid: cb72581214615bd4f99aa272fcc8c636, type: 2}
     isWinningPath: 1
