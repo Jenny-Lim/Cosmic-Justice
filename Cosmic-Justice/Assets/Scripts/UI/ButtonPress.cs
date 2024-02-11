@@ -17,10 +17,10 @@ public class ButtonPress : MonoBehaviour
 
     public void OnButtonPress()
     {
-        numClicks++;
+        //numClicks++;
 
-        if (numClicks % 2 == 0)
-            return;
+        //if (numClicks % 2 == 0)
+        //    return;
 
         //Debug.Log("pressed");
         anim.SetTrigger("pressed");
