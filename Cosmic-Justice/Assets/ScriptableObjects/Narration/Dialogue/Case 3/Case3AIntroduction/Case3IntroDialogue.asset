@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59349bf22ac25884cbbc11797eea1f7d, type: 3}
   m_Name: Case3IntroDialogue
   m_EditorClassIdentifier: 
-  m_FirstNode: {fileID: 11400000, guid: 252df9c2506b1e94dbecd94475041a79, type: 2}
+  m_FirstNode: {fileID: 11400000, guid: 10c8f653c6fbdc24cab91dc484f7488c, type: 2}
