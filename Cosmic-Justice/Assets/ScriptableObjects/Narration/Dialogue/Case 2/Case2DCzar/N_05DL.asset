@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
+  m_Name: N_05DL
+  m_EditorClassIdentifier: 
+  m_Speaker: {fileID: 11400000, guid: 02d13fca7d61ceb42b741cc4d3fa1ea9, type: 2}
+  m_Listener: {fileID: 0}
+  m_Text: '"Ehehehehe."'
+  m_FontSize: 40
+  m_TextSpeed: 0.01
+  m_CharacterSprite1: sad
+  m_CharacterSprite2: happy
+  m_CJHandsSprite: 
+  m_character1: {fileID: 11400000, guid: 11d4b2b628b7b114fad06b59138ac37b, type: 2}
+  m_character2: {fileID: 11400000, guid: 02d13fca7d61ceb42b741cc4d3fa1ea9, type: 2}
+  m_hands: {fileID: 0}
+  m_events: 8
+  m_leftCharacterAnimation: 1
+  m_rightCharacterAnimation: 0
+  m_minigames: 0
