@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
-  m_Name: N_08BL
+  m_Name: N_12BL
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 11400000, guid: 11d4b2b628b7b114fad06b59138ac37b, type: 2}
+  m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CLook, your honour! Parking in this quadrant is impossible to find\u2026
-    And when you\u2019ve got five kids and three heads to take care of? The amount
-    of pit stops\u2026\u201D"
+  m_Text: "\u201CThat is hardly an excuse and you must be aware. Especially when
+    you\u2019re this vindictive.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
-  m_CharacterSprite1: stressed
+  m_CharacterSprite1: sad
   m_CharacterSprite2: neutral
   m_CJHandsSprite: 
   m_character1: {fileID: 11400000, guid: 11d4b2b628b7b114fad06b59138ac37b, type: 2}
-  m_character2: {fileID: 11400000, guid: fbc922fd669368a4e87faac4b91bf3f7, type: 2}
+  m_character2: {fileID: 11400000, guid: 02d13fca7d61ceb42b741cc4d3fa1ea9, type: 2}
   m_hands: {fileID: 0}
   m_events: 0
   m_leftCharacterAnimation: 1
