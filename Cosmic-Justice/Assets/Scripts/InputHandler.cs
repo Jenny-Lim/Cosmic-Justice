@@ -104,6 +104,7 @@ public class InputHandler : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.S))
             {
+                Debug.Log("case2");
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case2StartDebug.FirstNode);
                 case2 = false;
@@ -113,6 +114,7 @@ public class InputHandler : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.S))
             {
+                Debug.Log("case3");
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case3StartDebug.FirstNode);
                 case3 = false;
