@@ -151,6 +151,21 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
                 AudioManager.instance.Play(node.DialogueLine.SoundToPlay);
             }
 
+            if (node.DialogueLine.SoundToStop != null) // jenny
+            {
+                AudioManager.instance.Stop(node.DialogueLine.SoundToStop);
+            }
+
+            if (node is ChoiceDialogueNode)
+            {
+                ChoiceDialogueNode N = (ChoiceDialogueNode)node;
+                if (N.isVerdict)
+                {
+                    AudioManager.instance.Play("Verdict");
+                    AudioManager.instance.Stop("Ambient_Track_A");
+                }
+            }
+
             //If there are events then run them
             if (node.DialogueLine.events != 0)
             {

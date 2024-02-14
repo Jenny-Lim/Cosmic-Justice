@@ -40,6 +40,9 @@ public class NarrationLine : ScriptableObject
     public String SoundToPlay;
 
     [SerializeField]
+    public String SoundToStop;
+
+    [SerializeField]
     private String m_CharacterSprite1;
 
     [SerializeField]
