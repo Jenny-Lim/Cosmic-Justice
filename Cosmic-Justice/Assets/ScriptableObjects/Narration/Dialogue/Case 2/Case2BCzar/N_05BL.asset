@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 11d4b2b628b7b114fad06b59138ac37b, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\u201COhhh how heroic you are. Do you really believe any of this your
-    honor?\""
+    honor?\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral

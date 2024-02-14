@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: fbc922fd669368a4e87faac4b91bf3f7, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201COF COURSE NOT. You see, he\u2019s simply an idiot."
+  m_Text: "\u201COF COURSE NOT. You see, he\u2019s simply an idiot.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: happy

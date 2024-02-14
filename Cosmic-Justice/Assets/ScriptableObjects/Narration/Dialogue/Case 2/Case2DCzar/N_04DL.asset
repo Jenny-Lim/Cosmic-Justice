@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: fbc922fd669368a4e87faac4b91bf3f7, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\"Your words are meaningless to anything with higher cognitive function
+  m_Text: "\u201CYour words are meaningless to anything with higher cognitive function
     and only serve to project your insecurity.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
