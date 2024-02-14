@@ -19,8 +19,10 @@ MonoBehaviour:
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
   m_CharacterSprite2: 
+  m_CJHandsSprite: 
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
+  m_hands: {fileID: 0}
   m_events: 0
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0

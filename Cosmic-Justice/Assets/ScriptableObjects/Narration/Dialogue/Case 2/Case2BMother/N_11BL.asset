@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: '"O-okay..."
 
 '
-  m_FontSize: 20
+  m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: sad
   m_CharacterSprite2: stressed

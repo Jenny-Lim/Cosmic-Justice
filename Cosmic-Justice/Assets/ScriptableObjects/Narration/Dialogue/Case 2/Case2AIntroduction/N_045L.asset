@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "<i>She must\u2019ve grabbed it without reading it when she stormed in\u2026
     However, it might not be so black and white\u2026 I need more context from one
     of them\u2026 but which one?</i>"
-  m_FontSize: 35
+  m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral
   m_CharacterSprite2: neutral
