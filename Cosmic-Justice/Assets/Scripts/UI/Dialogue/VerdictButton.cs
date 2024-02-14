@@ -63,6 +63,7 @@ public class VerdictButton : MonoBehaviour
     {
         Debug.Log("pressed");
         anim.SetTrigger("pressed");
+        AudioManager.instance.Play("Gavel");
         EnORDisableChildren(false);
     } // OnButtonPress
 

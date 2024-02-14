@@ -146,6 +146,11 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
             EventManager.current.Invoke("CharacterAnimation", 0);
 
+            if (node.DialogueLine.SoundToPlay != null) // jenny
+            {
+                AudioManager.instance.Play(node.DialogueLine.SoundToPlay);
+            }
+
             //If there are events then run them
             if (node.DialogueLine.events != 0)
             {

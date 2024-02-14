@@ -17,6 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CGah!\u201D "
   m_FontSize: 40
   m_TextSpeed: 0.05
+  SoundToPlay: KnightFreeze
   m_CharacterSprite1: neutral
   m_CharacterSprite2: frozen
   m_CJHandsSprite: 

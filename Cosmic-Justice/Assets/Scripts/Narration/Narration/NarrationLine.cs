@@ -36,6 +36,8 @@ public class NarrationLine : ScriptableObject
 
     [SerializeField]
     private Sprite m_CharacterImage2;*/
+    [SerializeField]
+    public String SoundToPlay;
 
     [SerializeField]
     private String m_CharacterSprite1;
