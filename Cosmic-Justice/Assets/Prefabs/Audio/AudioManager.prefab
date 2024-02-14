@@ -108,3 +108,39 @@ MonoBehaviour:
     playOnAwake: 0
     canOverlap: 1
     mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+  - name: Verdict
+    clip: {fileID: 8300000, guid: 3bfc8d60a00771a418e6feb00d13fbed, type: 3}
+    volume: 0.16
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+    playOnAwake: 0
+    canOverlap: 1
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+  - name: Gavel
+    clip: {fileID: 8300000, guid: 4cde0deb95b77ae499b93ee818ddc8b7, type: 3}
+    volume: 0.16
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 0
+    canOverlap: 1
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+  - name: Bobblehead
+    clip: {fileID: 8300000, guid: f92478c6932f8334e820350c77f32531, type: 3}
+    volume: 0.16
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 0
+    canOverlap: 1
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+  - name: KnightFreeze
+    clip: {fileID: 8300000, guid: 1c1469234b76e2449927b2dd62272b83, type: 3}
+    volume: 0.16
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 0
+    canOverlap: 1
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
