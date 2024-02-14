@@ -205,7 +205,7 @@ public class MinigameManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         // screenwipe
-        screenWipe.SetFillMethod();
+        //screenWipe.SetFillMethod();
 
         screenWipe.ToggleWipe(true);
         while (!screenWipe.isDone)
