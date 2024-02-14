@@ -21,3 +21,15 @@ MonoBehaviour:
     FramesPerSecond: 0
     sprite:
     - {fileID: 21300000, guid: 7b6a59da7ac1c1743aec6246bb9269dd, type: 3}
+  - name: tentacles
+    FramesPerSecond: 0
+    sprite:
+    - {fileID: 21300000, guid: 88c3892d711beda42b7df5ac1de29a46, type: 3}
+  - name: paws
+    FramesPerSecond: 0
+    sprite:
+    - {fileID: 21300000, guid: ef8ee35320516934a8e19c71c18b8bea, type: 3}
+  - name: crocodile
+    FramesPerSecond: 0
+    sprite:
+    - {fileID: 21300000, guid: b37b35e8d72399343b8c5ea02361a8e3, type: 3}
