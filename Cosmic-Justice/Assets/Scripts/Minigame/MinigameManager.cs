@@ -13,6 +13,9 @@ public class MinigameManager : MonoBehaviour
     [SerializeField]
     private GameObject nextButton, nameTag;
 
+    [SerializeField]
+    private ScreenWipe screenWipe;
+
     //asteroidMinigame, dialMinigame, puzzleMinigame,
 
     //[SerializeField]
@@ -40,6 +43,8 @@ public class MinigameManager : MonoBehaviour
         EventManager.current.puzzle += StartMinigame;
         EventManager.current.endPuzzle += EndMinigame;
 
+        EventManager.current.nextCase += NextCase;
+
         //EventManager.current.verdict += StartVerdictMinigame;
         //EventManager.current.endVerdict += EndVerdictMinigame;
 
@@ -56,6 +61,8 @@ public class MinigameManager : MonoBehaviour
         EventManager.current.endDial -= EndMinigame;
         EventManager.current.puzzle -= StartMinigame;
         EventManager.current.endPuzzle -= EndMinigame;
+
+        EventManager.current.nextCase -= NextCase;
         //EventManager.current.verdict -= StartVerdictMinigame;
         //EventManager.current.endVerdict -= EndVerdictMinigame;
     }
@@ -185,6 +192,23 @@ public class MinigameManager : MonoBehaviour
         StartCoroutine(StopMinigameAnim(minigame, "MiniGame_Track_A", "Ambient_Track_A"));
     }
 
+    // jenny
+    private void NextCase()
+    {
+        StartCoroutine("NextCaseCORO");
+    }
+
+    private IEnumerator NextCaseCORO()
+    {
+        yield return new WaitForSeconds(5f);
+        // screenwipe
+        screenWipe.SetFillMethod();
+
+        screenWipe.ToggleWipe(true);
+        while (!screenWipe.isDone)
+            yield return null;
+        // set node -- probably just set it from the last node
+    }
 
 
     // UNUSED

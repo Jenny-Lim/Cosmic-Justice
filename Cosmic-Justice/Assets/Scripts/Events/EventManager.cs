@@ -105,6 +105,12 @@ public class EventManager : MonoBehaviour
         endGame?.Invoke();
     }
 
+    public event Action nextCase;
+    public void NextCase()
+    {
+        nextCase?.Invoke();
+    }
+
     // -------------------- Minigames -------------------- //
     //asteroid
     public event Action<GameObject> asteroid;
