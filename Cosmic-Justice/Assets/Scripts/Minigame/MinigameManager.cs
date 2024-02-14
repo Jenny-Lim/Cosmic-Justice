@@ -200,14 +200,26 @@ public class MinigameManager : MonoBehaviour
 
     private IEnumerator NextCaseCORO()
     {
-        yield return new WaitForSeconds(5f);
+        EventManager.current.CanDialogue(false);
+        hidePanel(); // also hide + unhide characters
+        yield return new WaitForSeconds(3f);
+
         // screenwipe
         screenWipe.SetFillMethod();
 
         screenWipe.ToggleWipe(true);
         while (!screenWipe.isDone)
             yield return null;
-        // set node -- probably just set it from the last node
+
+        screenWipe.ToggleWipe(false);
+        while (!screenWipe.isDone)
+            yield return null;
+
+        // set node -- just set it from the last node
+
+        yield return new WaitForSeconds(3f);
+        EventManager.current.CanDialogue(true);
+        showPanel();
     }
 
 
