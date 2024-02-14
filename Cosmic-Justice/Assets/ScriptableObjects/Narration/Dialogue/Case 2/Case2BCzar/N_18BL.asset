@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: fbc922fd669368a4e87faac4b91bf3f7, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\"What he meant was that, obviously, this case is closed, and you would
-    side with us. So what\u2019s taking so long? I\u2019m a very busy man CJ.\u201D"
+  m_Text: "\u201CWhat he meant was that, obviously, this case is closed, and you
+    would side with us. So what\u2019s taking so long? I\u2019m a very busy man CJ.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: happy

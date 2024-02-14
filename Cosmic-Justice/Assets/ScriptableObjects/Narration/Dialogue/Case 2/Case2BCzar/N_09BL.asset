@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 11d4b2b628b7b114fad06b59138ac37b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\"W-what? No! Judge I am a humble mother of 5\u2026 would you really take
-    me to be a lying cheat? I don\u2019t have a single dishonest bone in my body!\u201D"
+  m_Text: "\u201CW-what? No! Judge I am a humble mother of 5\u2026 would you really
+    take me to be a lying cheat? I don\u2019t have a single dishonest bone in my
+    body!\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: neutral

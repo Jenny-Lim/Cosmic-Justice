@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\"I missed the Romp of the Cosmic Fox for the first time to come into
+  m_Text: "\u201CI missed the Romp of the Cosmic Fox for the first time to come into
     work today.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01

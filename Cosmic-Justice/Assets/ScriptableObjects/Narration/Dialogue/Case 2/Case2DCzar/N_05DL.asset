@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 02d13fca7d61ceb42b741cc4d3fa1ea9, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: '"Ehehehehe."'
+  m_Text: "\u201CEhehehehe.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
   m_CharacterSprite1: sad
