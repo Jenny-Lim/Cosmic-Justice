@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Text: "\u201CHe is no pet, rather my savior from a thousand year old glacier!
     His name is Sir. Button, the Honourable Immolator, Destroyer of Worlds, and he
-    bows down to no one!\""
+    bows down to no one!\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
   m_CharacterSprite1: 

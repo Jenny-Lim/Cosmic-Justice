@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2b89fdac05c256d408068c0d1212fd75, type: 2}
   m_Listener: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
-  m_Text: '"BLEGH!" <i> The dragon angrily retorts. </i>'
+  m_Text: "\u201CBLEGH!\u201D <i> The dragon angrily retorts. </i>"
   m_FontSize: 40
   m_TextSpeed: 0.05
   m_CharacterSprite1: 
