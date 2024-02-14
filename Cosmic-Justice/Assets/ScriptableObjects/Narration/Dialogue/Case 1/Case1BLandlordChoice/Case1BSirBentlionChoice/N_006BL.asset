@@ -20,7 +20,7 @@ MonoBehaviour:
   m_TextSpeed: 0.05
   m_CharacterSprite1: angry
   m_CharacterSprite2: sad
-  m_CJHandsSprite: CJHands_Void
+  m_CJHandsSprite: 
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
   m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
