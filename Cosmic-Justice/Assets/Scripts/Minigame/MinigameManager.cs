@@ -192,7 +192,6 @@ public class MinigameManager : MonoBehaviour
         StartCoroutine(StopMinigameAnim(minigame, "MiniGame_Track_A", "Ambient_Track_A"));
     }
 
-    // jenny
     private void NextCase()
     {
         StartCoroutine("NextCaseCORO");

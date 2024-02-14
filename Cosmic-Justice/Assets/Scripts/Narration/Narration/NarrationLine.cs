@@ -74,6 +74,9 @@ public class NarrationLine : ScriptableObject
     [SerializeField]
     private Minigames m_minigames;
 
+    [SerializeField]
+    public GameObject animatedGO;
+
     [Flags]
     public enum Events
     {

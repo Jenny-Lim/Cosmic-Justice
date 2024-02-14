@@ -151,7 +151,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
                 AudioManager.instance.Play(node.DialogueLine.SoundToPlay);
             }
 
-            if (node.DialogueLine.SoundToStop != null) // jenny
+            if (node.DialogueLine.SoundToStop != null)
             {
                 AudioManager.instance.Stop(node.DialogueLine.SoundToStop);
             }
@@ -164,6 +164,11 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
                     AudioManager.instance.Play("Verdict");
                     AudioManager.instance.Stop("Ambient_Track_A");
                 }
+            }
+
+            if (node.DialogueLine.animatedGO != null)
+            {
+                Instantiate(node.DialogueLine.animatedGO, new Vector3(0, 0, 0), Quaternion.identity, this.transform); // a wip
             }
 
             //If there are events then run them

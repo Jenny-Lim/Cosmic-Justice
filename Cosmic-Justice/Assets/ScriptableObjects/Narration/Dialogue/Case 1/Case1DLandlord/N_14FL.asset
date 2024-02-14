@@ -17,6 +17,8 @@ MonoBehaviour:
   m_Text: "\u201CHow is he breathing out there?\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: sad
   m_CharacterSprite2: sad
   m_CJHandsSprite: 
@@ -27,3 +29,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 0
+  animatedGO: {fileID: 1060782420819542850, guid: 6880b0625b0c8f649a31a1dcde4d56ad, type: 3}
