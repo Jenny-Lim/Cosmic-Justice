@@ -17,13 +17,16 @@ MonoBehaviour:
   m_Text: <i>I guess I'll have to...</i>
   m_FontSize: 40
   m_TextSpeed: 0.05
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: neutral
   m_CharacterSprite2: neutral
-  m_CJHandsSprite: CJHands_Gavel
+  m_CJHandsSprite: 
   m_character1: {fileID: 11400000, guid: 11d4b2b628b7b114fad06b59138ac37b, type: 2}
   m_character2: {fileID: 11400000, guid: fbc922fd669368a4e87faac4b91bf3f7, type: 2}
   m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
-  m_events: 32
+  m_events: 64
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 0
+  animatedGO: {fileID: 0}
