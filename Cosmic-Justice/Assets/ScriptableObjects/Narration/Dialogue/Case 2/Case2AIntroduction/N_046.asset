@@ -15,12 +15,12 @@ MonoBehaviour:
   m_DialogueLine: {fileID: 11400000, guid: d0d475d41cee54545b4760463eff7ea7, type: 2}
   isVerdict: 0
   m_Choices:
-  - m_ChoicePreview: Push the Czar for his side of events.
+  - m_ChoicePreview: Clarify The Czar's Position
     m_ChoiceNode: {fileID: 11400000, guid: 8072c88d1ffe7d54dbcc656ccd017aa2, type: 2}
     m_ButtonSprite: {fileID: 21300000, guid: b5b7088ef5d221d40a3df15eeeb128fa, type: 3}
     m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
     m_FontColor: {r: 1, g: 1, b: 1, a: 0}
-  - m_ChoicePreview: Call Entium on the ticket.
+  - m_ChoicePreview: Examine Entium's Ticket
     m_ChoiceNode: {fileID: 11400000, guid: 888a8d69c12402144b76ce5f4799e80a, type: 2}
     m_ButtonSprite: {fileID: 21300000, guid: b5b7088ef5d221d40a3df15eeeb128fa, type: 3}
     m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
