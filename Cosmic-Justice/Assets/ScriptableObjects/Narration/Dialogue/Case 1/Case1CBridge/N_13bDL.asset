@@ -17,13 +17,16 @@ MonoBehaviour:
   m_Text: "\u201CThis verdict shall be final- and enacted for the rest of eternity!\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: stressed
   m_CharacterSprite2: stressed
   m_CJHandsSprite: gavel
   m_character1: {fileID: 0}
   m_character2: {fileID: 0}
   m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
-  m_events: 1
+  m_events: 33
   m_leftCharacterAnimation: 4
   m_rightCharacterAnimation: 4
   m_minigames: 0
+  animatedGO: {fileID: 0}
