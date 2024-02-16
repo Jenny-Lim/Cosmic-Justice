@@ -74,8 +74,8 @@ public class NarrationLine : ScriptableObject
     [SerializeField]
     private Minigames m_minigames;
 
-    [SerializeField]
-    public GameObject animatedGO;
+    //[SerializeField]
+    //public GameObject animatedGO;
 
     [Flags]
     public enum Events
@@ -106,7 +106,9 @@ public class NarrationLine : ScriptableObject
         Puzzle = 4,
         //Verdict = 8
         EndGame = 8,
-        NextCase = 16 // jenny
+        NextCase = 16, // jenny
+        AnimationPlay = 32,
+        AnimationStop = 64
     }
 
     public NarrationCharacter Speaker => m_Speaker; //Gets speaker's name

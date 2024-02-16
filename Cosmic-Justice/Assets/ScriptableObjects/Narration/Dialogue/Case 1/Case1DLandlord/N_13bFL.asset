@@ -19,6 +19,8 @@ MonoBehaviour:
     a nearby planet.
   m_FontSize: 40
   m_TextSpeed: 0.05
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: sad
   m_CharacterSprite2: sad
   m_CJHandsSprite: 
@@ -28,4 +30,4 @@ MonoBehaviour:
   m_events: 8
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
-  m_minigames: 0
+  m_minigames: 32

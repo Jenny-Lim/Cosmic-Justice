@@ -8,6 +8,7 @@ public class EventManager : MonoBehaviour
 {
     //One instance of the class
     public static EventManager current;
+    int currAnimation = 0; // not sure if this actually increments rn
 
     private void Awake()
     {
@@ -24,7 +25,23 @@ public class EventManager : MonoBehaviour
     [SerializeField]
     GameObject dialMinigame, puzzleMinigame, asteroidMinigame;
 
+    [SerializeField]
+    GameObject[] animatedGO;
+
     //---------------------- Events --------------------------//
+
+    public event Action<GameObject> animationPlay;
+    public void AnimationPlay()
+    {
+        animationPlay?.Invoke(animatedGO[currAnimation]);
+    }
+
+    public event Action<GameObject> animationStop;
+    public void AnimationStop()
+    {
+        animationStop?.Invoke(animatedGO[currAnimation]);
+        currAnimation++;
+    }
 
     public event Action<DialogueNode> canvasShake;
     public void ShakeCanvas()

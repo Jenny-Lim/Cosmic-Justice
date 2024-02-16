@@ -166,10 +166,10 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
                 }
             }
 
-            if (node.DialogueLine.animatedGO != null)
-            {
-                Instantiate(node.DialogueLine.animatedGO, new Vector3(0, 0, 0), Quaternion.identity, this.transform); // a wip
-            }
+            //if (node.DialogueLine.animatedGO != null)
+            //{
+            //    Instantiate(node.DialogueLine.animatedGO, new Vector3(0, 0, 0), Quaternion.identity, this.transform); // a wip
+            //}
 
             //If there are events then run them
             if (node.DialogueLine.events != 0)

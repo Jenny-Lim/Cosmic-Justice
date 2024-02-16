@@ -16,6 +16,9 @@ public class MinigameManager : MonoBehaviour
     [SerializeField]
     private ScreenWipe screenWipe;
 
+    [SerializeField]
+    private GameObject animatedGOHolder;
+
     //asteroidMinigame, dialMinigame, puzzleMinigame,
 
     //[SerializeField]
@@ -45,6 +48,9 @@ public class MinigameManager : MonoBehaviour
 
         EventManager.current.nextCase += NextCase;
 
+        EventManager.current.animationPlay += StartAnimation;
+        EventManager.current.animationStop += EndAnimation;
+
         //EventManager.current.verdict += StartVerdictMinigame;
         //EventManager.current.endVerdict += EndVerdictMinigame;
 
@@ -63,6 +69,10 @@ public class MinigameManager : MonoBehaviour
         EventManager.current.endPuzzle -= EndMinigame;
 
         EventManager.current.nextCase -= NextCase;
+
+        EventManager.current.animationPlay -= StartAnimation;
+        EventManager.current.animationStop -= EndAnimation;
+
         //EventManager.current.verdict -= StartVerdictMinigame;
         //EventManager.current.endVerdict -= EndVerdictMinigame;
     }
@@ -184,24 +194,38 @@ public class MinigameManager : MonoBehaviour
         minigame.SetActive(true); // on enable, animate them going up
 
         StartCoroutine(StartMinigameAnim(minigame, "MiniGame_Track_A", "Ambient_Track_A"));
-    } // StartDialMinigame
+    } // StartMinigame
 
     private void EndMinigame(GameObject minigame)
     {
         isDone = true;
         StartCoroutine(StopMinigameAnim(minigame, "MiniGame_Track_A", "Ambient_Track_A"));
-    }
+    } // EndMinigame
+
+    private void StartAnimation(GameObject GO)
+    {
+        Debug.Log("hi -- start anim");
+        Instantiate(GO, animatedGOHolder.transform);
+    } // StartAnimation
+
+    private void EndAnimation(GameObject GO)
+    {
+        foreach (Transform child in animatedGOHolder.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    } // EndAnimation
 
     private void NextCase()
     {
         StartCoroutine("NextCaseCORO");
     }
 
-    private IEnumerator NextCaseCORO()
+    private IEnumerator NextCaseCORO() // extremely ugly
     {
         EventManager.current.CanDialogue(false);
         hidePanel(); // also hide + unhide characters
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
         // screenwipe
         //screenWipe.SetFillMethod();
@@ -216,7 +240,7 @@ public class MinigameManager : MonoBehaviour
 
         // set node -- just set it from the last node
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         EventManager.current.CanDialogue(true);
         showPanel();
     }
