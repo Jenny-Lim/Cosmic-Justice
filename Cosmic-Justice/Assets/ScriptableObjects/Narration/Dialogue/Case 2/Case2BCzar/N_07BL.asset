@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 11d4b2b628b7b114fad06b59138ac37b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CI AM NOTHING OF THE SORT. THESE TWO ARE COMPLETELY IMMORAL.\u201D"
+  m_Text: "\u201CI AM NOTHING OF THE SORT!!! THESE TWO ARE COMPLETELY IMMORAL!!!!!!!!!\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: angry
   m_CharacterSprite2: stressed
   m_CJHandsSprite: 
@@ -27,3 +29,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 2
   m_rightCharacterAnimation: 1
   m_minigames: 0
+  animatedGO: {fileID: 0}

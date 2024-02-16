@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: '"NEXT!"'
+  m_Text: '"And now... some quiet..."'
   m_FontSize: 40
   m_TextSpeed: 0.01
   SoundToPlay: 
@@ -29,3 +29,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 8
   m_rightCharacterAnimation: 0
   m_minigames: 16
+  animatedGO: {fileID: 0}

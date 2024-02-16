@@ -16,9 +16,11 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CStop this feckless bickering before I go against my prerogative
     and shoot you both out of the airlock at speeds not yet recorded by the Interstellar
-    Senate.\u201D"
+    Archive of Galactic Records.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: stressed
   m_CharacterSprite2: stressed
   m_CJHandsSprite: 
@@ -29,3 +31,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 4
   m_rightCharacterAnimation: 4
   m_minigames: 0
+  animatedGO: {fileID: 0}
