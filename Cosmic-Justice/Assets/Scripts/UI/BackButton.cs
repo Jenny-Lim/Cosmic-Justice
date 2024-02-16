@@ -18,6 +18,7 @@ public class BackButton : MonoBehaviour
     
     private void BackClicked()
     {
+        Debug.Log("clicked");
         SceneLoader.instance.MainMenu();
     }
 }

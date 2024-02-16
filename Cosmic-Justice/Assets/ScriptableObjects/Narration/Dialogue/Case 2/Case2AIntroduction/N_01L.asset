@@ -24,7 +24,7 @@ MonoBehaviour:
   m_CJHandsSprite: neutral
   m_character1: {fileID: 11400000, guid: 11d4b2b628b7b114fad06b59138ac37b, type: 2}
   m_character2: {fileID: 0}
-  m_hands: {fileID: 0}
+  m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
   m_events: 35
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
