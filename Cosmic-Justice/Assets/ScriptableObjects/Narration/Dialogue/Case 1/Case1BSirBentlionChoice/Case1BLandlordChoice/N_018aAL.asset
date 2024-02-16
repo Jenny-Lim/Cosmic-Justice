@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CWelp... *sigh* Look CJ, I know he\u2019s a good guy. Really, I do!
     He\u2019s actually a really good tenant, at least compared to that Lunar Hydra
-    family in B7.\""
+    family in B7.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
   caseNumber: 1

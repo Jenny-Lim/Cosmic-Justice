@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\u201CBut nothing. Didn\u2019t you hear the whole speech about final judgement,
-    all eternity, and so on?\""
+    all eternity, and so on?\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
   caseNumber: 1

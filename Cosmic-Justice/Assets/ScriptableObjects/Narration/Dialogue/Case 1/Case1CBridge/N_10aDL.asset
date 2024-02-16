@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Text: "\u201CI am a Knight, your honour. I made an oath of chivalry to my kingdom.
     I simply wish to understand this strange place\u2026 and defrost what is left
-    of my life.\""
+    of my life.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
   caseNumber: 1
