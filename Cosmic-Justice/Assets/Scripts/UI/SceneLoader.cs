@@ -103,7 +103,7 @@ public class SceneLoader : MonoBehaviour
         }
         else
         {
-            TrailRenderer trail = FindObjectOfType<TrailRenderer>();
+            TrailRenderer trail = SC_CursorTrail.instance.trail;
             trail.Clear();
             trail.enabled = false;
         }
@@ -118,9 +118,9 @@ public class SceneLoader : MonoBehaviour
         Time.timeScale = 1f;
 
         if (VirtualMouse.instance != null)
-            VirtualMouse.instance.mouseTrail.enabled = false;
+            VirtualMouse.instance.mouseTrail.enabled = true;
         else
-            FindObjectOfType<TrailRenderer>().enabled = false;
+            SC_CursorTrail.instance.trail.enabled = true;
 
         isPaused = false;
         EventManager.current.CanDialogue(true);
@@ -133,7 +133,7 @@ public class SceneLoader : MonoBehaviour
         if (VirtualMouse.instance != null)
             VirtualMouse.instance.mouseTrail.enabled = true;
         else
-            FindObjectOfType<TrailRenderer>().enabled = true;
+            SC_CursorTrail.instance.trail.enabled = true;
 
         StartLoadLevel(0);
     }
