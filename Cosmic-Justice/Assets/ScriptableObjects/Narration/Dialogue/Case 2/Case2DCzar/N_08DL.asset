@@ -14,17 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: fbc922fd669368a4e87faac4b91bf3f7, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CCJ, my representatives will pay any required fines by the end of
-    the business day. Agent C, let\u2019s get a cold treat, shall we?\u201D"
+  m_Text: "\u201CThank the stars\u2026 Peace.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
-  m_CharacterSprite1: angry
+  m_CharacterSprite1: 
   m_CharacterSprite2: neutral
   m_CJHandsSprite: 
-  m_character1: {fileID: 11400000, guid: 11d4b2b628b7b114fad06b59138ac37b, type: 2}
+  m_character1: {fileID: 0}
   m_character2: {fileID: 11400000, guid: fbc922fd669368a4e87faac4b91bf3f7, type: 2}
   m_hands: {fileID: 0}
   m_events: 8
-  m_leftCharacterAnimation: 2
-  m_rightCharacterAnimation: 8
+  m_leftCharacterAnimation: 0
+  m_rightCharacterAnimation: 0
   m_minigames: 0
