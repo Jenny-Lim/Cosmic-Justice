@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Reta_Character
   m_EditorClassIdentifier: 
   m_CharacterName: Secretary Reta
-  m_DialoguePanel: {fileID: 21300000, guid: 5b0ab1b334c7d6d46afca3e0b14b1853, type: 3}
+  m_DialoguePanel: {fileID: 21300000, guid: a7a9a4412977e704096fe4384ae12426, type: 3}
   m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   voice: {fileID: 8300000, guid: d00be359fdf34f0439249df5bc8d133f, type: 3}
