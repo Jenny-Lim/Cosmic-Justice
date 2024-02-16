@@ -18,6 +18,7 @@ MonoBehaviour:
     Assistance <i>you</i> can provide.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
+  caseNumber: 1
   SoundToPlay: 
   SoundToStop: 
   m_CharacterSprite1: stressed

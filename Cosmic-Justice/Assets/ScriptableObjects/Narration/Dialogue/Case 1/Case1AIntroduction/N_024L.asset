@@ -17,6 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CAhem, I call upon\u2026-\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
+  caseNumber: 1
   SoundToPlay: 
   SoundToStop: 
   m_CharacterSprite1: neutral

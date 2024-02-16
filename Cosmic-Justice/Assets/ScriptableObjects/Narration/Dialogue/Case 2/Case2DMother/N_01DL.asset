@@ -17,6 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CAeric! Unfortunately, you are the party in the most wrong here-\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
+  caseNumber: 2
   SoundToPlay: 
   SoundToStop: 
   m_CharacterSprite1: neutral

@@ -17,6 +17,9 @@ MonoBehaviour:
   m_Text: "\u201CS-Sir! Yes Sir!\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
+  caseNumber: 2
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: stressed
   m_CharacterSprite2: stressed
   m_CJHandsSprite: 
@@ -27,3 +30,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 0
+  animatedGO: {fileID: 0}

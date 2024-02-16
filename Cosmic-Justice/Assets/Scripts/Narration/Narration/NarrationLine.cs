@@ -26,6 +26,9 @@ public class NarrationLine : ScriptableObject
     [Range(0f, 10f)]
     private float m_TextSpeed = 0.1f;
 
+    [SerializeField]
+    public int caseNumber;
+
 
     [Header("Speaker Manipulation")]
     /*

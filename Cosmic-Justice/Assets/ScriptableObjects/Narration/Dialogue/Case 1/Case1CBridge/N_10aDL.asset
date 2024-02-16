@@ -19,6 +19,9 @@ MonoBehaviour:
     of my life.\""
   m_FontSize: 40
   m_TextSpeed: 0.05
+  caseNumber: 1
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: neutral
   m_CharacterSprite2: stressed
   m_CJHandsSprite: 
@@ -29,3 +32,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 0
+  animatedGO: {fileID: 0}

@@ -18,6 +18,9 @@ MonoBehaviour:
     scorching bubble.</i>"
   m_FontSize: 40
   m_TextSpeed: 0.05
+  caseNumber: 1
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: 
   m_CharacterSprite2: angry
   m_CJHandsSprite: 
@@ -28,3 +31,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 2
   m_minigames: 0
+  animatedGO: {fileID: 0}

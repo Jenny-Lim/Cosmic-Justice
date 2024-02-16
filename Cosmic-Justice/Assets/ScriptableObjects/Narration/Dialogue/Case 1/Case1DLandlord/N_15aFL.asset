@@ -17,6 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CI'm not quite sure.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
+  caseNumber: 1
   SoundToPlay: 
   SoundToStop: 
   m_CharacterSprite1: sad
@@ -29,3 +30,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 64
+  animatedGO: {fileID: 0}
