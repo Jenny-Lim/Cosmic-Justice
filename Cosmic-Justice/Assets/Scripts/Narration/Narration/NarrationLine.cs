@@ -98,6 +98,7 @@ public class NarrationLine : ScriptableObject
         Happy = 8
     }
 
+    [Flags]
     public enum Minigames
     {
         None = 0,

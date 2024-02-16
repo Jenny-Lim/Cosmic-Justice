@@ -1947,6 +1947,11 @@ MonoBehaviour:
   nameTag: {fileID: 643182786}
   screenWipe: {fileID: 1318311565}
   animatedGOHolder: {fileID: 702810818}
+  channel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
+  caseStarts:
+  - {fileID: 11400000, guid: 8ceaa0e2b28743a43ae66e65e4aa571a, type: 2}
+  - {fileID: 11400000, guid: 9c92f9cea0839a44aaed689bc99a2b4f, type: 2}
+  - {fileID: 11400000, guid: 1fc45f676dd0a7148a7c497fba39a2cc, type: 2}
   dialogueText: {fileID: 425288106}
   characterName: {fileID: 359141761}
   dialogueBox: {fileID: 1755579119}

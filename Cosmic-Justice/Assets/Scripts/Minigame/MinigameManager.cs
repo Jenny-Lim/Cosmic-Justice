@@ -19,6 +19,11 @@ public class MinigameManager : MonoBehaviour
     [SerializeField]
     private GameObject animatedGOHolder;
 
+    [SerializeField] private DialogueChannel channel;
+
+    [SerializeField] private Dialogue[] caseStarts;
+    int currCase = 0;
+
     //asteroidMinigame, dialMinigame, puzzleMinigame,
 
     //[SerializeField]
@@ -218,13 +223,14 @@ public class MinigameManager : MonoBehaviour
 
     private void NextCase()
     {
+        //hidePanel();
         StartCoroutine("NextCaseCORO");
     }
 
-    private IEnumerator NextCaseCORO() // extremely ugly
+    private IEnumerator NextCaseCORO() // deed it
     {
         EventManager.current.CanDialogue(false);
-        hidePanel(); // also hide + unhide characters
+        hidePanel();
         yield return new WaitForSeconds(1f);
 
         // screenwipe
@@ -234,15 +240,16 @@ public class MinigameManager : MonoBehaviour
         while (!screenWipe.isDone)
             yield return null;
 
+        currCase++;
+        EventManager.current.CanDialogue(true);
+        channel.RaiseRequestDialogueNode(caseStarts[currCase].FirstNode);
+
+        yield return new WaitForSeconds(1f);
+        showPanel();
+
         screenWipe.ToggleWipe(false);
         while (!screenWipe.isDone)
             yield return null;
-
-        // set node -- just set it from the last node
-
-        yield return new WaitForSeconds(1f);
-        EventManager.current.CanDialogue(true);
-        showPanel();
     }
 
 
