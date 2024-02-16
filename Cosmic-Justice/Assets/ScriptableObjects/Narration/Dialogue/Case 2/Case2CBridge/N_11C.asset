@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: N_11C
   m_EditorClassIdentifier: 
   m_DialogueLine: {fileID: 11400000, guid: 4c206db2e5da2a444976ac9c831b9c89, type: 2}
-  isVerdict: 0
+  isVerdict: 1
   m_Choices:
   - m_ChoicePreview: Comply With The Star Czar
     m_ChoiceNode: {fileID: 11400000, guid: d810663d426d0ad478a626f326652e6f, type: 2}
