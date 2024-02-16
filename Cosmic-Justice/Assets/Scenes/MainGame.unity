@@ -676,8 +676,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6502044686855808405, guid: 5e78ea2b2d9f9b046933a2e979103bc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1739085348}
   m_SourcePrefab: {fileID: 100100000, guid: 5e78ea2b2d9f9b046933a2e979103bc0, type: 3}
+--- !u!1 &96250746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6502044686855808405, guid: 5e78ea2b2d9f9b046933a2e979103bc0, type: 3}
+  m_PrefabInstance: {fileID: 96250745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &136299695
 GameObject:
   m_ObjectHideFlags: 0
@@ -9556,6 +9564,18 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3291607224911629867, guid: 5e78ea2b2d9f9b046933a2e979103bc0, type: 3}
   m_PrefabInstance: {fileID: 96250745}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1739085348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96250746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d40e7c723a41f49b41287480c9461c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1755579117
 GameObject:
   m_ObjectHideFlags: 0
@@ -9665,8 +9685,6 @@ MonoBehaviour:
   asteroidMinigame: {fileID: 619057680}
   animatedGO:
   - {fileID: 1060782420819542850, guid: 6880b0625b0c8f649a31a1dcde4d56ad, type: 3}
-  animatedGOTime:
-  - 5
 --- !u!4 &1756292681
 Transform:
   m_ObjectHideFlags: 0
