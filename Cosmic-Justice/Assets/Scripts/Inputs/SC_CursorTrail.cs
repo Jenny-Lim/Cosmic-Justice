@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class SC_CursorTrail : MonoBehaviour
 {
+    public static SC_CursorTrail instance;
+
     public Gradient trailColor;
     public float distanceFromCamera = 5;
     public float startWidth = 0.1f;
@@ -22,6 +24,11 @@ public class SC_CursorTrail : MonoBehaviour
     {
         if (VirtualMouse.instance != null)
             virtualMouse = true;
+
+        if(instance == null)
+        {
+            instance = this;
+        }
 
         if (!virtualMouse)
         {

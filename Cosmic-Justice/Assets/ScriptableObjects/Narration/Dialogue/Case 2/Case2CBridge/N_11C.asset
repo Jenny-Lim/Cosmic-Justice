@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: N_11C
   m_EditorClassIdentifier: 
   m_DialogueLine: {fileID: 11400000, guid: 4c206db2e5da2a444976ac9c831b9c89, type: 2}
-  isVerdict: 0
+  isVerdict: 1
   m_Choices:
-  - m_ChoicePreview: Comply With The Star Czar
-    m_ChoiceNode: {fileID: 11400000, guid: d810663d426d0ad478a626f326652e6f, type: 2}
+  - m_ChoicePreview: Pick Madam Entium's Side
+    m_ChoiceNode: {fileID: 11400000, guid: 6f65f55ce8b8b8c4ba5b597d29ec14a9, type: 2}
     m_ButtonSprite: {fileID: 21300000, guid: b5b7088ef5d221d40a3df15eeeb128fa, type: 3}
     m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
     m_FontColor: {r: 1, g: 1, b: 1, a: 0}
-  - m_ChoicePreview: Pick Madam Entium's Side
-    m_ChoiceNode: {fileID: 11400000, guid: 6f65f55ce8b8b8c4ba5b597d29ec14a9, type: 2}
+  - m_ChoicePreview: Comply With The Star Czar
+    m_ChoiceNode: {fileID: 11400000, guid: d810663d426d0ad478a626f326652e6f, type: 2}
     m_ButtonSprite: {fileID: 21300000, guid: b5b7088ef5d221d40a3df15eeeb128fa, type: 3}
     m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
     m_FontColor: {r: 1, g: 1, b: 1, a: 0}

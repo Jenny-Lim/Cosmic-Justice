@@ -95,9 +95,18 @@ public class SceneLoader : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
 
-        TrailRenderer trail = VirtualMouse.instance.mouseTrail;
-        trail.Clear();
-        trail.enabled = false;
+        if (VirtualMouse.instance != null)
+        {
+            TrailRenderer trail = VirtualMouse.instance.mouseTrail;
+            trail.Clear();
+            trail.enabled = false;
+        }
+        else
+        {
+            TrailRenderer trail = SC_CursorTrail.instance.trail;
+            trail.Clear();
+            trail.enabled = false;
+        }
 
         isPaused = true;
         EventManager.current.CanDialogue(false);
@@ -108,7 +117,10 @@ public class SceneLoader : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
 
-        VirtualMouse.instance.mouseTrail.enabled = false;
+        if (VirtualMouse.instance != null)
+            VirtualMouse.instance.mouseTrail.enabled = true;
+        else
+            SC_CursorTrail.instance.trail.enabled = true;
 
         isPaused = false;
         EventManager.current.CanDialogue(true);
@@ -118,24 +130,30 @@ public class SceneLoader : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        VirtualMouse.instance.mouseTrail.enabled = true;
+        if (VirtualMouse.instance != null)
+            VirtualMouse.instance.mouseTrail.enabled = true;
+        else
+            SC_CursorTrail.instance.trail.enabled = true;
 
         StartLoadLevel(0);
     }
 
     public void LevelOne()
     {
+        CaseSelector.instance.setCase = 1;
         StartLoadLevel(2);
     }
 
     public void LevelTwo()
     {
-        StartLoadLevel(4);
+        CaseSelector.instance.setCase = 2;
+        StartLoadLevel(2);
     }
 
     public void LevelThree()
     {
-        StartLoadLevel(5);
+        CaseSelector.instance.setCase = 3;
+        StartLoadLevel(2);
     }
 
     public void QuitGame()

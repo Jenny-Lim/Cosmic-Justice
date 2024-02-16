@@ -59,6 +59,10 @@ public class AudioManager : MonoBehaviour
     //Plays a sound based on a name
     public void Play(string name)
     {
+
+        if (name == "Nothing" || string.IsNullOrEmpty(name))
+            return;
+
         //Find the sound if it is there
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
@@ -79,6 +83,9 @@ public class AudioManager : MonoBehaviour
     //Stops playing a sound based on a name
     public void Stop(string name)
     {
+        if (name == "Nothing" || string.IsNullOrEmpty(name))
+            return;
+
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
