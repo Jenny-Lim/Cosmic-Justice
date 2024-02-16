@@ -29,6 +29,7 @@ public class SlotChecker : MonoBehaviour
         {
             puzzleComplete = true;
             Debug.Log(puzzleComplete);
+            EventManager.current.EndPuzzle();
         }
 
 

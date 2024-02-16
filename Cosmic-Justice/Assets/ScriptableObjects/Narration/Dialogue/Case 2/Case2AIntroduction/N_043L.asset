@@ -29,5 +29,5 @@ MonoBehaviour:
   m_events: 0
   m_leftCharacterAnimation: 8
   m_rightCharacterAnimation: 1
-  m_minigames: 0
+  m_minigames: 4
   animatedGO: {fileID: 0}
