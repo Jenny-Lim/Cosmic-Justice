@@ -25,6 +25,9 @@ public class InputHandler : MonoBehaviour
 
     [Header("--------Case 2 Debug Dialogues--------")]
     [SerializeField] private Dialogue case2StartDebug;
+    [SerializeField] private Dialogue case2ChoiceDebug;
+    [SerializeField] private Dialogue case2VerdictDebug;
+    [SerializeField] private Dialogue case2MinigameDebug;
 
     [Header("--------Case 3 Debug Dialogues--------")]
     [SerializeField] private Dialogue case3StartDebug;
@@ -106,6 +109,27 @@ public class InputHandler : MonoBehaviour
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case2StartDebug.FirstNode);
+                case2 = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.C))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case2ChoiceDebug.FirstNode);
+                ShowCharacters();
+                case2 = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.V))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case2VerdictDebug.FirstNode);
+                ShowCharacters();
+                case2 = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.G))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case2MinigameDebug.FirstNode);
+                ShowCharacters();
                 case2 = false;
             }
         }

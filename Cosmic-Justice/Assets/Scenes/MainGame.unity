@@ -5364,7 +5364,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: AVOID THE ASTEROIDS!
+  m_text: 'AVOID THE ASTEROIDS!
+
+    Use the arrow keys to fly around.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12302,6 +12304,9 @@ MonoBehaviour:
   case1VerdictDebug: {fileID: 11400000, guid: d7b3878cdc8a2d3448bdd280bc2005ff, type: 2}
   case1MinigameDebug: {fileID: 11400000, guid: b5a95f516cb47c74fa7516298a73d92c, type: 2}
   case2StartDebug: {fileID: 11400000, guid: 9c92f9cea0839a44aaed689bc99a2b4f, type: 2}
+  case2ChoiceDebug: {fileID: 11400000, guid: b830ab7147ead3a40a30723cba2c5abd, type: 2}
+  case2VerdictDebug: {fileID: 11400000, guid: f62902704702ed94ba7cc0450ce87e91, type: 2}
+  case2MinigameDebug: {fileID: 11400000, guid: d7333de48cb6d40489d0dfcfa1403aec, type: 2}
   case3StartDebug: {fileID: 11400000, guid: 1fc45f676dd0a7148a7c497fba39a2cc, type: 2}
 --- !u!1001 &1824382854
 PrefabInstance:
