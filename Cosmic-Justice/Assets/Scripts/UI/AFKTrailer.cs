@@ -46,6 +46,15 @@ public class AFKTrailer : MonoBehaviour
     void Update()
     {
 
+        if (Input.GetKeyUp(KeyCode.T) && !trailerPlaying)
+        {
+            trailerPlaying = true;
+            screen.enabled = true;
+            player.frame = 0;
+            player.Play();
+            currTime = timer + 1;
+        }
+
         if (!Input.anyKey && Input.GetAxis("Mouse X") == 0 && Input.GetAxis("Mouse Y") == 0)
         {
             //Increase time
