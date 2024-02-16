@@ -128,7 +128,7 @@ public class EventManager : MonoBehaviour
     public void NextCase()
     {
         UnityEngine.Debug.Log(AssetDatabase.GetAssetPath(node));
-        currCase = (int)Char.GetNumericValue(AssetDatabase.GetAssetPath(node)[49]);
+        currCase = (int)Char.GetNumericValue(AssetDatabase.GetAssetPath(node)[49]); // based off folder name
         //Assets/ScriptableObjects/Narration/Dialogue/Case x
         nextCase?.Invoke();
     }
