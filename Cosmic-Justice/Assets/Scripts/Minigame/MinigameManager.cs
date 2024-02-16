@@ -13,8 +13,8 @@ public class MinigameManager : MonoBehaviour
     [SerializeField]
     private GameObject nextButton, nameTag;
 
-    [SerializeField]
-    private ScreenWipe screenWipe;
+    //[SerializeField]
+    //private ScreenWipe screenWipe;
 
     [SerializeField]
     private GameObject animatedGOHolder;
@@ -233,10 +233,10 @@ public class MinigameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         // screenwipe
-        //screenWipe.SetFillMethod();
+        //ScreenWipe.instance.SetFillMethod();
 
-        screenWipe.ToggleWipe(true);
-        while (!screenWipe.isDone)
+        ScreenWipe.instance.ToggleWipe(true);
+        while (!ScreenWipe.instance.isDone)
             yield return null;
 
         EventManager.current.currCase++;
@@ -246,8 +246,8 @@ public class MinigameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         showPanel();
 
-        screenWipe.ToggleWipe(false);
-        while (!screenWipe.isDone)
+        ScreenWipe.instance.ToggleWipe(false);
+        while (!ScreenWipe.instance.isDone)
             yield return null;
     }
 
