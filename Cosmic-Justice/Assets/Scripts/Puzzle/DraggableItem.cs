@@ -12,18 +12,22 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public GameObject text;
     public GameObject correctSlot;
     bool disableDrag = false;
+    public bool sendMessageToChecker = false;
+
 
     public void Start()
     {
         text.SetActive(false);
+        
     }
+
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (disableDrag == false)
         {
             parentAfterDrag = transform.parent;
-            Debug.Log(parentAfterDrag);
+            //Debug.Log(parentAfterDrag);
             transform.SetParent(transform.root);
             transform.SetAsLastSibling();
             image.raycastTarget = false;
@@ -43,10 +47,16 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
-        Debug.Log(parentAfterDrag);
+        //Debug.Log(parentAfterDrag);
         if(parentAfterDrag.gameObject == correctSlot)
         {
             disableDrag = true;
+            sendMessageToChecker = true;
+        }
+        else
+        {
+            disableDrag = false;
+            sendMessageToChecker = false;
         }
     }
 
