@@ -22,7 +22,6 @@ public class MinigameManager : MonoBehaviour
     [SerializeField] private DialogueChannel channel;
 
     [SerializeField] private Dialogue[] caseStarts;
-    int currCase = 0;
 
     //asteroidMinigame, dialMinigame, puzzleMinigame,
 
@@ -213,7 +212,7 @@ public class MinigameManager : MonoBehaviour
         Instantiate(GO, animatedGOHolder.transform);
     } // StartAnimation
 
-    private void EndAnimation(GameObject GO)
+    private void EndAnimation()
     {
         foreach (Transform child in animatedGOHolder.transform)
         {
@@ -240,9 +239,9 @@ public class MinigameManager : MonoBehaviour
         while (!screenWipe.isDone)
             yield return null;
 
-        currCase++;
+        EventManager.current.currCase++;
         EventManager.current.CanDialogue(true);
-        channel.RaiseRequestDialogueNode(caseStarts[currCase].FirstNode);
+        channel.RaiseRequestDialogueNode(caseStarts[EventManager.current.currCase-1].FirstNode);
 
         yield return new WaitForSeconds(1f);
         showPanel();

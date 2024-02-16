@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// JENNY LOOK AT THIS
-
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Line")]
 public class NarrationLine : ScriptableObject
 {
@@ -74,8 +72,8 @@ public class NarrationLine : ScriptableObject
     [SerializeField]
     private Minigames m_minigames;
 
-    //[SerializeField]
-    //public GameObject animatedGO;
+    [SerializeField]
+    public GameObject animatedGO;
 
     [Flags]
     public enum Events

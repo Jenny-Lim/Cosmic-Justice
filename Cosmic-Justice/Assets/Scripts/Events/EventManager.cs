@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEditor;
 
 public class EventManager : MonoBehaviour
 {
     //One instance of the class
     public static EventManager current;
-    int currAnimation = 0; // not sure if this actually increments rn
+    //int currAnimation = 0;
+    public int currCase = 1;
 
     private void Awake()
     {
@@ -25,22 +27,22 @@ public class EventManager : MonoBehaviour
     [SerializeField]
     GameObject dialMinigame, puzzleMinigame, asteroidMinigame;
 
-    [SerializeField]
-    GameObject[] animatedGO;
+    //[SerializeField]
+    //GameObject[] animatedGO;
 
     //---------------------- Events --------------------------//
 
     public event Action<GameObject> animationPlay;
     public void AnimationPlay()
     {
-        animationPlay?.Invoke(animatedGO[currAnimation]);
+        animationPlay?.Invoke(node.DialogueLine.animatedGO);
     }
 
-    public event Action<GameObject> animationStop;
+    public event Action animationStop;
     public void AnimationStop()
     {
-        animationStop?.Invoke(animatedGO[currAnimation]);
-        currAnimation++;
+        animationStop?.Invoke();
+        //currAnimation++;
     }
 
     public event Action<DialogueNode> canvasShake;
@@ -125,6 +127,9 @@ public class EventManager : MonoBehaviour
     public event Action nextCase;
     public void NextCase()
     {
+        UnityEngine.Debug.Log(AssetDatabase.GetAssetPath(node));
+        currCase = (int)Char.GetNumericValue(AssetDatabase.GetAssetPath(node)[49]);
+        //Assets/ScriptableObjects/Narration/Dialogue/Case x
         nextCase?.Invoke();
     }
 
