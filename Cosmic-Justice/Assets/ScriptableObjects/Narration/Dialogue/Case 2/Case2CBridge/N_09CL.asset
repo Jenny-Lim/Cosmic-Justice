@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CCzar. You and your agents behaviour is unethical, and the destruction
-    of important evidence and Madame\u2019s testimony means you should also not be
-    without blame.\u201D"
+  m_Text: "\u201CCzar. You and your agent's behaviour is unethical, and the destruction
+    of important evidence means you should also share the blame.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: stressed
   m_CharacterSprite2: stressed
   m_CJHandsSprite: 
@@ -29,3 +30,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 0
+  animatedGO: {fileID: 0}

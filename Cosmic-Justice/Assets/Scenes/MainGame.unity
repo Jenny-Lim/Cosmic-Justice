@@ -1945,7 +1945,6 @@ MonoBehaviour:
   isDone: 0
   nextButton: {fileID: 518898628}
   nameTag: {fileID: 643182786}
-  screenWipe: {fileID: 1318311565}
   animatedGOHolder: {fileID: 702810818}
   channel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   caseStarts:
@@ -7433,17 +7432,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a867e7badf397c45ae6038672c93adc, type: 3}
---- !u!114 &1318311565 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1477457096723522587, guid: fa19a6e6aed60a7419b63b39378ec11d, type: 3}
-  m_PrefabInstance: {fileID: 355501866}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7cc9aaeadf6b844cbb620c153554058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1321168485
 GameObject:
   m_ObjectHideFlags: 0
@@ -9685,11 +9673,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b8fb46cf8d3d94eb6cf946f6157524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currCase: 1
   dialMinigame: {fileID: 1773281793}
   puzzleMinigame: {fileID: 1534452391}
   asteroidMinigame: {fileID: 619057680}
-  animatedGO:
-  - {fileID: 1060782420819542850, guid: 6880b0625b0c8f649a31a1dcde4d56ad, type: 3}
 --- !u!4 &1756292681
 Transform:
   m_ObjectHideFlags: 0
@@ -12170,7 +12157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitTime: 3.5
   dialogueChannel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
-  dialogue: {fileID: 11400000, guid: 8ceaa0e2b28743a43ae66e65e4aa571a, type: 2}
+  case1: {fileID: 11400000, guid: 8ceaa0e2b28743a43ae66e65e4aa571a, type: 2}
+  case2: {fileID: 11400000, guid: 9c92f9cea0839a44aaed689bc99a2b4f, type: 2}
+  case3: {fileID: 11400000, guid: 1fc45f676dd0a7148a7c497fba39a2cc, type: 2}
 --- !u!1 &2128092163
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
-  m_Name: N_027L
+  m_Name: N_045bL
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201CNot so fast Czar. I must be indifferent, thorough and unbiased.
-    It comes to my attention that your assistant may have disposed of some rather
-    major firsthand evidence.\u201D"
+  m_Text: "<i>I need more context from one of them\u2026 but which one?</i>"
   m_FontSize: 40
   m_TextSpeed: 0.01
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: neutral
   m_CharacterSprite2: neutral
   m_CJHandsSprite: 
@@ -29,3 +29,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 0
+  animatedGO: {fileID: 0}
