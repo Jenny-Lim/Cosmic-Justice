@@ -35,7 +35,7 @@ public class EventManager : MonoBehaviour
     public event Action<GameObject> animationPlay;
     public void AnimationPlay()
     {
-        animationPlay?.Invoke(node.DialogueLine.animatedGO);
+        animationPlay?.Invoke(node.DialogueLine.animatedGO); // when its played, the next node is triggered so atm you have to put the GO on the node after as well which is strange
     }
 
     public event Action animationStop;
