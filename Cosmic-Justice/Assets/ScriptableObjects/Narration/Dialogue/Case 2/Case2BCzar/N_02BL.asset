@@ -15,10 +15,12 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: fbc922fd669368a4e87faac4b91bf3f7, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\u201CWell it\u2019s fairly simple your honor. I was making an emergency
-    pit stop with my X3 Patented Star Destoyer in order to make sure that the ion
+    pit stop with my patented Star Destructor in order to make sure that the ion
     blaster was operational.\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: neutral
   m_CharacterSprite2: neutral
   m_CJHandsSprite: 
@@ -29,3 +31,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 0
+  animatedGO: {fileID: 0}
