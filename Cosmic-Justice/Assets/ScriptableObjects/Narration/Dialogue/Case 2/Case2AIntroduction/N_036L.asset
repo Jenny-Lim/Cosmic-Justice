@@ -18,6 +18,9 @@ MonoBehaviour:
     right here!\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
+  caseNumber: 2
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: happy
   m_CharacterSprite2: neutral
   m_CJHandsSprite: 
@@ -28,3 +31,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 8
   m_rightCharacterAnimation: 0
   m_minigames: 0
+  animatedGO: {fileID: 0}

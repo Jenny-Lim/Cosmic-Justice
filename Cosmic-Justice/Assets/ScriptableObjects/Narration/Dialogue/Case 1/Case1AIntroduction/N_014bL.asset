@@ -17,6 +17,9 @@ MonoBehaviour:
   m_Text: "\u201CBWEGH!\u201D <i>The small creature beams defiantly! </i>"
   m_FontSize: 50
   m_TextSpeed: 0.05
+  caseNumber: 1
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: angry
   m_CharacterSprite2: happy
   m_CJHandsSprite: 
@@ -27,3 +30,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 8
   m_minigames: 0
+  animatedGO: {fileID: 0}

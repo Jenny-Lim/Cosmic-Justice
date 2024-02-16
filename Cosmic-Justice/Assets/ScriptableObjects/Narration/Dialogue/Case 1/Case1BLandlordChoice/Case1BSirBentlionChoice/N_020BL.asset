@@ -17,6 +17,9 @@ MonoBehaviour:
   m_Text: "\u201CReta, can you fix him?\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
+  caseNumber: 1
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: 
   m_CharacterSprite2: 
   m_CJHandsSprite: 
@@ -27,3 +30,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 0
+  animatedGO: {fileID: 0}

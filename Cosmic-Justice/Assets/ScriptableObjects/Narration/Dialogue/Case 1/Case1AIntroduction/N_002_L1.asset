@@ -18,6 +18,7 @@ MonoBehaviour:
     distinction between black and white! Right and\u2026 less right!</i>"
   m_FontSize: 40
   m_TextSpeed: 0.05
+  caseNumber: 1
   SoundToPlay: 
   SoundToStop: 
   m_CharacterSprite1: 

@@ -17,6 +17,9 @@ MonoBehaviour:
   m_Text: '"Always an excuse, huh? Fine, let''s make this quick."'
   m_FontSize: 40
   m_TextSpeed: 0.05
+  caseNumber: 1
+  SoundToPlay: 
+  SoundToStop: 
   m_CharacterSprite1: stressed
   m_CharacterSprite2: frozen
   m_CJHandsSprite: 
@@ -27,3 +30,4 @@ MonoBehaviour:
   m_leftCharacterAnimation: 0
   m_rightCharacterAnimation: 0
   m_minigames: 2
+  animatedGO: {fileID: 0}

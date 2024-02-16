@@ -17,6 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CNot so fast, Czar. I must be indifferent, thorough and unbiased!\""
   m_FontSize: 40
   m_TextSpeed: 0.01
+  caseNumber: 2
   SoundToPlay: 
   SoundToStop: 
   m_CharacterSprite1: neutral
