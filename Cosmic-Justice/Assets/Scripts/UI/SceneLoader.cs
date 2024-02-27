@@ -71,6 +71,7 @@ public class SceneLoader : MonoBehaviour
 
     public void PlayGame()
     {
+        CaseSelector.instance.setCase = 1;
         StartLoadLevel(1);
         //SceneManager.LoadScene(2);
     }
