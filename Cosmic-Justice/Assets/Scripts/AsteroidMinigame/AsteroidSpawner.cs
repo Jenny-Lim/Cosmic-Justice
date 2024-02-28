@@ -31,20 +31,26 @@ public class AsteroidSpawner : MonoBehaviour
 
     private void SpawnAsteroid()
     {
+
         //Get position outside of screen
-        float screenW = rectangle.rect.width;
-        float screenH = rectangle.rect.height;
+        float screenW = Screen.width;
+        float screenH = Screen.height;
 
         //Debug.Log(screenW);
 
         for(int i = 0; i < spawnAmount; i++)
         {
             //Get the random position on the edge of a circle
-            Vector3 randomCircle = Random.insideUnitCircle.normalized;
+            //Vector3 randomCircle = Random.insideUnitCircle.normalized;
 
-            //Vector3 spawnDirection = Random.insideUnitCircle.normalized * spawnDistance;
-            Vector3 spawnDirection = new Vector3(randomCircle.x * screenW, randomCircle.y * screenH);
-            Vector3 spawnPoint = this.transform.position + spawnDirection;
+            Vector3 spawnDirection = Random.insideUnitCircle.normalized * spawnDistance;
+            //Vector3 spawnDirection = new Vector3(randomCircle.x * screenW, randomCircle.y * screenH);
+            Vector3 spawnPoint = rectangle.position + spawnDirection;
+
+            spawnPoint.x += screenW / 2;
+            spawnPoint.y += screenH / 2;
+
+            Debug.Log(rectangle.position);
 
             float variance = Random.Range(-this.trajectoryVariance, this.trajectoryVariance);
             Quaternion rotation = Quaternion.AngleAxis(variance, Vector3.forward);

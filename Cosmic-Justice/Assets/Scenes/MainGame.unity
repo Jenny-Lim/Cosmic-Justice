@@ -3186,7 +3186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 5
-  turningSpeed: 0.7
+  turningSpeed: 0.9
   lives: 3
   textMeshProUGUI: {fileID: 2068516886}
   timer: {fileID: 1693861254}
@@ -7720,10 +7720,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21f46bee85b477459e642dcde47d6d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 2
-  spawnAmount: 3
-  spawnDistance: 430
-  trajectoryVariance: 0
+  spawnRate: 3
+  spawnAmount: 4
+  spawnDistance: 550
+  trajectoryVariance: 50
   asteroidPrefab: {fileID: 6253810066946974102, guid: 28640849be4b3694e99938db94dd4cfb, type: 3}
 --- !u!1 &1123798999
 GameObject:
