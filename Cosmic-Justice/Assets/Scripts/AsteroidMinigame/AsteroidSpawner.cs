@@ -50,7 +50,6 @@ public class AsteroidSpawner : MonoBehaviour
             spawnPoint.x += screenW / 2;
             spawnPoint.y += screenH / 2;
 
-            Debug.Log(rectangle.position);
 
             float variance = Random.Range(-this.trajectoryVariance, this.trajectoryVariance);
             Quaternion rotation = Quaternion.AngleAxis(variance, Vector3.forward);
