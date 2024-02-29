@@ -131,6 +131,10 @@ public class MinigameManager : MonoBehaviour
 
         objList.AddRange(deskObjects);
 
+        if (objList.Count>0)
+        {
+            AudioManager.instance.Play("DeskMovementA");
+        }
         foreach (DeskObject obj in objList.ToList())
         {
             yield return new WaitUntil(() => obj.broughtUp);
@@ -158,6 +162,10 @@ public class MinigameManager : MonoBehaviour
 
         objList.AddRange(deskObjects);
 
+        if (objList.Count>0)
+        {
+            AudioManager.instance.Play("DeskMovementA");
+        }
         foreach (DeskObject obj in objList)
         {
             obj.BringDown();

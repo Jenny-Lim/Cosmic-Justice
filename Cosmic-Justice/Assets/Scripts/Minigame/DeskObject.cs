@@ -53,13 +53,13 @@ public class DeskObject : MonoBehaviour
     }
     void OnEnable() 
     {
-        AudioManager.instance.Play("DeskMovementA");
+        //AudioManager.instance.Play("DeskMovementA");
         enabled = true;
     }
 
     public void BringDown()
     {
-        AudioManager.instance.Play("DeskMovementA"); // probably want a different sound
+        //AudioManager.instance.Play("DeskMovementA");
         bringDown = true;
     }
 }

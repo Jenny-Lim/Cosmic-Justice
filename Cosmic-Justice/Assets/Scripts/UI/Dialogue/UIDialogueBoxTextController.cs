@@ -208,6 +208,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     //Handles the ending of the dialogue
     private void OnDialogueNodeEnd(DialogueNode node)
     {
+        CanClickNext(true); // lazy sol
         m_NextNode = null;
         m_ListenToInput = false;
         m_SpeakerText.text = "";
