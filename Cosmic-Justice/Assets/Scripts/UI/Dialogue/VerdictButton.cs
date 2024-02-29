@@ -56,7 +56,8 @@ public class VerdictButton : MonoBehaviour
             child.gameObject.GetComponent<CanvasRenderer>().cull = true;
             child.GetChild(0).gameObject.GetComponent<CanvasRenderer>().cull = true;
         }
-        yield return new WaitForSeconds(10f);
+        //yield return new WaitForSeconds(10f);
+        yield return null;
     } // HideChildren
 
     public void OnButtonPress()
@@ -78,7 +79,14 @@ public class VerdictButton : MonoBehaviour
         StartCoroutine("HideChildren"); // hide them first, destroy later in panel controller
 
         verdictController.GoToNext();
+        StartCoroutine("WaitForDialoguePanel");
         //dialoguePanel.GetComponent<UIDialogueTextBoxController>().canClickToNext = true; // sort of a lazy solution
         Debug.Log("in end verdict");
     } // EndVerdict
+
+    IEnumerator WaitForDialoguePanel() // just in case
+    {
+        yield return new WaitUntil(() => dialoguePanel);
+        dialoguePanel.GetComponent<UIDialogueTextBoxController>().canClickToNext = true;
+    }
 }
