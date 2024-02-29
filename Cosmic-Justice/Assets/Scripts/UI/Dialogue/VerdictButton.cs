@@ -78,7 +78,7 @@ public class VerdictButton : MonoBehaviour
         StartCoroutine("HideChildren"); // hide them first, destroy later in panel controller
 
         verdictController.GoToNext();
-
+        dialoguePanel.GetComponent<UIDialogueTextBoxController>().canClickToNext = true; // sort of a lazy solution
         Debug.Log("in end verdict");
     } // EndVerdict
 }

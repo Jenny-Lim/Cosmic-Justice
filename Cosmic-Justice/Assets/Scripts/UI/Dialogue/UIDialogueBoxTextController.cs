@@ -52,7 +52,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     private bool canGoNext;
 
     //Handles the clicking of the button
-    private bool canClickToNext;
+    public bool canClickToNext; // lazy solution
     private bool click;
 
     [HideInInspector]
