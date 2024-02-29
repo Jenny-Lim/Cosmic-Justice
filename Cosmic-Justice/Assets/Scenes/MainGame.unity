@@ -2713,6 +2713,7 @@ MonoBehaviour:
   nextButton: {fileID: 518898628}
   nameTag: {fileID: 643182786}
   animatedGOHolder: {fileID: 702810818}
+  verdictTransform: {fileID: 2056235907}
   channel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   caseStarts:
   - {fileID: 11400000, guid: 8ceaa0e2b28743a43ae66e65e4aa571a, type: 2}

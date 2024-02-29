@@ -18,6 +18,8 @@ public class MinigameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject animatedGOHolder;
+    [SerializeField]
+    private Transform verdictTransform;
 
     [SerializeField] private DialogueChannel channel;
 
@@ -238,6 +240,11 @@ public class MinigameManager : MonoBehaviour
         ScreenWipe.instance.ToggleWipe(true);
         while (!ScreenWipe.instance.isDone)
             yield return null;
+
+        foreach(Transform child in verdictTransform) // clear verdict panel
+        {
+            Destroy(child.gameObject);
+        }
 
         EventManager.current.currCase++;
         EventManager.current.CanDialogue(true);
