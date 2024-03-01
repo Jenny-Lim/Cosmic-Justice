@@ -41,10 +41,10 @@ public class AsteroidSpawner : MonoBehaviour
         for(int i = 0; i < spawnAmount; i++)
         {
             //Get the random position on the edge of a circle
-            //Vector3 randomCircle = Random.insideUnitCircle.normalized;
+            Vector3 randomCircle = Random.insideUnitCircle.normalized;
 
-            Vector3 spawnDirection = Random.insideUnitCircle.normalized * spawnDistance;
-            //Vector3 spawnDirection = new Vector3(randomCircle.x * screenW, randomCircle.y * screenH);
+            //Vector3 spawnDirection = Random.insideUnitCircle.normalized * spawnDistance;
+            Vector3 spawnDirection = new Vector3(randomCircle.x * screenW/1.5f, randomCircle.y * screenH/1.5f);
             Vector3 spawnPoint = rectangle.position + spawnDirection;
 
             spawnPoint.x += screenW / 2;
