@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class AFKTrailer : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class AFKTrailer : MonoBehaviour
 
     private void Awake()
     {
+
         if (instance == null)
             instance = this;
         else
@@ -36,6 +38,7 @@ public class AFKTrailer : MonoBehaviour
         canvas = GetComponent<Canvas>();
 
         trailerPlaying = false;
+
     }
 
 
@@ -56,7 +59,8 @@ public class AFKTrailer : MonoBehaviour
             //Increase time
             if (currTime < timer)
             {
-                currTime += Time.unscaledDeltaTime;
+                if (SceneManager.GetActiveScene().buildIndex != 2)
+                    currTime += Time.unscaledDeltaTime;
             }
             else if (currTime > timer && !trailerPlaying)
             {

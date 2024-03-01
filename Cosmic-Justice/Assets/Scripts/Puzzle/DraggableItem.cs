@@ -11,19 +11,27 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public Image image;
     public GameObject text;
     public GameObject correctSlot;
+    public Transform PiecesPool;
     bool disableDrag = false;
     public bool sendMessageToChecker = false;
+
+    private bool correctSpot;
 
 
     public void Start()
     {
-        text.SetActive(false);
-        
+        if(text != null)
+            text.SetActive(false);
+
+        correctSpot = false;
     }
 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (correctSpot)
+            return;
+
         if (disableDrag == false)
         {
             parentAfterDrag = transform.parent;
@@ -37,6 +45,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (correctSpot)
+            return;
+
         if (disableDrag == false)
         {
             transform.position = Input.mousePosition + offset;
@@ -45,28 +56,38 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.SetParent(parentAfterDrag);
+        Debug.Log("drop");
+
+        if (correctSpot)
+            return;
+
+        if (parentAfterDrag.tag != "PuzzlePiece")
+            transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
         //Debug.Log(parentAfterDrag);
         if(parentAfterDrag.gameObject == correctSlot)
         {
             disableDrag = true;
             sendMessageToChecker = true;
+            correctSpot = true;
         }
         else
         {
             disableDrag = false;
             sendMessageToChecker = false;
+            transform.SetParent(PiecesPool);
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        text.SetActive(true);
+        if (text != null)
+            text.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        text.SetActive(false);
+        if (text != null)
+            text.SetActive(false);
     }
 }

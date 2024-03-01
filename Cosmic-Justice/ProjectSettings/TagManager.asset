@@ -8,6 +8,7 @@ TagManager:
   - DialoguePanel
   - VerdictPanel
   - SceneLoader
+  - PuzzlePiece
   layers:
   - Default
   - TransparentFX
