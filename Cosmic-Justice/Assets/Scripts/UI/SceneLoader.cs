@@ -194,16 +194,21 @@ public class SceneLoader : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
 
         //Plays music or stops it depending on the level loading
-        if (levelIndex == 0 || levelIndex == 1 || levelIndex == 3)
+        if (levelIndex == 0 || levelIndex == 3)
         {
             AudioManager.instance.Play("MainTheme");
             AudioManager.instance.Stop("Ambient_Track_A");
             AudioManager.instance.Stop("MiniGame_Track_A");
         }
-        else
+        else if(levelIndex == 2)
         {
             AudioManager.instance.Stop("MainTheme");
+            AudioManager.instance.Stop("Verdict");
             AudioManager.instance.Play("Ambient_Track_A");
+        }else if(levelIndex == 1)
+        {
+            AudioManager.instance.Stop("MainTheme");
+            AudioManager.instance.Play("Verdict");
         }
 
         EventManager.current.endGame -= Credits;

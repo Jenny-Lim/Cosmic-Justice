@@ -3061,7 +3061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardSpeed: 5
   turningSpeed: 0.9
-  lives: 3
+  NeedToCollect: 10
   textMeshProUGUI: {fileID: 2068516886}
   timer: {fileID: 1693861254}
 --- !u!114 &422636828
@@ -11284,7 +11284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1693861251
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13914,7 +13914,7 @@ GameObject:
   - component: {fileID: 2068516886}
   - component: {fileID: 2068516888}
   m_Layer: 5
-  m_Name: Lives
+  m_Name: Collected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13936,8 +13936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 92.45001, y: -38.09201}
-  m_SizeDelta: {x: 165.54, y: 39.196}
+  m_AnchoredPosition: {x: 244, y: -76.28}
+  m_SizeDelta: {x: 409.88, y: 79.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2068516886
 MonoBehaviour:
@@ -13959,7 +13959,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lives:
+  m_text: 'Collected:
 
 '
   m_isRightToLeft: 0
@@ -13988,14 +13988,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 94.6
-  m_fontSizeBase: 94.6
+  m_fontSize: 67.78
+  m_fontSizeBase: 67.78
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -14024,7 +14024,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -206.09125, w: 0}
+  m_margin: {x: 0, y: 0, z: 0.13929756, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
