@@ -9417,6 +9417,7 @@ MonoBehaviour:
   - {fileID: 908927168}
   main: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
+  nextbutton: {fileID: 518898628}
   canClickToNext: 0
   currNode: {fileID: 0}
 --- !u!114 &1341420162
