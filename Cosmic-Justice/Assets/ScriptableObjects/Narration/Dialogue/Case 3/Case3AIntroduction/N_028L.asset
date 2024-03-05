@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 08ee94217b6f913419620ad60ab4ac7e, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\u201CThey\u2019re from aaaages ago\u2026 I was a lot smaller back then.
-    And less cute.\u201D She blinks with pleading eyes at CJ.\r\r\r\r\r \r\r\r"
+    And less cute.\u201D <i>She blinks with pleading eyes at CJ.</i>\r\r\r\r\r \r\r\r"
   m_FontSize: 40
   m_TextSpeed: 0.01
   caseNumber: 3

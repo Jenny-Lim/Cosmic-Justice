@@ -14,21 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "But I am a beacon of equality! Would it be fair to give this woman an
-    exemption, even if small?\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r \r\r\r"
+  m_Text: "<i>But I am a beacon of equality! Would it be fair to give this woman
+    an exemption, even if small?</i>\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r \r\r\r"
   m_FontSize: 40
   m_TextSpeed: 0.01
   caseNumber: 3
   SoundToPlay: 
   SoundToStop: 
   m_CharacterSprite1: neutral
-  m_CharacterSprite2: happy
+  m_CharacterSprite2: sad
   m_CJHandsSprite: 
   m_character1: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
   m_character2: {fileID: 11400000, guid: 08ee94217b6f913419620ad60ab4ac7e, type: 2}
   m_hands: {fileID: 0}
   m_events: 0
   m_leftCharacterAnimation: 0
-  m_rightCharacterAnimation: 8
+  m_rightCharacterAnimation: 1
   m_minigames: 0
   animatedGO: {fileID: 0}
