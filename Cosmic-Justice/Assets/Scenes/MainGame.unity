@@ -712,7 +712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2175928483455712307, guid: 5e78ea2b2d9f9b046933a2e979103bc0, type: 3}
       propertyPath: m_Radius
-      value: 1.01
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3257441850041965144, guid: 5e78ea2b2d9f9b046933a2e979103bc0, type: 3}
       propertyPath: m_Damper
