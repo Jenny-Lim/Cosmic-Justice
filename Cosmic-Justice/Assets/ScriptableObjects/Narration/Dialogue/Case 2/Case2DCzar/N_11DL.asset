@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 02d13fca7d61ceb42b741cc4d3fa1ea9, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: '<i>Agent C picks up the Czar and begins running to the teleporter willingly.</i>
+  m_Text: '<i>Agent B picks up the Czar and begins running to the teleporter willingly.</i>
 
 '
   m_FontSize: 40

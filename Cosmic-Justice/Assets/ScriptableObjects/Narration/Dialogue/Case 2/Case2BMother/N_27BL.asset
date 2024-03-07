@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 02d13fca7d61ceb42b741cc4d3fa1ea9, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: <i>Agent C mumbles and twists in discomfort.</i>
+  m_Text: <i>Agent B mumbles and twists in discomfort.</i>
   m_FontSize: 40
   m_TextSpeed: 0.01
   caseNumber: 2
