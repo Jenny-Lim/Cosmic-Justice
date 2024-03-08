@@ -21,7 +21,7 @@ MonoBehaviour:
   caseNumber: 3
   SoundToPlay: 
   SoundToStop: 
-  m_CharacterSprite1: neutral
+  m_CharacterSprite1: sad
   m_CharacterSprite2: sad
   m_CJHandsSprite: 
   m_character1: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}

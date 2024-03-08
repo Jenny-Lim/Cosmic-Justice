@@ -22,7 +22,7 @@ MonoBehaviour:
   SoundToPlay: 
   SoundToStop: 
   m_CharacterSprite1: neutral
-  m_CharacterSprite2: happy
+  m_CharacterSprite2: sad
   m_CJHandsSprite: 
   m_character1: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
   m_character2: {fileID: 11400000, guid: 08ee94217b6f913419620ad60ab4ac7e, type: 2}
