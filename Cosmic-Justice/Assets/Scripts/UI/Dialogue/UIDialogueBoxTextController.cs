@@ -49,6 +49,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     [SerializeField]
     private Hands hands;
 
+    [SerializeField]
+    private GameObject nextbutton;
+
     private bool canGoNext;
 
     //Handles the clicking of the button
@@ -159,11 +162,15 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             if (node is ChoiceDialogueNode)
             {
                 ChoiceDialogueNode N = (ChoiceDialogueNode)node;
-                if (N.isVerdict)
+
+                if (!N.isVerdict)
                 {
-                    AudioManager.instance.Play("Verdict");
-                    AudioManager.instance.Stop("Ambient_Track_A");
+                    nextbutton.SetActive(false);
                 }
+            }
+            else
+            {
+                nextbutton.SetActive(true);
             }
 
             //if (node.DialogueLine.animatedGO != null)

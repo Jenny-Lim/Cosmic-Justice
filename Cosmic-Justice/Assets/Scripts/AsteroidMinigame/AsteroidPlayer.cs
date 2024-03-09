@@ -12,8 +12,10 @@ public class AsteroidPlayer : MonoBehaviour
     [SerializeField]
     private float turningSpeed = 1.0f;
 
+    private int Collected = 0;
+
     [SerializeField]
-    private int lives = 3;
+    private int NeedToCollect = 10;
 
     [SerializeField]
     private TextMeshProUGUI textMeshProUGUI;
@@ -34,9 +36,9 @@ public class AsteroidPlayer : MonoBehaviour
 
     private void OnEnable()
     {
-        lives = 3;
+        Collected = 0;
         transform.localPosition = Vector3.zero;
-        textMeshProUGUI.text = lives.ToString();
+        textMeshProUGUI.text = "Collected: " + Collected.ToString();
     }
 
     // Update is called once per frame
@@ -59,7 +61,8 @@ public class AsteroidPlayer : MonoBehaviour
             turningDir = 0.0f;
         }
 
-        if (timer.GetTime() <= 0) { EventManager.current.EndAsteroid(); }
+        if(timer.isActiveAndEnabled)
+            if (timer.GetTime() <= 0) { EventManager.current.EndAsteroid(); }
     }
 
     private void FixedUpdate()
@@ -82,11 +85,11 @@ public class AsteroidPlayer : MonoBehaviour
     {
         if(collision.tag == "Asteroid")
         {
-            lives--;
-            textMeshProUGUI.text = lives.ToString();
+            Collected++;
+            textMeshProUGUI.text = "Collected: " + Collected.ToString();
             Destroy(collision.gameObject);
 
-            if(lives <= 0)
+            if(Collected >= NeedToCollect)
             {
                 EventManager.current.EndAsteroid();
             }
