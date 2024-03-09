@@ -212,7 +212,7 @@ public class MinigameManager : MonoBehaviour
 
     private void EndMinigame(GameObject minigame)
     {
-        isDone = true;
+        //isDone = true;
         StartCoroutine(StopMinigameAnim(minigame, "MiniGame_Track_A", "Ambient_Track_A"));
     } // EndMinigame
 

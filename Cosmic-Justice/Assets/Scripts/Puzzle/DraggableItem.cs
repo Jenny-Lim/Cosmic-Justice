@@ -8,6 +8,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 {
     private Vector3 offset;
     [HideInInspector] public Transform parentAfterDrag;
+    [SerializeField] Minigame parent;
     public Image image;
     public GameObject text;
     public GameObject correctSlot;
@@ -29,6 +30,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (!parent.GetPlayable())
+        {
+            return;
+        }
         if (correctSpot)
             return;
 
@@ -45,6 +50,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (!parent.GetPlayable())
+        {
+            return;
+        }
         if (correctSpot)
             return;
 
@@ -56,6 +65,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!parent.GetPlayable())
+        {
+            return;
+        }
         Debug.Log("drop");
 
         if (correctSpot)
@@ -81,12 +94,20 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (!parent.GetPlayable())
+        {
+            return;
+        }
         if (text != null)
             text.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (!parent.GetPlayable())
+        {
+            return;
+        }
         if (text != null)
             text.SetActive(false);
     }

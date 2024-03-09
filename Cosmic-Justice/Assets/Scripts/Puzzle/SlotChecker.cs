@@ -6,7 +6,7 @@ public class SlotChecker : MonoBehaviour
 {
 
     public bool puzzleComplete;
-
+    [SerializeField] Minigame parent;
     public GameObject piece1, piece2, piece3, piece4, piece5, piece6, piece7, piece8;
 
     // Start is called before the first frame update
@@ -16,9 +16,14 @@ public class SlotChecker : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if(piece1.GetComponent<DraggableItem>().sendMessageToChecker == true &&
+        if (!parent.GetPlayable())
+        {
+            return;
+        }
+
+        if (piece1.GetComponent<DraggableItem>().sendMessageToChecker == true &&
             piece2.GetComponent<DraggableItem>().sendMessageToChecker == true &&
             piece3.GetComponent<DraggableItem>().sendMessageToChecker == true &&
             piece4.GetComponent<DraggableItem>().sendMessageToChecker == true &&

@@ -1147,6 +1147,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2020727201}
     - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1534452393}
+    - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
       propertyPath: PiecesPool
       value: 
       objectReference: {fileID: 1502903248}
@@ -1286,7 +1290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57217, y: 83124.984}
+  m_AnchoredPosition: {x: 57217, y: 65316}
   m_SizeDelta: {x: 27854.2, y: 13863.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &217120437
@@ -1668,6 +1672,10 @@ PrefabInstance:
       propertyPath: image
       value: 
       objectReference: {fileID: 1038328214}
+    - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1534452393}
     - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
       propertyPath: PiecesPool
       value: 
@@ -2152,6 +2160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleComplete: 0
+  parent: {fileID: 1534452393}
   piece1: {fileID: 148360955}
   piece2: {fileID: 1268215303}
   piece3: {fileID: 2020727198}
@@ -2614,6 +2623,10 @@ PrefabInstance:
       propertyPath: image
       value: 
       objectReference: {fileID: 1219511998}
+    - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1534452393}
     - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
       propertyPath: PiecesPool
       value: 
@@ -6367,6 +6380,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 992515756}
     - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1534452393}
+    - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
       propertyPath: PiecesPool
       value: 
       objectReference: {fileID: 1502903248}
@@ -6531,6 +6548,10 @@ PrefabInstance:
       propertyPath: image
       value: 
       objectReference: {fileID: 148360958}
+    - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1534452393}
     - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
       propertyPath: PiecesPool
       value: 
@@ -8225,6 +8246,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1650469080}
     - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1534452393}
+    - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
       propertyPath: PiecesPool
       value: 
       objectReference: {fileID: 1502903248}
@@ -9800,6 +9825,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1693381680}
     - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1534452393}
+    - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
       propertyPath: PiecesPool
       value: 
       objectReference: {fileID: 1502903248}
@@ -10394,6 +10423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1502903248}
+  - component: {fileID: 1502903249}
   m_Layer: 5
   m_Name: Pieces
   m_TagString: Untagged
@@ -10425,9 +10455,26 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49842, y: 28266.355}
+  m_AnchoredPosition: {x: 49842, y: -45533}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1502903249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502903247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8294e47d75921468a95dc6efe7526b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveUpBy: {x: 0, y: 300, z: 0}
+  totalTime_UP: 2
+  totalTime_DOWN: 2
+  broughtDown: 0
+  broughtUp: 0
 --- !u!1 &1523386444
 GameObject:
   m_ObjectHideFlags: 0
@@ -12373,6 +12420,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1268215306}
     - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1534452393}
+    - target: {fileID: 7393706988480772890, guid: eb2c9cbcea4812c47b3be163dfeb1be9, type: 3}
       propertyPath: PiecesPool
       value: 
       objectReference: {fileID: 1502903248}
@@ -12713,6 +12764,7 @@ GameObject:
   - component: {fileID: 1870840022}
   - component: {fileID: 1870840021}
   - component: {fileID: 1870840020}
+  - component: {fileID: 1870840023}
   m_Layer: 5
   m_Name: Grid
   m_TagString: Untagged
@@ -12744,7 +12796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50187, y: 37517}
+  m_AnchoredPosition: {x: 50187, y: -46150}
   m_SizeDelta: {x: 495.9, y: 501.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870840020
@@ -12809,6 +12861,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870840018}
   m_CullTransparentMesh: 1
+--- !u!114 &1870840023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870840018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8294e47d75921468a95dc6efe7526b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveUpBy: {x: 0, y: 350, z: 0}
+  totalTime_UP: 0
+  totalTime_DOWN: 2
+  broughtDown: 0
+  broughtUp: 0
 --- !u!1 &1910999785 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7344316151570255129, guid: ebb8051bbedf86e45819bcd56cb7abb2, type: 3}
