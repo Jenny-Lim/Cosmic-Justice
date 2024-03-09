@@ -80,11 +80,29 @@ public class ScreenWipe : MonoBehaviour
             image.fillAmount = 1; // Fully blocked initially
         }
     }
-    
+
+    private void SetBtnsInteractable(bool val) // Jenny
+    {
+        Button[] btnList = Object.FindObjectsOfType<Button>();
+        foreach (Button btn in btnList)
+        {
+            btn.interactable = val;
+        }
+
+        // tween
+        OnPointerTween[] tweenList = Object.FindObjectsOfType<OnPointerTween>();
+        foreach (OnPointerTween tween in tweenList)
+        {
+            tween.enabled = val;
+            Debug.Log("tween: " + tween.enabled);
+        }
+        
+    }
 
     public void ToggleWipe(bool blockScreen)
     {
         isDone = false;
+        SetBtnsInteractable(isDone);
         if (blockScreen)
         {
             wipeMode = WipeMode.WipingToBlocked;
@@ -117,6 +135,7 @@ public class ScreenWipe : MonoBehaviour
         if (wipeProgress >= 1f)
         {
             isDone = true;
+            SetBtnsInteractable(isDone);
             wipeMode = WipeMode.Blocked;
         }
     }
@@ -128,6 +147,7 @@ public class ScreenWipe : MonoBehaviour
         if (wipeProgress <= 0)
         {
             isDone = true;
+            SetBtnsInteractable(isDone);
             wipeMode = WipeMode.NotBlocked;
         }
     }
