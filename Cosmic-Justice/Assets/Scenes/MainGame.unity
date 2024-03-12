@@ -4222,7 +4222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 318dde39cdc6e6f4f9169eefb8bd96bc, type: 3}
-  color: {r: 1, g: 1, b: 1, a: 0}
+  color: {r: 1, g: 0, b: 0, a: 0}
+  colorToChange: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &554035956
 GameObject:
   m_ObjectHideFlags: 0
