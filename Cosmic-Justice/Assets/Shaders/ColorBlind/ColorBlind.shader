@@ -58,7 +58,6 @@ Shader "Hidden/ColorBlind"
                 else if(col.b > col.g && col.b > col.r){
                 color = 3; //blue
                 }
-
                 return color;
             } // getColor
 
@@ -66,17 +65,17 @@ Shader "Hidden/ColorBlind"
             {
                 float4 col = tex2D(_MainTex, i.uv);
                 switch(getColor(_colorToChange)){
-                    case(1):
+                    case(1): //red
                         if(col.r > col.g && col.r > col.b){
                             return col * _color;
                         }
                     break;
-                    case(2):
+                    case(2): //green
                         if(col.g > col.r && col.g > col.b){
                             return col * _color;
                         }
                     break;
-                    case(3):
+                    case(3): //blue
                         if(col.b > col.g && col.b > col.r){ // if color is more blue than any other coior
                             return col * _color;
                         }
