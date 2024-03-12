@@ -8,7 +8,7 @@ public class PostEffectsController : MonoBehaviour
     public Shader shader;
     Material mat;
 
-    public Color color;
+    public Color color, colorToChange;
 
     void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
@@ -17,6 +17,7 @@ public class PostEffectsController : MonoBehaviour
         RenderTexture renderTex = RenderTexture.GetTemporary(src.width, src.height, 0, src.format);
 
         mat.SetColor("_color", color);
+        mat.SetColor("_colorToChange", colorToChange);
 
         // alter
         Graphics.Blit(src, renderTex, mat); // apply shader
