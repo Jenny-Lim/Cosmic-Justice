@@ -39,12 +39,14 @@ Shader "Hidden/ColorBlind"
 
             sampler2D _MainTex;
 
+            fixed4 _color;
+
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
                 // just invert the colors
                 //col.rgb = 1 - col.rgb;
-                return col * fixed4(1,1,1,1);
+                return col * _color;
             }
             ENDCG
         }
