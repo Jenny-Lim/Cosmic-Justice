@@ -96,7 +96,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case1StartDebug.FirstNode);
-                ShowCharacters();
+                MinigameManager.current.ResetVerdict();
                 case1 = false; 
             }
             else if (Input.GetKeyDown(KeyCode.C))
@@ -105,6 +105,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case1ChoiceDebug.FirstNode);
+                MinigameManager.current.ResetVerdict();
                 ShowCharacters();
                 case1 = false; 
             }
@@ -114,6 +115,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case1VerdictDebug.FirstNode);
+                //MinigameManager.current.ResetVerdict();
                 ShowCharacters();
                 case1 = false; 
             }
@@ -123,6 +125,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case1MinigameDebug.FirstNode);
+                MinigameManager.current.ResetVerdict();
                 ShowCharacters();
                 case1 = false; 
             }
@@ -132,6 +135,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case1PostMinigameDebug.FirstNode);
+                MinigameManager.current.ResetVerdict();
                 ShowCharacters();
                 case1 = false; 
             }
@@ -144,6 +148,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case2StartDebug.FirstNode);
+                MinigameManager.current.ResetVerdict();
                 case2 = false; 
             }
             else if (Input.GetKeyDown(KeyCode.C))
@@ -152,6 +157,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case2ChoiceDebug.FirstNode);
+                MinigameManager.current.ResetVerdict();
                 ShowCharacters();
                 case2 = false; 
             }
@@ -161,6 +167,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case2VerdictDebug.FirstNode);
+                //MinigameManager.current.ResetVerdict();
                 ShowCharacters();
                 case2 = false; 
             }
@@ -170,6 +177,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case2MinigameDebug.FirstNode);
+                MinigameManager.current.ResetVerdict();
                 ShowCharacters();
                 case2 = false; 
             }
@@ -179,6 +187,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case2PostMinigameDebug.FirstNode);
+                MinigameManager.current.ResetVerdict();
                 ShowCharacters();
                 case2 = false; 
             }
@@ -191,6 +200,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case3StartDebug.FirstNode);
+                MinigameManager.current.ResetVerdict();
                 case3 = false; 
             }
             else if (Input.GetKeyDown(KeyCode.C))
@@ -199,6 +209,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case3ChoiceDebug.FirstNode);
+                MinigameManager.current.ResetVerdict();
                 ShowCharacters();
                 case3 = false; 
             }
@@ -208,6 +219,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case3VerdictDebug.FirstNode);
+                //MinigameManager.current.ResetVerdict(); // maybe just hide it and make sure it empties properly
                 ShowCharacters();
                 case3 = false; 
             }
@@ -217,6 +229,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case3MinigameDebug.FirstNode);
+                MinigameManager.current.ResetVerdict();
                 ShowCharacters();
                 case3 = false; 
             }
@@ -226,6 +239,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case3PostMinigameDebug.FirstNode);
+                MinigameManager.current.ResetVerdict();
                 ShowCharacters();
                 case3 = false; 
             }
