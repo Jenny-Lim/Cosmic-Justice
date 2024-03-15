@@ -19,18 +19,27 @@ public class InputHandler : MonoBehaviour
     [SerializeField] private Image rightCharacter;
 
     [Header("--------Case 1 Debug Dialogues--------")]
+    [SerializeField] private Dialogue case1StartDebug;
     [SerializeField] private Dialogue case1ChoiceDebug;
     [SerializeField] private Dialogue case1VerdictDebug;
     [SerializeField] private Dialogue case1MinigameDebug;
+    [SerializeField] private Dialogue case1PostMinigameDebug;
 
     [Header("--------Case 2 Debug Dialogues--------")]
     [SerializeField] private Dialogue case2StartDebug;
     [SerializeField] private Dialogue case2ChoiceDebug;
     [SerializeField] private Dialogue case2VerdictDebug;
     [SerializeField] private Dialogue case2MinigameDebug;
+    [SerializeField] private Dialogue case2PostMinigameDebug;
 
     [Header("--------Case 3 Debug Dialogues--------")]
     [SerializeField] private Dialogue case3StartDebug;
+    [SerializeField] private Dialogue case3ChoiceDebug;
+    [SerializeField] private Dialogue case3VerdictDebug;
+    [SerializeField] private Dialogue case3MinigameDebug;
+    [SerializeField] private Dialogue case3PostMinigameDebug;
+
+
 
 
 
@@ -103,7 +112,15 @@ public class InputHandler : MonoBehaviour
                 ShowCharacters();
                 case1 = false;
             }
-        }else if (case2)
+            else if (Input.GetKeyDown(KeyCode.P))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case1PostMinigameDebug.FirstNode);
+                ShowCharacters();
+                case1 = false;
+            }
+        } // case1
+        else if (case2)
         {
             if (Input.GetKeyDown(KeyCode.S))
             {
@@ -132,7 +149,14 @@ public class InputHandler : MonoBehaviour
                 ShowCharacters();
                 case2 = false;
             }
-        }
+            else if (Input.GetKeyDown(KeyCode.P))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case2PostMinigameDebug.FirstNode);
+                ShowCharacters();
+                case2 = false;
+            }
+        } // case2
         else if (case3)
         {
             if (Input.GetKeyDown(KeyCode.S))
@@ -141,7 +165,35 @@ public class InputHandler : MonoBehaviour
                 channel.RaiseRequestDialogueNode(case3StartDebug.FirstNode);
                 case3 = false;
             }
-        }
+            else if (Input.GetKeyDown(KeyCode.C))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case3ChoiceDebug.FirstNode);
+                ShowCharacters();
+                case3 = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.V))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case3VerdictDebug.FirstNode);
+                ShowCharacters();
+                case3 = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.G))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case3MinigameDebug.FirstNode);
+                ShowCharacters();
+                case3 = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.P))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case3PostMinigameDebug.FirstNode);
+                ShowCharacters();
+                case3 = false;
+            }
+        } // case3
     }
 
     private void ShowCharacters()
