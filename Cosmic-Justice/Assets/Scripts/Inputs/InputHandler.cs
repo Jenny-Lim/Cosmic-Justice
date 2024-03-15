@@ -91,33 +91,40 @@ public class InputHandler : MonoBehaviour
 
         if (case1)
         {
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                EventManager.current.Debug();
+                channel.RaiseRequestDialogueNode(case1StartDebug.FirstNode);
+                ShowCharacters();
+                case1 = false; // end minigame here
+            }
             if (Input.GetKeyDown(KeyCode.C))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case1ChoiceDebug.FirstNode);
                 ShowCharacters();
-                case1 = false;
+                case1 = false; // end minigame here
             }
             else if (Input.GetKeyDown(KeyCode.V))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case1VerdictDebug.FirstNode);
                 ShowCharacters();
-                case1 = false;
+                case1 = false; // end minigame here
             }
             else if (Input.GetKeyDown(KeyCode.G))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case1MinigameDebug.FirstNode);
                 ShowCharacters();
-                case1 = false;
+                case1 = false; // end minigame here
             }
             else if (Input.GetKeyDown(KeyCode.P))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case1PostMinigameDebug.FirstNode);
                 ShowCharacters();
-                case1 = false;
+                case1 = false; // end minigame here
             }
         } // case1
         else if (case2)
@@ -126,35 +133,35 @@ public class InputHandler : MonoBehaviour
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case2StartDebug.FirstNode);
-                case2 = false;
+                case2 = false; // end minigame here
             }
             else if (Input.GetKeyDown(KeyCode.C))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case2ChoiceDebug.FirstNode);
                 ShowCharacters();
-                case2 = false;
+                case2 = false; // end minigame here
             }
             else if (Input.GetKeyDown(KeyCode.V))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case2VerdictDebug.FirstNode);
                 ShowCharacters();
-                case2 = false;
+                case2 = false; // end minigame here
             }
             else if (Input.GetKeyDown(KeyCode.G))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case2MinigameDebug.FirstNode);
                 ShowCharacters();
-                case2 = false;
+                case2 = false; // end minigame here
             }
             else if (Input.GetKeyDown(KeyCode.P))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case2PostMinigameDebug.FirstNode);
                 ShowCharacters();
-                case2 = false;
+                case2 = false; // end minigame here
             }
         } // case2
         else if (case3)
@@ -163,35 +170,35 @@ public class InputHandler : MonoBehaviour
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case3StartDebug.FirstNode);
-                case3 = false;
+                case3 = false; // end minigame here
             }
             else if (Input.GetKeyDown(KeyCode.C))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case3ChoiceDebug.FirstNode);
                 ShowCharacters();
-                case3 = false;
+                case3 = false; // end minigame here
             }
             else if (Input.GetKeyDown(KeyCode.V))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case3VerdictDebug.FirstNode);
                 ShowCharacters();
-                case3 = false;
+                case3 = false; // end minigame here
             }
             else if (Input.GetKeyDown(KeyCode.G))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case3MinigameDebug.FirstNode);
                 ShowCharacters();
-                case3 = false;
+                case3 = false; // end minigame here
             }
             else if (Input.GetKeyDown(KeyCode.P))
             {
                 EventManager.current.Debug();
                 channel.RaiseRequestDialogueNode(case3PostMinigameDebug.FirstNode);
                 ShowCharacters();
-                case3 = false;
+                case3 = false; // end minigame here
             }
         } // case3
     }
