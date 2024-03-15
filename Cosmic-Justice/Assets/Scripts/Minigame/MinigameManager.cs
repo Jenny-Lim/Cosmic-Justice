@@ -266,6 +266,13 @@ public class MinigameManager : MonoBehaviour
             yield return null;
     }
 
+    public void ResetVerdict()
+    {
+        foreach (Transform child in verdictTransform) // clear verdict panel
+        {
+            Destroy(child.gameObject);
+        }
+    }
 
     // UNUSED
 
