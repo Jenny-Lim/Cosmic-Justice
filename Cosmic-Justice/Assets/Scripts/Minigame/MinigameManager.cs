@@ -212,7 +212,7 @@ public class MinigameManager : MonoBehaviour
 
     private void EndMinigame(GameObject minigame)
     {
-        isDone = true;
+        //isDone = true;
         StartCoroutine(StopMinigameAnim(minigame, "MiniGame_Track_A", "Ambient_Track_A"));
     } // EndMinigame
 
@@ -266,6 +266,13 @@ public class MinigameManager : MonoBehaviour
             yield return null;
     }
 
+    public void ResetVerdict()
+    {
+        foreach (Transform child in verdictTransform) // clear verdict panel
+        {
+            Destroy(child.gameObject);
+        }
+    }
 
     // UNUSED
 

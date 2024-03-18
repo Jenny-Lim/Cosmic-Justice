@@ -9,57 +9,59 @@ public class DeskObject : MonoBehaviour
     [SerializeField] float totalTime_UP, totalTime_DOWN;
     float timePassed, t;
     bool enabled, bringDown;
+    [HideInInspector]
     public bool broughtDown, broughtUp;
 
-    void Start()
+    void Awake()
     {
         startPos = this.transform.position;
-    }
+    } // Awake
 
-    void FixedUpdate()
+    void OnEnable()
     {
-        if (enabled)
-        {
+        StartCoroutine("BringUpCORO");
+    } // OnEnable
+
+    IEnumerator BringUpCORO() 
+    {
+        broughtUp = false;
+
+        timePassed = 0;
+
+        while (timePassed < totalTime_UP) {
             timePassed += Time.deltaTime;
             t = timePassed / totalTime_UP;
 
             // lerp it up
             this.transform.position = Vector3.Lerp(startPos, startPos + moveUpBy, t);
-
-            if (timePassed >= totalTime_UP)
-            {
-                this.transform.position = startPos + moveUpBy;
-                enabled = false;
-                timePassed = 0;
-                broughtUp = true;
-            }
+            yield return null;
         }
-        if (bringDown)
+        this.transform.position = startPos + moveUpBy;
+        broughtUp = true;
+    } // BringUpCORO
+
+    public void BringDown()
+    {
+        StartCoroutine("BringDownCORO");
+    } // BringDown
+
+    IEnumerator BringDownCORO()
+    {
+        broughtDown = false;
+
+        timePassed = 0;
+
+        while (timePassed < totalTime_DOWN)
         {
             timePassed += Time.deltaTime;
             t = timePassed / totalTime_DOWN;
 
             // lerp it down
             this.transform.position = Vector3.Lerp(startPos + moveUpBy, startPos, t);
-
-            if (timePassed >= totalTime_DOWN)
-            {
-                this.transform.position = startPos;
-                bringDown = false;
-                //timePassed = 0; // this gotta stay commented
-                broughtDown = true;
-            }
+            yield return null;
         }
-    }
-    void OnEnable() 
-    {
-        //AudioManager.instance.Play("DeskMovementA");
-        enabled = true;
-    }
 
-    public void BringDown()
-    {
-        //AudioManager.instance.Play("DeskMovementA");
-        bringDown = true;
-    }
+        this.transform.position = startPos;
+        broughtDown = true;
+    } // BringDownCORO
 }

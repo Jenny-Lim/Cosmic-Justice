@@ -59,7 +59,8 @@ public class AFKTrailer : MonoBehaviour
             //Increase time
             if (currTime < timer)
             {
-                if (SceneManager.GetActiveScene().buildIndex != 2)
+                int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+                if (sceneIndex != 2 && sceneIndex != 1)
                     currTime += Time.unscaledDeltaTime;
             }
             else if (currTime > timer && !trailerPlaying)
@@ -72,7 +73,7 @@ public class AFKTrailer : MonoBehaviour
         }
         else
         {
-            if(currTime != 0)
+            if (currTime != 0)
                 currTime = 0;
 
             if (trailerPlaying)

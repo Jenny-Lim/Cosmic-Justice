@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 465d29ffbfe749d48b452cf7f5dfaf16, type: 3}
+  m_Name: N_54B
+  m_EditorClassIdentifier: 
+  m_DialogueLine: {fileID: 11400000, guid: 731a2022d78a2924691874e0e84523a2, type: 2}
+  isVerdict: 1
+  m_Choices:
+  - m_ChoicePreview: 
+    m_ChoiceNode: {fileID: 11400000, guid: 5f15aae9bdc690e4e890a77e931762e7, type: 2}
+    m_ButtonSprite: {fileID: 21300000, guid: 20412936aaf65a34f8ae5bcc18c2e84c, type: 3}
+    m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
+    m_FontColor: {r: 1, g: 1, b: 1, a: 0}
+  - m_ChoicePreview: 
+    m_ChoiceNode: {fileID: 11400000, guid: 5f15aae9bdc690e4e890a77e931762e7, type: 2}
+    m_ButtonSprite: {fileID: 21300000, guid: 20412936aaf65a34f8ae5bcc18c2e84c, type: 3}
+    m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
+    m_FontColor: {r: 1, g: 1, b: 1, a: 0}

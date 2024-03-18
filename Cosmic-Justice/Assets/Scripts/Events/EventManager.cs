@@ -25,7 +25,7 @@ public class EventManager : MonoBehaviour
     }
 
     [SerializeField]
-    GameObject dialMinigame, puzzleMinigame, asteroidMinigame;
+    public GameObject dialMinigame, puzzleMinigame, asteroidMinigame;
 
     //[SerializeField]
     //GameObject[] animatedGO;
@@ -133,6 +133,21 @@ public class EventManager : MonoBehaviour
         //Assets/ScriptableObjects/Narration/Dialogue/Case x
         nextCase?.Invoke();
     }
+
+    public void EndOpenMinigame()
+    {
+        if (dialMinigame.activeInHierarchy)
+        {
+            EndDial();
+        }
+        else if (puzzleMinigame.activeInHierarchy)
+        {
+            EndPuzzle();
+        }
+        else if(asteroidMinigame.activeInHierarchy){
+            EndAsteroid();
+        }
+    } // EndAllMinigames
 
     // -------------------- Minigames -------------------- //
     //asteroid
