@@ -8902,6 +8902,7 @@ MonoBehaviour:
   main: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
   nextbutton: {fileID: 518898628}
+  CharacterTag: {fileID: 643182788}
   canClickToNext: 0
   currNode: {fileID: 0}
 --- !u!114 &1341420162
@@ -10930,7 +10931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1498e6d6a8f394449a5a91b7fa271385, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f17be8e073f98b4fbb32e66ca944de2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

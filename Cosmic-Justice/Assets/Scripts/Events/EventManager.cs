@@ -14,7 +14,22 @@ public class EventManager : MonoBehaviour
 
     private void Awake()
     {
-        current = this;
+
+        if(current == null)
+            current = this;
+        else
+        {
+            if (dialMinigame != null)
+            {
+                current.dialMinigame = this.dialMinigame;
+                current.puzzleMinigame = this.puzzleMinigame;
+                current.asteroidMinigame = this.asteroidMinigame;
+            }
+
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     private DialogueNode node;

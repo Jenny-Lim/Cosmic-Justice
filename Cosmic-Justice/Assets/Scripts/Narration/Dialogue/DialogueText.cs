@@ -19,6 +19,9 @@ public class DialogueText : MonoBehaviour
 
     [SerializeField] private bool instant = true;
 
+
+    private TMP_FontAsset standardizedFont;
+
     private void Awake()
     {
         textMeshProUGUI = GetComponent<TextMeshProUGUI>();
@@ -26,6 +29,8 @@ public class DialogueText : MonoBehaviour
         textOver = true;
         speedText = false;
         canSpeedUp = true;
+
+        standardizedFont = SettingsSaver.instance.standardizedFont;
     }
 
     private void OnEnable()
@@ -126,7 +131,13 @@ public class DialogueText : MonoBehaviour
     {
         speedText = false;
         textMeshProUGUI.text = string.Empty; //Empty the text
-        textMeshProUGUI.font = font;
+
+        if (!SettingsSaver.instance.IsStandardized)
+            textMeshProUGUI.font = font;
+        else
+            textMeshProUGUI.font = standardizedFont;
+
+
         textMeshProUGUI.fontSize = size;
         textMeshProUGUI.color = color;
         text = line;
