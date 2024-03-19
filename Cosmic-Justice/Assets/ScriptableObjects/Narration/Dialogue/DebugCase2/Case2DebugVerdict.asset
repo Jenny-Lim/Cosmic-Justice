@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59349bf22ac25884cbbc11797eea1f7d, type: 3}
   m_Name: Case2DebugVerdict
   m_EditorClassIdentifier: 
-  m_FirstNode: {fileID: 11400000, guid: 90b3ed7f87feaf545bf922a721db95e6, type: 2}
+  m_FirstNode: {fileID: 11400000, guid: 20d20607e08a13b45b5250ea71ebd97f, type: 2}
