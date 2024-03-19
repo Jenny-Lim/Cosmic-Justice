@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 08ee94217b6f913419620ad60ab4ac7e, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\u201CHold on\u2026 one second... I think I picked my tiny form again
-    on accident...\u201D\r"
+    by accident...\u201D\r"
   m_FontSize: 40
   m_TextSpeed: 0.01
   caseNumber: 3

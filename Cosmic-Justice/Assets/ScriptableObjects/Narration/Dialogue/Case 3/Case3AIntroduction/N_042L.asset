@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 08ee94217b6f913419620ad60ab4ac7e, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\u201CSorry for all the noise, your honour\u2026 they don\u2019t know
-    any better\u2026\u201D Pluta sniffles.\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+    any better\u2026\u201D <i>Pluta sniffles.</i>\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
     \r\r\r"
   m_FontSize: 40
   m_TextSpeed: 0.01
