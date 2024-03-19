@@ -10925,21 +10925,21 @@ MonoBehaviour:
   channel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   leftCharacter: {fileID: 1832885798}
   rightCharacter: {fileID: 231371097}
-  case1StartDebug: {fileID: 0}
+  case1StartDebug: {fileID: 11400000, guid: 8ceaa0e2b28743a43ae66e65e4aa571a, type: 2}
   case1ChoiceDebug: {fileID: 11400000, guid: 44d879f3b44d8504583e7078aaa3d3d9, type: 2}
   case1VerdictDebug: {fileID: 11400000, guid: d7b3878cdc8a2d3448bdd280bc2005ff, type: 2}
   case1MinigameDebug: {fileID: 11400000, guid: b5a95f516cb47c74fa7516298a73d92c, type: 2}
-  case1PostMinigameDebug: {fileID: 0}
+  case1PostMinigameDebug: {fileID: 11400000, guid: dd566c49464001f4aaca4025cf997897, type: 2}
   case2StartDebug: {fileID: 11400000, guid: 9c92f9cea0839a44aaed689bc99a2b4f, type: 2}
   case2ChoiceDebug: {fileID: 11400000, guid: b830ab7147ead3a40a30723cba2c5abd, type: 2}
   case2VerdictDebug: {fileID: 11400000, guid: f62902704702ed94ba7cc0450ce87e91, type: 2}
   case2MinigameDebug: {fileID: 11400000, guid: d7333de48cb6d40489d0dfcfa1403aec, type: 2}
-  case2PostMinigameDebug: {fileID: 0}
+  case2PostMinigameDebug: {fileID: 11400000, guid: 9386c38df5b65634cb88b53c455e81b7, type: 2}
   case3StartDebug: {fileID: 11400000, guid: 1fc45f676dd0a7148a7c497fba39a2cc, type: 2}
-  case3ChoiceDebug: {fileID: 0}
-  case3VerdictDebug: {fileID: 0}
-  case3MinigameDebug: {fileID: 0}
-  case3PostMinigameDebug: {fileID: 0}
+  case3ChoiceDebug: {fileID: 11400000, guid: 0bcd1b9ec3722374fa41437c0aa4a603, type: 2}
+  case3VerdictDebug: {fileID: 11400000, guid: 198e654f210dc774e911cc3ec4a8558c, type: 2}
+  case3MinigameDebug: {fileID: 11400000, guid: f23adee0f72957840a02fa758883fece, type: 2}
+  case3PostMinigameDebug: {fileID: 11400000, guid: 7d0459b448680a74f8f948965369d741, type: 2}
 --- !u!1001 &1824382854
 PrefabInstance:
   m_ObjectHideFlags: 0
