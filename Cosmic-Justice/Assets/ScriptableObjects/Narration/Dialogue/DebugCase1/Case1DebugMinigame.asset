@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59349bf22ac25884cbbc11797eea1f7d, type: 3}
   m_Name: Case1DebugMinigame
   m_EditorClassIdentifier: 
-  m_FirstNode: {fileID: 11400000, guid: e5772db25af591a4cb4d1978519d4c81, type: 2}
+  m_FirstNode: {fileID: 11400000, guid: bcaeaebc75562cb42b123efd249417b4, type: 2}
