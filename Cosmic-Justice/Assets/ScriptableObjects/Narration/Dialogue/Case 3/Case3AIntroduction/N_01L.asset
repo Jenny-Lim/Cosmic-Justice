@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201COh my goddddd those three were obnoxious. Those\u2026 five? Do her
-    heads count?\u201D"
+  m_Text: "\u201CSoaring stars in the greater flaming cosmos those three were obnoxious.
+    Those\u2026 five? Do her heads count?\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.01
   caseNumber: 3
