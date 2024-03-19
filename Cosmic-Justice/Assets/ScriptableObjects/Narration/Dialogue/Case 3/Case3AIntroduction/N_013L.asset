@@ -15,13 +15,13 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 08ee94217b6f913419620ad60ab4ac7e, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\u201CHold on\u2026 one second... I think I picked my tiny form again
-    on accident...\u201D\r"
+    by accident...\u201D\r"
   m_FontSize: 40
   m_TextSpeed: 0.01
   caseNumber: 3
   SoundToPlay: 
   SoundToStop: 
-  m_CharacterSprite1: neutral
+  m_CharacterSprite1: stressed
   m_CharacterSprite2: neutral
   m_CJHandsSprite: 
   m_character1: {fileID: 11400000, guid: 1d3212d78d9e8d4469e1da05ae9ebdca, type: 2}
