@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class Asteroid : MonoBehaviour
 {
-    //Holds the different sprites of the asteroids
+    [SerializeField] 
+    private SpriteRenderer spriteRenderer;
+
     [SerializeField]
     private Sprite[] asteroidSprites;
 
@@ -19,7 +21,6 @@ public class Asteroid : MonoBehaviour
     public float maxSize = 2.0f;
     public float size = 1.0f;
 
-    private Image imageSprite;
 
     private Rigidbody2D rgBd;
 
@@ -29,8 +30,7 @@ public class Asteroid : MonoBehaviour
 
     private void Awake()
     {
-        //Get needed components
-        imageSprite = GetComponent<Image>();
+        if(spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
         rgBd = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         rectran = GetComponent<RectTransform>();
@@ -43,7 +43,7 @@ public class Asteroid : MonoBehaviour
 
     private void Start()
     {
-        imageSprite.sprite = asteroidSprites[Random.Range(0, asteroidSprites.Length)];
+        spriteRenderer.sprite = asteroidSprites[Random.Range(0, asteroidSprites.Length)]; 
 
         this.transform.eulerAngles = new Vector3(0f, 0f, Random.value * 360.0f);
         this.transform.localScale = Vector3.one * this.size;
@@ -62,6 +62,4 @@ public class Asteroid : MonoBehaviour
     {
         boxCollider.size = new Vector2(rectran.rect.width, rectran.rect.height);
     }
-
-
 }
