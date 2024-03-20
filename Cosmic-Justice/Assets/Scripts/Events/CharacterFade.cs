@@ -46,6 +46,9 @@ public class CharacterFade : MonoBehaviour
 
     private void OnDestroy()
     {
+        EventManager.current.characterFadeInC1 -= fadeInC1;
+        EventManager.current.characterFadeOutC1 -= fadeOutC1;
+
         EventManager.current.characterFadeInC2 -= fadeInC2;
         EventManager.current.characterFadeOutC2 -= fadeOutC2;
         EventManager.current.canDialogue -= CanSpeedUp;
