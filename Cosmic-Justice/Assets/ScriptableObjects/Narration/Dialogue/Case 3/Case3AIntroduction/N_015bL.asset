@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\"Um.....\"\r\r\r"
+  m_Text: "<i>Do I have the energy to be polite with her?</i> \r\r\r"
   m_FontSize: 40
   m_TextSpeed: 0.01
   caseNumber: 3
