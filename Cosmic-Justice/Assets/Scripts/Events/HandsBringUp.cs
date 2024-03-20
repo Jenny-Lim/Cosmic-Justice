@@ -30,6 +30,12 @@ public class HandsBringUp : MonoBehaviour
         startPos = this.transform.position;
     }
 
+    private void OnDestroy()
+    {
+        EventManager.current.handsFadeIn -= fadeInHands;
+        EventManager.current.handsFadeOut -= fadeOutHands;
+    }
+
     private void CanSpeedUp(bool can)
     {
         canSpeedUp = can;
