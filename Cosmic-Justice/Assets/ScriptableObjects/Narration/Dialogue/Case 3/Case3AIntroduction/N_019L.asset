@@ -15,7 +15,8 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: 08ee94217b6f913419620ad60ab4ac7e, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\r\r\r\u201CMhm! And it\u2019s all right here!\u201D <i>Pluta places a
-    large stack of messy papers on CJ\u2019s desk.</i>\r\r\n"
+    large stack of messy papers on CJ\u2019s desk.</i> \"Also! Don't condescend to
+    me please! I'm thousands of years old.\"\r\r\n"
   m_FontSize: 40
   m_TextSpeed: 0.01
   caseNumber: 3

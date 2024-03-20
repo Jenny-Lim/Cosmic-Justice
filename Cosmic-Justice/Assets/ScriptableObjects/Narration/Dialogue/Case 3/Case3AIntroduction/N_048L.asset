@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 08ee94217b6f913419620ad60ab4ac7e, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "<i>Pluta hugs CJ.</i>\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+  m_Text: "\"R-really? Y-you mean it?\"\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
     \r\r\r"
   m_FontSize: 40
   m_TextSpeed: 0.01

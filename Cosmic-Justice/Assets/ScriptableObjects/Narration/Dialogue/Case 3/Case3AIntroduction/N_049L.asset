@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "\u201COh. Hello there!\u201D <i>CJ\u2019s facade wavers as a single tear
-    drips down their face.</i>\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r \r\r\r"
+  m_Text: "\u201CI do, Pluta! All my colleagues are long gone... and I'm not even
+    sure I enjoy the job anymore...\u201D <i>CJ\u2019s facade wavers as a single
+    tear drips down their face.</i>\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+    \r\r\r"
   m_FontSize: 40
   m_TextSpeed: 0.01
   caseNumber: 3

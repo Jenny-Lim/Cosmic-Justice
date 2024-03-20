@@ -52,6 +52,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     [SerializeField]
     private GameObject nextbutton;
 
+    [SerializeField]
+    private Image CharacterTag;
+
     private bool canGoNext;
 
     //Handles the clicking of the button
@@ -60,6 +63,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     [HideInInspector]
     public DialogueNode currNode;
+
+
+    private TMP_FontAsset standardizedFont;
 
     private void Awake()
     {
@@ -72,10 +78,13 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
         gameObject.SetActive(false);
         m_ChoicesBoxTransform.gameObject.SetActive(false);
+
+        standardizedFont = SettingsSaver.instance.standardizedFont;
     }
 
     private void Start()
     {
+
         EventManager.current.dialogueClick += CanClickNext;
         EventManager.current.nextClick += Click;
     }
@@ -194,7 +203,23 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
                 dialoguePanel.sprite = node.DialogueLine.Speaker.DialoguePanel;
 
             if (node.DialogueLine.Speaker.Font != null)
+            {
+                m_SpeakerText.font = standardizedFont;
+            }
+
+            //Standardized Text
+            if (!SettingsSaver.instance.IsStandardized)
+            {
+                dialoguePanel.color = Color.white;
+                CharacterTag.color = Color.white;
                 m_SpeakerText.font = node.DialogueLine.Speaker.Font;
+            }
+            else
+            {
+                dialoguePanel.color = Color.black;
+                CharacterTag.color = Color.black;
+                m_SpeakerText.font = standardizedFont;
+            }
 
             if (node.DialogueLine.character1 != null || node.DialogueLine.character2 != null || node.DialogueLine.hands != null)
                 EventManager.current.Invoke("SetCharacters", 0);

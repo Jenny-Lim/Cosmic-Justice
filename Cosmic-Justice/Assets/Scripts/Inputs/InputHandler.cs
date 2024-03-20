@@ -219,7 +219,7 @@ public class InputHandler : MonoBehaviour
                 EventManager.current.CanDialogue(true);
                 EventManager.current.EndOpenMinigame();
                 channel.RaiseRequestDialogueNode(case3VerdictDebug.FirstNode);
-                //MinigameManager.current.ResetVerdict(); // maybe just hide it and make sure it empties properly
+                //MinigameManager.current.ResetVerdict(); // maybe just hide it and make sure it empties properly -- thankfully it doesnt matter if i dont reset them here
                 ShowCharacters();
                 case3 = false; 
             }

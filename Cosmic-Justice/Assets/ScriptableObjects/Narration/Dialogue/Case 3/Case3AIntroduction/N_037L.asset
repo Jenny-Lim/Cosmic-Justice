@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
-  m_Text: "<i>I can\u2019t help but agree with her. Her status is legendary. To deny
-    her vindication after such a long time would be\u2026 an affront to justice.</i>\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+  m_Text: "<i>I can\u2019t help but agree with her. She's done everything she can.
+    To deny her vindication after such a long time would be\u2026 an affront to justice.</i>\r\r\r\r\r\r\r\r\r\r\r\r\r\r
     \r\r\r"
   m_FontSize: 40
   m_TextSpeed: 0.01
