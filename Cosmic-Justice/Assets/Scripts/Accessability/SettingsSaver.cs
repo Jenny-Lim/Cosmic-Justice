@@ -98,6 +98,9 @@ public class SettingsSaver : MonoBehaviour
 
     public void SetColorBlind(bool isColorBlind)
     {
+        if(isColorBlind) PlayerPrefs.SetInt("ColorBlind", 1);
+        else PlayerPrefs.SetInt("ColorBlind", 0);
+        IsColorBlind = isColorBlind;
         pec.enabled = isColorBlind;
     }
 
