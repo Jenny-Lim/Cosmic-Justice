@@ -2,21 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using static UnityEditor.PlayerSettings;
+using UnityEngine.EventSystems;
 
-public class ColorSelector : MonoBehaviour
+public class ColorSelector : MonoBehaviour, IPointerDownHandler
 {
-    [SerializeField] GameObject colorWheelObj;
+    [SerializeField] Image button;
+    [SerializeField] Canvas c;
+    GameObject colorWheelObj;
     Texture2D colorWheel;
-    Image thisButton;
     Color selectedColor;
+    RectTransform thisRect;
 
     // Start is called before the first frame update
     public void Start()
     {
+        colorWheelObj = this.gameObject;
         colorWheelObj.SetActive(false);
-        thisButton = gameObject.GetComponent<Image>();
         colorWheel = colorWheelObj.GetComponent<Image>().sprite.texture;
+        thisRect = GetComponent<RectTransform>();
     } // Start
     public void OnClick()
     {
@@ -24,22 +27,15 @@ public class ColorSelector : MonoBehaviour
         colorWheelObj.SetActive(true);
     } // OnClick
 
-    public void OnColorPick()
+    public void OnPointerDown(PointerEventData p)
     {
-        // onmouseclick, save color, change color of button to that color, and hide the color wheel image
-        //selectedColor = colorWheel.GetPixel( (int)( Input.mousePosition.x ), (int)( Input.mousePosition.y ));
+        Vector2 result;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(thisRect, p.position, Camera.main, out result);
+        result += thisRect.sizeDelta / 2;
 
-        RaycastHit hit;
-        Camera _cam = Camera.main; // Camera to use for raycasting
-        Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
-        Physics.Raycast(_cam.transform.position, ray.direction, out hit, 10000.0f);
-
-        if (hit.collider)
-        {
-            selectedColor = colorWheel.GetPixel((int)hit.textureCoord2.x, (int)hit.textureCoord2.y); // Get color from texture
-        }
-
-        thisButton.color = selectedColor;
+        selectedColor = colorWheel.GetPixel((int)result.x, (int)result.y);
+        button.color = selectedColor;
         colorWheelObj.SetActive(false);
-    }
-}
+    } // OnPointerDown
+
+} // ColorSelector
