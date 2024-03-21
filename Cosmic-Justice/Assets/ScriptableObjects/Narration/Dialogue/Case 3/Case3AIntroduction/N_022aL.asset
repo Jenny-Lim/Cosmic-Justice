@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CI\u2019m not tiny! I\u2019ll have you know I\u2019m taking this
     petite form not to destroy your courtroom... which I could totally do if I wanted
-    I guess :/\"\r\r"
+    I guess.\"\r\r"
   m_FontSize: 40
   m_TextSpeed: 0.01
   caseNumber: 3
