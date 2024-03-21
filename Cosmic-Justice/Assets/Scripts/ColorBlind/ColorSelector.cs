@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.EventSystems;
 
 public class ColorSelector : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] Image button;
     [SerializeField] Canvas c;
+    [SerializeField] public TMP_Text text;
     GameObject colorWheelObj;
     Texture2D colorWheel;
     Color selectedColor;
     RectTransform thisRect;
+    [HideInInspector] public int id;
 
     // Start is called before the first frame update
     public void Start()
@@ -35,7 +38,7 @@ public class ColorSelector : MonoBehaviour, IPointerDownHandler
 
         selectedColor = colorWheel.GetPixel((int)result.x, (int)result.y);
         button.color = selectedColor;
-        SettingsSaver.instance.replacingColors[0] = selectedColor;
+        SettingsSaver.instance.replacingColors[id] = selectedColor;
         colorWheelObj.SetActive(false);
     } // OnPointerDown
 
