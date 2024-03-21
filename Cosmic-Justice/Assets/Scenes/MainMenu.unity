@@ -356,7 +356,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardizedFont: {fileID: 11400000, guid: dfe4c55afce771f4f90666a8d132d354, type: 2}
   normalFont: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
+  replacingColors: []
   IsStandardized: 0
+  IsColorBlind: 0
 --- !u!4 &193098628
 Transform:
   m_ObjectHideFlags: 0
@@ -1899,6 +1901,7 @@ GameObject:
   - component: {fileID: 1886666945}
   - component: {fileID: 1886666949}
   - component: {fileID: 1886666950}
+  - component: {fileID: 1886666951}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2088,6 +2091,27 @@ MonoBehaviour:
   trailTime: 0.24
   trailMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   trail: {fileID: 0}
+--- !u!114 &1886666951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886666944}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8993827aa32a1547b7e258b3b473fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 318dde39cdc6e6f4f9169eefb8bd96bc, type: 3}
+  replacingColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1907665330
 GameObject:
   m_ObjectHideFlags: 0

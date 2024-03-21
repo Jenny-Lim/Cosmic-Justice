@@ -8,7 +8,13 @@ public class PostEffectsController : MonoBehaviour
     public Shader shader;
     Material mat;
 
-    public Color color, colorToChange;
+    //public Color[] replacingColors = { Color.white, Color.white, Color.white, Color.white, Color.white, Color.white, Color.white };
+    //private string[] replacingColorStrings = { "_replacingRed", "_replacingGreen", "_replacingBlue", "_replacingYellow", "_replacingOrange", "_replacingPurple", "_replacingCyan"};
+
+    //void OnEnable()
+    //{
+    //    replacingColors = SettingsSaver.instance.replacingColors;
+    //}
 
     void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
@@ -16,8 +22,9 @@ public class PostEffectsController : MonoBehaviour
 
         RenderTexture renderTex = RenderTexture.GetTemporary(src.width, src.height, 0, src.format);
 
-        mat.SetColor("_color", color);
-        mat.SetColor("_colorToChange", colorToChange);
+        //for (int i = 0; i < replacingColors.Length; i++) {
+            mat.SetColorArray("_replacingColors", SettingsSaver.instance.replacingColors);
+        //}
 
         // alter
         Graphics.Blit(src, renderTex, mat); // apply shader

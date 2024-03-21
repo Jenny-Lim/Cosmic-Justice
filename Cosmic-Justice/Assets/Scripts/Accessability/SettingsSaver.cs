@@ -9,10 +9,14 @@ public class SettingsSaver : MonoBehaviour
     public TMP_FontAsset standardizedFont;
     public TMP_FontAsset normalFont;
 
+    public Color[] replacingColors;
+
     public static SettingsSaver instance { get; private set; }
 
     [HideInInspector]
-    public bool IsStandardized;
+    public bool IsStandardized, IsColorBlind;
+
+    PostEffectsController pec;
 
     void Awake()
     {
@@ -26,6 +30,13 @@ public class SettingsSaver : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
+        pec = Camera.main.GetComponent<PostEffectsController>();
+
+        replacingColors = new Color[7];
+        for (int i = 0; i < 7; i++)
+        {
+            replacingColors[i] = Color.white;
+        }
 
         //If the playerprefs does not have a saved setting for standardized text then set it as no
         if (!PlayerPrefs.HasKey("StandardizedText"))
@@ -33,6 +44,13 @@ public class SettingsSaver : MonoBehaviour
             Debug.Log("test");
             PlayerPrefs.SetInt("StandardizedText", 0);
         }
+
+        if (!PlayerPrefs.HasKey("ColorBlind"))
+        {
+            PlayerPrefs.SetInt("ColorBlind", 0);
+        }
+
+        //must go through colors
 
         //Load all playerpref settings
         LoadSettings();
@@ -45,12 +63,6 @@ public class SettingsSaver : MonoBehaviour
         EventManager.current.sceneLoad -= SceneTransitioned;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void SceneTransitioned()
     {
         Debug.Log("transfer");
@@ -59,6 +71,10 @@ public class SettingsSaver : MonoBehaviour
         {
             ChangeFonts(standardizedFont);
         }
+
+        pec = Camera.main.GetComponent<PostEffectsController>();
+        SetColorBlind(IsColorBlind);
+
     }
 
     //Set if the accessibility setting of setting standardized text is on or off
@@ -76,6 +92,13 @@ public class SettingsSaver : MonoBehaviour
             IsStandardized = true;
             ChangeFonts(standardizedFont);
         }
+
+        
+    }
+
+    public void SetColorBlind(bool isColorBlind)
+    {
+        pec.enabled = isColorBlind;
     }
 
     private void ChangeFonts(TMP_FontAsset font)
@@ -102,5 +125,16 @@ public class SettingsSaver : MonoBehaviour
             IsStandardized = true;
             ChangeFonts(standardizedFont);
         }
+
+        int colorBlind = PlayerPrefs.GetInt("ColorBlind");
+        if (colorBlind == 0)
+        {
+            IsColorBlind = false;
+        }
+        else
+        {
+            IsColorBlind = true;
+        }
+        SetColorBlind(IsColorBlind);
     }
 }
