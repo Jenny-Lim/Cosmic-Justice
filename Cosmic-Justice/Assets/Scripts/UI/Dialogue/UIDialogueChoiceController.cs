@@ -39,14 +39,19 @@ public class UIDialogueChoiceController : MonoBehaviour
                 if (!SettingsSaver.instance.IsStandardized)
                 {
                     //If not a verdict button
-                    if(GetComponent<VerdictButton>() == null)
-                        m_Choice.text = value.ChoicePreview;
+                    m_Choice.text = value.ChoicePreview;
                     text.font = m_Font;
                     image.sprite = m_ButtonSprite;
                     text.color = m_FontColor;
 
-                    if (text.color.a == 0)
-                        text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
+                    if (GetComponent<VerdictButton>() == null) { 
+                        if (text.color.a == 0)
+                            text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
+                    }
+                    else
+                    {
+                        text.color = new Color(text.color.r, text.color.g, text.color.b, 0);
+                    }
                 }
                 else
                 {
