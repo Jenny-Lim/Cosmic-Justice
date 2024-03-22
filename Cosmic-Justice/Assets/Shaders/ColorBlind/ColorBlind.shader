@@ -63,7 +63,7 @@ Shader "Hidden/ColorBlind"
 
             const float EPSILON = 0.00001;
             bool isLess(float a, float b) {
-                return abs(b-a) > EPSILON;
+                return abs(a - b) < EPSILON;
             }
 
             float getDistance(float4 a, float4 b){ // returns distance
