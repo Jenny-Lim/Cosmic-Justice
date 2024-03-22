@@ -157,7 +157,8 @@ public class DialogueText : MonoBehaviour
             if(c == '<')
                 richText = true;
 
-            if (c != '\'' && c != ',' && c != '\"' && !richText)
+            if (c != '’' && c != ',' && c != '\"' && !richText && c != '\'' && c != '“' && c != '”')
+)
             {
                 ttsText.text += c;
             }
