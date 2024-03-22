@@ -157,4 +157,9 @@ public class DialogueText : MonoBehaviour
             speedText = true;
         }
     }
+
+    public void SetFontColor(Color r)
+    {
+        textMeshProUGUI.color = r;
+    }
 }

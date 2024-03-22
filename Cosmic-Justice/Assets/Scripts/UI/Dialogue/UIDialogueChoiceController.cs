@@ -24,7 +24,6 @@ public class UIDialogueChoiceController : MonoBehaviour
     {
         set
         {
-            m_Choice.text = value.ChoicePreview;
             m_ChoiceNextNode = value.ChoiceNode;
 
             m_Font = value.Font;
@@ -36,12 +35,33 @@ public class UIDialogueChoiceController : MonoBehaviour
 
             if (m_ButtonSprite != null && m_Font != null)
             {
-                text.font = m_Font;
-                image.sprite = m_ButtonSprite;
-                text.color = m_FontColor;
 
-                if (text.color.a == 0)
-                    text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
+                if (!SettingsSaver.instance.IsStandardized)
+                {
+                    //If not a verdict button
+                    m_Choice.text = value.ChoicePreview;
+                    text.font = m_Font;
+                    image.sprite = m_ButtonSprite;
+                    text.color = m_FontColor;
+
+                    if (GetComponent<VerdictButton>() == null) { 
+                        if (text.color.a == 0)
+                            text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
+                    }
+                    else
+                    {
+                        text.color = new Color(text.color.r, text.color.g, text.color.b, 0);
+                    }
+                }
+                else
+                {
+                    m_Choice.text = value.ChoicePreview;
+                    text.font = SettingsSaver.instance.standardizedFont;
+                    text.color = Color.black;
+
+                    if (text.color.a == 0)
+                        text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
+                }
             }
             else
             {

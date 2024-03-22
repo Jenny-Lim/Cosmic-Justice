@@ -547,6 +547,70 @@ MonoBehaviour:
   m_CallbackOnHighlight:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &429099774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8536536582854409102, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+  m_PrefabInstance: {fileID: 7222405659764993187}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &429099778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429099774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5a6303525c22643a9ca4bbe020c1b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnInteractionStart:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionAbort:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ForceStartHere: 0
+  m_ManualPositionOrder: -1
+  m_ManualPositionParent: {fileID: 0}
+  m_UseTargetForOutline: 0
+  m_PositionOrder: 0
+  m_SecondaryOrder: 0
+  m_Pos: {x: 0, y: 0}
+  m_TextAsAudio: {fileID: 0}
+  m_Prefix: 
+  m_PrefixIsLocalizationKey: 0
+  m_PrefixIsPostFix: 0
+  m_FilterText: 1
+  m_Text: Color Blind Toggle
+  m_NameLabel: {fileID: 0}
+  m_AdditionalNameLabels: []
+  m_TestList: []
+  m_IsLocalizationKey: 0
+  m_TryToReadLabel: 0
+  m_ReferenceElement: {fileID: 0}
+  m_AllowVoiceOver: 1
+  m_ReadType: 1
+  m_WasJustAdded: 1
+  m_Type: 3
+  m_CustomHint: 0
+  m_HintAsAudio: {fileID: 0}
+  m_Hint: 
+  m_HintIsLocalizationKey: 0
+  m_IsInsideScrollView: 0
+  m_IsInitialized: 1
+  m_CallbackOnHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  m_UseCustomOnOff: 0
+  m_CustomOn: Checked
+  m_CustomOff: Not Checked
+  m_CustomHintsAreLocalizationKeys: 0
+  m_CustomOnAudio: {fileID: 0}
+  m_CustomOffAudio: {fileID: 0}
 --- !u!1 &434884610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3345171904568152017, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
@@ -1548,6 +1612,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c373706687267554aa9ccc4d7ee92d1c, type: 3}
+--- !u!1 &1433015003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7357378467427019064, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+  m_PrefabInstance: {fileID: 7222405659764993187}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1433015007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433015003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5a6303525c22643a9ca4bbe020c1b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnInteractionStart:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionAbort:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ForceStartHere: 0
+  m_ManualPositionOrder: -1
+  m_ManualPositionParent: {fileID: 0}
+  m_UseTargetForOutline: 0
+  m_PositionOrder: 0
+  m_SecondaryOrder: 0
+  m_Pos: {x: 0, y: 0}
+  m_TextAsAudio: {fileID: 0}
+  m_Prefix: 
+  m_PrefixIsLocalizationKey: 0
+  m_PrefixIsPostFix: 0
+  m_FilterText: 1
+  m_Text: Standardize Text Toggle
+  m_NameLabel: {fileID: 0}
+  m_AdditionalNameLabels: []
+  m_TestList: []
+  m_IsLocalizationKey: 0
+  m_TryToReadLabel: 0
+  m_ReferenceElement: {fileID: 0}
+  m_AllowVoiceOver: 1
+  m_ReadType: 1
+  m_WasJustAdded: 1
+  m_Type: 3
+  m_CustomHint: 0
+  m_HintAsAudio: {fileID: 0}
+  m_Hint: 
+  m_HintIsLocalizationKey: 0
+  m_IsInsideScrollView: 0
+  m_IsInitialized: 1
+  m_CallbackOnHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  m_UseCustomOnOff: 0
+  m_CustomOn: Checked
+  m_CustomOff: Not Checked
+  m_CustomHintsAreLocalizationKeys: 0
+  m_CustomOnAudio: {fileID: 0}
+  m_CustomOffAudio: {fileID: 0}
 --- !u!1 &1475098235 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8605061013312934746, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
@@ -1572,6 +1700,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11475380, guid: 89f4a0ae7ea3fa84ea56c91291d7bd87, type: 3}
       propertyPath: m_EditorOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475380, guid: 89f4a0ae7ea3fa84ea56c91291d7bd87, type: 3}
+      propertyPath: m_SaveEnabledState
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11475380, guid: 89f4a0ae7ea3fa84ea56c91291d7bd87, type: 3}
@@ -2104,14 +2236,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 318dde39cdc6e6f4f9169eefb8bd96bc, type: 3}
-  replacingColors:
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
+  colors:
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0, g: 1, b: 0.08543229, a: 0}
+  - {r: 0, g: 0.07410216, b: 1, a: 0}
+  - {r: 1, g: 0.89338535, b: 0, a: 0}
+  - {r: 1, g: 0.45360184, b: 0, a: 0}
+  - {r: 0.53631115, g: 0, b: 1, a: 0}
+  - {r: 0, g: 0.9448633, b: 1, a: 0}
 --- !u!1 &1907665330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,19 +3072,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868243224031831130, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 868243224031831130, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 868243224031831130, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 868243224031831130, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1071637263785024678, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3140,7 +3272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3212449948616110280, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -163.5
+      value: -213.5
       objectReference: {fileID: 0}
     - target: {fileID: 3327178437357139238, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: AudioSource
@@ -3366,6 +3498,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1789574062}
+    - target: {fileID: 4892858953766691877, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892858953766691877, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892858953766691877, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892858953766691877, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -70
+      objectReference: {fileID: 0}
     - target: {fileID: 4895842697007674434, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3773,6 +3921,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3948792805731990454, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 829506279}
+    - targetCorrespondingSourceObject: {fileID: 7357378467427019064, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1433015007}
+    - targetCorrespondingSourceObject: {fileID: 8536536582854409102, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 429099778}
     - targetCorrespondingSourceObject: {fileID: 7927204406528054518, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1354091480}

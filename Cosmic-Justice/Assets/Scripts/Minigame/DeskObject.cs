@@ -19,8 +19,22 @@ public class DeskObject : MonoBehaviour
 
     void OnEnable()
     {
-        StartCoroutine("BringUpCORO");
+
+        StartCoroutine(WaitForInput());
+
     } // OnEnable
+
+    IEnumerator WaitForInput()
+    {
+
+        while (MinigameManager.current.WaitForInput)
+        {
+            yield return null;
+        }
+
+        if(!MinigameManager.current.SkipMinigame)
+            StartCoroutine("BringUpCORO"); 
+    }
 
     IEnumerator BringUpCORO() 
     {

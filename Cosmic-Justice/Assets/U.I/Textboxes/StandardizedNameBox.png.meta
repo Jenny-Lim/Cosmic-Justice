@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bfff9528a0eb7da4abcd70f998c3d5ab
+guid: 169c4278068a5d043b5a355909dd0898
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MotherNameBox_0
+      name: StandardizedNameBox_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 40
-        width: 470
+        x: 425
+        y: 200
+        width: 400
         height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72818f899b8043b41a1943874d61ce98
-      internalID: -1050147477
+      spriteID: 80d666f7197c010409599d0a5fba42a7
+      internalID: -591767996
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MotherNameBox_0: -1050147477
+      StandardizedNameBox_0: -591767996
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
