@@ -199,16 +199,20 @@ public class SceneLoader : MonoBehaviour
             AudioManager.instance.Play("MainTheme");
             AudioManager.instance.Stop("Ambient_Track_A");
             AudioManager.instance.Stop("MiniGame_Track_A");
+            AudioManager.instance.Stop("CharacterSpeaking");
         }
         else if(levelIndex == 2)
         {
             AudioManager.instance.Stop("MainTheme");
             AudioManager.instance.Stop("Verdict");
             AudioManager.instance.Play("Ambient_Track_A");
-        }else if(levelIndex == 1)
+            AudioManager.instance.Stop("CharacterSpeaking");
+        }
+        else if(levelIndex == 1)
         {
             AudioManager.instance.Stop("MainTheme");
             AudioManager.instance.Play("Verdict");
+            AudioManager.instance.Stop("CharacterSpeaking");
         }
 
         EventManager.current.endGame -= Credits;

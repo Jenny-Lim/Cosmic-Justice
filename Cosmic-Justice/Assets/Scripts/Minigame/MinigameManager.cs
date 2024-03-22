@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using static NarrationLine;
 
 public class MinigameManager : MonoBehaviour
 {
@@ -34,6 +35,16 @@ public class MinigameManager : MonoBehaviour
     private CanvasRenderer dialogueText, characterName;
     [SerializeField]
     private Image dialogueBox;
+
+
+    [SerializeField]
+    private GameObject MinigameYesOrNo;
+
+    private GameObject minigameToPlay;
+
+    public bool WaitForInput;
+
+    public bool SkipMinigame;
 
     private void Awake()
     {
@@ -203,12 +214,48 @@ public class MinigameManager : MonoBehaviour
 
     private void StartMinigame(GameObject minigame)
     {
+        WaitForInput = true;
+
+        minigameToPlay = null;
+
         hidePanel();
         EventManager.current.CanDialogue(false);
         minigame.SetActive(true); // on enable, animate them going up
 
-        StartCoroutine(StartMinigameAnim(minigame, "MiniGame_Track_A", "Ambient_Track_A"));
+        minigameToPlay = minigame;
+
+        MinigameYesOrNo.SetActive(true);
+
+        //StartCoroutine(StartMinigameAnim(minigame, "MiniGame_Track_A", "Ambient_Track_A"));
     } // StartMinigame
+
+
+    public void YesMinigameButtonClicked()
+    {
+        SkipMinigame = false;
+        StartCoroutine(StartMinigameAnim(minigameToPlay, "MiniGame_Track_A", "Ambient_Track_A"));
+    }
+
+    public void NoMinigameButtonClicked()
+    {
+        SkipMinigame = true;
+
+
+        DeskObject[] deskObjects = minigameToPlay.transform.GetComponentsInChildren<DeskObject>();
+        List<DeskObject> objList = new List<DeskObject>();
+
+        objList.AddRange(deskObjects);
+
+        foreach (DeskObject obj in objList.ToList())
+        {
+            //obj.BringDown();
+            objList.Remove(obj);
+        }
+
+        minigameToPlay.SetActive(false);
+        showPanel();
+        EventManager.current.CanDialogue(true);
+    }
 
     private void EndMinigame(GameObject minigame)
     {
