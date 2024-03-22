@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CharacterName: Madame Entium
   m_DialoguePanel: {fileID: 21300000, guid: dd2c066b97feda441a8305fc19399634, type: 3}
+  m_NameTagPanel: {fileID: -1050147477, guid: bfff9528a0eb7da4abcd70f998c3d5ab, type: 3}
   m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   voice: {fileID: 0}

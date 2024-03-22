@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CharacterName: Landlord Ferrin
   m_DialoguePanel: {fileID: 21300000, guid: b4038a25793f1324e80e08b885159b81, type: 3}
+  m_NameTagPanel: {fileID: 1761454874, guid: 3355d9eaf0a46164c85902286e5332d0, type: 3}
   m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   voice: {fileID: 8300000, guid: 9fb63d515011bfd4ab875ae0f89b43fb, type: 3}

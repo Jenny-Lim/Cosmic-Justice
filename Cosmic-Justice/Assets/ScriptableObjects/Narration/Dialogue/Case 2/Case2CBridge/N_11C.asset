@@ -15,12 +15,12 @@ MonoBehaviour:
   m_DialogueLine: {fileID: 11400000, guid: 4c206db2e5da2a444976ac9c831b9c89, type: 2}
   isVerdict: 1
   m_Choices:
-  - m_ChoicePreview: 
+  - m_ChoicePreview: SIDE WITH ENTIUM
     m_ChoiceNode: {fileID: 11400000, guid: 6f65f55ce8b8b8c4ba5b597d29ec14a9, type: 2}
     m_ButtonSprite: {fileID: 21300000, guid: 4086d93d5ab6d9d41b05f8429fec36a4, type: 3}
     m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
     m_FontColor: {r: 1, g: 1, b: 1, a: 0}
-  - m_ChoicePreview: 
+  - m_ChoicePreview: SIDE WITH THE CZAR
     m_ChoiceNode: {fileID: 11400000, guid: d810663d426d0ad478a626f326652e6f, type: 2}
     m_ButtonSprite: {fileID: 21300000, guid: 1c27f1d2ca861194f81aa031d4968987, type: 3}
     m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CharacterName: Secretary Reta
   m_DialoguePanel: {fileID: 21300000, guid: a7a9a4412977e704096fe4384ae12426, type: 3}
+  m_NameTagPanel: {fileID: -1701098789, guid: 09e5f5a1241dd014ba81746c6141c84f, type: 3}
   m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   voice: {fileID: 8300000, guid: d00be359fdf34f0439249df5bc8d133f, type: 3}

@@ -67,6 +67,15 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     private TMP_FontAsset standardizedFont;
 
+    [SerializeField]
+    private Sprite StandardizedTextBox;
+
+    [SerializeField]
+    private Sprite CharacterNameBox;
+
+    [SerializeField]
+    private Sprite StandardizedNameBox;
+
     private void Awake()
     {
         m_DialogueChannel.OnDialogueNodeStart += OnDialogueNodeStart;
@@ -199,26 +208,35 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
                 }
             }
 
-            if (node.DialogueLine.Speaker.DialoguePanel != null)
-                dialoguePanel.sprite = node.DialogueLine.Speaker.DialoguePanel;
-
-            if (node.DialogueLine.Speaker.Font != null)
+            //If not standardized then don't change sprites else change sprites for name tag and dialogue panel
+            if (!SettingsSaver.instance.IsStandardized)
             {
-                m_SpeakerText.font = standardizedFont;
+                if (node.DialogueLine.Speaker.DialoguePanel != null)
+                    dialoguePanel.sprite = node.DialogueLine.Speaker.DialoguePanel;
+
+                if (node.DialogueLine.Speaker.NamePanel != null)
+                    CharacterTag.sprite = node.DialogueLine.Speaker.NamePanel;
+            }
+            else
+            {
+                dialoguePanel.sprite = StandardizedTextBox;
+                CharacterTag.sprite = StandardizedNameBox;
             }
 
             //Standardized Text
             if (!SettingsSaver.instance.IsStandardized)
             {
-                dialoguePanel.color = Color.white;
-                CharacterTag.color = Color.white;
                 m_SpeakerText.font = node.DialogueLine.Speaker.Font;
+
+                m_SpeakerText.color = Color.white;
+                m_DialogueText.SetFontColor(Color.white);
             }
             else
             {
-                dialoguePanel.color = Color.black;
-                CharacterTag.color = Color.black;
                 m_SpeakerText.font = standardizedFont;
+
+                m_SpeakerText.color = Color.black;
+                m_DialogueText.SetFontColor(Color.black);
             }
 
             if (node.DialogueLine.character1 != null || node.DialogueLine.character2 != null || node.DialogueLine.hands != null)
