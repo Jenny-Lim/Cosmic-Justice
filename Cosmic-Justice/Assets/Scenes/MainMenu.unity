@@ -294,7 +294,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &96741094 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7235167299375540331, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
