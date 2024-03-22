@@ -2104,14 +2104,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 318dde39cdc6e6f4f9169eefb8bd96bc, type: 3}
-  replacingColors:
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
+  colors:
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0, g: 1, b: 0.08543229, a: 0}
+  - {r: 0, g: 0.07410216, b: 1, a: 0}
+  - {r: 1, g: 0.89338535, b: 0, a: 0}
+  - {r: 1, g: 0.45360184, b: 0, a: 0}
+  - {r: 0.53631115, g: 0, b: 1, a: 0}
+  - {r: 0, g: 0.9448633, b: 1, a: 0}
 --- !u!1 &1907665330
 GameObject:
   m_ObjectHideFlags: 0
