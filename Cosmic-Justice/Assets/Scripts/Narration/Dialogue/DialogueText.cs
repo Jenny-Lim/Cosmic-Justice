@@ -22,6 +22,9 @@ public class DialogueText : MonoBehaviour
 
     private TMP_FontAsset standardizedFont;
 
+    [SerializeField]
+    private TextMeshProUGUI ttsText;
+
     private void Awake()
     {
         textMeshProUGUI = GetComponent<TextMeshProUGUI>();
@@ -129,6 +132,8 @@ public class DialogueText : MonoBehaviour
     //Method to start dialogue and set font, size, and speed
     public void startDialogue(string line, float speed, TMP_FontAsset font, float size, Color color, AudioClip voice)
     {
+        ttsText.text = "";
+
         speedText = false;
         textMeshProUGUI.text = string.Empty; //Empty the text
 
@@ -143,6 +148,23 @@ public class DialogueText : MonoBehaviour
         text = line;
         textSpeed = speed;
         AudioManager.instance.PlayCharacterSpeaking(voice);
+
+
+        bool richText = false;
+
+        foreach (char c in line.ToCharArray())
+        {
+            if(c == '<')
+                richText = true;
+
+            if (c != '\'' && c != ',' && c != '\"' && !richText)
+            {
+                ttsText.text += c;
+            }
+
+            if (c == '>' && richText)
+                richText = false;
+        }
        
         //Start typing the dialogue
         StartCoroutine(TypeLine());
