@@ -15,12 +15,12 @@ MonoBehaviour:
   m_DialogueLine: {fileID: 11400000, guid: 1092ce75cbf28614cb2ad73dedf6d8ac, type: 2}
   isVerdict: 1
   m_Choices:
-  - m_ChoicePreview: 
+  - m_ChoicePreview: SIDE WITH THE LANDLORD
     m_ChoiceNode: {fileID: 11400000, guid: cb8646ee5c1b9b04ea638706b1d3fc41, type: 2}
     m_ButtonSprite: {fileID: 21300000, guid: 0fa91dcd0e737ac4ea6c3968f9ed4c10, type: 3}
     m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}
     m_FontColor: {r: 1, g: 1, b: 1, a: 0}
-  - m_ChoicePreview: 
+  - m_ChoicePreview: SIDE WITH THE KNIGHT
     m_ChoiceNode: {fileID: 11400000, guid: 87589b469129906499899945ae3e7543, type: 2}
     m_ButtonSprite: {fileID: 21300000, guid: bffd8d327cf88684a971aaf05056db2c, type: 3}
     m_Font: {fileID: 11400000, guid: 087dc9c2214599349a74d846ca892563, type: 2}

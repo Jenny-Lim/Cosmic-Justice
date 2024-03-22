@@ -24,6 +24,9 @@ public class NarrationCharacter : ScriptableObject
     private Sprite m_DialoguePanel; //The panel image
 
     [SerializeField]
+    private Sprite m_NameTagPanel; //The name tag panel image
+
+    [SerializeField]
     private TMP_FontAsset m_Font;
 
     [SerializeField]
@@ -38,6 +41,8 @@ public class NarrationCharacter : ScriptableObject
     public string CharacterName => m_CharacterName; //A public access for the character name
 
     public Sprite DialoguePanel => m_DialoguePanel; //Public access for the dialogue panel image
+
+    public Sprite NamePanel => m_NameTagPanel; //Public access for the dialogue panel image
 
     public TMP_FontAsset Font => m_Font;
 
