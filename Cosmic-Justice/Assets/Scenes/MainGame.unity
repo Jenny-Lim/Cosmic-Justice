@@ -3196,6 +3196,8 @@ MonoBehaviour:
   characterName: {fileID: 359141761}
   dialogueBox: {fileID: 1755579119}
   MinigameYesOrNo: {fileID: 412293500}
+  WaitForInput: 0
+  SkipMinigame: 0
 --- !u!1 &412293500
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,7 +5430,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 2001
   m_TargetDisplay: 0
 --- !u!224 &647130967
 RectTransform:
