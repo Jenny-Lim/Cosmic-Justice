@@ -144,14 +144,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
             gameObject.SetActive(true);
 
-            //if (node.DialogueLine.isStart)
-            //{
-            //    //gameObject.SetActive(false);
-            //    SplashScreenController.Instance.ShowCase(node.DialogueLine.caseNumber);
-            //    //suspend until click
-            //    StartCoroutine("WaitUntilClick");
-            //}
-
             //Start dialogue with function and give it the line, speed of dialogue, font, text size, and text color
             m_DialogueText.startDialogue(node.DialogueLine.Text, node.DialogueLine.TextSpeed, node.DialogueLine.Speaker.Font, node.DialogueLine.FontSize, node.DialogueLine.Speaker.Color, node.DialogueLine.Speaker.Voice);
             m_SpeakerText.color = node.DialogueLine.Speaker.Color;
@@ -261,12 +253,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
             node.Accept(this);
         }
-    }
-
-    IEnumerator WaitUntilClick()
-    {
-        yield return new WaitUntil(()=>SplashScreenController.Instance.pressed);
-        SplashScreenController.Instance.pressed = false; // reset
     }
 
     //Handles the ending of the dialogue
