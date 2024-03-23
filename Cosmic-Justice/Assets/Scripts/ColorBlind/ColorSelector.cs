@@ -24,11 +24,12 @@ public class ColorSelector : MonoBehaviour, IPointerDownHandler
         colorWheel = colorWheelObj.GetComponent<Image>().sprite.texture;
         thisRect = GetComponent<RectTransform>();
     } // Start
-    public void OnClick()
-    {
-        // bring up color wheel
-        colorWheelObj.SetActive(true);
-    } // OnClick
+
+    //public void OnClick()
+    //{
+    //    // bring up color wheel
+    //    colorWheelObj.SetActive(true);
+    //} // OnClick
 
     public void OnPointerDown(PointerEventData p)
     {
