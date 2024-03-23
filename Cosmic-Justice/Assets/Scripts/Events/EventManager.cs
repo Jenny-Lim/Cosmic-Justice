@@ -10,7 +10,7 @@ public class EventManager : MonoBehaviour
     //One instance of the class
     public static EventManager current;
     //int currAnimation = 0;
-    public int currCase = 1;
+    //public int currCase => CaseSelector.instance.setCase; // NEW SYSTEM
 
     private void Awake()
     {
@@ -144,7 +144,7 @@ public class EventManager : MonoBehaviour
     {
         //UnityEngine.Debug.Log(AssetDatabase.GetAssetPath(node));
         //currCase = (int)Char.GetNumericValue(AssetDatabase.GetAssetPath(node)[49]); // based off folder name
-        currCase = node.DialogueLine.caseNumber;
+        //currCase = node.DialogueLine.caseNumber; -- CHANGED SYSTEM
         //Assets/ScriptableObjects/Narration/Dialogue/Case x
         nextCase?.Invoke();
     }

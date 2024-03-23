@@ -90,8 +90,8 @@ Shader "Hidden/ColorBlind"
                 //return col * _replacingColors[getColor(col)];
                 //return _colors[0];
 
-                //return col * _replacingColors[smallestDistIndex];
-                return _replacingColors[smallestDistIndex];
+                return col * _replacingColors[smallestDistIndex];
+                //return _replacingColors[smallestDistIndex];
             }
             ENDCG
         }
