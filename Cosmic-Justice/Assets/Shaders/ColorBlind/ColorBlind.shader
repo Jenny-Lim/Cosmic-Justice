@@ -39,30 +39,10 @@ Shader "Hidden/ColorBlind"
             }
 
             sampler2D _MainTex;
-
-            // colors player can change
-            //static const float4 _red = (1, 0, 0, 1); // 0
-            //static const float4 _green = (0, 0, 1, 1); // 1
-            //static const float4 _blue = (0, 1, 0, 1); // 2
-            //static const float4 _yellow = (1, 1, 0, 1); // 3
-            //static const float4 _orange = (1, 0.65, 0, 1); // 4
-            //static const float4 _purple = (0.63, 0.13, 0.94, 1); // 5
-            //static const float4 _cyan = (0, 1, 1, 1); // 6
-
-            /*float4 _replacingRed;
-            float4 _replacingGreen;
-            float4 _replacingBlue;
-            float4 _replacingYellow;
-            float4 _replacingOrange;
-            float4 _replacingPurple;
-            float4 _replacingCyan;*/
-
-            //float4 _colors[7] = {_red, _green, _blue, _yellow, _orange, _purple, _cyan};
             float4 _replacingColors[7];
-float4 _colors[7];
-            //static float4 _replacingColors[7] = { _replacingRed, _replacingGreen, _replacingBlue, _replacingYellow, _replacingOrange, _replacingPurple, _replacingCyan };
-
+            float4 _colors[7];
             const float EPSILON = 0.00001;
+
             bool isLess(float a, float b) {
                 return abs(a - b) < EPSILON;
             }
@@ -71,73 +51,46 @@ float4 _colors[7];
                 return sqrt( pow((b.x - a.x),2.0) + pow((b.y - a.y),2.0) + pow((b.z - a.z),2.0) );
             } // getDistance
 
-
-
-
-
-
-
-
             int getColor(float4 col){ // categorizes into one of the color categories
-    
                 float distances[7];
                 int smallestDistIndex = 0;
 
+                [unroll]
                 for (int i = 0; i < 7; i++) {
                     distances[i] = distance(col, _colors[i]);
                     if (isLess(distances[i], distances[smallestDistIndex])) { // if smaller than the smallest
                         smallestDistIndex = i;
                     }
                 }
+
                 return smallestDistIndex;
             } // getColor
 
-
-
-
-
-
-            fixed4 frag (v2f i) : SV_Target // applied to all pixels
+            fixed4 frag (v2f i) : SV_Target // applied to all pixels -- WORKS LIKE THIS NOW 3/22/2024: no fxns lol
             {
                 float4 col = tex2D(_MainTex, i.uv);
     
-    //float distances[7];
-    //int smallestDistIndex = 0;
+                float distances[7];
+                int smallestDistIndex = 0;
 
-    //for (int i = 0; i < 7; i++)
-    //{
-    //    distances[i] = distance(col, _colors[i]);
-    //    if (isLess(distances[i], distances[smallestDistIndex]))
-    //    { // if smaller than the smallest
-    //        smallestDistIndex = i;
-    //    }
-    //}
-    //return smallestDistIndex;
-    
-    
-    
-    //float4 _red = (1.0, 0.0, 0.0, 1.0); // 0
-    //float4 _green = (0,0, 0.0, 1.0, 1.0); // 1
-    //float4 _blue = (0, 1, 0, 1); // 2
-    //float4 _yellow = (1, 1, 0, 1); // 3
-    //float4 _orange = (1, 0.65, 0, 1); // 4
-    //float4 _purple = (0.63, 0.13, 0.94, 1); // 5
-    //float4 _cyan = (0, 1, 1, 1); // 6
-    
-    //float4 _colors[7] = { _red, _green, _blue, _yellow, _orange, _purple, _cyan };
+                [unroll]
+                for (int i = 0; i < 7; i++) // compare pixel to each color & get index of color category
+                {
+                    distances[i] = sqrt(pow((_colors[i].r - col.r), 2.0) + pow((_colors[i].g - col.g), 2.0) + pow((_colors[i].b - col.b), 2.0));
+                    //if (isLess(distances[i], distances[smallestDistIndex]))
+                    if (distances[i] - distances[smallestDistIndex] < EPSILON)
+                    { // if smaller than the smallest
+                        smallestDistIndex = i;
+                    }
+                }
 
-                // compare pixel to each color & get index of color category
                 // change it to the color chosen to change for that category
-                return clamp(col * _replacingColors[getColor(col)], 0.0, 1.0);
-    //return float4(distance(col, 0.0), distance(col, 0.0), distance(col, 0.0), distance(col, 0.0));
-    //int result = getColor(col);
-    //return _colors[0];
-                //return col * float4(1,1,1,1);
-    
-    //return col * _replacingColors[smallestDistIndex];
-    //return col.rgba * _replacingColors[smallestDistIndex].rgba;
-
-}
+                
+                //return clamp(col * _replacingColors[getColor(col)], 0.0, 1.0);
+                //return col * _replacingColors[getColor(col)];
+                //return _colors[0];
+                return col * _replacingColors[smallestDistIndex];
+            }
             ENDCG
         }
     }
