@@ -2244,6 +2244,8 @@ MonoBehaviour:
   - {r: 1, g: 0.45360184, b: 0, a: 0}
   - {r: 0.53631115, g: 0, b: 1, a: 0}
   - {r: 0, g: 0.9448633, b: 1, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &1907665330
 GameObject:
   m_ObjectHideFlags: 0

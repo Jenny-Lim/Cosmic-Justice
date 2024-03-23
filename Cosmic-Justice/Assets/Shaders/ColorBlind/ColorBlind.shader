@@ -39,8 +39,8 @@ Shader "Hidden/ColorBlind"
             }
 
             sampler2D _MainTex;
-            float4 _replacingColors[7];
-            float4 _colors[7];
+            float4 _replacingColors[9];
+            float4 _colors[9];
             const float EPSILON = 0.00001;
 
             bool isLess(float a, float b) {
@@ -52,11 +52,11 @@ Shader "Hidden/ColorBlind"
             } // getDistance
 
             int getColor(float4 col){ // categorizes into one of the color categories
-                float distances[7];
+                float distances[9];
                 int smallestDistIndex = 0;
 
                 [unroll]
-                for (int i = 0; i < 7; i++) {
+                for (int i = 0; i < 9; i++) {
                     distances[i] = distance(col, _colors[i]);
                     if (isLess(distances[i], distances[smallestDistIndex])) { // if smaller than the smallest
                         smallestDistIndex = i;
@@ -70,11 +70,11 @@ Shader "Hidden/ColorBlind"
             {
                 float4 col = tex2D(_MainTex, i.uv);
     
-                float distances[7];
+                float distances[9];
                 int smallestDistIndex = 0;
 
                 [unroll]
-                for (int i = 0; i < 7; i++) // compare pixel to each color & get index of color category
+                for (int i = 0; i < 9; i++) // compare pixel to each color & get index of color category
                 {
                     distances[i] = sqrt(pow((_colors[i].r - col.r), 2.0) + pow((_colors[i].g - col.g), 2.0) + pow((_colors[i].b - col.b), 2.0));
                     //if (isLess(distances[i], distances[smallestDistIndex]))
@@ -89,7 +89,9 @@ Shader "Hidden/ColorBlind"
                 //return clamp(col * _replacingColors[getColor(col)], 0.0, 1.0);
                 //return col * _replacingColors[getColor(col)];
                 //return _colors[0];
-                return col * _replacingColors[smallestDistIndex];
+
+                //return col * _replacingColors[smallestDistIndex];
+                return _replacingColors[smallestDistIndex];
             }
             ENDCG
         }

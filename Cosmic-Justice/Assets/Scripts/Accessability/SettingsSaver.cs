@@ -32,8 +32,8 @@ public class SettingsSaver : MonoBehaviour
 
         pec = Camera.main.GetComponent<PostEffectsController>();
 
-        replacingColors = new Color[7];
-        for (int i = 0; i < 7; i++)
+        replacingColors = new Color[9];
+        for (int i = 0; i < 9; i++)
         {
             replacingColors[i] = Color.white;
         }
