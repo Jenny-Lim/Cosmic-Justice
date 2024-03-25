@@ -159,7 +159,14 @@ public class DialogueText : MonoBehaviour
 
             if (c != '’' && c != ',' && c != '\"' && !richText && c != '\'' && c != '“' && c != '”')
             {
-                ttsText.text += c;
+                if(c == '…')
+                {
+                    ttsText.text += " dot dot dot ";
+                }
+                else
+                {
+                    ttsText.text += c;
+                }
             }
 
             if (c == '>' && richText)

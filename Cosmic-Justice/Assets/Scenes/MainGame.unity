@@ -4281,7 +4281,7 @@ GameObject:
   - component: {fileID: 518898636}
   m_Layer: 5
   m_Name: Skip/NextButton
-  m_TagString: Untagged
+  m_TagString: NoStandardize
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13180,7 +13180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b8fb46cf8d3d94eb6cf946f6157524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currCase: 1
   dialMinigame: {fileID: 1773281793}
   puzzleMinigame: {fileID: 1534452391}
   asteroidMinigame: {fileID: 619057680}

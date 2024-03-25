@@ -7,6 +7,8 @@ public class StandardiTextToggle : MonoBehaviour
 {
     private Toggle toggle;
 
+    [SerializeField] private GameObject DarkMode;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,8 @@ public class StandardiTextToggle : MonoBehaviour
         toggle = GetComponent<Toggle>();
 
         toggle.isOn = SettingsSaver.instance.IsStandardized;
+
+        DarkMode.SetActive(toggle.isOn);
 
     }
 
@@ -24,5 +28,7 @@ public class StandardiTextToggle : MonoBehaviour
             SettingsSaver.instance.SetStandardizedText(1);
         else
             SettingsSaver.instance.SetStandardizedText(0);
+
+        DarkMode.SetActive(toggle.isOn);
     }
 }

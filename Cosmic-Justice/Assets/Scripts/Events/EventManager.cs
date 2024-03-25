@@ -255,4 +255,10 @@ public class EventManager : MonoBehaviour
     {
         sceneLoad?.Invoke();
     }
+
+    public event Action sceneWipe;
+    public void SceneWipe()
+    {
+        sceneWipe?.Invoke();
+    }
 }

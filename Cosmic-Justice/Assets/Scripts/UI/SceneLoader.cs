@@ -223,6 +223,8 @@ public class SceneLoader : MonoBehaviour
             yield return null;
 
         transitioning = false;
+
+        EventManager.current.SceneLoaded();
     }
 
 
@@ -244,8 +246,6 @@ public class SceneLoader : MonoBehaviour
         // Now trigger the wipe effect to end
         screenWipe.ToggleWipe(false);
         print("wiping in.");
-
-        EventManager.current.SceneLoaded();
 
         EventManager.current.endGame += Credits;
     }

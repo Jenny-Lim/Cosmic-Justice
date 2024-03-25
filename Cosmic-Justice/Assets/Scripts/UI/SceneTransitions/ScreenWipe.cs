@@ -134,6 +134,7 @@ public class ScreenWipe : MonoBehaviour
         image.fillAmount = wipeProgress;
         if (wipeProgress >= 1f)
         {
+            EventManager.current.SceneWipe();
             isDone = true;
             SetBtnsInteractable(isDone);
             wipeMode = WipeMode.Blocked;

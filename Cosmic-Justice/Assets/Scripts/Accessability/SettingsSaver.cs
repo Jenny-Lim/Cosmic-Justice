@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SettingsSaver : MonoBehaviour
 {
@@ -13,10 +14,19 @@ public class SettingsSaver : MonoBehaviour
 
     public static SettingsSaver instance { get; private set; }
 
+
+    //Identifiers for scripts to know if accessability is on
     [HideInInspector]
-    public bool IsStandardized, IsColorBlind;
+    public bool IsStandardized, IsDarkModeText, IsColorBlind;
+
+    //The panel for standardized buttons
+    public Sprite StandardPanel;
 
     PostEffectsController pec;
+
+    //A list of the button sprites before they are changed from standization
+    private List<ButtonDefaults> buttonDefaultSprites = new List<ButtonDefaults>();
+    private List<TextMeshProUGUI> buttonTexts = new List<TextMeshProUGUI>();
 
     void Awake()
     {
@@ -52,28 +62,78 @@ public class SettingsSaver : MonoBehaviour
 
         //must go through colors
 
+        GetButtonDefaults();
+
         //Load all playerpref settings
         LoadSettings();
 
         EventManager.current.sceneLoad += SceneTransitioned;
+        EventManager.current.sceneWipe += ResetStandardize;
     }
 
     private void OnDestroy()
     {
         EventManager.current.sceneLoad -= SceneTransitioned;
+        EventManager.current.sceneWipe -= ResetStandardize;
+        ResetStandardize();
+    }
+
+    struct ButtonDefaults
+    {
+        public Button button;
+        public Sprite sprite;
+
+        public ButtonDefaults(Button b, Sprite s)
+        {
+            button = b;
+            sprite = s;
+        }
     }
 
     private void SceneTransitioned()
     {
-        Debug.Log("transfer");
+
+        GetButtonDefaults();
+
         //Handles changing all texts into standardized texts
         if (IsStandardized)
         {
-            ChangeFonts(standardizedFont);
+            StandardizeFonts(standardizedFont);
+            DarkMode();
         }
 
         pec = Camera.main.GetComponent<PostEffectsController>();
         SetColorBlind(IsColorBlind);
+
+    }
+
+
+    // ------------------------------------------------------ //
+    // -------------------Standardize Font------------------- //
+    // ------------------------------------------------------ //
+
+    private void GetButtonDefaults()
+    {
+        buttonDefaultSprites.Clear();
+        buttonTexts.Clear();
+
+        Button[] buttons = Resources.FindObjectsOfTypeAll<Button>();
+
+        foreach (Button button in buttons)
+        {
+            if (button.tag != "NoStandardize")
+            {
+                if(button != null) 
+                    if ( button.image != null)
+                        buttonDefaultSprites.Add(new ButtonDefaults(button, button.image.sprite));
+
+                TextMeshProUGUI text = button.GetComponentInChildren<TextMeshProUGUI>();
+
+                if (text != null)
+                    buttonTexts.Add(text);
+            }
+            
+        }
 
     }
 
@@ -85,16 +145,120 @@ public class SettingsSaver : MonoBehaviour
         if (set == 0)
         {
             IsStandardized = false;
-            ChangeFonts(normalFont);
+            StandardizeFonts(normalFont);
         }
         else
         {
             IsStandardized = true;
-            ChangeFonts(standardizedFont);
+            StandardizeFonts(standardizedFont);
+            DarkMode();
+        }
+    }
+
+    //Set if the accessibility setting of setting standardized text is on or off
+    public void SetDarkModeText(int set)
+    {
+        PlayerPrefs.SetInt("DarkModeText", set);
+
+        if (set == 0)
+        {
+            IsDarkModeText = false;
+            DarkMode();
+        }
+        else
+        {
+            IsDarkModeText = true;
+            DarkMode();
+        }
+    }
+
+    //Changes fonts and buttons of scenes on load
+    private void StandardizeFonts(TMP_FontAsset font)
+    {
+        TextMeshProUGUI[] texts = Resources.FindObjectsOfTypeAll<TextMeshProUGUI>();
+
+        Button[] buttons = Resources.FindObjectsOfTypeAll<Button>();
+
+        foreach (TextMeshProUGUI text in texts)
+        {
+            text.font = font;
         }
 
+
+        foreach (Button button in buttons)
+        {
+            if(button.tag != "NoStandardize")
+                if(button.image != null)
+                    button.image.sprite = StandardPanel;
+        }
         
+        if (font == normalFont)
+            ResetStandardize();
     }
+
+    //Changes fonts and buttons of scenes on load
+    private void DarkMode()
+    {
+        if (!IsStandardized)
+            return;
+
+        Button[] buttons = Resources.FindObjectsOfTypeAll<Button>();
+
+        foreach (Button button in buttons)
+        {
+            if (button.tag != "NoStandardize")
+            {
+                if (IsDarkModeText)
+                    if(button.image != null)
+                        button.image.color = Color.black;
+                else
+                    if (button.image != null)
+                        button.image.color = Color.white;
+            }
+        }
+
+        for(int i = 0; i < buttonTexts.Count; i++)
+        {
+            if (buttonTexts[i] != null)
+            {
+
+                if (IsDarkModeText)
+                {
+                    buttonTexts[i].color = Color.white;
+                    buttonTexts[i].text = buttonTexts[i].text;
+                }
+                else
+                {
+                    buttonTexts[i].color = Color.black;
+                    buttonTexts[i].text = buttonTexts[i].text;
+                }
+            }
+        }
+
+    }
+
+    private void ResetStandardize()
+    {
+
+        foreach(ButtonDefaults buttonDefaults in buttonDefaultSprites)
+        {
+            if(buttonDefaults.button != null)
+                if (buttonDefaults.button.image != null)
+                    buttonDefaults.button.image.sprite = buttonDefaults.sprite;
+        }
+
+        for (int i = 0; i < buttonTexts.Count; i++)
+        {
+            if (buttonTexts[i] != null)
+            {
+                 buttonTexts[i].color = Color.white;
+            }
+        }
+    }
+
+        // ------------------------------------------------------ //
+        // -------------------Color Blind Mode------------------- //
+        // ------------------------------------------------------ //
 
     public void SetColorBlind(bool isColorBlind)
     {
@@ -104,15 +268,9 @@ public class SettingsSaver : MonoBehaviour
         pec.enabled = isColorBlind;
     }
 
-    private void ChangeFonts(TMP_FontAsset font)
-    {
-        TextMeshProUGUI[] texts = Resources.FindObjectsOfTypeAll<TextMeshProUGUI>();
-
-        foreach (TextMeshProUGUI text in texts)
-        {
-            text.font = font;
-        }
-    }
+    // ------------------------------------------------------ //
+    // -------------------Load Settings---------------------- //
+    // ------------------------------------------------------ //
 
     private void LoadSettings()
     {
@@ -121,12 +279,25 @@ public class SettingsSaver : MonoBehaviour
         if (standardize == 0)
         {
             IsStandardized = false;
-            ChangeFonts(normalFont);
+            StandardizeFonts(normalFont);
         }
         else
         {
             IsStandardized = true;
-            ChangeFonts(standardizedFont);
+            StandardizeFonts(standardizedFont);
+        }
+
+        int darkMode = PlayerPrefs.GetInt("DarkModeText");
+
+        if (darkMode == 0)
+        {
+            IsDarkModeText = false;
+            DarkMode();
+        }
+        else
+        {
+            IsDarkModeText = true;
+            DarkMode();
         }
 
         int colorBlind = PlayerPrefs.GetInt("ColorBlind");

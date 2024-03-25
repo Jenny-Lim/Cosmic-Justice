@@ -59,14 +59,15 @@ public class SkipMinigame : MonoBehaviour
 
     private void YesClicked()
     {
-        MinigameManager.current.YesMinigameButtonClicked();
+        MinigameManager.current.NoMinigameButtonClicked();
         gameObject.SetActive(false);
         MinigameManager.current.WaitForInput = false;
     }
 
     private void NoClicked()
     {
-        MinigameManager.current.NoMinigameButtonClicked();
+
+        MinigameManager.current.YesMinigameButtonClicked();
         gameObject.SetActive(false);
         MinigameManager.current.WaitForInput = false;
     }
