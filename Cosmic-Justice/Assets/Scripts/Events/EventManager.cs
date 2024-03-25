@@ -261,4 +261,17 @@ public class EventManager : MonoBehaviour
     {
         sceneWipe?.Invoke();
     }
+
+
+    public event Action standardizeTextChanged;
+    public void StandardizeTextChanged()
+    {
+        standardizeTextChanged?.Invoke();
+    }
+
+    public event Action darkModeChanged;
+    public void DarkModeChanged()
+    {
+        darkModeChanged?.Invoke();
+    }
 }

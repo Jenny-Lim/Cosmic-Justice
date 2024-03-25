@@ -153,6 +153,8 @@ public class SettingsSaver : MonoBehaviour
             StandardizeFonts(standardizedFont);
             DarkMode();
         }
+
+        EventManager.current.StandardizeTextChanged();
     }
 
     //Set if the accessibility setting of setting standardized text is on or off
@@ -170,6 +172,8 @@ public class SettingsSaver : MonoBehaviour
             IsDarkModeText = true;
             DarkMode();
         }
+
+        EventManager.current.DarkModeChanged();
     }
 
     //Changes fonts and buttons of scenes on load
@@ -208,12 +212,13 @@ public class SettingsSaver : MonoBehaviour
         {
             if (button.tag != "NoStandardize")
             {
-                if (IsDarkModeText)
-                    if(button.image != null)
+                if (button.image != null)
+                {
+                    if (IsDarkModeText)
                         button.image.color = Color.black;
-                else
-                    if (button.image != null)
+                    else
                         button.image.color = Color.white;
+                }
             }
         }
 
@@ -225,12 +230,12 @@ public class SettingsSaver : MonoBehaviour
                 if (IsDarkModeText)
                 {
                     buttonTexts[i].color = Color.white;
-                    buttonTexts[i].text = buttonTexts[i].text;
+                    //buttonTexts[i].text = buttonTexts[i].text;
                 }
                 else
                 {
                     buttonTexts[i].color = Color.black;
-                    buttonTexts[i].text = buttonTexts[i].text;
+                    //buttonTexts[i].text = buttonTexts[i].text;
                 }
             }
         }
@@ -242,9 +247,12 @@ public class SettingsSaver : MonoBehaviour
 
         foreach(ButtonDefaults buttonDefaults in buttonDefaultSprites)
         {
-            if(buttonDefaults.button != null)
+            if (buttonDefaults.button != null)
                 if (buttonDefaults.button.image != null)
+                {
                     buttonDefaults.button.image.sprite = buttonDefaults.sprite;
+                    buttonDefaults.button.image.color = Color.white;
+                }
         }
 
         for (int i = 0; i < buttonTexts.Count; i++)

@@ -6,10 +6,10 @@ using TMPro;
 
 public class SkipMinigame : MonoBehaviour
 {
-    private TextMeshProUGUI[] texts;
-    private Image[] images;
+    [SerializeField] private TextMeshProUGUI[] texts;
+    [SerializeField] private Image[] images;
 
-    private Sprite[] sprites;
+    private List<DefaultSprites> sprites = new List<DefaultSprites>();
 
     [SerializeField]
     private Sprite standardizedSprite;
@@ -19,41 +19,120 @@ public class SkipMinigame : MonoBehaviour
     [SerializeField]
     private Button Yes, No;
 
-
-    private void OnEnable()
+    //The default sprites
+    struct DefaultSprites
     {
+        public Image obj;
+        public Sprite sprite;
 
-        texts = GetComponentsInChildren<TextMeshProUGUI>();
-        images = GetComponentsInChildren<Image>();
-        //sprites = GetComponentsInChildren<Sprite>();
+        public DefaultSprites(Image o, Sprite s)
+        {
+            obj = o; 
+            sprite = s;
+        }
+    }
+
+    private void Awake()
+    {
+        Yes.onClick.AddListener(YesClicked);
+        No.onClick.AddListener(NoClicked);
+
+        foreach (Image image in images)
+        {
+            sprites.Add(new DefaultSprites(image, image.sprite));
+        }
 
         standardizedFont = SettingsSaver.instance.standardizedFont;
 
+        EventManager.current.standardizeTextChanged += StandizeText;
+        EventManager.current.darkModeChanged += DarkMode;
+    }
+
+
+    private void OnEnable()
+    {
+        StandizeText();
+        DarkMode();
+        
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.current.standardizeTextChanged -= StandizeText;
+        EventManager.current.darkModeChanged -= DarkMode;
+    }
+
+    private void StandizeText()
+    {
         if (!SettingsSaver.instance.IsStandardized)
         {
+            foreach (DefaultSprites s in sprites)
+                s.obj.sprite = s.sprite;
 
+            foreach (TextMeshProUGUI text in texts)
+                text.color = Color.black;
         }
         else
         {
             foreach (Image image in images)
             {
                 image.sprite = standardizedSprite;
+
             }
 
             foreach (TextMeshProUGUI text in texts)
             {
                 text.font = standardizedFont;
-                text.color = Color.black;
+            }
+
+            if (SettingsSaver.instance.IsDarkModeText)
+            {
+                images[0].color = Color.black;
+                images[1].color = Color.white;
+                images[2].color = Color.white;
+
+                texts[0].color = Color.white;
+                texts[1].color = Color.black;
+                texts[2].color = Color.black;
+            }
+            else
+            {
+                images[0].color = Color.white;
+                images[1].color = Color.black;
+                images[2].color = Color.black;
+
+                texts[0].color = Color.black;
+                texts[1].color = Color.white;
+                texts[2].color = Color.white;
             }
         }
-
-        Yes.onClick.AddListener(YesClicked);
-        No.onClick.AddListener(NoClicked);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void DarkMode()
     {
+        if (!SettingsSaver.instance.IsStandardized)
+            return;
+
+        if (SettingsSaver.instance.IsDarkModeText)
+        {
+            images[0].color = Color.black;
+            images[1].color = Color.white;
+            images[2].color = Color.white;
+
+            texts[0].color = Color.white;
+            texts[1].color = Color.black;
+            texts[2].color = Color.black;
+        }
+        else
+        {
+            images[0].color = Color.white;
+            images[1].color = Color.black;
+            images[2].color = Color.black;
+
+            texts[0].color = Color.black;
+            texts[1].color = Color.white;
+            texts[2].color = Color.white;
+        }
         
     }
 

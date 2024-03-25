@@ -7,15 +7,23 @@ public class FollowMouseObject : MonoBehaviour
     Vector3 pos;
     public float speed = 1f;
 
+    private Transform virtualMouse;
+
     void Start()
     {
-        
+        if(VirtualMouse.instance != null)
+        {
+            virtualMouse = VirtualMouse.instance.transform;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        pos = Input.mousePosition;
+        if (virtualMouse == null)
+            pos = Input.mousePosition;
+        else
+            pos = virtualMouse.position;
         pos.z = speed;
         transform.position = Camera.main.ScreenToWorldPoint(pos);
     }

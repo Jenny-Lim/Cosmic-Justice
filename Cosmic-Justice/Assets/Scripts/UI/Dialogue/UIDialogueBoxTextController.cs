@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -96,6 +97,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
         EventManager.current.dialogueClick += CanClickNext;
         EventManager.current.nextClick += Click;
+
+        EventManager.current.standardizeTextChanged += Standardize;
+        EventManager.current.darkModeChanged += DarkMode;
     }
 
     private void OnDestroy()
@@ -105,6 +109,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         eventManager.canDialogue -= CanDialogueRequest;
         EventManager.current.dialogueClick -= CanClickNext;
         EventManager.current.nextClick -= Click;
+
+        EventManager.current.standardizeTextChanged -= Standardize;
+        EventManager.current.darkModeChanged -= DarkMode;
     }
 
     private void Update()
@@ -148,6 +155,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             m_DialogueText.startDialogue(node.DialogueLine.Text, node.DialogueLine.TextSpeed, node.DialogueLine.Speaker.Font, node.DialogueLine.FontSize, node.DialogueLine.Speaker.Color, node.DialogueLine.Speaker.Voice);
             m_SpeakerText.color = node.DialogueLine.Speaker.Color;
             m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
+
+            Standardize();
+            DarkMode();
 
             NarrationCharacter speakerName = node.DialogueLine.Speaker;
 
@@ -208,36 +218,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
                 }
             }
 
-            //If not standardized then don't change sprites else change sprites for name tag and dialogue panel
-            if (!SettingsSaver.instance.IsStandardized)
-            {
-                if (node.DialogueLine.Speaker.DialoguePanel != null)
-                    dialoguePanel.sprite = node.DialogueLine.Speaker.DialoguePanel;
-
-                if (node.DialogueLine.Speaker.NamePanel != null)
-                    CharacterTag.sprite = node.DialogueLine.Speaker.NamePanel;
-            }
-            else
-            {
-                dialoguePanel.sprite = StandardizedTextBox;
-                CharacterTag.sprite = StandardizedNameBox;
-            }
-
-            //Standardized Text
-            if (!SettingsSaver.instance.IsStandardized)
-            {
-                m_SpeakerText.font = node.DialogueLine.Speaker.Font;
-
-                m_SpeakerText.color = Color.white;
-                m_DialogueText.SetFontColor(Color.white);
-            }
-            else
-            {
-                m_SpeakerText.font = standardizedFont;
-
-                m_SpeakerText.color = Color.black;
-                m_DialogueText.SetFontColor(Color.black);
-            }
 
             if (node.DialogueLine.character1 != null || node.DialogueLine.character2 != null || node.DialogueLine.hands != null)
                 EventManager.current.Invoke("SetCharacters", 0);
@@ -323,6 +303,66 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         {
             DialogueMinigameController newController = Instantiate(MinigameControllerPrefab);
             newController.path = m;
+        }
+    }
+
+
+    private void Standardize()
+    {
+        //If not standardized then don't change sprites else change sprites for name tag and dialogue panel
+        if (!SettingsSaver.instance.IsStandardized)
+        {
+            if (currNode.DialogueLine.Speaker.DialoguePanel != null)
+                dialoguePanel.sprite = currNode.DialogueLine.Speaker.DialoguePanel;
+
+            if (currNode.DialogueLine.Speaker.NamePanel != null)
+                CharacterTag.sprite = currNode.DialogueLine.Speaker.NamePanel;
+        }
+        else
+        {
+            dialoguePanel.sprite = StandardizedTextBox;
+            CharacterTag.sprite = StandardizedNameBox;
+            dialoguePanel.color = Color.white;
+            CharacterTag.color = Color.white;
+        }
+
+        //Standardized Text
+        if (!SettingsSaver.instance.IsStandardized)
+        {
+            m_SpeakerText.font = currNode.DialogueLine.Speaker.Font;
+
+            m_SpeakerText.color = Color.white;
+            m_DialogueText.SetFontColor(Color.white);
+        }
+        else
+        {
+            m_SpeakerText.font = standardizedFont;
+
+            m_SpeakerText.color = Color.black;
+            m_DialogueText.SetFontColor(Color.black);
+        }
+    }
+
+    private void DarkMode()
+    {
+        if (!SettingsSaver.instance.IsStandardized)
+            return;
+
+        if (SettingsSaver.instance.IsDarkModeText)
+        {
+            m_SpeakerText.color = Color.white;
+            m_DialogueText.SetFontColor(Color.white);
+            dialoguePanel.color = Color.black;
+            CharacterTag.color = Color.black;
+        }
+        else
+        {
+            Debug.Log("not");
+            m_SpeakerText.color = Color.black;
+            m_DialogueText.SetFontColor(Color.black);
+
+            dialoguePanel.color = Color.white;
+            CharacterTag.color = Color.white;
         }
     }
 }
