@@ -20,7 +20,7 @@
                     "id": "84211cea-5f52-4df6-957e-bb64672a3251",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -38,9 +38,9 @@
                 },
                 {
                     "name": "",
-                    "id": "41c84f8c-fd99-4277-917a-02649beeb25c",
+                    "id": "1c801262-1b44-4d50-a6ae-b2761832f1f5",
                     "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "Interact",

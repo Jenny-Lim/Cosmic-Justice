@@ -2876,41 +2876,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8317546802976366293, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
   m_PrefabInstance: {fileID: 7222405659764993187}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2111322402 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6198448854337090179, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
-  m_PrefabInstance: {fileID: 7222405659764993187}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2111322406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111322402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_MoveRepeatDelay: 0.5
-  m_MoveRepeatRate: 0.1
-  m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
-  m_CursorLockBehavior: 0
 --- !u!1001 &1358837147476579818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3134,9 +3099,129 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1886666946}
+    - target: {fileID: 302039125990400560, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2006
+      objectReference: {fileID: 0}
     - target: {fileID: 402591578066308818, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
       propertyPath: input
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 569474090828844814, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 569474090828844814, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_CursorMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_StickAction.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_BackButtonAction.m_Reference
+      value: 
+      objectReference: {fileID: 5691678465847471171, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_LeftButtonAction.m_Reference
+      value: 
+      objectReference: {fileID: 1778491627356654179, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_RightButtonAction.m_Reference
+      value: 
+      objectReference: {fileID: 5691678465847471171, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_ScrollWheelAction.m_Reference
+      value: 
+      objectReference: {fileID: 5691678465847471171, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_MiddleButtonAction.m_Reference
+      value: 
+      objectReference: {fileID: 5691678465847471171, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_BackButtonAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_ForwardButtonAction.m_Reference
+      value: 
+      objectReference: {fileID: 5691678465847471171, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_LeftButtonAction.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_RightButtonAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_ScrollWheelAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_MiddleButtonAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_ForwardButtonAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_LeftButtonAction.m_Action.m_SingletonActionBindings.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_MiddleButtonAction.m_Action.m_SingletonActionBindings.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_ForwardButtonAction.m_Action.m_SingletonActionBindings.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_LeftButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: dd8df727-7381-4a47-a7f5-a15b66da37c3
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_LeftButtonAction.m_Action.m_SingletonActionBindings.Array.data[1].m_Id
+      value: b0ccba88-be10-47b2-bfa0-98a9bb8640bf
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_LeftButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Gamepad>/buttonSouth
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_MiddleButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: a76b7ee6-5d0e-496a-a43a-072e6d4b2475
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_ForwardButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: e876882a-6900-45de-8ab2-1317a6d9544c
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_LeftButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Left Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_LeftButtonAction.m_Action.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Left Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_MiddleButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Middle Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_ForwardButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Forward Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 638828287980119166, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
+      propertyPath: m_LeftButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Interactions
+      value: Press
       objectReference: {fileID: 0}
     - target: {fileID: 836614963921664926, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3160,7 +3245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7347050719675136226, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7517497217071827709, guid: a0e401ed2ed36ef4086b47c5582f75e3, type: 3}
       propertyPath: m_Enabled
@@ -3808,6 +3893,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3674762495994622857, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_SubmitAction
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674762495994622857, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_LeftClickAction
+      value: 
+      objectReference: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
     - target: {fileID: 3810667262493785823, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4363,9 +4456,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7141403070046024825, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 712826178}
-    - targetCorrespondingSourceObject: {fileID: 6198448854337090179, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2111322406}
     - targetCorrespondingSourceObject: {fileID: 2406512035360879845, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 589991907}
