@@ -11,8 +11,8 @@ public class SettingsSaver : MonoBehaviour
     public TMP_FontAsset normalFont;
 
     // colorblind
-    public Color[] replacingColors = new Color[9];
-    public string[] colorStrings = { "Red", "Green", "Blue", "Yellow", "Orange", "Purple", "Cyan", "Black", "White" };
+    public Color[] replacingColors;
+    string[] colorStrings = { "Red", "Green", "Blue", "Yellow", "Orange", "Purple", "Cyan", "Black", "White" };
     string[] colorStrings_r, colorStrings_g, colorStrings_b;
 
     public static SettingsSaver instance { get; private set; }
@@ -42,14 +42,6 @@ public class SettingsSaver : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        pec = Camera.main.GetComponent<PostEffectsController>();
-
-        replacingColors = new Color[9];
-        for (int i = 0; i < 9; i++)
-        {
-            replacingColors[i] = Color.white;
-        }
-
         //If the playerprefs does not have a saved setting for standardized text then set it as no
         if (!PlayerPrefs.HasKey("StandardizedText"))
         {
@@ -57,11 +49,17 @@ public class SettingsSaver : MonoBehaviour
             PlayerPrefs.SetInt("StandardizedText", 0);
         }
 
+        // color blind
+
+        pec = Camera.main.GetComponent<PostEffectsController>();
+        replacingColors = new Color[9];
+
         if (!PlayerPrefs.HasKey("ColorBlind"))
         {
             PlayerPrefs.SetInt("ColorBlind", 0);
         }
 
+        // names for playerpref
         colorStrings_r = new string[9];
         colorStrings_g = new string[9];
         colorStrings_b = new string[9];
@@ -69,6 +67,7 @@ public class SettingsSaver : MonoBehaviour
         //must go through colors
         for (int i = 0; i < colorStrings.Length; i++)
         {
+            // assign strings
             colorStrings_r[i] = colorStrings[i] + "_r";
             colorStrings_g[i] = colorStrings[i] + "_g";
             colorStrings_b[i] = colorStrings[i] + "_b";
@@ -85,7 +84,11 @@ public class SettingsSaver : MonoBehaviour
             {
                 PlayerPrefs.SetFloat(colorStrings_b[i], 1.0f);
             }
+
+            replacingColors[i] = Color.white;
         }
+
+        // end color blind
 
         GetButtonDefaults();
 
@@ -128,7 +131,11 @@ public class SettingsSaver : MonoBehaviour
         }
 
         pec = Camera.main.GetComponent<PostEffectsController>();
-        SetColorBlind(IsColorBlind);
+        Debug.Log("isColorBlind" + IsColorBlind);
+        if (IsColorBlind)
+        {
+            ColorBlind();
+        }
 
     }
 
@@ -298,23 +305,34 @@ public class SettingsSaver : MonoBehaviour
         if (isColorBlind)
         {
             PlayerPrefs.SetInt("ColorBlind", 1);
-            for (int i = 0; i < colorStrings.Length; i++)
-            {
-                replacingColors[i].r = PlayerPrefs.GetFloat(colorStrings_r[i]);
-                replacingColors[i].g = PlayerPrefs.GetFloat(colorStrings_g[i]);
-                replacingColors[i].b = PlayerPrefs.GetFloat(colorStrings_b[i]);
-
-                PlayerPrefs.SetFloat(colorStrings_r[i], replacingColors[i].r);
-                PlayerPrefs.SetFloat(colorStrings_g[i], replacingColors[i].g);
-                PlayerPrefs.SetFloat(colorStrings_b[i], replacingColors[i].b);
-            }
+            SetColors();
         }
 
         else PlayerPrefs.SetInt("ColorBlind", 0);
 
-
         IsColorBlind = isColorBlind;
         pec.enabled = isColorBlind;
+    }
+
+    public void SetColors()
+    {
+        for (int i = 0; i < colorStrings.Length; i++)
+        {
+            PlayerPrefs.SetFloat(colorStrings_r[i], replacingColors[i].r);
+            PlayerPrefs.SetFloat(colorStrings_g[i], replacingColors[i].g);
+            PlayerPrefs.SetFloat(colorStrings_b[i], replacingColors[i].b);
+        }
+        ColorBlind();
+    }
+
+    public void ColorBlind()
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            replacingColors[i] = new Color(PlayerPrefs.GetFloat(colorStrings_r[i]), PlayerPrefs.GetFloat(colorStrings_g[i]), PlayerPrefs.GetFloat(colorStrings_b[i]), 1.0f);
+            Debug.Log("col: " + replacingColors[i]);
+            pec.enabled = true;
+        }
     }
 
     // ------------------------------------------------------ //
@@ -358,6 +376,6 @@ public class SettingsSaver : MonoBehaviour
         {
             IsColorBlind = true;
         }
-        SetColorBlind(IsColorBlind);
+        ColorBlind();
     }
 }

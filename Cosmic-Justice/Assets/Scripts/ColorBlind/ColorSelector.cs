@@ -43,6 +43,7 @@ public class ColorSelector : MonoBehaviour, IPointerDownHandler
         selectedColor = colorWheel.GetPixel((int)result.x, (int)result.y);
         button.color = selectedColor;
         SettingsSaver.instance.replacingColors[id] = selectedColor;
+        SettingsSaver.instance.SetColors();
         colorWheelObj.SetActive(false);
     } // OnPointerDown
 
