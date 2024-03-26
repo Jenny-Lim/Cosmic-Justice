@@ -58,8 +58,12 @@ public class VirtualMouse : MonoBehaviour
             canvas.worldCamera = Camera.main;
     }
 
+
+    private float timer = 0.2f;
+    private float checker = 0;
+
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
 
         if (canvas.worldCamera == null)
@@ -76,15 +80,24 @@ public class VirtualMouse : MonoBehaviour
                 mouseMoved = true;
 
                 InputState.Change(virtualMouseTrue.virtualMouse.position, mousePos);
+
+                checker = 0;
             }
         }
         else if(MouseScreenCheck())
         {
-            mouseMoved = false;
 
-            //Constantly move the mouse to be at the virtual mouse
-            Mouse.current.WarpCursorPosition(mousePosition.anchoredPosition);
-            InputState.Change(Mouse.current.position, mousePosition.anchoredPosition);
+            if (checker > timer)
+            {
+                mouseMoved = false;
+
+                //Constantly move the mouse to be at the virtual mouse
+                Mouse.current.WarpCursorPosition(mousePosition.anchoredPosition);
+                InputState.Change(Mouse.current.position, mousePosition.anchoredPosition);
+            } else
+            {
+                checker += Time.unscaledDeltaTime;
+            }
         }
 
     }

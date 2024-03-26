@@ -12,7 +12,9 @@ public class VMouseSpawner : MonoBehaviour
     {
         if(VirtualMouse.instance == null)
         {
-            Instantiate(virtualMouse_Prefab);
+            GameObject vM = Instantiate(virtualMouse_Prefab);
+
+            vM.SetActive(true);
         }
     }
 }
