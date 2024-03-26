@@ -303,15 +303,17 @@ public class MinigameManager : MonoBehaviour
 
         ScreenWipe.instance.ToggleWipe(false);
 
-        //EventManager.current.currCase++;
-        CaseSelector.instance.setCase++;
-        SplashScreenController.Instance.ShowCase(CaseSelector.instance.setCase);
+        //Debug.Log(EventManager.current.currCase);
+        EventManager.current.currCase++; // case nums start at 1
+        Debug.Log(EventManager.current.currCase);
+        //CaseSelector.instance.setCase++;
+        SplashScreenController.Instance.ShowCase(EventManager.current.currCase-1);
         yield return new WaitUntil(() => SplashScreenController.Instance.pressed);
         SplashScreenController.Instance.pressed = false; // reset
 
         EventManager.current.CanDialogue(true);
-        //channel.RaiseRequestDialogueNode(caseStarts[EventManager.current.currCase-1].FirstNode);
-        channel.RaiseRequestDialogueNode(caseStarts[CaseSelector.instance.setCase].FirstNode);
+        channel.RaiseRequestDialogueNode(caseStarts[EventManager.current.currCase-1].FirstNode);
+        //channel.RaiseRequestDialogueNode(caseStarts[CaseSelector.instance.setCase-1].FirstNode);
 
         yield return new WaitForSeconds(1f);
         //showPanel();
