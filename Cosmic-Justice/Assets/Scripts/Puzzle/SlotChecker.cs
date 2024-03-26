@@ -34,6 +34,7 @@ public class SlotChecker : MonoBehaviour
         {
             puzzleComplete = true;
             Debug.Log(puzzleComplete);
+            AudioManager.instance.Play("Ticket_Repair_A");
             EventManager.current.EndPuzzle();
         }
 

@@ -22,6 +22,8 @@ public class SceneLoader : MonoBehaviour
 
     public static SceneLoader instance;
 
+    GameObject bobblehead;
+
     public void Awake()
     {
 
@@ -73,6 +75,7 @@ public class SceneLoader : MonoBehaviour
     {
         CaseSelector.instance.setCase = 1;
         StartLoadLevel(1);
+        
         //SceneManager.LoadScene(2);
     }
 
@@ -93,6 +96,8 @@ public class SceneLoader : MonoBehaviour
 
     public void Pause()
     {
+        bobblehead = GameObject.FindWithTag("Bobblehead");
+        bobblehead.SetActive(false);
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
 
@@ -115,6 +120,7 @@ public class SceneLoader : MonoBehaviour
 
     public void Resume()
     {
+        bobblehead.SetActive(true);
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
 
@@ -221,7 +227,6 @@ public class SceneLoader : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelIndex);
         while (!asyncLoad.isDone)
             yield return null;
-
         transitioning = false;
 
         EventManager.current.SceneLoaded();
