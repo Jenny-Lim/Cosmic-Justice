@@ -30,6 +30,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        AudioManager.instance.Play("Ticket_Interaction_A");
         if (!parent.GetPlayable())
         {
             return;
