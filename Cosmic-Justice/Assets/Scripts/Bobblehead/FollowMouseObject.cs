@@ -13,7 +13,7 @@ public class FollowMouseObject : MonoBehaviour
     {
         if(VirtualMouse.instance != null)
         {
-            virtualMouse = VirtualMouse.instance.transform;
+            virtualMouse = VirtualMouse.instance.virtualmouse.transform;
         }
     }
 
@@ -24,7 +24,12 @@ public class FollowMouseObject : MonoBehaviour
             pos = Input.mousePosition;
         else
             pos = virtualMouse.position;
+
         pos.z = speed;
-        transform.position = Camera.main.ScreenToWorldPoint(pos);
+
+        if (virtualMouse == null)
+            transform.position = Camera.main.ScreenToWorldPoint(pos);
+        else
+            transform.position = new Vector3(pos.x, pos.y, speed);
     }
 }
