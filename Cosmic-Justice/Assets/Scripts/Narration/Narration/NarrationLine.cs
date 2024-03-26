@@ -7,8 +7,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Line")]
 public class NarrationLine : ScriptableObject
 {
-    [SerializeField]
-    public bool isStart;
+    //[SerializeField]
+    //public bool isStart;
 
     [SerializeField]
     private NarrationCharacter m_Speaker; //holds the speaker of the line
@@ -28,8 +28,8 @@ public class NarrationLine : ScriptableObject
     [Range(0f, 10f)]
     private float m_TextSpeed = 0.1f;
 
-    //[SerializeField]
-    //public int caseNumber; // NEW SYSTEM
+    [SerializeField]
+    public int caseNumber; // NEW SYSTEM
 
 
     [Header("Speaker Manipulation")]

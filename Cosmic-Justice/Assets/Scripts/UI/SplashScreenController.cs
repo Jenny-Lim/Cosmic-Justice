@@ -19,7 +19,7 @@ public class SplashScreenController : MonoBehaviour
     }
     public void ShowCase(int caseNum)
     {
-        gameObject.transform.GetChild(caseNum-1).gameObject.SetActive(true);
+        gameObject.transform.GetChild(caseNum).gameObject.SetActive(true);
     }
 
     public void SetPressed()

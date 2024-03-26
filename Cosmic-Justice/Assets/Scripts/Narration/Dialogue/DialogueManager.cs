@@ -41,19 +41,19 @@ public class DialogueManager : MonoBehaviour
         {
             case (1):
                 ToStart = case1;
-                SplashScreenController.Instance.ShowCase(1);
+                SplashScreenController.Instance.ShowCase(0);
                 yield return new WaitUntil(() => SplashScreenController.Instance.pressed);
                 SplashScreenController.Instance.pressed = false; // reset
                 break;
             case (2):
                 ToStart = case2;
-                SplashScreenController.Instance.ShowCase(2);
+                SplashScreenController.Instance.ShowCase(1);
                 yield return new WaitUntil(() => SplashScreenController.Instance.pressed);
                 SplashScreenController.Instance.pressed = false; // reset
                 break;
             case (3):
                 ToStart = case3;
-                SplashScreenController.Instance.ShowCase(3);
+                SplashScreenController.Instance.ShowCase(2);
                 yield return new WaitUntil(() => SplashScreenController.Instance.pressed);
                 SplashScreenController.Instance.pressed = false; // reset
                 break;
