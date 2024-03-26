@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11926e65f6795b48aa2e1fe67552166, type: 3}
   m_Name: N_005aBL
   m_EditorClassIdentifier: 
+  isStart: 0
   m_Speaker: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_Listener: {fileID: 11400000, guid: 49efe30fa026f4b479c993224a1d60d7, type: 2}
   m_Text: "\u201CAnd I\u2019ve paid my due amount! You simply refuse to see the value
     of pure, ornate gold!\u201D"
   m_FontSize: 40
   m_TextSpeed: 0.05
-  caseNumber: 1
   SoundToPlay: 
   SoundToStop: 
   m_CharacterSprite1: 
-  m_CharacterSprite2: happy
+  m_CharacterSprite2: angry
   m_CJHandsSprite: 
   m_character1: {fileID: 0}
   m_character2: {fileID: 11400000, guid: 465a1ef05783b4146b9aba4c2c8a9bb7, type: 2}
   m_hands: {fileID: 11400000, guid: 5f1fe7899a982f94fbcaea83a4828dfe, type: 2}
   m_events: 0
   m_leftCharacterAnimation: 0
-  m_rightCharacterAnimation: 8
+  m_rightCharacterAnimation: 2
   m_minigames: 0
   animatedGO: {fileID: 0}
