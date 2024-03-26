@@ -1164,6 +1164,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5126668723027809265, guid: 5e78ea2b2d9f9b046933a2e979103bc0, type: 3}
+      propertyPath: m_TagString
+      value: Bobblehead
+      objectReference: {fileID: 0}
     - target: {fileID: 5570074632333888477, guid: 5e78ea2b2d9f9b046933a2e979103bc0, type: 3}
       propertyPath: m_Constraints
       value: 120
@@ -13198,6 +13202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b8fb46cf8d3d94eb6cf946f6157524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currCase: 1
   dialMinigame: {fileID: 1773281793}
   puzzleMinigame: {fileID: 1534452391}
   asteroidMinigame: {fileID: 619057680}

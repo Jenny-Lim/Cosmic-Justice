@@ -46,6 +46,8 @@ public class MinigameManager : MonoBehaviour
 
     public bool SkipMinigame;
 
+    GameObject bobblehead;
+
     private void Awake()
     {
         current = this;
@@ -73,6 +75,9 @@ public class MinigameManager : MonoBehaviour
 
         //isWon = false;
         //isDone = false;
+
+        bobblehead = GameObject.FindGameObjectWithTag("Bobblehead");
+
     }
 
     private void OnDestroy()
@@ -137,6 +142,7 @@ public class MinigameManager : MonoBehaviour
 
     IEnumerator StartMinigameAnim(GameObject minigame, string audioToPlay, string audioToPause)
     {
+        bobblehead.SetActive(false);
         DeskObject[] deskObjects = minigame.transform.GetComponentsInChildren<DeskObject>();
         List<DeskObject> objList = new List<DeskObject>();
 
@@ -193,7 +199,7 @@ public class MinigameManager : MonoBehaviour
         minigame.SetActive(false);
         showPanel();
         EventManager.current.CanDialogue(true);
-
+        bobblehead.SetActive(true);
         yield return null;
     } // StopMinigameAnim
 
