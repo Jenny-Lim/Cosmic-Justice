@@ -44,7 +44,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             transform.SetParent(transform.root);
             transform.SetAsLastSibling();
             image.raycastTarget = false;
-            offset = transform.position - Input.mousePosition;
+            offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
 
@@ -59,7 +59,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         if (disableDrag == false)
         {
-            transform.position = Input.mousePosition + offset;
+            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
         }
     }
 
