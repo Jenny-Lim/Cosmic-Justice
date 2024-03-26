@@ -50,6 +50,13 @@ public class EndCutscene : MonoBehaviour
             else if (Input.GetKeyUp(KeyCode.W))
                 player.playbackSpeed = 1;
 
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                player.playbackSpeed = 0;
+            }
+            else if (Input.GetKeyUp(KeyCode.S))
+                player.playbackSpeed = 1;
+
         }
         else
         {
