@@ -23,6 +23,9 @@ public class ColorSelector : MonoBehaviour, IPointerDownHandler
         colorWheelObj.SetActive(false);
         colorWheel = colorWheelObj.GetComponent<Image>().sprite.texture;
         thisRect = GetComponent<RectTransform>();
+
+        selectedColor = SettingsSaver.instance.replacingColors[id];
+        button.color = selectedColor;
     } // Start
 
     //public void OnClick()

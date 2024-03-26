@@ -10,10 +10,12 @@ public class SettingsSaver : MonoBehaviour
     public TMP_FontAsset standardizedFont;
     public TMP_FontAsset normalFont;
 
-    public Color[] replacingColors;
+    // colorblind
+    public Color[] replacingColors = new Color[9];
+    public string[] colorStrings = { "Red", "Green", "Blue", "Yellow", "Orange", "Purple", "Cyan", "Black", "White" };
+    string[] colorStrings_r, colorStrings_g, colorStrings_b;
 
     public static SettingsSaver instance { get; private set; }
-
 
     //Identifiers for scripts to know if accessability is on
     [HideInInspector]
@@ -60,7 +62,30 @@ public class SettingsSaver : MonoBehaviour
             PlayerPrefs.SetInt("ColorBlind", 0);
         }
 
+        colorStrings_r = new string[9];
+        colorStrings_g = new string[9];
+        colorStrings_b = new string[9];
+
         //must go through colors
+        for (int i = 0; i < colorStrings.Length; i++)
+        {
+            colorStrings_r[i] = colorStrings[i] + "_r";
+            colorStrings_g[i] = colorStrings[i] + "_g";
+            colorStrings_b[i] = colorStrings[i] + "_b";
+
+            if (!PlayerPrefs.HasKey(colorStrings_r[i]))
+            {
+                PlayerPrefs.SetFloat(colorStrings_r[i], 1.0f);
+            }
+            if (!PlayerPrefs.HasKey(colorStrings_g[i]))
+            {
+                PlayerPrefs.SetFloat(colorStrings_g[i], 1.0f);
+            }
+            if (!PlayerPrefs.HasKey(colorStrings_b[i]))
+            {
+                PlayerPrefs.SetFloat(colorStrings_b[i], 1.0f);
+            }
+        }
 
         GetButtonDefaults();
 
@@ -270,8 +295,24 @@ public class SettingsSaver : MonoBehaviour
 
     public void SetColorBlind(bool isColorBlind)
     {
-        if(isColorBlind) PlayerPrefs.SetInt("ColorBlind", 1);
+        if (isColorBlind)
+        {
+            PlayerPrefs.SetInt("ColorBlind", 1);
+            for (int i = 0; i < colorStrings.Length; i++)
+            {
+                replacingColors[i].r = PlayerPrefs.GetFloat(colorStrings_r[i]);
+                replacingColors[i].g = PlayerPrefs.GetFloat(colorStrings_g[i]);
+                replacingColors[i].b = PlayerPrefs.GetFloat(colorStrings_b[i]);
+
+                PlayerPrefs.SetFloat(colorStrings_r[i], replacingColors[i].r);
+                PlayerPrefs.SetFloat(colorStrings_g[i], replacingColors[i].g);
+                PlayerPrefs.SetFloat(colorStrings_b[i], replacingColors[i].b);
+            }
+        }
+
         else PlayerPrefs.SetInt("ColorBlind", 0);
+
+
         IsColorBlind = isColorBlind;
         pec.enabled = isColorBlind;
     }
