@@ -4441,6 +4441,14 @@ PrefabInstance:
       propertyPath: m_MatchWidthOrHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9129517475531981366, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 146.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129517475531981366, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9184285115259395223, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_Spacing
       value: 40
