@@ -152,6 +152,9 @@ public class DialogueText : MonoBehaviour
 
         bool richText = false;
 
+        bool dotsCheck = false;
+        List <char> chars = new List <char>();
+
         foreach (char c in line.ToCharArray())
         {
             if(c == '<')

@@ -59,7 +59,7 @@ public class VirtualMouse : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
 
         if (canvas.worldCamera == null)

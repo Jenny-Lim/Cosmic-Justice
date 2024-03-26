@@ -102,7 +102,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 5691678465847471171, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
   m_RightButtonAction:
     m_UseReference: 0
     m_Action:
@@ -114,7 +114,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 5691678465847471171, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
   m_ForwardButtonAction:
     m_UseReference: 0
     m_Action:
@@ -126,7 +126,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 5691678465847471171, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
   m_BackButtonAction:
     m_UseReference: 0
     m_Action:
@@ -138,7 +138,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 5691678465847471171, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
   m_ScrollWheelAction:
     m_UseReference: 0
     m_Action:
@@ -150,7 +150,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 5691678465847471171, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
 --- !u!1 &7347050719675136226
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +212,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 2006
   m_TargetDisplay: 0
 --- !u!114 &4279915990818910863
 MonoBehaviour:
