@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class SettingsSaver : MonoBehaviour
 {
@@ -20,6 +20,33 @@ public class SettingsSaver : MonoBehaviour
     //Identifiers for scripts to know if accessability is on
     [HideInInspector]
     public bool IsStandardized, IsDarkModeText, IsColorBlind;
+    
+    ///Setting the audio levels to max or loading saved levels
+    [HideInInspector]
+    public bool NewMusic, NewSFX;
+
+    [SerializeField]
+    private AudioMixer MusicMixer;
+    //[SerializeField]
+    //private AudioSource MusicAudioSource;
+
+    public Slider MusicSlider;
+
+    [SerializeField]
+    private AudioMixer SFXMixer;
+    //[SerializeField]
+    //private AudioSource SFXAudioSource;
+
+    public Slider SFXSlider;
+
+    [SerializeField]
+    private AudioMixMode MixMode;
+    public enum AudioMixMode
+    {
+        LogrithmicMixerVolume
+    }
+    ///
+
 
     //The panel for standardized buttons
     public Sprite StandardPanel;
@@ -48,6 +75,21 @@ public class SettingsSaver : MonoBehaviour
             Debug.Log("test");
             PlayerPrefs.SetInt("StandardizedText", 0);
         }
+
+        // Music saving
+        if (!PlayerPrefs.HasKey("Music"))
+        {
+            Debug.Log("testmusic");
+            PlayerPrefs.SetFloat("Music", 1);
+        }
+
+        // SFX saving
+        if (!PlayerPrefs.HasKey("SFX"))
+        {
+            Debug.Log("testSFX");
+            PlayerPrefs.SetFloat("SFX", 1);
+        }
+
 
         // color blind
 
@@ -336,6 +378,72 @@ public class SettingsSaver : MonoBehaviour
     }
 
     // ------------------------------------------------------ //
+    // -------------------Audio Settings--------------------- //
+    // ------------------------------------------------------ //
+
+
+    public void SetMusic(float value)
+    {
+        PlayerPrefs.SetFloat("Music", value);
+
+        if (value == 1)
+        {
+            NewMusic = true;
+            Music(value);
+        }
+        else
+        {
+            NewMusic = false;
+            Music(value);
+        }
+
+        EventManager.current.MusicChanged();
+    }
+
+    private void Music(float value)
+    {
+        if (NewMusic == true)
+        {
+            switch (MixMode)
+            {
+                case AudioMixMode.LogrithmicMixerVolume:
+                    MusicMixer.SetFloat("Volume", Mathf.Log10(1) * 20);
+                    break;
+            }
+            NewMusic = false;
+        }
+        else
+        {
+            switch (MixMode)
+            {
+                case AudioMixMode.LogrithmicMixerVolume:
+                    MusicMixer.SetFloat("Volume", Mathf.Log10(value) * 20);
+                    break;
+            }
+            
+        }
+    }
+
+    public void MusicOnChangeSlider()
+    {
+        float Value = MusicSlider.value;
+        switch (MixMode)
+        {
+            case AudioMixMode.LogrithmicMixerVolume:
+                MusicMixer.SetFloat("Volume", Mathf.Log10(Value) * 20);
+                break;
+        }
+        Debug.Log(Value);
+        SetMusic(Value);
+    }
+
+    private void SFX()
+    {
+
+    }
+
+
+    // ------------------------------------------------------ //
     // -------------------Load Settings---------------------- //
     // ------------------------------------------------------ //
 
@@ -377,5 +485,20 @@ public class SettingsSaver : MonoBehaviour
             IsColorBlind = true;
         }
         ColorBlind();
+
+        float music = PlayerPrefs.GetInt("Music");
+
+        if(music == 1)
+        {
+            NewMusic = true;
+            Music(music);
+            MusicSlider.value = 1;
+        }
+        else
+        {
+            NewMusic = false;
+            Music(music);
+            MusicSlider.value = music;
+        }
     }
 }

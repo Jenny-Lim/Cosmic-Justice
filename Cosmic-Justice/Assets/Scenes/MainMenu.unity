@@ -436,6 +436,13 @@ MonoBehaviour:
   IsStandardized: 0
   IsDarkModeText: 0
   IsColorBlind: 0
+  NewMusic: 0
+  NewSFX: 0
+  MusicMixer: {fileID: 24100000, guid: a5dc7adb83cebba428fc249709ad401d, type: 2}
+  MusicSlider: {fileID: 507165603}
+  SFXMixer: {fileID: 24100000, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+  SFXSlider: {fileID: 593734420}
+  MixMode: 0
   StandardPanel: {fileID: -591767996, guid: 169c4278068a5d043b5a355909dd0898, type: 3}
 --- !u!4 &193098628
 Transform:
@@ -3780,6 +3787,30 @@ PrefabInstance:
     - target: {fileID: 2284705118642602590, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -217.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547008733662671880, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547008733662671880, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547008733662671880, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 193098627}
+    - target: {fileID: 2547008733662671880, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MusicOnChangeSlider
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547008733662671880, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SettingsSaver, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547008733662671880, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2694266089420212545, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchorMax.y
