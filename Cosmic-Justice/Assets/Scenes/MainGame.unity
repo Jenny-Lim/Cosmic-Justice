@@ -3510,6 +3510,7 @@ MonoBehaviour:
   NeedToCollect: 10
   textMeshProUGUI: {fileID: 2068516886}
   timer: {fileID: 1693861254}
+  input: {fileID: -944628639613478452, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
 --- !u!114 &422636828
 MonoBehaviour:
   m_ObjectHideFlags: 0
