@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class AsteroidPlayer : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class AsteroidPlayer : MonoBehaviour
 
     [SerializeField] Timer timer;
 
+    public InputActionAsset input;
+
     private void Awake()
     {
         rgBd = GetComponent<Rigidbody2D>();
@@ -45,14 +48,20 @@ public class AsteroidPlayer : MonoBehaviour
     void Update()
     {
         //Gets if player is moving forward
-        isMoving = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
+        isMoving = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || input.FindAction("ShipForward").IsPressed();
+
+        if (isMoving)
+        {
+            AudioManager.instance.Play("Spaceship_Loop_A");            
+        }
 
         //Gets if player turning to the left
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || input.FindAction("ShipLeft").IsPressed())
         {
             turningDir = turningSpeed;
         }//Gets if player turning to the right
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || input.FindAction("ShipRight").IsPressed())
         {
             turningDir = -turningSpeed;
         }
@@ -85,6 +94,7 @@ public class AsteroidPlayer : MonoBehaviour
     {
         if(collision.tag == "Asteroid")
         {
+            AudioManager.instance.Play("Asteroid_Collect_A");
             Collected++;
             textMeshProUGUI.text = "Collected: " + Collected.ToString();
             Destroy(collision.gameObject);

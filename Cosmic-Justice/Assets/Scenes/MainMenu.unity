@@ -4999,6 +4999,18 @@ PrefabInstance:
       propertyPath: sounds.Array.data[0].pitch
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[16].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[16].volume
+      value: 0.659
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894444973886950961, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
+      propertyPath: sounds.Array.data[16].canOverlap
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4482849573137828552, guid: b5ed52e172036ee49a5a26cae51270b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.0436535
