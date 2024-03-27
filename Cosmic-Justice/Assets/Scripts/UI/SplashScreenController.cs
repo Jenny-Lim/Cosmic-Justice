@@ -10,6 +10,8 @@ public class SplashScreenController : MonoBehaviour
     [HideInInspector] public bool pressed = false;
 
     GameObject bobblehead;
+
+    int caseNum;
     void Start()
     {
         if (instance == null) instance = this;
@@ -26,13 +28,24 @@ public class SplashScreenController : MonoBehaviour
     }
     public void ShowCase(int caseNum)
     {
-        gameObject.transform.GetChild(caseNum).gameObject.SetActive(true);
+        this.caseNum = caseNum;
+        gameObject.transform.GetChild(this.caseNum).gameObject.SetActive(true);
         bobblehead.SetActive(false);
+    }
+
+    IEnumerator Wipe()
+    {
+        ScreenWipe.instance.ToggleWipe(true);
+        while (!ScreenWipe.instance.isDone)
+            yield return null;
+        ScreenWipe.instance.ToggleWipe(false);
     }
 
     public void SetPressed()
     {
+        StartCoroutine("Wipe");
         pressed = true;
+        gameObject.transform.GetChild(this.caseNum).gameObject.SetActive(false);
         bobblehead.SetActive(true);
     }
 }

@@ -275,4 +275,16 @@ public class EventManager : MonoBehaviour
     {
         darkModeChanged?.Invoke();
     }
+
+    public event Action musicChanged;
+    public void MusicChanged()
+    {
+        musicChanged?.Invoke();
+    }
+
+    public event Action sfxChanged;
+    public void SFXChanged()
+    {
+        sfxChanged?.Invoke();
+    }
 }

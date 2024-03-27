@@ -31,7 +31,7 @@ public class AsteroidSpawner : MonoBehaviour
 
     private void SpawnAsteroid()
     {
-
+        AudioManager.instance.Play("Asteroid_A");
         //Get position outside of screen
         float screenW = Screen.width;
         float screenH = Screen.height;
