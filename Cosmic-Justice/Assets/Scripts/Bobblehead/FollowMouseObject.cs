@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 
 public class FollowMouseObject : MonoBehaviour
@@ -13,18 +14,24 @@ public class FollowMouseObject : MonoBehaviour
     {
         if(VirtualMouse.instance != null)
         {
-            virtualMouse = VirtualMouse.instance.transform;
+            virtualMouse = VirtualMouse.instance.virtualmouse.transform;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (virtualMouse == null)
             pos = Input.mousePosition;
         else
             pos = virtualMouse.position;
+
         pos.z = speed;
-        transform.position = Camera.main.ScreenToWorldPoint(pos);
+
+        if (virtualMouse == null)
+            transform.position = Camera.main.ScreenToWorldPoint(pos);
+        else
+            transform.position = new Vector3(pos.x, pos.y, speed-9.8f);
     }
 }

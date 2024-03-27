@@ -46,6 +46,8 @@ public class MinigameManager : MonoBehaviour
 
     public bool SkipMinigame;
 
+    GameObject bobblehead;
+
     private void Awake()
     {
         current = this;
@@ -73,6 +75,9 @@ public class MinigameManager : MonoBehaviour
 
         //isWon = false;
         //isDone = false;
+
+        bobblehead = GameObject.FindGameObjectWithTag("Bobblehead");
+
     }
 
     private void OnDestroy()
@@ -137,6 +142,7 @@ public class MinigameManager : MonoBehaviour
 
     IEnumerator StartMinigameAnim(GameObject minigame, string audioToPlay, string audioToPause)
     {
+        bobblehead.SetActive(false);
         DeskObject[] deskObjects = minigame.transform.GetComponentsInChildren<DeskObject>();
         List<DeskObject> objList = new List<DeskObject>();
 
@@ -193,7 +199,7 @@ public class MinigameManager : MonoBehaviour
         minigame.SetActive(false);
         showPanel();
         EventManager.current.CanDialogue(true);
-
+        bobblehead.SetActive(true);
         yield return null;
     } // StopMinigameAnim
 
@@ -303,15 +309,17 @@ public class MinigameManager : MonoBehaviour
 
         ScreenWipe.instance.ToggleWipe(false);
 
-        //EventManager.current.currCase++;
-        CaseSelector.instance.setCase++;
-        SplashScreenController.Instance.ShowCase(CaseSelector.instance.setCase);
+        //Debug.Log(EventManager.current.currCase);
+        EventManager.current.currCase++; // case nums start at 1
+        Debug.Log(EventManager.current.currCase);
+        //CaseSelector.instance.setCase++;
+        SplashScreenController.Instance.ShowCase(EventManager.current.currCase-1);
         yield return new WaitUntil(() => SplashScreenController.Instance.pressed);
         SplashScreenController.Instance.pressed = false; // reset
 
         EventManager.current.CanDialogue(true);
-        //channel.RaiseRequestDialogueNode(caseStarts[EventManager.current.currCase-1].FirstNode);
-        channel.RaiseRequestDialogueNode(caseStarts[CaseSelector.instance.setCase].FirstNode);
+        channel.RaiseRequestDialogueNode(caseStarts[EventManager.current.currCase-1].FirstNode);
+        //channel.RaiseRequestDialogueNode(caseStarts[CaseSelector.instance.setCase-1].FirstNode);
 
         yield return new WaitForSeconds(1f);
         //showPanel();

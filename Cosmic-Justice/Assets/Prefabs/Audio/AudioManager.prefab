@@ -144,3 +144,39 @@ MonoBehaviour:
     playOnAwake: 0
     canOverlap: 1
     mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+  - name: Ticket_Interaction_A
+    clip: {fileID: 8300000, guid: ebc28c04efec22646af56db8b00cf88c, type: 3}
+    volume: 0.16
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 0
+    canOverlap: 1
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+  - name: Ticket_Repair_A
+    clip: {fileID: 8300000, guid: 9aabbe5255f6e8b47872ea309ec807ee, type: 3}
+    volume: 0.16
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 0
+    canOverlap: 1
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+  - name: Laser_A
+    clip: {fileID: 8300000, guid: c47c4fcf43983a14a805338f04c4a526, type: 3}
+    volume: 0.16
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 0
+    canOverlap: 1
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+  - name: Asteroid_A
+    clip: {fileID: 8300000, guid: 9a78e652777c07f45ba729f5bf7aa8b2, type: 3}
+    volume: 0.16
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 0
+    canOverlap: 1
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}

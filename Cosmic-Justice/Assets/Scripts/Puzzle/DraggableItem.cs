@@ -30,6 +30,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        AudioManager.instance.Play("Ticket_Interaction_A");
         if (!parent.GetPlayable())
         {
             return;
@@ -44,7 +45,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             transform.SetParent(transform.root);
             transform.SetAsLastSibling();
             image.raycastTarget = false;
-            offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            if(VirtualMouse.instance == null)
+                offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            else
+                offset = transform.position - VirtualMouse.instance.mousePosition.position;
         }
     }
 
@@ -59,7 +64,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         if (disableDrag == false)
         {
-            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+            if (VirtualMouse.instance == null)
+                transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+            else
+                transform.position = VirtualMouse.instance.mousePosition.position + offset;
         }
     }
 
