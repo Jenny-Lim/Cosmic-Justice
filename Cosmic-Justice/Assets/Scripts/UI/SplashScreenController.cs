@@ -38,6 +38,8 @@ public class SplashScreenController : MonoBehaviour
         ScreenWipe.instance.ToggleWipe(true);
         while (!ScreenWipe.instance.isDone)
             yield return null;
+        gameObject.transform.GetChild(this.caseNum).gameObject.SetActive(false);
+        bobblehead.SetActive(true);
         ScreenWipe.instance.ToggleWipe(false);
     }
 
@@ -45,7 +47,5 @@ public class SplashScreenController : MonoBehaviour
     {
         StartCoroutine("Wipe");
         pressed = true;
-        gameObject.transform.GetChild(this.caseNum).gameObject.SetActive(false);
-        bobblehead.SetActive(true);
     }
 }
