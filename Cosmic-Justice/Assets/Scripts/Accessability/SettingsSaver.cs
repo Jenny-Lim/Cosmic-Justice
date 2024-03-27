@@ -369,11 +369,18 @@ public class SettingsSaver : MonoBehaviour
 
     public void ColorBlind()
     {
-        for (int i = 0; i < 9; i++)
+        if (IsColorBlind)
         {
-            replacingColors[i] = new Color(PlayerPrefs.GetFloat(colorStrings_r[i]), PlayerPrefs.GetFloat(colorStrings_g[i]), PlayerPrefs.GetFloat(colorStrings_b[i]), 1.0f);
-            Debug.Log("col: " + replacingColors[i]);
-            pec.enabled = true;
+            for (int i = 0; i < 9; i++)
+            {
+                replacingColors[i] = new Color(PlayerPrefs.GetFloat(colorStrings_r[i]), PlayerPrefs.GetFloat(colorStrings_g[i]), PlayerPrefs.GetFloat(colorStrings_b[i]), 1.0f);
+                Debug.Log("col: " + replacingColors[i]);
+                pec.enabled = true;
+            }
+        }
+        else
+        {
+            pec.enabled = false;
         }
     }
 
