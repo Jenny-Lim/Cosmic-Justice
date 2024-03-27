@@ -47,8 +47,13 @@ public class AsteroidPlayer : MonoBehaviour
         //Gets if player is moving forward
         isMoving = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
 
+        if (isMoving)
+        {
+            AudioManager.instance.Play("Spaceship_Loop_A");            
+        }
+
         //Gets if player turning to the left
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             turningDir = turningSpeed;
         }//Gets if player turning to the right
@@ -85,6 +90,7 @@ public class AsteroidPlayer : MonoBehaviour
     {
         if(collision.tag == "Asteroid")
         {
+            AudioManager.instance.Play("Asteroid_Collect_A");
             Collected++;
             textMeshProUGUI.text = "Collected: " + Collected.ToString();
             Destroy(collision.gameObject);
