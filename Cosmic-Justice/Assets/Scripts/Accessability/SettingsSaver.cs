@@ -57,6 +57,9 @@ public class SettingsSaver : MonoBehaviour
     private List<ButtonDefaults> buttonDefaultSprites = new List<ButtonDefaults>();
     private List<TextMeshProUGUI> buttonTexts = new List<TextMeshProUGUI>();
 
+    [SerializeField]
+    private GameObject inputController;
+
     void Awake()
     {
         if (instance == null)
@@ -139,6 +142,12 @@ public class SettingsSaver : MonoBehaviour
 
         EventManager.current.sceneLoad += SceneTransitioned;
         EventManager.current.sceneWipe += ResetStandardize;
+
+
+        if(InputController.instance == null)
+        {
+            Instantiate(inputController);
+        }
     }
 
     private void OnDestroy()

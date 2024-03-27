@@ -444,6 +444,7 @@ MonoBehaviour:
   SFXSlider: {fileID: 593734420}
   MixMode: 0
   StandardPanel: {fileID: -591767996, guid: 169c4278068a5d043b5a355909dd0898, type: 3}
+  inputController: {fileID: 649751612553221132, guid: 4e443a2b2b9749743a3a5daba93bd85b, type: 3}
 --- !u!4 &193098628
 Transform:
   m_ObjectHideFlags: 0

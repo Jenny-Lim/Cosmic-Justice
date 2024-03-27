@@ -97,8 +97,11 @@ public class SceneLoader : MonoBehaviour
     public void Pause()
     {
         bobblehead = GameObject.FindWithTag("Bobblehead");
-        bobblehead.SetActive(false);
-        pauseMenu.SetActive(true);
+        if (bobblehead != null)
+        {
+            bobblehead.SetActive(false);
+            pauseMenu.SetActive(true);
+        }
         Time.timeScale = 0f;
 
         if (VirtualMouse.instance != null)
@@ -120,7 +123,8 @@ public class SceneLoader : MonoBehaviour
 
     public void Resume()
     {
-        bobblehead.SetActive(true);
+        if(bobblehead != null)
+            bobblehead.SetActive(true);
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
 

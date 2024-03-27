@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class InputHandler : MonoBehaviour
 {
 
-    public InputActionAsset controller;
+    private InputController input;
 
     private bool case1;
     private bool case2;
@@ -47,12 +47,14 @@ public class InputHandler : MonoBehaviour
         case1 = false;
         case2 = false;
         case3 = false;
+
+        input = InputController.instance;
     }
 
     // Update is called once per frame
     void Update() // JENNY TODO: also reset verdict buttons
     {
-        if(Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Space) || controller.FindAction("Interact").WasReleasedThisFrame())
+        if(input.IsInteract)
         {
             EventManager.current.MouseClick();
         }

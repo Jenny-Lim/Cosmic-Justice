@@ -8,17 +8,19 @@ public class NextButton : MonoBehaviour
 {
     [SerializeField] private Button nextButton;
 
-
+    private InputController input;
 
     // Start is called before the first frame update
     void Start()
     {
         nextButton.onClick.AddListener(Click);
+
+        input = InputController.instance;
     }
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (input.IsSkip)
             EventManager.current.NextClick();
     }
 

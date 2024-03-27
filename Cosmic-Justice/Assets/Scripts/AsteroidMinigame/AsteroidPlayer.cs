@@ -30,7 +30,7 @@ public class AsteroidPlayer : MonoBehaviour
 
     [SerializeField] Timer timer;
 
-    public InputActionAsset input;
+    private InputController player;
 
     private void Awake()
     {
@@ -42,13 +42,15 @@ public class AsteroidPlayer : MonoBehaviour
         Collected = 0;
         transform.localPosition = Vector3.zero;
         textMeshProUGUI.text = "Collected: " + Collected.ToString();
+
+        player = InputController.instance;
     }
 
     // Update is called once per frame
     void Update()
     {
         //Gets if player is moving forward
-        isMoving = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || input.FindAction("ShipForward").IsPressed();
+        isMoving = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || player.IsForward;
 
         if (isMoving)
         {
@@ -57,11 +59,11 @@ public class AsteroidPlayer : MonoBehaviour
 
         //Gets if player turning to the left
 
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || input.FindAction("ShipLeft").IsPressed())
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || player.IsLeft)
         {
             turningDir = turningSpeed;
         }//Gets if player turning to the right
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || input.FindAction("ShipRight").IsPressed())
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || player.IsRight)
         {
             turningDir = -turningSpeed;
         }

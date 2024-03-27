@@ -12,7 +12,7 @@ public class ClickEffect : MonoBehaviour
 
     private bool virtualMouse;
 
-    public InputActionAsset input;
+    private InputController input;
 
     private void Awake()
     {
@@ -34,6 +34,8 @@ public class ClickEffect : MonoBehaviour
     {
         //EventManager.current.click += onClick;
 
+        input = InputController.instance;
+
         if (VirtualMouse.instance != null)
             virtualMouse = true;
         else
@@ -48,7 +50,7 @@ public class ClickEffect : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Space) || input.FindAction("Interact").WasReleasedThisFrame())
+        if (input.IsInteract)
         {
             onClick();
         }

@@ -1067,7 +1067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4964f03644a59f8479ca6231674628f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: -944628639613478452, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
   speedUpValue: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

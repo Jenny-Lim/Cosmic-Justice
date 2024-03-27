@@ -3510,7 +3510,6 @@ MonoBehaviour:
   NeedToCollect: 10
   textMeshProUGUI: {fileID: 2068516886}
   timer: {fileID: 1693861254}
-  input: {fileID: -944628639613478452, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
 --- !u!114 &422636828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13563,7 +13562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3935d85a0be88b4ea95e98fb55eaaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: -944628639613478452, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
   channel: {fileID: 11400000, guid: 99a411004ccf1e844a55348ee2365c7b, type: 2}
   leftCharacter: {fileID: 1832885798}
   rightCharacter: {fileID: 231371097}
@@ -14355,6 +14353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resumeButton: {fileID: 1171386051}
   returnButton: {fileID: 307221864}
+  nextButton: {fileID: 518898631}
 --- !u!4 &1956709918
 Transform:
   m_ObjectHideFlags: 0

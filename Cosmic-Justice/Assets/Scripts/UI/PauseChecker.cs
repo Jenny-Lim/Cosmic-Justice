@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Windows;
 
 public class PauseChecker : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class PauseChecker : MonoBehaviour
     [SerializeField]
     private Button returnButton;
 
+    private InputController input;
+
+    [SerializeField]
+    private Button nextButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,23 +28,27 @@ public class PauseChecker : MonoBehaviour
 
         resumeButton.onClick.AddListener(ResumeButtonClicked);
         returnButton.onClick.AddListener(QuitToMenuClicked);
+
+        input = InputController.instance;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (input.IsPause)
         {
             if (sceneLoader.isPaused == false)
             {
                 sceneLoader.Pause();
+                nextButton.interactable = false;
                 Debug.Log("paused");
                 return;
             }
 
             if (sceneLoader.isPaused == true)
             {
-                sceneLoader.Resume(); 
+                sceneLoader.Resume();
+                nextButton.interactable = true;
                 Debug.Log("unpaused");
                 return;
             }

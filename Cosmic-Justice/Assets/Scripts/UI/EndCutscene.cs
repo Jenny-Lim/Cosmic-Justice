@@ -12,11 +12,11 @@ public class EndCutscene : MonoBehaviour
     private float videoLength; //The total number of frames of the video
     private float currFrame; //The current frame of the video
 
-    public InputActionAsset input;
-
     private bool videoPlaying;
 
     [SerializeField] private float speedUpValue = 2;
+
+    private InputController input;
 
     // Start is called before the first frame update
     void Awake()
@@ -24,6 +24,8 @@ public class EndCutscene : MonoBehaviour
         videoPlaying = true;
         player = GetComponent<VideoPlayer>();
         videoLength = player.frameCount;
+
+        input = InputController.instance;
     }
 
     private void Update()
@@ -32,7 +34,7 @@ public class EndCutscene : MonoBehaviour
         {
             currFrame = player.frame + 1;
 
-            if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0) || input.FindAction("Interact").WasReleasedThisFrame())
+            if (input.IsInteract)
             {
                 if (videoPlaying)
                 {
@@ -43,19 +45,20 @@ public class EndCutscene : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.W))
+            if (input.IsSpeed)
             {
                 player.playbackSpeed = speedUpValue;
             }
-            else if (Input.GetKeyUp(KeyCode.W))
+            else
                 player.playbackSpeed = 1;
 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (input.IsSlow)
             {
                 player.playbackSpeed = 0;
             }
-            else if (Input.GetKeyUp(KeyCode.S))
+            else if(player.playbackSpeed != speedUpValue)
                 player.playbackSpeed = 1;
+
 
         }
         else
