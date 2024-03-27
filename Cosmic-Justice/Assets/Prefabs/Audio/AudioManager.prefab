@@ -180,6 +180,15 @@ MonoBehaviour:
     playOnAwake: 0
     canOverlap: 1
     mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
+  - name: Asteroid_Collect_A
+    clip: {fileID: 8300000, guid: 0ccb73c1742dd574887fbe99af4cff26, type: 3}
+    volume: 0.16
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 0
+    canOverlap: 1
+    mixer: {fileID: 24300002, guid: 2342066c08584c64a9ffef011b033704, type: 2}
   - name: Spaceship_Loop_A
     clip: {fileID: 8300000, guid: 0539e5e0b86d1974c8011552cef5c0ef, type: 3}
     volume: 0.16
