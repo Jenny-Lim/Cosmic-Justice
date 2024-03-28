@@ -52,3 +52,99 @@ MonoBehaviour:
   IsInteract: 0
   IsSpeed: 0
   IsSlow: 0
+  shipforward:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Shipforward
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: cc5a6319-781c-4ae8-ab95-0f8e9643cb7c
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -4043017330106854371, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+  shipright:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Shipright
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 2f6ed326-a384-4d8d-bc9a-22f9463f67fd
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -605335046975332507, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+  shipleft:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Shipleft
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 562cafe0-1944-46ec-89ca-3bb06ac4e943
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -711327358355328110, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+  skip:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Skip
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: b85bf266-dd68-43b7-b4d4-557ebd5ac878
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 3160061739403858117, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+  pause:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Pause
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: dea7ea94-2032-4349-88ee-6a0353849df6
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 1883667703167735956, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+  interact:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Interact
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d129635a-15d7-49fe-8097-db842ec67810
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 1778491627356654179, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+  speed:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Speed
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 7c063022-1ee3-45e5-acd2-2599865221fa
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5081306146042131050, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+  slow:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Slow
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: be5b2f31-d484-4c31-9388-5addb178579f
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -3690011233782966006, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 
 public class SettingsSaver : MonoBehaviour
 {
@@ -59,6 +60,8 @@ public class SettingsSaver : MonoBehaviour
 
     [SerializeField]
     private GameObject inputController;
+
+    public InputActionAsset actions;
 
     void Awake()
     {
@@ -142,12 +145,6 @@ public class SettingsSaver : MonoBehaviour
 
         EventManager.current.sceneLoad += SceneTransitioned;
         EventManager.current.sceneWipe += ResetStandardize;
-
-
-        if(InputController.instance == null)
-        {
-            Instantiate(inputController);
-        }
     }
 
     private void OnDestroy()
@@ -515,6 +512,11 @@ public class SettingsSaver : MonoBehaviour
             NewMusic = false;
             Music(music);
             MusicSlider.value = music;
+        }
+
+        if (InputController.instance == null)
+        {
+            Instantiate(inputController);
         }
     }
 }

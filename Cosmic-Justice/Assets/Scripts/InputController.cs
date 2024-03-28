@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputController : MonoBehaviour
 {
-    private PlayerController playerController;
 
     public static InputController instance { get; private set; }
 
@@ -27,6 +27,15 @@ public class InputController : MonoBehaviour
     [HideInInspector]
     public bool IsSlow;
 
+    [SerializeField] private InputActionProperty shipforward;
+    [SerializeField] private InputActionProperty shipright;
+    [SerializeField] private InputActionProperty shipleft;
+    [SerializeField] private InputActionProperty skip;
+    [SerializeField] private InputActionProperty pause;
+    [SerializeField] private InputActionProperty interact;
+    [SerializeField] private InputActionProperty speed;
+    [SerializeField] private InputActionProperty slow;
+
     private void Awake()
     {
         if(instance == null)
@@ -38,32 +47,23 @@ public class InputController : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-
-        playerController = new PlayerController();
-    }
-
-    private void OnEnable()
-    {
-        playerController.Enable();
-    }
-
-    private void OnDisable()
-    {
-        playerController.Disable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        IsForward = playerController.VirtualMouse.ShipForward.IsPressed();
-        IsLeft = playerController.VirtualMouse.ShipLeft.IsPressed();
-        IsRight = playerController.VirtualMouse.ShipRight.IsPressed();
+        IsForward = shipforward.action.IsPressed();
+        IsLeft = shipleft.action.IsPressed();
+        IsRight = shipright.action.IsPressed();
 
-        IsInteract = playerController.VirtualMouse.Interact.WasReleasedThisFrame();
-        IsPause = playerController.VirtualMouse.Pause.WasReleasedThisFrame();
-        IsSkip = playerController.VirtualMouse.Skip.WasReleasedThisFrame();
+        IsInteract = interact.action.WasReleasedThisFrame();
+        IsPause = pause.action.WasReleasedThisFrame();
+        IsSkip = skip.action.WasReleasedThisFrame();
 
-        IsSpeed = playerController.VirtualMouse.CutsceneSpeed.IsPressed();
-        IsSlow = playerController.VirtualMouse.CutsceneSlow.IsPressed();
+        IsSpeed = speed.action.IsPressed();
+        IsSlow = slow.action.IsPressed();
+
     }
+
+
 }
