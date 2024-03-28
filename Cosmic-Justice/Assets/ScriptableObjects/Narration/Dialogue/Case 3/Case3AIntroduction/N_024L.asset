@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CIt\u2019s all incredibly thorough, Lady Pluta. I am impressed\u201D\r
     \r\r\r"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 3
   SoundToPlay: 
   SoundToStop: 

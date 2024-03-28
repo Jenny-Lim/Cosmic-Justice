@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CAnd we don\u2019t talk about what happened last time. Is your hair
     finally okay?\u201D\r"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 3
   SoundToPlay: 
   SoundToStop: 

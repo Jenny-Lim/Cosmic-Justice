@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201COh, this old thing? It just does that sometimes, it\u2019s like-
     old and weird and malfunctioning-\u201D\r\n"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

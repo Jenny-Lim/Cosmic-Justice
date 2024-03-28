@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CNo such evidence exists, your honor. This case will be as swift
     as it is pointless.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

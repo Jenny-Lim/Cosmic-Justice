@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: <i>Entium is hit with a bright teleportation sphere, launched from the
     teleporter in the back of the room.</i>
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

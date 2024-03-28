@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CEntium. It\u2019s been expired for over 8 years. What in the nine
     stars are you doing still trying to use it?\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

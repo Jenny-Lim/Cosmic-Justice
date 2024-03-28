@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CYES! HAHAHA! I told you so, you stuck-up, high profile dorks!\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

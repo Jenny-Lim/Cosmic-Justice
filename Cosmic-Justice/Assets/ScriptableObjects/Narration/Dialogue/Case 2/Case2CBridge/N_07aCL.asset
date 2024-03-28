@@ -15,10 +15,10 @@ MonoBehaviour:
   m_Speaker: {fileID: 11400000, guid: a8c2a681c72f3684fa8de5be7ec9506b, type: 2}
   m_Listener: {fileID: 0}
   m_Text: "\u201CMadame, You are ridiculously entitled and have attempted to manipulate
-    my emotions in order to influence this case in your favor. This has gotten you
+    my emotions in order to influence this case in your favour. This has gotten you
     nowhere.\""
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

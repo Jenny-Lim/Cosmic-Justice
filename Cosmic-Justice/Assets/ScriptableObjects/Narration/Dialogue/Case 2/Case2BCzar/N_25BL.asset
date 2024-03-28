@@ -18,7 +18,7 @@ MonoBehaviour:
     and shoot you both out of the airlock at speeds not yet recorded by the Interstellar
     Archive of Galactic Records.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

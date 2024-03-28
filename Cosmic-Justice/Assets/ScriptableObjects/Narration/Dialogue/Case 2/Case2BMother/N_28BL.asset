@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CY\u2019know. Normally I feel really bad about the stuff I do for
     the Czar. <b>Not this time.</b>\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

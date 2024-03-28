@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Listener: {fileID: 0}
   m_Text: "\u201CWe\u2019ll be closing soon, Pluta. I hope you have a great night.\u201D\r\r"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 3
   SoundToPlay: 
   SoundToStop: 

@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CNow hold on just a moment- what on a burning white star is going
     on here? Who are you?\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

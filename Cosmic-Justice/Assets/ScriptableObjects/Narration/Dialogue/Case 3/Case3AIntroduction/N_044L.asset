@@ -18,7 +18,7 @@ MonoBehaviour:
     to be accepted as a Judge in this court 9 times?\u201D\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
     \r\r\r"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 3
   SoundToPlay: 
   SoundToStop: 

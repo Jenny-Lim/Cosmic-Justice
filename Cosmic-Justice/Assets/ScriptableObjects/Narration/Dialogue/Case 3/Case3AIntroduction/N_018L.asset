@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\r\r\r\u201CThere's a lot of work that goes into official planet applications
     isn't there? Far too much for such a delicate spry rock such as you!\u201D\r\n"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 3
   SoundToPlay: 
   SoundToStop: 

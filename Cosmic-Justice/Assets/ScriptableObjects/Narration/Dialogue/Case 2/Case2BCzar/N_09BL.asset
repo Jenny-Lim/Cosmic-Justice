@@ -18,7 +18,7 @@ MonoBehaviour:
     take me to be a lying cheat? I don\u2019t have a single dishonest bone in my
     body!\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

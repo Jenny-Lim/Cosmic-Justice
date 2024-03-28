@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CI missed the Romp of the Cosmic Fox for the first time to come into
     work today.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

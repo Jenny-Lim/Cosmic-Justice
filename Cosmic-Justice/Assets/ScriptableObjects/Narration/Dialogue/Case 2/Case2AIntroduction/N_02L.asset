@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CW-what? Who are you? I\u2019m between cases at the moment and I
     have soft tacos to eat. I can assure you I haven\u2019t the time for this\u201D\r\n"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

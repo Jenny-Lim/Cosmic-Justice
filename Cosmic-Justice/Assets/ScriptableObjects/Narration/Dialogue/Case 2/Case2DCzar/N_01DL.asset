@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CMadame Entium! Please exit my courtroom and pay a mandatory fine
     of 1,300 Dibbles for calling an unneeded trial.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: Ambient_Track_A
   SoundToStop: Verdict

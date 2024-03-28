@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201C...is completely fabricated and proves our innocence? That\u2019s
     what I thought.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

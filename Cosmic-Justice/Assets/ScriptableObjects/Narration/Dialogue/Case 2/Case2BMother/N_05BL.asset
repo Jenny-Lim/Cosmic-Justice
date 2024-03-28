@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201COn the other hand we don\u2019t need to talk about this! What was
     that about innocence? I think I qualify!\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

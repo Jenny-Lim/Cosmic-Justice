@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201COhhh, how heroic you are. Do you really believe any of this your
     honour?\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CThat is hardly an excuse and you must be aware. Especially when
     you\u2019re this vindictive.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

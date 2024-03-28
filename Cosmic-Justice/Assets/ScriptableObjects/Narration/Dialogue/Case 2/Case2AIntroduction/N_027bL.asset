@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\"It comes to my immediate attention that your assistant may have... disposed
     of some rather significant evidence.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

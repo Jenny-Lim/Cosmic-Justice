@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CThe concept of justice just told you he doesn\u2019t care and you\u2019re
     still running your mouth? Your ignorance is as spectacular as it is sad.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Text: "\u201CWe don\u2019t have too much else to say, your honour. Just uhh,
     y\u2019know, wave the gavel, fate of the universe, blah blah blah.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 

@@ -18,7 +18,7 @@ MonoBehaviour:
     To deny her vindication after such a long time would be\u2026 an affront to justice.</i>\r\r\r\r\r\r\r\r\r\r\r\r\r\r
     \r\r\r"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 3
   SoundToPlay: 
   SoundToStop: 

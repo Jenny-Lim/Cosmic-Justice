@@ -18,7 +18,7 @@ MonoBehaviour:
     those who wronged you. Not justice, not what\u2019s right, nor karma. You just
     want to see them suffer.\u201D"
   m_FontSize: 40
-  m_TextSpeed: 0.01
+  m_TextSpeed: 0.05
   caseNumber: 2
   SoundToPlay: 
   SoundToStop: 
