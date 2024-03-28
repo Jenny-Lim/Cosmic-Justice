@@ -7644,6 +7644,10 @@ PrefabInstance:
       propertyPath: m_enableAutoSizing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 269114085219097446, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_TagString
+      value: NoStandardize
+      objectReference: {fileID: 0}
     - target: {fileID: 367646165910839832, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
