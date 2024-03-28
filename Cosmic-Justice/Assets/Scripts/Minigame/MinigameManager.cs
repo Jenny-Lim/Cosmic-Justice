@@ -42,8 +42,10 @@ public class MinigameManager : MonoBehaviour
 
     private GameObject minigameToPlay;
 
+    [HideInInspector]
     public bool WaitForInput;
 
+    [HideInInspector]
     public bool SkipMinigame;
 
     GameObject bobblehead;
@@ -266,6 +268,7 @@ public class MinigameManager : MonoBehaviour
     private void EndMinigame(GameObject minigame)
     {
         //isDone = true;
+        showPanel();
         StartCoroutine(StopMinigameAnim(minigame, "MiniGame_Track_A", "Ambient_Track_A"));
     } // EndMinigame
 

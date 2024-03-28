@@ -46,11 +46,21 @@ public class AsteroidPlayer : MonoBehaviour
         player = InputController.instance;
     }
 
+    private void OnDisable()
+    {
+        AudioManager.instance.Stop("Spaceship_Loop_A");
+        EventManager.current.EndAsteroid();
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (MinigameManager.current.WaitForInput)
+            return;
+
+
         //Gets if player is moving forward
-        isMoving = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || player.IsForward;
+        isMoving = player.IsForward;
 
         if (isMoving)
         {
@@ -59,11 +69,11 @@ public class AsteroidPlayer : MonoBehaviour
 
         //Gets if player turning to the left
 
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || player.IsLeft)
+        if(player.IsLeft)
         {
             turningDir = turningSpeed;
         }//Gets if player turning to the right
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || player.IsRight)
+        else if (player.IsRight)
         {
             turningDir = -turningSpeed;
         }

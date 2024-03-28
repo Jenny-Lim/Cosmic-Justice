@@ -93,7 +93,9 @@ public class AudioManager : MonoBehaviour
             return;
         }
         currentlyPlayingSounds.Remove(s);
-        s.source.Stop();
+
+        if(s.source != null)
+            s.source.Stop();
     }
 
     //Pause a sound based on a name

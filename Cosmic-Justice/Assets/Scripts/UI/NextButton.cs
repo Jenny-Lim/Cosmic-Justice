@@ -20,7 +20,8 @@ public class NextButton : MonoBehaviour
 
     private void Update()
     {
-        if (input.IsSkip)
+
+        if (input.IsSkip && !SceneLoader.instance.isPaused)
             EventManager.current.NextClick();
     }
 

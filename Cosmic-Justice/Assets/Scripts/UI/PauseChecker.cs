@@ -58,6 +58,7 @@ public class PauseChecker : MonoBehaviour
     private void ResumeButtonClicked()
     {
         sceneLoader.Resume();
+        nextButton.interactable = true;
     }
 
     private void QuitToMenuClicked()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public class SkipMinigame : MonoBehaviour
 {
@@ -53,7 +54,6 @@ public class SkipMinigame : MonoBehaviour
     {
         StandizeText();
         DarkMode();
-        
     }
 
     private void OnDestroy()

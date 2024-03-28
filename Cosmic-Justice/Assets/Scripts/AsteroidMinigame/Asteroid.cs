@@ -53,6 +53,10 @@ public class Asteroid : MonoBehaviour
 
     public void SetTrajectory(Vector2 direction)
     {
+
+        if(!gameObject.activeSelf)
+            Destroy(gameObject);
+
         rgBd.AddForce(direction * speed);
 
         Destroy(this.gameObject, this.maxLifeTime);
@@ -60,6 +64,9 @@ public class Asteroid : MonoBehaviour
 
     public void SetCollider()
     {
-        boxCollider.size = new Vector2(rectran.rect.width, rectran.rect.height);
+        if(boxCollider != null)
+            boxCollider.size = new Vector2(rectran.rect.width, rectran.rect.height);
+        else
+            Destroy(this.gameObject);
     }
 }

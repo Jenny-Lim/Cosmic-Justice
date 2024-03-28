@@ -22,11 +22,27 @@ public class AsteroidSpawner : MonoBehaviour
 
     private RectTransform rectangle;
 
+    private bool spawning;
+
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
+        spawning = false;
         rectangle = GetComponent<RectTransform>();
-        InvokeRepeating(nameof(SpawnAsteroid), spawnRate, spawnRate);
+    }
+    private void OnDisable()
+    {
+        CancelInvoke(nameof(SpawnAsteroid));
+        AudioManager.instance.Stop("Asteroid_A");
+    }
+
+    private void Update()
+    {
+        if(!MinigameManager.current.WaitForInput && !spawning)
+        {
+            spawning=true;
+            InvokeRepeating(nameof(SpawnAsteroid), spawnRate, spawnRate);
+        }
     }
 
     private void SpawnAsteroid()
@@ -62,7 +78,8 @@ public class AsteroidSpawner : MonoBehaviour
                 asteroid.size = Random.Range(asteroid.minSize, asteroid.maxSize);
                 asteroid.SetCollider();
 
-                asteroid.SetTrajectory(rotation * -spawnDirection);
+                if(asteroid != null)
+                    asteroid.SetTrajectory(rotation * -spawnDirection);
             }
         }
     }
