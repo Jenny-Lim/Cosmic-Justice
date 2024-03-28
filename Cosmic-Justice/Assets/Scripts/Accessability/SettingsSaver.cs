@@ -63,6 +63,8 @@ public class SettingsSaver : MonoBehaviour
 
     public InputActionAsset actions;
 
+    //public EventManager eventManager;
+
     void Awake()
     {
         if (instance == null)
@@ -143,9 +145,19 @@ public class SettingsSaver : MonoBehaviour
         //Load all playerpref settings
         LoadSettings();
 
+        if (InputController.instance == null)
+        {
+            Instantiate(inputController);
+        }
+    }
+
+    private void Start()
+    {
+
         EventManager.current.sceneLoad += SceneTransitioned;
         EventManager.current.sceneWipe += ResetStandardize;
     }
+
 
     private void OnDestroy()
     {
@@ -397,6 +409,10 @@ public class SettingsSaver : MonoBehaviour
 
     public void SetMusic(float value)
     {
+
+        if (value == 0.0001)
+            return;
+
         PlayerPrefs.SetFloat("Music", value);
 
         if (value == 1)
@@ -410,7 +426,8 @@ public class SettingsSaver : MonoBehaviour
             Music(value);
         }
 
-        EventManager.current.MusicChanged();
+        if(EventManager.current != null)
+            EventManager.current.MusicChanged();
     }
 
     private void Music(float value)
@@ -446,7 +463,7 @@ public class SettingsSaver : MonoBehaviour
                 MusicMixer.SetFloat("Volume", Mathf.Log10(Value) * 20);
                 break;
         }
-        Debug.Log(Value);
+
         SetMusic(Value);
     }
 
@@ -512,11 +529,6 @@ public class SettingsSaver : MonoBehaviour
             NewMusic = false;
             Music(music);
             MusicSlider.value = music;
-        }
-
-        if (InputController.instance == null)
-        {
-            Instantiate(inputController);
         }
     }
 }

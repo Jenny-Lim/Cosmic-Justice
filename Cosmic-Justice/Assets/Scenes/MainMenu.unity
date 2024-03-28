@@ -981,6 +981,7 @@ MonoBehaviour:
   StandardPanel: {fileID: -591767996, guid: 169c4278068a5d043b5a355909dd0898, type: 3}
   inputController: {fileID: 649751612553221132, guid: 4e443a2b2b9749743a3a5daba93bd85b, type: 3}
   actions: {fileID: -944628639613478452, guid: 03c3d202817f6a7438ae0119ae54d4a9, type: 3}
+  eventManager: {fileID: 582665791}
 --- !u!4 &193098628
 Transform:
   m_ObjectHideFlags: 0
@@ -1658,6 +1659,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561688029}
   m_CullTransparentMesh: 1
+--- !u!114 &582665791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3965926783926278157, guid: d218ff4c3760c99419a4d4b0c6d7a013, type: 3}
+  m_PrefabInstance: {fileID: 4945224694258240227}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b8fb46cf8d3d94eb6cf946f6157524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &585765752
 GameObject:
   m_ObjectHideFlags: 0
@@ -8100,6 +8112,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3674762495994622857, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
+      propertyPath: m_MoveAction
+      value: 
+      objectReference: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
     - target: {fileID: 3674762495994622857, guid: 4fb0192803654da498c5d1885196d3f5, type: 3}
       propertyPath: m_SubmitAction
       value: 

@@ -234,6 +234,8 @@ public class SceneLoader : MonoBehaviour
         transitioning = false;
 
         EventManager.current.SceneLoaded();
+
+        AudioManager.instance.Stop("CharacterSpeaking");
     }
 
 
@@ -242,6 +244,8 @@ public class SceneLoader : MonoBehaviour
     {
         // Unsubscribe from the event to prevent it from being called if not needed
         SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        AudioManager.instance.Stop("CharacterSpeaking");
 
         // Start an unwipe after a short delay to give the scene time to render
         StartCoroutine(UnwipeScene());

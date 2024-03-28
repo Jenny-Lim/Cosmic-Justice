@@ -26,4 +26,5 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ButtonMash.unity
     guid: b598f691cdb0b9f4b839dfe20f70247a
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 4910b98afb2a33e409e540ce1092cbd0, type: 2}

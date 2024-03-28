@@ -27,20 +27,13 @@ public class ClickEffect : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         particles = GetComponent<ParticleSystem>();
-
-
-    }
-
-    private void reinitialize()
-    {
-        input = InputController.instance;
     }
 
     private void Start()
     {
-        //EventManager.current.click += onClick;
-
         input = InputController.instance;
+
+        //EventManager.current.click += onClick;
 
         if (VirtualMouse.instance != null)
             virtualMouse = true;
@@ -56,6 +49,7 @@ public class ClickEffect : MonoBehaviour
 
     private void Update()
     {
+
         if (input.IsInteract)
         {
             onClick();

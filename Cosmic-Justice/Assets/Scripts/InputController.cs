@@ -33,10 +33,10 @@ public class InputController : MonoBehaviour
             instance = this;
         else
         {
+            Debug.Log("There was another");
             Destroy(gameObject);
             return;
         }
-
         DontDestroyOnLoad(gameObject);
     }
 
