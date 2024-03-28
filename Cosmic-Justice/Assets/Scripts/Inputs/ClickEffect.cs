@@ -28,6 +28,12 @@ public class ClickEffect : MonoBehaviour
 
         particles = GetComponent<ParticleSystem>();
 
+
+    }
+
+    private void reinitialize()
+    {
+        input = InputController.instance;
     }
 
     private void Start()

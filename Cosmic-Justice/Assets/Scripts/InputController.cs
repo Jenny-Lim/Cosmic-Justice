@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class InputController : MonoBehaviour
 {
-
+    public InputActionAsset playerController;
     public static InputController instance { get; private set; }
 
     [HideInInspector]
@@ -27,15 +27,6 @@ public class InputController : MonoBehaviour
     [HideInInspector]
     public bool IsSlow;
 
-    [SerializeField] private InputActionProperty shipforward;
-    [SerializeField] private InputActionProperty shipright;
-    [SerializeField] private InputActionProperty shipleft;
-    [SerializeField] private InputActionProperty skip;
-    [SerializeField] private InputActionProperty pause;
-    [SerializeField] private InputActionProperty interact;
-    [SerializeField] private InputActionProperty speed;
-    [SerializeField] private InputActionProperty slow;
-
     private void Awake()
     {
         if(instance == null)
@@ -49,20 +40,29 @@ public class InputController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void OnEnable()
+    {
+        playerController.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerController.Disable();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        IsForward = shipforward.action.IsPressed();
-        IsLeft = shipleft.action.IsPressed();
-        IsRight = shipright.action.IsPressed();
+        IsForward = playerController.FindAction("ShipForward").IsPressed();
+        IsLeft = playerController.FindAction("ShipLeft").IsPressed();
+        IsRight = playerController.FindAction("ShipRight").IsPressed();
 
-        IsInteract = interact.action.WasReleasedThisFrame();
-        IsPause = pause.action.WasReleasedThisFrame();
-        IsSkip = skip.action.WasReleasedThisFrame();
+        IsInteract = playerController.FindAction("Interact").WasReleasedThisFrame();
+        IsPause = playerController.FindAction("Pause").WasReleasedThisFrame();
+        IsSkip = playerController.FindAction("Skip").WasReleasedThisFrame();
 
-        IsSpeed = speed.action.IsPressed();
-        IsSlow = slow.action.IsPressed();
-
+        IsSpeed = playerController.FindAction("CutsceneSpeed").IsPressed();
+        IsSlow = playerController.FindAction("CutsceneSlow").IsPressed();
     }
 
 
